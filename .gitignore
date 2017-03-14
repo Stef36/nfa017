@@ -1,0 +1,5 @@
+# ignorer le repertoire de comptage
+/compteur
+
+#ignorer le fichier de connection
+connection.php
