@@ -12,7 +12,7 @@
 
 <link rel="icon" href="soullat2.ico" />
 
-<title>Soul Latitude | connection </title>
+<title>Connection au Back-Office</title>
 <link href="./css/soul.css" rel="stylesheet" type="text/css" />
 </head>
 <!-- ======================================================= -->
