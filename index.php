@@ -7,9 +7,9 @@
 <meta charset="UTF-8" lang="fr">
 <meta name="Mes Repos"  content="poser consulter jours congés travail équipe ">
 
-<link rel="icon" href="soullat2.ico" >
+<link rel="icon" href="mes-repos.ico" >
 
-<title>Mes Repos poser en ligne</title>
+<title>Poser mes repos en ligne</title>
 <link href="./css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <!-- ======================================================= -->
@@ -25,8 +25,6 @@
 <header id="">
  
 </header>
-<!-- ======================================================= -->
-
 
 
 
@@ -36,6 +34,10 @@
 <!-- ===================== MENU ===================== -->
 <?php include("includes/menu.php"); ?>
 
+
+
+<!-- ===================== BAS DE PAGE  ===================== -->
+<?php include("includes/basDePage.php"); ?>
 </body>
 
 </html>
