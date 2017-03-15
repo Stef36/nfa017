@@ -12,6 +12,9 @@
 <?php require ("./includes/header.inc.php"); titre_header('Formulaire de Contact')?>
 
 
+<!-- ===================== MENU ===================== -->
+<?php include("includes/menu.php"); ?>
+
 <section id="">
     <H3>Vous souhaitez pouvoir utiliser "mesrepos.domduf.com"</H3>
     <p>Merci de bien vouloir remplir ce formulaire, et nous vous envoyons votre code au plus vite. </p>
@@ -82,6 +85,10 @@
     <p><input type="submit" value="Envoyer à notre secretaire" /> ou alors...<input type="reset" value="J'annule tout, désolé." />
     </p>
     </form>	
+<!-- ===================== BAS DE PAGE  ===================== -->
+
+<?php include("includes/basDePage.php"); ?>
+
 
 <!-- ============= Appels de scripts JS ================== -->
 <script src='./javascripts/validationChamps.js' type = 'text/javascript' ></script>
