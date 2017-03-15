@@ -11,8 +11,11 @@
 
 		<a href="./index.php">Accueil</a>
 
-		<a href="./formulaire-contact.php">Contact</a>
+		<a href="./inscrire-equipe.php">Régir son équipe de travail</a>		
 
+		<a href="./cusulter.php">Consulter et poser des congés</a>
+
+		<a href="./formulaire-contact.php">Contact</a>
 
 
 	
