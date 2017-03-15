@@ -19,15 +19,22 @@
 
 
 
+
+
 <!-- ===================== TITRE ===================== -->
 <header id="">
  
 </header>
 <!-- ======================================================= -->
 
+
+
+
+
 <H1>Bientôt un site gratuit pour poser ses jours de congé en ligne</H1>
 
-
+<!-- ===================== MENU ===================== -->
+<?php include("includes/menu.php"); ?>
 
 </body>
 
