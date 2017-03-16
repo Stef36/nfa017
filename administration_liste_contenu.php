@@ -1,3 +1,5 @@
+<?php Session_start()?>
+
 <!DOCTYPE html>
 <html lang="fr-fr">
 

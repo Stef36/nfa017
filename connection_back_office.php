@@ -1,3 +1,4 @@
+<?php Session_start()?>
 <!DOCTYPE html>
 <html lang="fr-fr" >
 
@@ -26,7 +27,8 @@
 
 <?php require ("./includes/header.inc.php"); titre_header('Connection </br>back-office')?>
 
-
+<!-- ===================== MENU ===================== -->
+<?php include("includes/menu.php"); ?>
 <!-- ===================== VISUEL ===================== -->
 
 <section id="">
