@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost
--- Généré le :  Jeu 16 Mars 2017 à 18:10
+-- Généré le :  Jeu 16 Mars 2017 à 18:22
 -- Version du serveur :  10.1.21-MariaDB
 -- Version de PHP :  7.1.1
 
@@ -55,7 +55,7 @@ CREATE TABLE `membre` (
 
 INSERT INTO `membre` (`mem_id`, `mem_login`, `mem_mdp`, `mem_persona`, `mem_activite`, `mem_description_musico`, `mem_civilite`, `mem_nom`, `mem_prenom`, `mem_date_naiss`, `mem_sexe`, `mem_centre_interet`, `mem_article`, `mem_lien_photo`, `mem_membre_bureau`, `mem_email`, `mem_adres_num`, `mem_adres_rue`, `mem_adres_cp`, `mem_adres_ville`) VALUES
 (1, 'domduf', '$2y$10$A40L5e9e9iXmY.oD8L7K3OQG7knoFroeYYqLGYX7.Z5Z2YUeetQOC', 'Gestionaire', NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(2, 'stf', '$2y$10$5iYLDxGcHN8Ij/c7rGDlluc9EaAP6OxeRDclPlmV81X5NKF5QLe5y', 'Gestionaire', NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(2, 'stef', '$2y$10$5iYLDxGcHN8Ij/c7rGDlluc9EaAP6OxeRDclPlmV81X5NKF5QLe5y', 'Gestionaire', NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Index pour les tables exportées
