@@ -14,7 +14,7 @@
 <link rel="icon" href="soullat2.ico" />
 
 <title>Connection au Back-Office</title>
-<link href="./css/soul.css" rel="stylesheet" type="text/css" />
+<link href="./css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <!-- ======================================================= -->
 
@@ -66,21 +66,24 @@
   		
   		else { /* si déjà connecté */ ?>
   		<span id="administration">
+      
+      
   			<H2 ><?php echo $_SESSION['login'];?>, vous êtes connecté,</br> que voulez vous faire ?</H2>
 
-  			<form name="formdeConnect" method="POST" action="./administration_deconnection.php">
+ 
   			<table> 
-  				<tr>
+            <tr>
       				
-      				<td><a href="administration_liste_contenu.php"><img src="./images/boutonRetour.png"></a> à la liste d'administration</td>
+      				<td><a href="administration_liste_contenu.php"><img src="./images/boutons/retour.png"></a></td>
       			</tr>
-      			<tr>
-        			
-        			<td><input type="submit" name="soumission" id="soumission" value="Vous déconnecter" /></td>
+            
+            <tr>
+      				
+      				<td><a href="administration_deconnection.php"><img src="./images/boutons/deconnection.png"></a></td>
       			</tr>
 	
   			</table>
-  		</form>	
+
   			
   		</span>
   		<?php
