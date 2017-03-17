@@ -5,7 +5,7 @@
 		/* DECLARATION des Variables de connection à la bdd */
 		$dsn="mysql:host=db673497762.db.1and1.com;dbname=db673497762;charset=UTF8";
 		$login = "dbo673497762";
-		$pass= "RHcHttym3&A4";
+		$pass= "";
 		
 		/* CONNECTION serveur*/
 		$pdo= new PDO($dsn, $login, $pass);
