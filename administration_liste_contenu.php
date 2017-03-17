@@ -15,7 +15,7 @@
 	<link rel="icon" href="icone.ico" />
 
 	<title> | connection </title>
-	<link href="./css/soul.css" rel="stylesheet" type="text/css" />
+	<link href="./css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <!-- ======================================================= -->
 
