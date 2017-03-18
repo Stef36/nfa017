@@ -8,15 +8,42 @@
 
   <div class="nav-inner">
     
+  	<ul> <!-- liste non ordonnée -->
 
-		<a href="./index.php">Accueil</a>
+			<li>
+			<a href="./index.php">Accueil</a>
+			</li>
+			
+			<li>
+			<a href="./inscrire-equipe.php">Les équipes de travail</a>
+				<ul>
+					<li>
+					<a href="">inscrire / modifier</a>
+					</li>
+					<li>
+					<a href="">gerer les congés</a>
+					</li>
+				</ul>		
+			</li>
+			
+			<li>
+			<a href="./cusulter.php">Mes congés</a>
+				<ul>
+					<li>
+					<a href="">consulter</a>
+					</li>
+					<li>
+					<a href="">poser</a>
+					</li>
 
-		<a href="./inscrire-equipe.php">Régir son équipe de travail</a>		
-
-		<a href="./cusulter.php">Consulter et poser des congés</a>
-
-		<a href="./formulaire-contact.php">Contact</a>
-
+				</ul>
+			</li>
+			
+			<li>
+			<a href="./formulaire-contact.php">Contact</a>
+			</li>
+			
+		</ul>
 
 	
   </div>
