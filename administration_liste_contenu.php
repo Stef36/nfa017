@@ -27,6 +27,12 @@
 
 <?php require ("./includes/header.inc.php"); titre_header('Liste administration')?>
 
+
+<!-- ===================== MENU ===================== -->
+<?php include("includes/menu.php"); ?>
+
+
+
 <!-- ===================== VISUEL ===================== -->
 
 <section id="centre">
