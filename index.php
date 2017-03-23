@@ -20,18 +20,12 @@
 <body>
 
 
-
-
-
 <!-- ===================== TITRE ===================== -->
-<header id="">
- 
-</header>
+
+<?php require ("./includes/header.inc.php"); titre_header('Bientôt un site gratuit pour poser ses jours de congé en ligne')?>
 
 
 
-
-<H1>Bientôt un site gratuit pour poser ses jours de congé en ligne</H1>
 
 <!-- ===================== MENU ===================== -->
 <?php include("includes/menu.php"); ?>
