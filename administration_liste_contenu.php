@@ -63,6 +63,8 @@
 			& 
 		 ( password_verify ($mdp_entre_user,$administrateur['mem_mdp'])/* test du hash */)) 
 		{
+
+			$_SESSION['ticket']=true;
 	
   			 /*echo ('log de session: '.$_SESSION['login']); test*/?>
 
@@ -84,7 +86,7 @@
 		}
 
 	// si la connection a échoué
-	else {	?>
+	else {	$_SESSION['ticket']=false; ?>
 	<span>
 		<H2>Désolé <?php echo ($_SESSION['login']);?>, mot de passe et/ou login incorrect...
 		<a href="connection_back_office.php"><img src="./images/boutonRetour.png"></a></H2>

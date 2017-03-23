@@ -27,7 +27,7 @@
 			</li>
 			
 			<li>
-			<a href="./cusulter.php">Mes congés</a>
+			<a href="./consulter.php">Mes congés</a>
 				<ul>
 					<li>
 					<a href="">consulter</a>
@@ -42,6 +42,26 @@
 			<li>
 			<a href="./formulaire-contact.php">Contact</a>
 			</li>
+
+			<?php if ( !isset ($_SESSION['ticket'])) { 
+
+				// la variable $_SESSION['ticket'] 
+				// est mise à true lors de la connection au BO
+
+				// n'affiche rien
+			}
+
+
+			elseif ($_SESSION['ticket']==true) { 
+				// on va afficher un lien vers la liste de gestion
+				?>
+
+			<li>
+			<a href="./administration_liste_contenu.php">Administration</a>
+			</li>	<?php 
+
+
+			} ?>
 			
 		</ul>
 
