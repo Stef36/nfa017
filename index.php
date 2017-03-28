@@ -4,42 +4,42 @@
 <html lang="fr-fr" >
 
 <!-- ======================================================= -->
-<head>
+    <head>
 
-<meta charset="UTF-8" lang="fr">
-<meta name="Mes Repos"  content="poser consulter jours congés travail équipe ">
+        <meta charset="UTF-8" lang="fr">
+        <meta name="Mes Repos"  content="poser consulter jours congés travail équipe ">
 
-<link rel="icon" href="mes-repos.ico" >
+        <link rel="icon" href="mes-repos.ico" >
 
-<title>Poser mes repos en ligne</title>
-<link href="./css/style.css" rel="stylesheet" type="text/css" />
-</head>
+        <title>Poser mes repos en ligne</title>
+        <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    </head>
 <!-- ======================================================= -->
 
 
-<body>
+    <body>
 
 
 
 
 
 <!-- ===================== TITRE ===================== -->
-<header id="">
+        <header id="">
  
-</header>
+        </header>
 
 
 
 
-<H1>Bientôt un site gratuit pour poser ses jours de congé en ligne</H1>
+        <H1>Bientôt un site gratuit pour poser ses jours de congés en ligne</H1>
 
 <!-- ===================== MENU ===================== -->
-<?php include("includes/menu.php"); ?>
+        <?php include("includes/menu.php"); ?>
 
 
 
 <!-- ===================== BAS DE PAGE  ===================== -->
-<?php include("includes/basDePage.php"); ?>
-</body>
+        <?php include("includes/basDePage.php"); ?>
+    </body>
 
 </html>
