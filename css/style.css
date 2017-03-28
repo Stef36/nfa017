@@ -16,7 +16,7 @@ background-color: #B7AA3F;
 }
 
 nav {
-margin:15px;
+margin:5px;
 padding:25px;
 border-style: solid;
 }
@@ -52,6 +52,11 @@ nav ul li:hover ul { /* concerne ul quand parent li survolé par souris */
 position: relative;
 font-size : 0.8em;
 display:block;
-top:8px;
-left:-40px;
+top:5px;
+left:-2px;
+margin:5px;
+padding:5px 25px 5px 15px;
+border-style: solid  ;
+border-width: 0px 1px 2px ;
+background-color: #B7AA3F;
 }
