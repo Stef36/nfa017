@@ -1,3 +1,57 @@
 body {
   background-color:#dabf00;
 }
+
+
+/* -------------        DISPOSITION du menu écran PC  -------------------- */
+nav > input,
+.nav-button {
+  display: none; /* on cache le bouton menu */
+}
+
+nav {/* ce qui concerne le menu en lui-même */
+font-size : 1.1em;
+background-color: #B7AA3F;
+
+}
+
+nav {
+margin:15px;
+padding:25px;
+border-style: solid;
+}
+
+nav ul {/* les elements ul de menu contenus dans nav */
+list-style: none;
+display: flex;
+justify-content: space-around;
+
+}
+
+nav a {
+color:#362938;
+text-decoration:none; /* supprime le soulignement moche */
+padding:3px;
+}
+
+nav a:hover{
+color:#225668;
+}
+
+nav ul  ul   {
+display:none;
+}
+ 
+nav ul li {
+position: relative;
+height:35px;/* fixe la hauteur du container */
+}
+
+
+nav ul li:hover ul { /* concerne ul quand parent li survolé par souris */
+position: relative;
+font-size : 0.8em;
+display:block;
+top:8px;
+left:-40px;
+}

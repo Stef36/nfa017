@@ -15,7 +15,7 @@
 			</li>
 			
 			<li>
-			<a href="./inscrire-equipe.php">Les équipes de travail</a>
+			<a href="./inscrire-equipe.php">Les équipes</a>
 				<ul>
 					<li>
 					<a href="">inscrire / modifier</a>
@@ -52,12 +52,13 @@
 			}
 
 
-			elseif ($_SESSION['ticket']==true) { 
+			elseif ($_SESSION['ticket']==true) {
+			 
 				// on va afficher un lien vers la liste de gestion
 				?>
 
 			<li>
-			<a href="./administration_liste_contenu.php">Administration</a>
+			<a href="./administration_liste_contenu.php">Admin.</a>
 			</li>	<?php 
 
 
