@@ -31,12 +31,23 @@
 <?php include("includes/menu.php"); ?>
 
 
-<setion id="provisoire">
+<section id="provisoire">
 
-<p>
 
-1- le chef d'équipe interréssé par le site envoie un mail par le biais du menu "contact" 2- le webmaster (en BO (Back-Office) reçoit ce mail et créé un login et un mdp à ce chef d'équipe, et lui envoie par mail (fictif) 3- le chef d'équipe peut se logger (en catégorie A) et construire son équipe en A1, en créant chaque employé, en remplissant les champs NOM, prénom, etc, y compris le mail de l'employé. 4- les employés reçoivent individuellement un mail avec leur loggin (créés par le chef d'équipe) et le mdp (créé aléatoirement sur 4 caractères en PHP 5 les employés peuvent se logger en Cat B
-</p>
+<ol>
+	<li>Le chef d'équipe interréssé par le site envoie un mail par le biais du menu "contact" </li>
+
+	<li>Le webmaster (en BO (Back-Office) reçoit ce mail et créé un login et un mdp à ce chef d'équipe, et lui envoie par mail (fictif)</li>
+
+	<li>Le chef d'équipe peut se logger (en menu "Les équipes") et construire son équipe en menu "Les équipes" /"Inscrire-Modifier" , en créant chaque employé, en remplissant les champs NOM, prénom, etc, y compris le mail de l'employé.</li>
+
+	<li>Les employés reçoivent individuellement un mail avec leur loggin (créés par le chef d'équipe) et le mdp (créé aléatoirement sur 4 caractères en PHP 5) les employés peuvent se logger en menu "Mes congés" </li>
+
+</ol>
+
+</section>
+  
+
 
 <!-- ===================== BAS DE PAGE  ===================== -->
 <?php include("includes/basDePage.php"); ?>
