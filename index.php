@@ -12,7 +12,13 @@
 <link rel="icon" href="mes-repos.ico" >
 
 <title>Poser mes repos en ligne</title>
+
+<!-- charger les feuiles de style  -->
 <link href="./css/style.css" rel="stylesheet" type="text/css" />
+
+	<!-- animation du mode d'emploi via css dédié  -->
+<link href="./css/mode-emploi.css" rel="stylesheet" type="text/css" />
+
 </head>
 <!-- ======================================================= -->
 
@@ -44,6 +50,21 @@
 	<li>Les employés reçoivent individuellement un mail avec leur loggin (créés par le chef d'équipe) et le mdp (créé aléatoirement sur 4 caractères en PHP 5) les employés peuvent se logger en menu "Mes congés" </li>
 
 </ol>
+
+</section>
+
+<section id="animation-mode-emploi">
+
+	<p id="animation">
+
+		<img src="./images/animation-accueuil/1.png" id="image1">
+		<img src="./images/animation-accueuil/1explication.jpg" id="image2">
+
+		<img src="./images/animation-accueuil/2.png" id="image3">
+		<img src="./images/animation-accueuil/2e.png" id="image4">
+
+	</p>
+	
 
 </section>
   

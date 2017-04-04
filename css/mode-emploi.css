@@ -1,0 +1,59 @@
+/* -------------        Images "mouvante "  -------------------- */
+
+#animation{
+position: relative; /* prépare la position des images incluses au container */
+height:0;
+padding-top: 35%; /* fixe la hauteur proportionnelle au container */
+}
+
+@keyframes transparence { /* définition de l'animation */
+from  {opacity :0;} /* de pleine opacité */
+to  {opacity:1;}    /* à pleine opacité */
+}
+
+
+
+#image1 {
+animation:  transparence  10s infinite;	/* animation "transparence" */																			/* en boucle  */
+position:absolute ;
+width:95%;
+max-height:390px;
+margin-left: 2.5%;
+top: 5%;
+border-radius:12px;
+}
+
+
+#image2 {
+animation:  transparence  10s infinite; /* même animation, mais décalée de 3s */
+animation-delay:3s;
+position:absolute ;
+width:95%;
+max-height:390px;
+margin-left: 2.5%;
+top: 5%;
+border-radius:12px;
+}
+
+
+#image3 {
+animation:  transparence  7s infinite; /* même animation, mais décalée de 5s */
+animation-delay:5s;
+position:absolute ;
+width:95%;
+max-height:390px;
+margin-left: 2.5%;
+top: 5%;
+border-radius:12px;
+}
+
+#image4 {
+animation:  transparence  7s infinite; /* même animation, mais décalée de 5s */
+animation-delay:5s;
+position:absolute ;
+width:95%;
+max-height:390px;
+margin-left: 2.5%;
+top: 5%;
+border-radius:12px;
+}
