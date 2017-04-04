@@ -57,11 +57,11 @@
 
 	<p id="animation">
 
-		<img src="./images/animation-accueuil/1.png" id="image1">
-		<img src="./images/animation-accueuil/1explication.jpg" id="image2">
+		<img src="./images/animation-accueuil/1.jpg" id="image1">
+		<img src="./images/animation-accueuil/2.jpg" id="image2">
 
-		<img src="./images/animation-accueuil/2.png" id="image3">
-		<img src="./images/animation-accueuil/2e.png" id="image4">
+		<img src="./images/animation-accueuil/3.jpg" id="image3">
+		<img src="./images/animation-accueuil/2.jpg" id="image4">
 
 	</p>
 	

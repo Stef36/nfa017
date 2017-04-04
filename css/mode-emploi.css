@@ -7,14 +7,14 @@ padding-top: 35%; /* fixe la hauteur proportionnelle au container */
 }
 
 @keyframes transparence { /* définition de l'animation */
-from  {opacity :0;} /* de pleine opacité */
-to  {opacity:1;}    /* à pleine opacité */
+from  {opacity :1;} /* de pleine opacité */
+to  {opacity:0;}    /* à pleine transparence */
 }
 
 
 
 #image1 {
-animation:  transparence  10s infinite;	/* animation "transparence" */																			/* en boucle  */
+animation:  transparence  8s infinite;	/* animation "transparence" */																			/* en boucle  */
 position:absolute ;
 width:95%;
 max-height:390px;
@@ -25,8 +25,8 @@ border-radius:12px;
 
 
 #image2 {
-animation:  transparence  10s infinite; /* même animation, mais décalée de 3s */
-animation-delay:3s;
+animation:  transparence  8s infinite; /* même animation, mais décalée de 3s */
+animation-delay:2s;
 position:absolute ;
 width:95%;
 max-height:390px;
@@ -37,8 +37,8 @@ border-radius:12px;
 
 
 #image3 {
-animation:  transparence  7s infinite; /* même animation, mais décalée de 5s */
-animation-delay:5s;
+animation:  transparence  8s infinite; /* même animation, mais décalée de 5s */
+animation-delay:2s;
 position:absolute ;
 width:95%;
 max-height:390px;
@@ -48,8 +48,8 @@ border-radius:12px;
 }
 
 #image4 {
-animation:  transparence  7s infinite; /* même animation, mais décalée de 5s */
-animation-delay:5s;
+animation:  transparence  8s infinite; /* même animation, mais décalée de 5s */
+animation-delay:2s;
 position:absolute ;
 width:95%;
 max-height:390px;
