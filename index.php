@@ -10,7 +10,7 @@
         <meta name="Mes Repos"  content="poser consulter jours congés travail équipe ">
 
         <link rel="icon" href="mes-repos.ico" >
-
+        <link rel="icon" type="image/x-icon" href="img/photos/favicon.ico">
         <title>Poser mes repos en ligne</title>
         <link href="./css/style.css" rel="stylesheet" type="text/css" />
     </head>

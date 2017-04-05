@@ -1,6 +1,7 @@
 <footer>
-    <!--Une ligne pour separer le bas de page
-    <hr/>-->
+    <!--Une ligne pour separer le bas de page-->
+    <hr/>
+    FOOTER
     <p>site exercice du CNAM NFA017-083-021.</p>
     <p>Dominique D. et Stéphane L.</p>
     <a href="./planDuSite.php">Plan du site et documents utiles.</a><br/>

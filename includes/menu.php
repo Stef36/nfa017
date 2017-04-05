@@ -5,7 +5,7 @@
 
     <input type="checkbox" id="toggle-nav" aria-label="open/close navigation">
   <label for="toggle-nav" class="nav-button"></label>
-
+MENU
   <div class="nav-inner">
     
       <ul> <!-- liste non ordonnée -->
