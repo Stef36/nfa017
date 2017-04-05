@@ -59,9 +59,11 @@
   	$administrateurs= $pdo->query($sql);
 	
 	/* test de login et mdp */
-	if (($administrateur = $administrateurs->fetch() /* verifie que le login est dans la base */) 
+	if (($administrateur = $administrateurs->fetch()) 
+		/* verifie que le login est dans la base */ 
 			& 
-		 ( password_verify ($mdp_entre_user,$administrateur['mem_mdp'])/* test du hash */)) 
+		 ( password_verify ($mdp_entre_user,$administrateur['mem_mdp'])
+		 	/* test du hash */)) 
 		{
 
 			$_SESSION['ticket']=true;
@@ -70,7 +72,8 @@
 
  			
 
-  
+  		<!-- =================   SECTION AUTORISEE ADMINISTRATION  ===================== -->
+
     	<span id="administration"> 
 
 			<H2><?php echo 'Bienvenue '.$administrateur['mem_prenom'].'<br> alias '.$login.'.';
@@ -78,15 +81,30 @@
   		 		
   			<p>Attention, toute modification influe sur le contenu de la base de donnée...</br>
   		Soyez sûr de ce que vous faites.</p>
-  		
 
 		</span>
+
+		<section>
+			
+			<p>
+				Vous souhaitez inscrire une équipe: <a href="administration_inscrire_equipe.php">ICI</a>
+			</p>
+			<p>
+				Vous souhaitez invalider une équipe: <a href="administration_invalider_equipe.php">ICI</a>
+			</p>
+		</section>
+
 		<?php 
 		
 		}
 
 	// si la connection a échoué
+
+
+
 	else {	$_SESSION['ticket']=false; ?>
+
+	<!-- =================   SECTION NON AUTORISEE ADMINISTRATION  ===================== -->
 	<span>
 		<H2>Désolé <?php echo ($_SESSION['login']);?>, mot de passe et/ou login incorrect...
 		<a href="connection_back_office.php"><img src="./images/boutonRetour.png"></a></H2>
