@@ -1,4 +1,7 @@
 /* -------------        Images "mouvante "  -------------------- */
+/* -------------        en format desktop "  ------------------- */
+
+
 
 #animation{
 position: relative; /* prépare la position des images incluses au container */
@@ -6,17 +9,20 @@ height:0;
 padding-top: 35%; /* fixe la hauteur proportionnelle au container */
 }
 
-@keyframes transparence { /* définition de l'animation */
+
+
+@keyframes disparition { /* définition de l'animation */
 from  {opacity :1;} /* de pleine opacité */
-20% {opacity:1;}
-25% {opacity:0;}
-to  {opacity:0;}    /* à pleine transparence */
+25% {opacity:1;}
+27% {opacity:0;}
+95% {opacity:0;}
+to  {opacity:1;}    /* à pleine disparition */
 }
 
 
 
 #image1 {
-animation:  transparence  8s infinite;	/* animation "transparence" */																			/* en boucle  */
+animation:  disparition  20s infinite;	/* animation "disparition" */																			/* en boucle  */
 position:absolute ;
 width:95%;
 max-height:390px;
@@ -25,10 +31,10 @@ top: 5%;
 border-radius:12px;
 }
 
-
 #image2 {
-animation:  transparence  8s infinite; /* même animation, mais décalée de 3s */
-animation-delay:2s;
+
+animation:  disparition  20s infinite;	/* animation "disparition" */
+animation-delay:5s;
 position:absolute ;
 width:95%;
 max-height:390px;
@@ -39,8 +45,9 @@ border-radius:12px;
 
 
 #image3 {
-animation:  transparence  8s infinite; /* même animation, mais décalée de 5s */
-animation-delay:4s;
+
+animation:  disparition  20s infinite; /* même animation, mais décalée de 5s */
+animation-delay:10s;
 position:absolute ;
 width:95%;
 max-height:390px;
@@ -49,9 +56,9 @@ top: 5%;
 border-radius:12px;
 }
 
-#image4 {
-animation:  transparence  8s infinite; /* même animation, mais décalée de 5s */
-animation-delay:6s;
+#image4 {	
+animation:  disparition  20s infinite; /* même animation, mais décalée de 5s */
+animation-delay:15s;
 position:absolute ;
 width:95%;
 max-height:390px;
@@ -59,3 +66,4 @@ margin-left: 2.5%;
 top: 5%;
 border-radius:12px;
 }
+
