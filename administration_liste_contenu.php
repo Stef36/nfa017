@@ -53,7 +53,7 @@
   	
   	$sql = "SELECT 		mem_prenom, mem_login, mem_mdp
 			FROM 		membre 
-			WHERE 		mem_persona = 'Gestionaire' 
+			WHERE 		mem_persona = 'Gestionnaire' 
 			AND 		mem_login = '$login' " ;
 			
   	$administrateurs= $pdo->query($sql);
