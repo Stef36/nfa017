@@ -40,7 +40,7 @@
 			</li>
 			
 			<li>
-			<a href="./formulaire-contact.php">Contact</a>
+			<a href="./contact.php">Contact</a>
 			</li>
 
 			<?php if ( !isset ($_SESSION['ticket'])) { 
@@ -58,7 +58,7 @@
 				?>
 
 			<li>
-			<a href="./administration_liste_contenu.php">Admin.</a>
+			<a href="./backoffice.php">Admin.</a>
 			</li>	<?php 
 
 
