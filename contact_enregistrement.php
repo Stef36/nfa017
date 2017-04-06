@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <?php 	/* si une ou aucune donnée du formulaire n'a été entrée 
 				(on arrive direct sur la page) */
 	
@@ -57,7 +59,7 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 
 <section id="centre">
 	<!-- ===================== MENU ===================== -->
-	<?php include("includes/menu.php"); ?>
+	<?php include("includes/menu.php"); echo session_cache_expire();?>
 
   	<!-- =========================== Resultat ici ========================= -->
 	<div>
