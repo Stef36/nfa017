@@ -14,7 +14,7 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 			/* tempo 2 secondes*/
 			sleep (2);
 			// redirection
-			header('Location: ./contact.php');
+			header('Location: "./contact.php"');
   		// on ne charge pas le code suivant
 			exit();
 			
