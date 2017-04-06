@@ -13,7 +13,7 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 			/* tempo 2 secondes*/
 			sleep (2);
 			// redirection
-			header('Location: mesrepos.domduf.com/contact.php');
+			header('Location: http://mesrepos.domduf.com/contact.php');
   		// on ne charge pas le code suivant
 			exit();
 			
