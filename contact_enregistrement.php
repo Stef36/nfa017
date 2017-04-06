@@ -1,4 +1,4 @@
-<?php session_start();?>
+
 
 <?php 	/* si une ou aucune donnée du formulaire n'a été entrée 
 				(on arrive direct sur la page) */
@@ -20,6 +20,8 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 			exit();
 			
 		}
+
+		 session_start();?>
 ?>
 
 <!DOCTYPE html>
