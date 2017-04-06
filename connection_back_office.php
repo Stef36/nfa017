@@ -42,7 +42,7 @@
   		<span>
   		
   		<H2>Administrateur du site, connectez vous:</H2>
-  		<form name="formConnect" method="POST" action="./administration_liste_contenu.php">
+  		<form name="formConnect" method="POST" action="./backoffice.php">
   			<table>
   	     		<tr>
         			<th >login</th>
@@ -74,7 +74,7 @@
   			<table> 
             <tr>
       				
-      				<td><a href="administration_liste_contenu.php"><img src="./images/boutons/retour.png"></a></td>
+      				<td><a href="backoffice.php"><img src="./images/boutons/retour.png"></a></td>
       			</tr>
             
             <tr>
