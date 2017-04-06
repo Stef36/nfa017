@@ -32,11 +32,7 @@
   </section>
 
   <!-- Début du FORMULAIRE -->
-    <form name="preInscription"  method="POST" action="contact.php" onsubmit="return valider()" >
-  
-  
-    
-  
+    <form name="preInscription"  method="POST" action="contact_enregistrement.php" onsubmit="return valider()" >
   
     
   <div>
@@ -87,6 +83,10 @@
     <p><input type="submit" value="Envoyer à notre secretaire" /> ou alors...<input type="reset" value="J'annule tout, désolé." />
     </p>
     </form>	
+
+
+
+
   <!-- ===================== BAS DE PAGE  ===================== -->
 
   <?php include("includes/basDePage.php"); ?>
