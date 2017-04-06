@@ -10,10 +10,11 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 				!isset($_POST['ip']) || $_POST['ip']=='' ) 
 		
 		{ 
+			echo "pas de Javascript...";
 			/* tempo 2 secondes*/
 			sleep (2);
 			// redirection
-			header('Location: http://mesrepos.domduf.com/contact.php');
+			header('Location: ./contact.php');
   		// on ne charge pas le code suivant
 			exit();
 			
