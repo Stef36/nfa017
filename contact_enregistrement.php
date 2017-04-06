@@ -1,5 +1,3 @@
-
-
 <?php 	/* si une ou aucune donnée du formulaire n'a été entrée 
 				(on arrive direct sur la page) */
 	
