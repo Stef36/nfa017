@@ -14,7 +14,7 @@
 
 	<link rel="icon" href="icone.ico" />
 
-	<title> | connection </title>
+	<title>Mes Repos | BackOffice </title>
 	<link href="./css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <!-- ======================================================= -->
@@ -108,15 +108,6 @@
 			  			</form>
 
 
-		<section>
-			
-			<p>
-				Vous souhaitez inscrire une équipe: <a href="administration_inscrire_equipe.php">ICI</a>
-			</p>
-			<p>
-				Vous souhaitez invalider une équipe: <a href="administration_invalider_equipe.php">ICI</a>
-			</p>
-		</section>
 
 		<?php 
 		

@@ -3,18 +3,18 @@
 <html lang="fr-fr" >
 
 <!-- ================ Connection bdd via PDO ================ -->
-<?php //include("./includes/connection.php"); ?>
+<?php include("./includes/connection.php"); ?>
 
 <!-- ======================================================= -->
 <head>
 
-<meta charset="UTF-8" lang="fr">
-<meta name="description"  content="liens contenus administrables">
+  <meta charset="UTF-8" lang="fr">
+  <meta name="description"  content="liens contenus administrables">
 
-<link rel="icon" href="soullat2.ico" />
+  <link rel="icon" href="soullat2.ico" />
 
-<title>Mes Repos | adminnistration </title>
-<link href="./css/styles.css" rel="stylesheet" type="text/css" />
+  <title>Mes Repos | Administration </title>
+  <link href="./css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <!-- ======================================================= -->
 
