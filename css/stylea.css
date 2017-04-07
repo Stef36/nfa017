@@ -1,0 +1,52 @@
+body {
+    background-color:black;
+    color:white;
+  }
+H1{
+    color:white;
+}
+
+.headera{
+    border:2px dashed red;
+    text-align:center;
+}
+/*=====================WARM==================*/
+#warm{
+    border:2px solid red;
+}
+
+/*===============BLOC CREER UNE EQUIPE===================*/
+#creer_equipe{
+    border:2px solid blue;
+    
+}
+
+#flex{
+    display:flex;
+    
+}
+
+#equipe_presentation{
+    border:2px dashed green;
+    width:60%;
+    margin:5px;
+}
+/*===================BLOC LOGIN=======================*/
+.log_employe{
+    border:2px solid yellow;
+    width:40%;
+    right:0;
+    text-align:center;
+    margin:5px;
+}
+
+/*====================BLOC DESCRIPTION EQUIPE==================*/
+#description_equipe{
+    border:2px solid white;
+    margin:5px;
+}
+
+#equipes{
+    border:2px solid pink;
+    margin:30px;
+}
