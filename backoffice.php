@@ -84,6 +84,30 @@
 
 		</span>
 
+			<form name="form_liste_contenu" method="POST" action="./administration_page.php">
+			  			
+			  				<table>	
+			  		      		<tr>
+			        				<th>Votre choix: ?</th>
+			        					<td>
+											<input type="radio" name="rad-1" id="messages" checked="checked" value="messages" />Consultation des messages d' internautes.<br />
+
+											<input type="radio" name="rad-1" id="membres"  value="membres" />Membres<br />
+
+
+			             					<input type="radio" name="rad-1" id="inscrire-equipe"  value="inscrire" />Inscrire une équipe.<br />
+
+			             					<input type="radio" name="rad-1" id="invalider-equipe"  value="invalider" />Invalider une équipe.<br />
+
+			      				</tr>	
+			      				<tr>
+			        				<th>C'est parti mon kiki</th>
+			        				<td><input type="submit" name="soumission" id="soumission" value="Soumettre" /></td>
+			      				</tr>
+			  				</table>
+			  			</form>
+
+
 		<section>
 			
 			<p>
