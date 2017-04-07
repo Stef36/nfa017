@@ -35,7 +35,7 @@
   		</form>
   		
 <!-- ==================================================================  -->
-<p><a href="backoffice.php"><img src="./images/boutonRetour.png"></a><p>
+<p><a href="backoffice.php"><img src="./images/boutons/retour.png"></a><p>
 <!-- ==================================================================  -->
 
 
@@ -78,5 +78,5 @@
 		
 
 
-		<p><a href="backoffice.php"><img src="./images/boutonRetour.png"></a><p>
+		<p><a href="backoffice.php"><img src="./images/boutons/retour.png"></a><p>
 			
