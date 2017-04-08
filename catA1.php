@@ -12,6 +12,7 @@
         <link rel="icon" href="mes-repos.ico" >
         <link rel="icon" type="image/x-icon" href="img/photos/favicon.ico">
         <title>Information du personnel</title>
+       
         <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
     </head>
 <!-- ======================================================= -->
@@ -34,9 +35,9 @@
         <?php include("includes/menu.php"); ?>
     </nav>
 <!--===================COMMENT CREER UNE EQUIPE==============-->
-        <section id="creer_equipe">
+        <section id="creer_personnel">
             <?php include("includes/inscription_personnel.inc.php"); ?>
-        
+         </section>
             <section id="flex">
                 
     
@@ -46,19 +47,16 @@ log_employe
                 <?php include("includes/log_employe.inc.php"); ?>
                 </aside>
         
-            </section></section>
+       
+        </section>
 <!--===========================DESCRIPTION EQUIPE=======================-->
-        <section id="description_equipe">
+        <section id="attribution_conges">
         
-description_equipe
-        <?php include("includes/description_equipe.inc.php"); ?>
+ATTRIBUTION DES CONGES<
+        <?php include("includes/attribution_conges.inc.php"); ?>
         
         
-<!--===========================EQUIPES=======================-->
-        <article id="equipes">
-equipes
-        <?php include("includes/equipes.inc.php"); ?>
-        </article>
+        
         
         </section>
         

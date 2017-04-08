@@ -1,5 +1,7 @@
 <!--==================COMMENT CREER UNE EQUIPE====================-->
-
+<head>
+<link href="./css/stylea.css" rel="stylesheet" type="text/css" />
+</head>
 
 <h2>FICHE D'INSCRIPTION</h2>
     <form class="contact_form" action="inscription_personnel.php" Method="post" name="formulaire"  >
