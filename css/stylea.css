@@ -50,3 +50,26 @@ H1{
     border:2px solid pink;
     margin:30px;
 }
+
+/*=======================PAGE CAT A1=============================*/
+
+#creer_equipe{
+    text-align:left;
+}
+
+/*=======================couleur du placeholder====================*/
+::-moz-placeholder { 
+    color: grey; 
+} 
+::-webkit-input-placeholder { 
+    color: grey; 
+}
+
+.contact_form>label { 
+    width:250px;
+    margin-top: 3px; 
+    display:inline-block; 
+    float:left; 
+    padding:3px; 
+
+} 
