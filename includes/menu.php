@@ -3,11 +3,12 @@
 
 <nav id = "navigation" role="navigation" >  
 
-	<input type="checkbox" id="toggle-nav" aria-label="open/close navigation">
+    <input type="checkbox" id="toggle-nav" aria-label="open/close navigation">
   <label for="toggle-nav" class="nav-button"></label>
 
   <div class="nav-inner">
     
+
   	<ul> <!-- liste non ordonnée -->
 
 			<li>
@@ -67,6 +68,7 @@
 		</ul>
 
 	
+
   </div>
 
 </nav>

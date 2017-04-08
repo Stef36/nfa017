@@ -9,13 +9,13 @@
 <!-- ======================================================= -->
 <head>
 
-	<meta charset="UTF-8" lang="fr"/>
-	<meta name="description"  content="Contenus administrables">
+    <meta charset="UTF-8" lang="fr"/>
+    <meta name="description"  content="Contenus administrables">
 
-	<link rel="icon" href="icone.ico" />
+    <link rel="icon" href="icone.ico" />
 
-	<title> | connection </title>
-	<link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <title> | connection </title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <!-- ======================================================= -->
 
