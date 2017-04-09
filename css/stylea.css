@@ -63,7 +63,9 @@ H1{
     border:2px dashed white;
 }
 
-
+#attribution_conges{
+    border:2px dashed red;
+}
 
 /*=======================couleur du placeholder====================*/
 ::-moz-placeholder { 
@@ -75,17 +77,20 @@ H1{
 
 /*=======================formulaire inscription==========================*/
 /*================/!\==NE FONCTIONNE PAS==/!\============================*/
-.contact_form>label { 
+.attribution_form>label { 
     width:250px;
     margin-top: 3px; 
     display:inline-block; 
     float:left; 
     padding:3px; 
+    color:red;
 
 } 
 
-.contact_form>input { 
+.attribution_form>input { 
     height:20px; 
     width:400px; 
     padding:5px 8px; 
 } 
+/*======================================================================*/
+/*======================================================================*/

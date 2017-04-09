@@ -7,7 +7,7 @@
     <form class="contact_form" action="inscription_personnel.php" Method="post" name="formulaire"  >
         <ul>
             <li><label for="noms">Nom Prénom :</label>
-                <input type="text" id="nom" name="nom" size="40" placeholder="Dupond Bernard" onblur="valid_nom()" required></li>
+                <input type="text" id="nom" name="nom" size="40" placeholder="Dupond Bernard" onblur="" required></li>
             <BR>
             <li><label for="number">Age :</label>
                 <input size="3" type="text" name="age" id="age" placeholder="24"> </li>
