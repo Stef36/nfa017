@@ -75,9 +75,9 @@
     
     }    
 
-  	if ($_SESSION['choix_administration'] == 'quiJoueQuoi'){
+  	if ($_SESSION['choix_administration'] == 'inscrire-equipe'){
   	
-  		include("includes/quiJoueQuoi_admin.inc.php");
+  		include("includes/inscrire-equipe_admin.inc.php");
   	
   	}
 
@@ -93,8 +93,11 @@
   	if ($_SESSION['choix_administration'] == 'onEnParle'){
   		include("includes/onEnParle_admin.inc.php");
   	
-  	}
-  	
+  	} ?>
+  	<!-- bouton de retour au choix d'administration -->
+<p><a href="backoffice.php"><img src="./images/boutons/retour.png"></a><p>
+
+    <?php
   	}
   	
   	else { ?>

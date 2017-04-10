@@ -63,6 +63,5 @@
 		<input type="submit" name="soumission" id="soumission" value="Selectionner pour modifier" />
 		</form>
 		
-		<!-- bouton de retour au choix d'administration -->
-		<p><a href="backoffice.php"><img src="./images/boutons/retour.png"></a><p>
+
 			

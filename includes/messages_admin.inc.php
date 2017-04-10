@@ -77,6 +77,4 @@
 <H2> Création du fichier CSV de la liste des messages.</H2>
 		
 
-
-		<p><a href="backoffice.php"><img src="./images/boutons/retour.png"></a><p>
 			
