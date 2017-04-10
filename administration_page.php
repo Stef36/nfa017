@@ -44,7 +44,7 @@
  if ( isset($_SESSION['login'])) {
   	
 
-	if ( $_SESSION['vientDeAdminContenu']==1 ){
+    if ( $_SESSION['vientDeAdminContenu']==1 ){
   	$_SESSION['choix_administration']=$_POST ['rad-1'];}
   	
   	
@@ -68,6 +68,12 @@
   		include("includes/membres_admin.inc.php");
   	
   	}
+
+    if ($_SESSION['choix_administration'] == 'visualiser-equipe'){
+    
+      include("includes/visualiser-equipe_admin.inc.php");
+    
+    }    
 
   	if ($_SESSION['choix_administration'] == 'quiJoueQuoi'){
   	

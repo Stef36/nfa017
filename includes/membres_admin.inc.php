@@ -1,5 +1,5 @@
 
-<H2> Gestion des membres et des musiciens </H2>
+<H2> Gestion des membres du Back-Office </H2>
 
 <!-- bouton de retour au choix d'administration -->
 <p><a href="backoffice.php"><img src="./images/boutons/retour.png"></a><p>
