@@ -15,9 +15,9 @@
             <li><label for="adresse">Adresse :</label>
                 <input size="50" type="text" name="adresse" id="adresse" placeholder="24, rue des spectateurs"></li>
             <BR>
-            <li><label for="text">Fonction <label>
+            <li><label for="text">Fonction :</label>
                 <input size="50" type="text" name="fonction" id="fonction" placeholder="Electricien"></li>
-            <br>
+            <BR>
             <li><label for="adresse_mail">Adresse mail :</label>
                 <input type="email" id="adresse_mail" name="mail" size="30" placeholder="bdupond@lecnam.net" onblur="valid_mail()"></li>
             <BR>

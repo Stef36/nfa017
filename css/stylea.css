@@ -40,7 +40,7 @@ H1{
 .log_employe{
     border:2px solid yellow;
     width:40%;
-    right:0;
+    right:10px;
     text-align:center;
     margin:5px;
 }
@@ -88,9 +88,13 @@ H1{
 
 .contact_form input { 
     height:15px; 
-    width:40px; 
+    width:200px; 
     padding:5px 8px; 
 } 
+
+.adresse_mail{
+    width:200px;
+}
 
 .attribution_form ul li label { 
     width:250px;
