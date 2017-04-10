@@ -63,9 +63,9 @@
   	}
   	
   	
-  	if ($_SESSION['choix_administration'] == 'musiciens'){
+  	if ($_SESSION['choix_administration'] == 'membres'){
   	
-  		include("includes/musiciens_admin.inc.php");
+  		include("includes/membres_admin.inc.php");
   	
   	}
 

@@ -95,9 +95,9 @@
 											<input type="radio" name="rad-1" id="membres"  value="membres" />Membres<br />
 
 
-			             					<input type="radio" name="rad-1" id="inscrire-equipe"  value="inscrire" />Inscrire une équipe.<br />
+			             		<input type="radio" name="rad-1" id="inscrire-equipe"  value="inscrire" />Inscrire une équipe.<br />
 
-			             					<input type="radio" name="rad-1" id="invalider-equipe"  value="invalider" />Invalider une équipe.<br />
+			             		<input type="radio" name="rad-1" id="invalider-equipe"  value="invalider" />Invalider une équipe.<br />
 
 			      				</tr>	
 			      				<tr>
