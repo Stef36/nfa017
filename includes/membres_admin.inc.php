@@ -1,31 +1,34 @@
-<!-- ================ Connection bdd via PDO ================ -->
-<?php include("includes/connection.php"); ?>
-
 
 <H2> Gestion des membres et des musiciens </H2>
 
 <!-- bouton de retour au choix d'administration -->
-		<p><a href="administration_liste_contenu.php"><img src="./images/boutonRetour.png"></a><p>
+<p><a href="backoffice.php"><img src="./images/boutons/retour.png"></a><p>
+
+
 <?php
 
-	$sqlmembre = "SELECT 	mem_id, mem_description_musico, mem_civilite,
-							mem_nom, mem_prenom, mem_date_naiss, mem_persona,
-							mem_activite
+	$sqlmembre = "SELECT 	mem_id, mem_login, mem_nom, mem_prenom,
+							mem_date_naiss,
+							mem_email, mem_actif, mem_lien_photo,
+							mem_persona, mem_description
+							
 					FROM 		membre " ;
 		
 		$membres= $pdo->query($sqlmembre); ?>
 		
 		
 		
-		<form name="choix-zicos" method="POST" action="./administration_musicien_modif.php">
+		<form name="choix-membres" method="POST" action="./administration_membres_modif.php">
 		
 		<table id="tableau_messages">
 			<tr>
 				
 				<th>id</th>
-				<th>zico ?</th>
+				<th>login</th>
+				<th>Membre<br/>actif ?</th>
 				<th>Prénom Nom</th>
-				<th>description musico</th>
+				<th>Date naissance</th>
+				<th>description</th>
 			</tr>
 
 		
@@ -37,13 +40,15 @@
 				<tr>
 				
 					
-					<td><input type="radio" name="choixZic" id="choixZic"  value = "<?php echo $membre['mem_id']; ?>" >
+					<td><input type="radio" name="choixMembre" id="choixMembre"  value = "<?php echo $membre['mem_id']; ?>" >
 						<?php echo $membre['mem_id']; 
-						if ($membre['mem_persona']=='Gestionaire'){echo '*';}?>
+						if ($membre['mem_persona']=='Gestionnaire'){echo '*';}?>
 					</td>
-					<td><?php if ($membre['mem_activite']=='oui'){ echo ' X ';}?></td>
+					<td><?php echo $membre['mem_login']?></td>
+					<td><?php if ($membre['mem_actif']){ echo ' X ';}?></td>
 					<td><?php echo $membre['mem_prenom'].' '.$membre['mem_nom']?></td>
-					<td><?php echo $membre['mem_description_musico']?></td>
+					<td><?php echo $membre['mem_date_naiss']?></td>
+					<td><?php echo $membre['mem_description']?></td>
 				
 				
 				</tr>
@@ -56,5 +61,5 @@
 		</form>
 		
 		<!-- bouton de retour au choix d'administration -->
-		<p><a href="administration_liste_contenu.php"><img src="./images/boutonRetour.png"></a><p>
+		<p><a href="backoffice.php"><img src="./images/boutons/retour.png"></a><p>
 			
