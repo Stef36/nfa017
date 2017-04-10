@@ -38,7 +38,11 @@
             <br>
         </fieldset>
         
-        
+<!--==========Boutons de réinitialisation et de validation===============-->
+            <center>
+            <input type="Reset" value="Réinitialiser" />
+                <input type="submit" value="Envoyer" onclick="alert(ValidBotBoot());">
+            </center>
         
         
     </form>

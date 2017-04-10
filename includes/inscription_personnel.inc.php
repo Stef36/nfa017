@@ -13,7 +13,7 @@
                 <input size="3" type="text" name="age" id="age" placeholder="24"> </li>
             <BR>
             <li><label for="adresse">Adresse :</label>
-                <input size="50" type="text" name="adresse" id="adresse" placeholder="24, rue des spectateurs"></li>
+                <input size="50" type="text" name="adresse" id="adresse" placeholder="24, rue des spectateurs - 36000 Chateauroux"></li>
             <BR>
             <li><label for="text">Fonction :</label>
                 <input size="50" type="text" name="fonction" id="fonction" placeholder="Electricien"></li>
