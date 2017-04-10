@@ -77,6 +77,21 @@ H1{
 
 /*=======================formulaire inscription==========================*/
 /*================/!\==NE FONCTIONNE PAS==/!\============================*/
+.contact_form ul li label { 
+    width:250px;
+    margin-top: 3px; 
+    display:inline-block; 
+    float:left; 
+    padding:3px; 
+    color:red;
+} 
+
+.contact_form input { 
+    height:15px; 
+    width:40px; 
+    padding:5px 8px; 
+} 
+
 .attribution_form ul li label { 
     width:250px;
     margin-top: 3px; 
@@ -84,12 +99,11 @@ H1{
     float:left; 
     padding:3px; 
     color:red;
-
 } 
 
 .attribution_form input { 
-    height:20px; 
-    width:400px; 
+    height:15px; 
+    width:40px; 
     padding:5px 8px; 
 } 
 /*======================================================================*/
