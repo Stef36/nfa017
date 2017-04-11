@@ -46,7 +46,7 @@
 						if ($equipe['equipe_visible']){echo '*';}?>
 					</td>
 					<td><?php echo $equipe['equipe_login']?></td>
-					<td><?php echo $equipe['equipe_nom'].' '.$equipe['equipe_nom']?>
+					<td><?php echo $equipe['equipe_nom']?>
 					<td><?php echo $equipe['equipe_entreprise']?></td>
 					<td><?php echo $equipe['equipe_mail']?></td>
 

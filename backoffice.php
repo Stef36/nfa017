@@ -77,37 +77,46 @@
     	<span id="administration"> 
 
 			<H2><?php echo 'Bienvenue '.$administrateur['mem_prenom'].'<br> alias '.$login.'.';
-				$_SESSION['vientDeAdminContenu']=1; ?> </H2>
+				$_SESSION['vientDeBackoffice']=1; ?> </H2>
   		 		
   			<p>Attention, toute modification influe sur le contenu de la base de donnée...</br>
   		Soyez sûr de ce que vous faites.</p>
 
 		</span>
 
+
+
 			<form name="form_liste_contenu" method="POST" action="./administration_page.php">
 			  			
-			  				<table>	
-			  		      		<tr>
-			        				<th>Votre choix: ?</th>
-			        					<td>
-											<input type="radio" name="rad-1" id="messages" checked="checked" value="messages" />Consultation des messages d' internautes.<br />
+			  	<table>	
 
-											<input type="radio" name="rad-1" id="membres"  value="membres" />Membres<br />
+			  		<tr>
+			        	<th>Votre choix: ?</th>
+			        		<td>
+								<input type="radio" name="rad-1" id="messages" checked="checked" value="messages" />Consultation des messages d' internautes.<br />
+
+								<input type="radio" name="rad-1" id="membres"  value="membres" />Membres<br />
 
 
-                      <input type="radio" name="rad-1" id="visualiser-equipe"  value="visualiser-equipe" />Visualiser la liste des équipes.<br />
+                      			<input type="radio" name="rad-1" id="visualiser-equipe"  value="visualiser-equipe" />Visualiser la liste des équipes.<br />
 
 			             		<input type="radio" name="rad-1" id="inscrire-equipe"  value="inscrire-equipe" />Inscrire une équipe.<br />
 
 			             		<input type="radio" name="rad-1" id="invalider-equipe"  value="invalider" />Invalider une équipe.<br />
+			             	</td>
 
-			      				</tr>	
-			      				<tr>
-			        				<th>C'est parti mon kiki</th>
-			        				<td><input type="submit" name="soumission" id="soumission" value="Soumettre" /></td>
-			      				</tr>
-			  				</table>
-			  			</form>
+			      	</tr>
+
+			      	<tr>
+			        	<th>C'est parti mon kiki</th>
+			        	
+			        	<td><input type="submit" name="soumission" id="soumission" value="Soumettre" />
+			        	</td>
+			      	</tr>
+
+			  	</table>
+
+			</form>
 
 
 
