@@ -93,60 +93,67 @@
 			<tr>
 				<th>equipe_nom</th>
 				<td>
-				<select name="equipe_nom" id ="equipe_nom">
-		 			<?php 
-
-					/* tableau des choix de nom d'equipe */
-					
-					$choix = array('chant','flûte','clarinette','saxophone','trompette','trombone',
-									'tuba','guitare','basse','batterie','percussions','piano / orgue',
-									'autre','sans');
-					
- 
-					foreach ($choix as $choi) {	 ?>
-							<option value="<?php echo ($choi); ?>" 
-									<?php 
-										if ($choi == $equipe['equipe_nom']) { ?>
-										 selected="selected" 
-										<?php } ?> 
-										><?php
-									
-							echo ($choi); ?>
-							</option>							
-							<?php } ?>
-				</select>
+					<input type="textarea" maxlengthid="200"
+					name="equipe_nom" 
+					value="<?php echo ($equipe['equipe_nom']); ?>">
 				</td>
 			</tr>
 
-
-
 			<tr>
-					<th>equipe_type</th>
-					<td>
-					<input type="text" 
-		   				 name="equipe_type" value="<?php echo ($equipe['equipe_type']); ?>" 
-		    id="equipe_type"/>
-					</td>
-			</tr>	
-				
-			<tr>
-					<th>equipe_marque</th>
-					<td>
-					<input type="text" 
-		   				 name="equipe_marque" value="<?php echo ($equipe['equipe_marque']); ?>" 
-		    id="equipe_marque"/>
-					</td>
+				<th>equipe_entreprise</th>
+				<td>
+					<input type="textarea" maxlengthid="200"
+					name="equipe_entreprise" 
+					value="<?php echo ($equipe['equipe_entreprise']); ?>">
+				</td>
 			</tr>
 
-	
 			<tr>
-					<th>equipe_no_serie</th>
-					<td>
-					<input type="text" 
-		   				 name="equipe_no_serie" value="<?php echo ($equipe['equipe_no_serie']); ?>" 
-		    id="equipe_no_serie"/>
-					</td>
-			</tr>	
+				<th>equipe_responsable</th>
+				<td>
+					<input type="textarea" maxlengthid="30"
+					name="equipe_responsable" 
+					value="<?php echo ($equipe['equipe_responsable']); ?>">
+				</td>
+			</tr>
+
+			<tr>
+				<th>equipe_mail</th>
+				<td>
+					<input type="email" maxlengthid="100"
+					name="equipe_mail" 
+					value="<?php echo ($equipe['equipe_mail']); ?>">
+				</td>
+			</tr>
+
+			<tr>
+				<th>equipe_logo</th>
+				<td>
+					<input type="textarea" maxlengthid="300"
+					name="equipe_logo" 
+					value="<?php echo ($equipe['equipe_logo']); ?>">
+				</td>
+			</tr>
+
+			<tr>
+				<th>equipe_visible ?</th>
+				<td>
+					<input type="radio" 
+					name="equipe_visible" 
+					value="1" > oui
+					
+
+				</td>
+				<td>
+					<input type="radio" 
+					name="equipe_visible" 
+					value="0"> non
+				</td>				
+			</tr>
+
+
+
+	
 					
   		</table>
   		
