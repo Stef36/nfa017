@@ -8,24 +8,24 @@
 <head>
 
 	<meta charset="UTF-8" lang="fr"/>
-	<meta name="description"  content="Soul Latitude liens contenus administrables">
+	<meta name="description"  content="Mes Repos contenus administrables">
 
-	<link rel="icon" href="soullat2.ico" />
+	<link rel="icon" href="mesRepos.ico" />
 
-	<title>Soul Latitude | modif instrument </title>
+	<title>Mes Repos | modif équipes </title>
 	<link href="./css/soul.css" rel="stylesheet" type="text/css" />
 </head>
 <!-- ======================================================= -->
 
 
 <body>
-<?php include_once("./includes/analyticstracking.inc.php"); ?>
+
 
 
 
 <!-- ===================== TITRE ===================== -->
 
-<?php require ("./includes/header.inc.php"); titre_header('Administration </br>modif. d\'un instrument')?>
+<?php require ("./includes/header.inc.php"); titre_header('Administration </br>modif. d\'une équipe')?>
 
 
 <!-- ===================== VISUEL ===================== -->
