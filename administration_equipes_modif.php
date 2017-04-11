@@ -140,14 +140,22 @@
 				<td>
 					<input type="radio" 
 					name="equipe_visible" 
-					value="1" > oui
+					value="1" 
+						<?php if ($equipe['equipe_visible']==1){
+							echo "checked";
+						} ?>
+					> oui
 					
 
 				</td>
 				<td>
 					<input type="radio" 
 					name="equipe_visible" 
-					value="0"> non
+					value="0" 
+						<?php if ($equipe['equipe_visible']==0){
+							echo "checked";
+						} ?>
+					> non
 				</td>				
 			</tr>
 
