@@ -1,3 +1,5 @@
+<?php Session_start()?>
+
 <!DOCTYPE html>
 <html lang="fr-fr">
 
@@ -8,7 +10,7 @@
 <head>
 
 <meta charset="UTF-8" lang="fr"/>
-<meta name="description"  content="Soul Latitude validation modif instrument">
+<meta name="description"  content="Mes Repos validation modif équipe">
 
 <link rel="icon" href="soullat2.ico" />
 
@@ -50,59 +52,60 @@
  		?>
 		<H3>Liste des mises à jour</H3>
 		<p><?php
+
  		/* récup des variables */
-		$choixInstru=$_SESSION['choixInstru'];
- 		
- 		echo ('inst_id='.$choixInstru);
+		$choixEquipe=$_SESSION['choixEquipe'];
+ 		echo ('equipe_id='.$choixEquipe);
 		?></br>
 
 		<?php
-		$inst_nom=$_POST ['inst_nom'];?>
-		<?php echo ($inst_nom);?></br><?php
+		$equipe_nom=$_POST ['equipe_nom'];?>
+		<?php echo ($equipe_nom);?></br><?php
 
+		$equipe_entreprise=$_POST ['equipe_entreprise'];?>
+		<?php echo ($equipe_entreprise);?></br><?php
+
+		$equipe_responsable=$_POST ['equipe_responsable'];?>
+		<?php echo ($equipe_responsable);?></br><?php
+
+		$equipe_mail=$_POST ['equipe_mail'];?>
+		<?php echo ($equipe_mail);?></br><?php
 		
-		$inst_type=$_POST ['inst_type'];?>
-		<?php echo ($inst_type);?></br><?php
+		$equipe_logo=$_POST ['equipe_logo'];?>
+		<?php echo ($equipe_logo);?></br><?php
 
-		$inst_marque=$_POST ['inst_marque'];?>
-		<?php echo ($inst_marque);?></br><?php
-
-		$inst_no_serie=$_POST ['inst_no_serie'];?>
-		<?php echo ($inst_no_serie);?></br>
-		
-
-		
+		$equipe_visible=$_POST ['equipe_visible'];?>
+		<?php echo ($equipe_visible);?></br>		
 
 
 
 	<?php
+
 	/* flag qui évite d'actualiser la requete sur la même page */
-	
-	 if ($_SESSION ['flag_requete_update_instrument']==0) {
+	 if ($_SESSION ['flag_requete_update_equipe']==0) {
 	
 	/*--------INSERTION EN BD -----------------*/
 	
-	$sql_update_instrument = "	UPDATE 	instrument
-								SET inst_nom = ?, inst_type = ?, inst_marque = ?, inst_no_serie = ?
-								WHERE inst_id = ? " ;
+	$sql_update_equipe = "	UPDATE 	equipe
+							SET equipe_nom = ?, equipe_entreprise = ?, equipe_responsable  = ?, equipe_mail = ?,
+								equipe_logo = ? , equipe_visible =?
+							WHERE equipe_id = ? " ;
 			
   	/* requete préparée */
-  	$prepar_inst = $pdo->prepare($sql_update_instrument);
-  	$nouvelles_valeurs= array ($inst_nom, $inst_type, $inst_marque, $inst_no_serie ,$choixInstru );
+  	$prepar_equipe = $pdo->prepare($sql_update_equipe);
+
+  	$nouvelles_valeurs = array ($equipe_nom, $equipe_entreprise, $equipe_responsable, $equipe_mail ,$equipe_logo, $equipe_visible,$choixEquipe  );
 	
 	/* execution de la requete préparée plus haut */
-	$prepar_inst->execute ($nouvelles_valeurs);
+	$prepar_equipe->execute ($nouvelles_valeurs);
 	
 	/* mise à 1 du flag  */
-	$_SESSION ['flag_requete_update_instrument']= 1;
+	$_SESSION ['flag_requete_update_equipe']= 1;
 	
 	}
 	else
 			{
 			echo ('Votre requète a déjà été enregistrée...inutile d\'insister');}
-
-
-
 
 	}
 

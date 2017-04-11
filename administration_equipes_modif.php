@@ -81,7 +81,7 @@
   		<p>Attention, toute modification influe sur le contenu de la base de donnée...</br>
   		Soyez sûr de ce que vous faites.</p>
   		
-  	<form name="modifEquipe"  method="POST" action="./administration_modif_equipe_validation.php" >
+  	<form name="modifEquipe"  method="POST" action="./administration_equipes_modif_validation.php" >
   	
   		<table id="tableau_messages">
 			<tr>
@@ -158,11 +158,7 @@
 					> non
 				</td>				
 			</tr>
-
-
-
-	
-					
+			
   		</table>
   		
   		<input type="submit" name="submit" value="Modifier je suis sûr de tout..." />
