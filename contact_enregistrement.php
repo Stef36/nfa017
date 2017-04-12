@@ -20,7 +20,7 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 		}
 
 		 session_start();?>
-?>
+
 
 <!DOCTYPE html>
 <html lang="fr-fr" >
@@ -84,6 +84,7 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 		/* mise au format string du no de télephone, afin de récuperer l'éventuel 0 du début  */
 		$monTel= htmlentities((string)$_POST['monTel']);
 		$choix=htmlentities($_POST['CHOIX']);
+		$login_souhait = htmlentities($_POST['login_souhait']);
 		$message=htmlentities($_POST['rem']);	
 		
 		// adresse IP que verra l'internaute sur la page contact.php
@@ -131,7 +132,11 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 				<td>Votre message</td>
 			</tr>
 			<tr>
-				<td><?php echo ($choix);?></td>
+				<td><?php echo ($choix);
+						if ($choix=='contact'){
+							echo "<br/>Mon désir de login est: ".$login_souhait;
+						}
+						?></td>
 				<td><?php echo ($message);?></td>
 			</tr>
 		</table>
