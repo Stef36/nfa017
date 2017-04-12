@@ -44,7 +44,7 @@
  if ( isset($_SESSION['login'])) {
   	
 
-    if ( $_SESSION['vientDeAdminContenu']==1 ){
+    if ( $_SESSION['vientDeBackoffice']==1 ){
   	$_SESSION['choix_administration']=$_POST ['rad-1'];}
   	
   	
