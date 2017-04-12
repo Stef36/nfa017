@@ -48,7 +48,7 @@
 		$messages= $pdo->query($sqlmessage); ?>
 		
 		<table id="tableau_messages">
-		<tr>
+		<tr><th>sel</th>
 			<th>id</th>
 			<th>Prénom Nom</th>
 			<th>mail</th>
@@ -58,23 +58,38 @@
 			<th>Date Time</th>
 			<th>IP visiteur</th>
 		</tr>
-		<?php 
-		while ($message = $messages->fetch()) {
-		?> <tr>
-			<td><?php echo $message['contact_id']?></td>
-			<td><?php echo $message['contact_prenom'].' '.$message['contact_nom']?></td>
-			<td><?php echo $message['contact_email']?></td>
-			<td><?php echo $message['contact_telephone']?></td>
-			<td><?php echo $message['contact_objet']?></td>
-			<td><?php echo $message['contact_message']?></td>
-			<td><?php echo $message['contact_dateTime']?></td>
-			<td><?php echo $message['contact_adresseIP']?></td>
-			</tr>
-		<?php 
-		}?> 
+
+
+
+		<!-- formulaire à vocation double: montrer les messages, et 
+			permettre de selectionner un message pour inscription de l'équipe -->
+		<form name="select_message_inscription" method="POST" action="./administration_inscription_equipe.php">
+		
+			<?php 
+			while ($message = $messages->fetch()) {
+			?> <tr>
+
+				<td><input type="radio" name="sel_login" id="sel_login" 
+				 value="<?php  echo $message['contact_message']; ?> " /></td>
+				<td><?php echo $message['contact_id']?></td>
+				<td><?php echo $message['contact_prenom'].' '.$message['contact_nom']?></td>
+				<td><?php echo $message['contact_email']?></td>
+				<td><?php echo $message['contact_telephone']?></td>
+				<td><?php echo $message['contact_objet']?></td>
+				<td><?php echo $message['contact_message']?></td>
+				<td><?php echo $message['contact_dateTime']?></td>
+				<td><?php echo $message['contact_adresseIP']?></td>
+				</tr>
+			<?php 
+			}?> 
+				<td><input type="submit" name="soumission" id="soumission" value="Inscrire" /></td>
+		</form>
+
 		</table>
 		
 <H2> Création du fichier CSV de la liste des messages.</H2>
+
+
 		
 
 			
