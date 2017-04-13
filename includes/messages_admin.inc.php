@@ -49,11 +49,13 @@
 		
 		<table id="tableau_messages">
 		<tr><th>sel</th>
+			<th>Login souhaité</th>
 			<th>id</th>
 			<th>Prénom Nom</th>
 			<th>mail</th>
 			<th>tel</th>
-			<th>Objet</th>	
+			<th>Objet</th>
+
 			<th>Message</th>
 			<th>Date Time</th>
 			<th>IP visiteur</th>
@@ -71,6 +73,7 @@
 
 				<td><input type="radio" name="sel_login" id="sel_login" 
 				 value="<?php  echo $message['contact_message']; ?> " /></td>
+				<td><?php echo $message['contact_login_souhait']?></td>			 
 				<td><?php echo $message['contact_id']?></td>
 				<td><?php echo $message['contact_prenom'].' '.$message['contact_nom']?></td>
 				<td><?php echo $message['contact_email']?></td>

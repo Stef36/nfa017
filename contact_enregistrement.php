@@ -84,7 +84,7 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 		/* mise au format string du no de télephone, afin de récuperer l'éventuel 0 du début  */
 		$monTel= htmlentities((string)$_POST['monTel']);
 		$choix=htmlentities($_POST['CHOIX']);
-		$login_souhait = htmlentities($_POST['login_souhait']);
+		$contact_login_souhait = htmlentities($_POST['login_souhait']);
 		$message=htmlentities($_POST['rem']);	
 		
 		// adresse IP que verra l'internaute sur la page contact.php
@@ -134,7 +134,7 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 			<tr>
 				<td><?php echo ($choix);
 						if ($choix=='contact'){
-							echo "<br/>Mon désir de login est: ".$login_souhait;
+							echo "<br/>Mon désir de login est: ".$contact_login_souhait;
 						}
 						?></td>
 				<td><?php echo ($message);?></td>
@@ -154,14 +154,14 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 		/* requète d'insertion préparée du message dans la bd */
 		$sqlInsertionMessage= 
 		"INSERT INTO contact (contact_nom, contact_prenom, contact_email,
-		 contact_telephone, contact_objet, contact_message, contact_dateTime, 
+		 contact_telephone, contact_objet, contact_login_souhait,  contact_message, contact_dateTime, 
 			contact_adresseIP)
-				VALUES (?,?,?,?,?,?,?,?)";
+				VALUES (?,?,?,?,?,?,?,?,?)";
 
 
 		/* insertion via pdo */	
 		$stmt=$pdo->prepare($sqlInsertionMessage);
-		$nouveau_message=array($nom,$prenom,$monMail,$monTel,$choix,$message,$contact_dateTime,$adresseIP);
+		$nouveau_message=array($nom,$prenom,$monMail,$monTel,$choix, $contact_login_souhait,$message,$contact_dateTime,$adresseIP);
 		$stmt->execute($nouveau_message);
 
 		/* affichage du message de l'heure d'enregistrement */
@@ -183,7 +183,7 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 			$corp="<H4>Message de Monsieur ou Madame<br> --- ".$prenom." ".$nom."---</H4>
 					<H5>Adresse Mail: <a href=\"mailto:".$monMail."\">$monMail</a></H5>".
 					"<H5>adresse IP: ".$adresseIP."</H5>".
-					"<H5>Tel: ".$monTel."</H5><H6>Sujet: ".$choix."</H6><p>Voici le texte: <br>".$misEnFormeMessage."<p>";
+					"<H5>Tel: ".$monTel."</H5><H6>Sujet: ".$choix."<br>Login souhaité: ".$contact_login_souhait."</H6><p>Voici le texte: <br>".$misEnFormeMessage."<p>";
 			$headers  = 'MIME-Version: 1.0' . "\r\n";
      		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 			
