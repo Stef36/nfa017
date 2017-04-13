@@ -72,7 +72,7 @@
 			?> <tr>
 
 				<td><input type="radio" name="sel_login" id="sel_login" 
-				 value="<?php  echo $message['contact_message']; ?> " /></td>
+				 value="<?php  echo $message['contact_login_souhait']; ?> " /></td>
 				<td><?php echo $message['contact_login_souhait']?></td>			 
 				<td><?php echo $message['contact_id']?></td>
 				<td><?php echo $message['contact_prenom'].' '.$message['contact_nom']?></td>
