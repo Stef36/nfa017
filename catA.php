@@ -48,9 +48,9 @@ equipe-presentation
                 </article>
     
 <!--====================login=============================-->
-                <aside class="log_employe">
-log_employe
-                <?php include("includes/log_employe.inc.php"); ?>
+                <aside class="log_equipe">
+log_equipe
+                <?php include("includes/log_equipe.inc.php"); ?>
                 </aside>
         
             </section></section>

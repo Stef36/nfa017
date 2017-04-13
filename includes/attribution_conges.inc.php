@@ -32,17 +32,18 @@
                 <legend>Commentaires :</legend>
             </center>
             <center><br>
-                <textarea name="message" rows="8" cols="100" placeholder="Tapez votre message" onblur="valid_message()" ></textarea>
+                <textarea name="message" rows="8" cols="100" placeholder="Tapez votre message" ></textarea>
                 <br>
             </center>
             <br>
         </fieldset>
         
 <!--==========Boutons de réinitialisation et de validation===============-->
-            <center>
+            <center class="bouton">
             <input type="Reset" value="Réinitialiser" />
-                <input type="submit" value="Envoyer" onclick="alert(ValidBotBoot());">
+                <input type="submit" value="Envoyer" onclick="alert();"/>
+            
             </center>
-        
+        <br><br><br><br><br>
         
     </form>

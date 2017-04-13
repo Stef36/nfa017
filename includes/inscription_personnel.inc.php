@@ -30,7 +30,7 @@
                 <legend>Commentaires :</legend>
             </center>
             <center><br>
-                <textarea name="message" rows="8" cols="100" placeholder="Tapez votre message" onblur="valid_message()" required></textarea>
+                <textarea name="message" rows="8" cols="100" placeholder="Tapez votre message" ></textarea>
                 <br>
             </center>
             <br>

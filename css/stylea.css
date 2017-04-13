@@ -33,13 +33,13 @@ H1{
 
 #equipe_presentation{
     border:2px dashed green;
-    width:60%;
+    width:80%;
     margin:5px;
 }
 /*===================BLOC LOGIN=======================*/
-.log_employe{
+.log_equipe{
     border:2px solid yellow;
-    width:40%;
+    width: 100%;
     right:10px;
     text-align:center;
     margin:5px;
@@ -101,7 +101,7 @@ H1{
     display:inline-block; 
     float:left; 
     padding:3px; 
-    color:red;
+    color:white;
 } 
 
 .attribution_form input { 
@@ -109,5 +109,12 @@ H1{
     width:25px; 
     padding:5px 8px; 
 } 
+
+.bouton{
+    display:inline-block;
+    align:center;
+    height:20px; 
+    width:50px; 
+}
 /*======================================================================*/
 /*======================================================================*/

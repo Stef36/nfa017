@@ -34,18 +34,18 @@
         <nav>
         <?php include("includes/menu.php"); ?>
     </nav>
+    
+<!--====================login=============================-->
+                <aside class="log_equipe">
+log_equipe
+                <?php include("includes/log_equipe.inc.php"); ?>
+                </aside>
+                
 <!--===================COMMENT CREER UNE EQUIPE==============-->
         <section id="creer_personnel">
             <?php include("includes/inscription_personnel.inc.php"); ?>
          </section>
             <section id="flex">
-                
-    
-<!--====================login=============================-->
-                <aside class="log_employe">
-log_employe
-                <?php include("includes/log_employe.inc.php"); ?>
-                </aside>
         
        
         </section>
@@ -55,21 +55,11 @@ log_employe
         <?php include("includes/attribution_conges.inc.php"); ?>
         
         
-
- 
-        
-        
         </section>
         
         
         
-        
-        
-        
-        
-        
-        
-        
+
         
         
         
@@ -78,6 +68,8 @@ log_employe
         
 <!-- ===================== BAS DE PAGE  ===================== -->
         <?php include("includes/basDePage.php"); ?>
+        
+        <script language="JavaScript" type="text/javascript" src="scripts.js"></script>
     </body>
 
 </html>
