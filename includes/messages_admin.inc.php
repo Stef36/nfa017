@@ -71,9 +71,10 @@
 			while ($message = $messages->fetch()) {
 			?> <tr>
 
-				<td><input type="radio" name="sel_login" id="sel_login" 
-				 value="<?php  echo $message['contact_login_souhait']; ?> " /></td>
-				<td><?php echo $message['contact_login_souhait']?></td>			 
+				<td><input type="radio" name="selection_id" id="selection_id" 
+				 value="<?php  echo $message['contact_id']; ?> " /></td>
+
+				<td><?php echo $message['contact_login_souhait']?></td>		 
 				<td><?php echo $message['contact_id']?></td>
 				<td><?php echo $message['contact_prenom'].' '.$message['contact_nom']?></td>
 				<td><?php echo $message['contact_email']?></td>
@@ -83,8 +84,9 @@
 				<td><?php echo $message['contact_dateTime']?></td>
 				<td><?php echo $message['contact_adresseIP']?></td>
 				</tr>
-			<?php 
-			}?> 
+				<?php /* fin de la boucle d'affichage */
+				}
+				$_SESSION ['flag_requete_ajout_equipe']=0; ?>
 				<td><input type="submit" name="soumission" id="soumission" value="Inscrire" /></td>
 		</form>
 
