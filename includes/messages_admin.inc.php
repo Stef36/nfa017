@@ -48,9 +48,11 @@
 		$messages= $pdo->query($sqlmessage); ?>
 		
 		<table id="tableau_messages">
-		<tr><th>sel</th>
-			<th>Login souhaité</th>
+		<tr>
 			<th>id</th>
+			<th>sel</th>
+			<th>Login souhaité</th>
+
 			<th>Prénom Nom</th>
 			<th>mail</th>
 			<th>tel</th>
@@ -70,12 +72,20 @@
 			<?php 
 			while ($message = $messages->fetch()) {
 			?> <tr>
+				<td><?php echo $message['contact_id']?></td>
+				<td>
+				<?php if ($message['contact_objet']=='contact'
+							& $message['contact_login_souhait']!='' ){?>
 
-				<td><input type="radio" name="selection_id" id="selection_id" 
-				 value="<?php  echo $message['contact_id']; ?> " /></td>
+					<input type="radio" name="selection_id" id="selection_id" 
+				 value="<?php  echo $message['contact_id']; ?> " />				
+
+					<?php } ?>
+
+				</td>
 
 				<td><?php echo $message['contact_login_souhait']?></td>		 
-				<td><?php echo $message['contact_id']?></td>
+
 				<td><?php echo $message['contact_prenom'].' '.$message['contact_nom']?></td>
 				<td><?php echo $message['contact_email']?></td>
 				<td><?php echo $message['contact_telephone']?></td>
