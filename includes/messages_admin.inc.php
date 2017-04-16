@@ -47,8 +47,35 @@
 		
 		$messages= $pdo->query($sqlmessage); 
 
-	$sqlloginEquipe= "SELECT 		equipe_login
+
+	$sqlloginEquipe= "SELECT 	equipe_login
 		FROM 		equipe ;" ;
+
+		//declaration du tableau des logins utilisés
+		$tabLoginUtilises=array();
+
+		// recherche en BD des logins utilisés.
+		$loginUtilises= $pdo->query($sqlloginEquipe);
+
+		
+		while ($loginUtilise = $loginUtilises->fetch()){
+
+				$tabLoginUtilises[]=$loginUtilise['equipe_login'];
+			}
+
+
+
+		function parcoursLogin($log, $tabLoginUtilises) {
+			$test=false;
+			
+				if (in_array($log,$tabLoginUtilises )){
+					$test=true;
+				}
+
+			return $test;
+			
+		}
+
 
 		?>
 		
@@ -80,12 +107,24 @@
 				<td><?php echo $message['contact_id']?></td>
 				<td>
 				<?php if ($message['contact_objet']=='contact'
-							& $message['contact_login_souhait']!='' ){?>
+							& $message['contact_login_souhait']!='' )
+					{
+						// parcours les différents logins déjà utilisés
+						if (parcoursLogin($message['contact_login_souhait'],$tabLoginUtilises ))
+								{
+								// si le login souhaité est déjà utilisé,
+								// ne montre pas le bouton de selection
+								// donc... ne fait rien
+								}
 
-					<input type="radio" name="selection_id" id="selection_id" 
-				 value="<?php  echo $message['contact_id']; ?> " />				
+							else  {// affiche le bouton de sélection ?> 
+								<input type="radio" name="selection_id" id="selection_id" 
+				 				value="<?php  echo $message['contact_id']; ?> " />	
+							<?php }
 
-					<?php } ?>
+			
+
+					 } ?>
 
 				</td>
 
