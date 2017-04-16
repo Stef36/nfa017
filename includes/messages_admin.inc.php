@@ -45,7 +45,12 @@
 		FROM 		contact 
 		ORDER BY $tri ;" ;
 		
-		$messages= $pdo->query($sqlmessage); ?>
+		$messages= $pdo->query($sqlmessage); 
+
+	$sqlloginEquipe= "SELECT 		equipe_login
+		FROM 		equipe ;" ;
+
+		?>
 		
 		<table id="tableau_messages">
 		<tr>
