@@ -59,7 +59,12 @@
       
       <fieldset ><legend>Votre message a pour objet:</legend>
       
-        <INPUT TYPE="radio" NAME="CHOIX" VALUE="contact" checked>Merci de créer une équipe, je renseigne ci-dessous le loggin souhaité.<BR> 
+        <INPUT TYPE="radio" NAME="CHOIX" VALUE="contact" checked>Merci de créer une équipe, je renseigne ci-dessous le loggin souhaité.<BR>
+
+
+        <!-- TODO fonction js de verif de format de login souhaité -->
+        <input type="text" name="login_souhait" size="50"placeholder="nomEquipe-ENTREPRISE" onblur="logFunc()">Le login souhaité.<br/>
+
         <INPUT TYPE="radio" NAME="CHOIX" VALUE="information">information<BR> 
         <INPUT TYPE="radio" NAME="CHOIX" VALUE="amelioration">suggestion d'amélioration<BR> 
        

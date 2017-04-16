@@ -44,7 +44,7 @@
  if ( isset($_SESSION['login'])) {
   	
 
-	if ( $_SESSION['vientDeAdminContenu']==1 ){
+    if ( $_SESSION['vientDeBackoffice']==1 ){
   	$_SESSION['choix_administration']=$_POST ['rad-1'];}
   	
   	
@@ -63,15 +63,21 @@
   	}
   	
   	
-  	if ($_SESSION['choix_administration'] == 'musiciens'){
+  	if ($_SESSION['choix_administration'] == 'membres'){
   	
-  		include("includes/musiciens_admin.inc.php");
+  		include("includes/membres_admin.inc.php");
   	
   	}
 
-  	if ($_SESSION['choix_administration'] == 'quiJoueQuoi'){
+    if ($_SESSION['choix_administration'] == 'visualiser-equipe'){
+    
+      include("includes/visualiser-equipe_admin.inc.php");
+    
+    }    
+
+  	if ($_SESSION['choix_administration'] == 'inscrire-equipe'){
   	
-  		include("includes/quiJoueQuoi_admin.inc.php");
+  		include("includes/inscrire-equipe_admin.inc.php");
   	
   	}
 
@@ -87,8 +93,11 @@
   	if ($_SESSION['choix_administration'] == 'onEnParle'){
   		include("includes/onEnParle_admin.inc.php");
   	
-  	}
-  	
+  	} ?>
+  	<!-- bouton de retour au choix d'administration -->
+<p><a href="backoffice.php"><img src="./images/boutons/retour.png"></a><p>
+
+    <?php
   	}
   	
   	else { ?>
