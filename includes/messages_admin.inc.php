@@ -1,7 +1,7 @@
 
 <?php
 
-	$_SESSION['vientDeAdminContenu']=0;
+	$_SESSION['vientDeBackoffice']=0;
 	$tri=$_SESSION ['ordre_messages'];?>
 
 <H2> Affichage des messages reçus</H2>
