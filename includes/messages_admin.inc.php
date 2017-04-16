@@ -1,7 +1,7 @@
 
 <?php
 
-	$_SESSION['vientDeAdminContenu']=0;
+	$_SESSION['vientDeBackoffice']=0;
 	$tri=$_SESSION ['ordre_messages'];?>
 
 <H2> Affichage des messages reçus</H2>
@@ -45,12 +45,46 @@
 		FROM 		contact 
 		ORDER BY $tri ;" ;
 		
-		$messages= $pdo->query($sqlmessage); ?>
+		$messages= $pdo->query($sqlmessage); 
+
+
+	$sqlloginEquipe= "SELECT 	equipe_login
+		FROM 		equipe ;" ;
+
+		//declaration du tableau des logins utilisés
+		$tabLoginUtilises=array();
+
+		// recherche en BD des logins utilisés.
+		$loginUtilises= $pdo->query($sqlloginEquipe);
+
+		
+		while ($loginUtilise = $loginUtilises->fetch()){
+
+				$tabLoginUtilises[]=$loginUtilise['equipe_login'];
+			}
+
+
+
+		function parcoursLogin($log, $tabLoginUtilises) {
+			$test=false;
+			
+				if (in_array($log,$tabLoginUtilises )){
+					$test=true;
+				}
+
+			return $test;
+			
+		}
+
+
+		?>
 		
 		<table id="tableau_messages">
-		<tr><th>sel</th>
-			<th>Login souhaité</th>
+		<tr>
 			<th>id</th>
+			<th>sel</th>
+			<th>Login souhaité</th>
+
 			<th>Prénom Nom</th>
 			<th>mail</th>
 			<th>tel</th>
@@ -70,12 +104,32 @@
 			<?php 
 			while ($message = $messages->fetch()) {
 			?> <tr>
+				<td><?php echo $message['contact_id']?></td>
+				<td>
+				<?php if ($message['contact_objet']=='contact'
+							& $message['contact_login_souhait']!='' )
+					{
+						// parcours les différents logins déjà utilisés
+						if (parcoursLogin($message['contact_login_souhait'],$tabLoginUtilises ))
+								{
+								// si le login souhaité est déjà utilisé,
+								// ne montre pas le bouton de selection
+								// donc... ne fait rien
+								}
 
-				<td><input type="radio" name="selection_id" id="selection_id" 
-				 value="<?php  echo $message['contact_id']; ?> " /></td>
+							else  {// affiche le bouton de sélection ?> 
+								<input type="radio" name="selection_id" id="selection_id" 
+				 				value="<?php  echo $message['contact_id']; ?> " />	
+							<?php }
+
+			
+
+					 } ?>
+
+				</td>
 
 				<td><?php echo $message['contact_login_souhait']?></td>		 
-				<td><?php echo $message['contact_id']?></td>
+
 				<td><?php echo $message['contact_prenom'].' '.$message['contact_nom']?></td>
 				<td><?php echo $message['contact_email']?></td>
 				<td><?php echo $message['contact_telephone']?></td>
