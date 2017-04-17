@@ -53,8 +53,18 @@
 					<td><?php echo $equipe['equipe_login']?></td>
 
 					<!-- insertion du logo -->
-					<td><img src="<?php echo $equipe['equipe_logo']?>"
-							class="avatar_equipe" ></img>
+					<td> 
+
+					<?php if ($equipe['equipe_logo']) {
+						# code...
+						afficher_suivant_mime($equipe['equipe_logo'],$equipe['equipe_entreprise'] , NULL, 'logo_equipe', NULL );
+					}
+
+					 ?>
+
+					<!--
+					<img src="<?php echo $equipe['equipe_logo']?>"
+							class="logo_equipe" ></img> -->
 
 					</td>
 

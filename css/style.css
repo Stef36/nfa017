@@ -60,3 +60,9 @@ border-style: solid  ;
 border-width: 0px 1px 2px ;
 background-color: #B7AA3F;
 }
+
+/* ------------ logos des équipes */
+.logo_equipe {
+	width : 100px;
+	height: auto;
+}

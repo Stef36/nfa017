@@ -16,7 +16,7 @@
 		<p><?php echo $typeMime ; ?></p>
 			<?php 
 			if ($credit){ ?>
-			<p>Photo &copy <?php echo $credit ;?></p>
+			<p>logo &copy <?php echo $credit ;?></p>
 			<?php }?>
 		<?php 
 		}

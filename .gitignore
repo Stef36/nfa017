@@ -3,3 +3,6 @@
 
 #ignorer le fichier de connection
 connection.php
+
+# ignorer le repertoire des logos
+/logos
