@@ -1,7 +1,7 @@
 <?php Session_start()?>
 
 <!DOCTYPE html>
-<html lang="fr-fr" >
+<html lang="fr" >
 
 <!-- ======================================================= -->
     <head>
@@ -11,7 +11,8 @@
 
         <link rel="icon" href="mes-repos.ico" >
         <link rel="icon" type="image/x-icon" href="img/photos/favicon.ico">
-        <title>Equipes de travail</title>
+        <title>Information du personnel</title>
+       
         <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
     </head>
 <!-- ======================================================= -->
@@ -25,61 +26,40 @@
 
 <!-- ===================== TITRE ===================== -->
         <header class="headera">
-            <h1>LES EQUIPES DE TRAVAIL<H1>
+            <h1>INFORMATIONS DU PERSONNEL<H1>
+            <h3>INSCRIRE / MODIFIER UNE EQUIPE</h3>
         </header>
 
-<!--=======voir si possibilité===Menu de demande de validation================-->
-        <article id="warm">
-warm
-        
-        </article>
 <!-- ===================== MENU ===================== -->
         <nav>
         <?php include("includes/menu.php"); ?>
     </nav>
-<!--===================COMMENT CREER UNE EQUIPE==============-->
-        <section id="creer_equipe">
-            <?php include("includes/creer_equipe.inc.php"); ?>
-        
-            <section id="flex">
-                <article id="equipe_presentation">
-equipe-presentation
-                <?php include("includes/equipe_presentation.inc.php"); ?>
-                </article>
     
 <!--====================login=============================-->
-
                 <aside class="log_equipe">
 log_equipe
                 <?php include("includes/log_equipe.inc.php"); ?>
-
                 </aside>
+                
+<!--===================COMMENT CREER UNE EQUIPE==============-->
+        <section id="creer_personnel">
+            <?php include("includes/inscription_personnel.inc.php"); ?>
+         </section>
+            <section id="flex">
         
-            </section></section>
+       
+        </section>
 <!--===========================DESCRIPTION EQUIPE=======================-->
-        <section id="description_equipe">
+        <section id="attribution_conges">
         
-description_equipe
-        <?php include("includes/description_equipe.inc.php"); ?>
+        <?php include("includes/attribution_conges.inc.php"); ?>
         
-        
-<!--===========================EQUIPES=======================-->
-        <article id="equipes">
-equipes
-        <?php include("includes/equipes.inc.php"); ?>
-        </article>
         
         </section>
         
         
         
-        
-        
-        
-        
-        
-        
-        
+
         
         
         
@@ -88,6 +68,8 @@ equipes
         
 <!-- ===================== BAS DE PAGE  ===================== -->
         <?php include("includes/basDePage.php"); ?>
+        
+        <script language="JavaScript" type="text/javascript" src="scripts.js"></script>
     </body>
 
 </html>

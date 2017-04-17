@@ -22,6 +22,7 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 		 session_start();?>
 
 
+
 <!DOCTYPE html>
 <html lang="fr-fr" >
 
@@ -58,6 +59,7 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 <!-- ===================== VISUEL ===================== -->
 
 <section id="centre">
+
 	<!-- ===================== MENU ===================== -->
 	<?php include("includes/menu.php"); echo session_cache_expire();?>
 
@@ -207,6 +209,7 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 		?>
 
 	</div>
+
 
 </section>
 
