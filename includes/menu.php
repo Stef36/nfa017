@@ -17,7 +17,7 @@
 			</li>
 			
 			<li>
-			<a href="./inscrire-equipe.php">Les équipes</a>
+			<a href="./equipes_presentation.php">Les équipes</a>
 				<ul>
 					<li>
 					<a href="">inscrire / modifier</a>
