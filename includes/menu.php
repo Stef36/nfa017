@@ -20,7 +20,7 @@
 			<a href="./equipes_presentation.php">Les équipes</a>
 				<ul>
 					<li>
-					<a href="">inscrire / modifier</a>
+					<a href="equipes_inscrire_modifier.php">inscrire / modifier</a>
 					</li>
 					<li>
 					<a href="">gerer les congés</a>
