@@ -28,13 +28,17 @@
 			// affichage des logos des équipes
 
 
-			if (($equipe['equipe_visible']==TRUE) & ($equipe['equipe_logo']!='') ) {?>
+			if (($equipe['equipe_visible']==TRUE) )  {?>
 						<!-- affiche le nom de l'équipe -->
 						<p><?php echo $equipe['equipe_nom']; ?></p>
-
-						<!-- affiche le logo via la fonction afficher_suivant_mime() -->
+						<?php
+						if ($equipe['equipe_logo']!=''){ ?>
+							<!-- affiche le logo via la fonction afficher_suivant_mime() -->
 						<?php
 						afficher_suivant_mime($equipe['equipe_logo'],$equipe['equipe_entreprise'] , NULL, 'logo_equipe', NULL );
+
+						} else afficher_suivant_mime("./logos/Dom.jpg","MesRepos" , NULL, 'logo_equipe', NULL );
+						
 					}
 			}
 
