@@ -13,10 +13,10 @@
 		<img id = "<?php echo $id; ?>" class= "<?php echo $class;?>" src="<?php echo $fichier ;?>" alt="<?php echo $alt; ?> www.mesrepos.domduf.com"/>
 		</p>
 
-		<p><?php echo $typeMime ; ?></p>
+		<!-- <p><?php echo $typeMime ; ?></p> -->
 			<?php 
 			if ($credit){ ?>
-			<p>logo &copy <?php echo $credit ;?></p>
+			<p class= "<?php echo $class;?>">logo &copy <?php echo $credit ;?></p>
 			<?php }?>
 		<?php 
 		}
