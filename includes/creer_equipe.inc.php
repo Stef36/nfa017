@@ -13,4 +13,8 @@ if (! isset($_SESSION['ticket_equipe'])) { ?>
 <p>Dans un deuxième temps, vous pourrez consulter, autoriser ou rejeter les demandes de congés formulées par les membres de votre équipe.</p>
 <p>Bons congés !</p>
 
-<?php } ?>
+<?php 
+}
+else { ?>
+ 	<h2>------       VOTRE EQUIPE       ------</h2> <?php
+ } ?>
