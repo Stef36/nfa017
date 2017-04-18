@@ -6,7 +6,8 @@
 		// gestion de la connection
 
 
-	
+	// si on tente de se connecter via le log équipe------------------
+
 	if (isset($_POST['login_equipe'])) {
 
 		$log=$_POST['login_equipe'];
@@ -36,10 +37,14 @@
 
 		}
 
+
+	// si on tente de se déconnecter via le log équipe------------------
+
 		if (isset($_POST['deconnecter_equipe'])) {
-			if ($_POST['deconnecter_equipe']) {
-				
-				//session_start();
+			if ($_POST['deconnecter_equipe']=='OK') {
+
+				// fermeture de session
+				//session_start(); 
   				$_SESSION = array();
   				session_destroy();
 			}
