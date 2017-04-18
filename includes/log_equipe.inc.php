@@ -11,12 +11,12 @@
                     <table>
                         <tr>
                             <th >login d'équipe</th>
-                            <td ><input type="text" size="25" name="login_equipe" value="toto" id="login_equipe"/></td>
+                            <td ><input type="text" size="20" name="login_equipe" value="toto" id="login_equipe"/></td>
                         </tr>
 
                         <tr>
                             <th >mot de passe</th>
-                            <td ><input type="password" size="10" name="equipe-passwd" id="equipe-passwd" /></td>
+                            <td ><input type="password" size="20" name="equipe-passwd" id="equipe-passwd" /></td>
                         </tr>
         
                         <tr>
