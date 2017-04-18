@@ -2,7 +2,7 @@
 
 		// ================ Connection bdd via PDO ================
  		include("./includes/connection.php"); 
-
+		require('./includes/fonctions_utiles.php');//pour affichage des logos
 		// gestion de la connection
 
 
@@ -26,6 +26,8 @@
 					($log_equipe['equipe_login']==$log)
 					&
 					($log_equipe['equipe_mdp']==$mdp)
+					& 
+					($log_equipe['equipe_mdp']!='')
 					) {
 
 					$_SESSION['ticket_equipe']=1;

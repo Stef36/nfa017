@@ -9,8 +9,7 @@
 	// si la connection du chef d'équipe n'est pas active
 	if ( !isset($_SESSION['ticket_equipe']) OR ($_SESSION['ticket_equipe'])==0)
 	{
-			include("./includes/connection.php"); 
-	require('./includes/fonctions_utiles.php');//pour affichage des logos
+
 
 
 	$sqlequipe = "SELECT 		equipe_id, equipe_visible,
