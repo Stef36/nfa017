@@ -9,14 +9,16 @@
 	if ( $typeMime == 'image/jpeg' OR $typeMime =='image/png'OR $typeMime =='image/gif') 
 
 		{?>
-		<p>
-		<img id = "<?php echo $id; ?>" class= "<?php echo $class;?>" src="<?php echo $fichier ;?>" alt="<?php echo $alt; ?> www.mesrepos.domduf.com"/>
-		</p>
+		<span>
+			<p>
+			<img id = "<?php echo $id; ?>" class= "<?php echo $class;?>" src="<?php echo $fichier ;?>" alt="<?php echo $alt; ?> www.mesrepos.domduf.com"/>
+			</p>
 
-		<!-- <p><?php echo $typeMime ; ?></p> -->
-			<?php 
-			if ($credit){ ?>
-			<p class= "<?php echo $class;?>">logo &copy <?php echo $credit ;?></p>
+			<!-- <p><?php echo $typeMime ; ?></p> -->
+				<?php 
+				if ($credit){ ?>
+				<p class= "<?php echo $class;?>">logo &copy <?php echo $credit ;?></p>
+		</span>
 			<?php }?>
 		<?php 
 		}
