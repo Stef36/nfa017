@@ -1,14 +1,14 @@
 <!--================== LOG EQUIPE====================-->
 
-			
+            
 
             <?php if (!isset ($_SESSION['ticket_equipe'])) 
-            	{ /* si pas encore connecté */?> 
+                { /* si pas encore connecté */?> 
             <span>
                 
                 <H2>Responsable d'une équipe,</br> connectez vous:</H2>
                     <form name="formConnect" method="POST" >
-                    <table>
+                    <table class="log_equipe">
                         <tr>
                             <th >login d'équipe</th>
                             <td ><input type="text" size="20" name="login_equipe" value="toto" id="login_equipe"/></td>
@@ -31,18 +31,18 @@
 
                 if (isset($_SESSION['ticket_equipe'])) {
 
-                	// affichage si équipe connectée
-                 	echo "<p>OK</p>"; ?>
+                    // affichage si équipe connectée
+                     echo "<p>OK</p>"; ?>
 
-                 	<form name="deconnection_equipe" method="POST">
-                 		<table>
-                 			<input type="hidden" name="deconnecter_equipe" value="OK">
-                 			<tr>
-                 				<th>Se déconnecter ?</th>
-                 				<td><input type="submit" name="déconnection" id="déconnection" value="OUI" /></td>
-                 			</tr>
-                 		</table>
-                 	</form>
+                     <form name="deconnection_equipe" method="POST">
+                         <table>
+                             <input type="hidden" name="deconnecter_equipe" value="OK">
+                             <tr>
+                                 <th>Se déconnecter ?</th>
+                                 <td><input type="submit" name="déconnection" id="déconnection" value="OUI" /></td>
+                             </tr>
+                         </table>
+                     </form>
 
 
                  <?php } ?>

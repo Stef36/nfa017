@@ -55,7 +55,7 @@ equipe-presentation
     
 <!--====================login=============================-->
 
-                <aside class="log_equipe">
+                <aside class="log_equipea">
 log_equipe
                 <?php include("includes/log_equipe.inc.php"); ?>
 

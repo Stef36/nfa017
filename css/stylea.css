@@ -47,14 +47,16 @@ H1{
     margin:5px;
 }
 /*===================BLOC LOGIN=======================*/
-.log_equipe{
+.log_equipea{
     border:2px solid yellow;
     width: 100%;
     right:10px;
-
     text-align:center;
-    margin:5px;
+    padding:5px;
+    
 }
+
+
 
 /*====================BLOC DESCRIPTION EQUIPE==================*/
 #description_equipe{
@@ -98,7 +100,7 @@ H1{
 } 
 
 .contact_form input { 
-    height:15px; 
+    height:25px; 
     width:300px; 
     padding:5px 8px; 
 } 
@@ -117,16 +119,16 @@ H1{
 } 
 
 .attribution_form input { 
-    height:15px; 
-    width:25px; 
+    height:25px; 
+    width:45px; 
     padding:5px 8px; 
 } 
 
-.bouton{
+.bouton input{
     display:inline-block;
     align:center;
-    height:20px; 
-    width:50px; 
+    height:30px; 
+    width:100px; 
 }
 /*======================================================================*/
 /*======================================================================*/
