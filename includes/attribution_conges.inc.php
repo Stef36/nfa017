@@ -40,8 +40,10 @@
         
 <!--==========Boutons de réinitialisation et de validation===============-->
             <center class="bouton">
-            <input type="Reset" value="Réinitialiser" />
-                <input type="submit" value="Envoyer" onclick="alert();"/>
+<!--=========================UTILITER D'UN BOUTON RESET ?????=============-->
+            <!--<input type="Reset" value="Réinitialiser" />-->
+<!--======================================================================-->
+                <input type="submit" value="Valider" onclick="alert();"/>
             
             </center>
         <br><br><br><br><br>

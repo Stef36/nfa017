@@ -50,7 +50,3 @@
 
 
 
-<p>log_equipe </p>
-
-
-
