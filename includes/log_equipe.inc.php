@@ -38,8 +38,8 @@
                  		<table>
                  			<input type="hidden" name="deconnecter_equipe" value="OK">
                  			<tr>
-                 				<th>Se déconnecter</th>
-                 				<td><input type="submit" name="déconnection" id="déconnection" value="true" /></td>
+                 				<th>Se déconnecter ?</th>
+                 				<td><input type="submit" name="déconnection" id="déconnection" value="OUI" /></td>
                  			</tr>
                  		</table>
                  	</form>

@@ -29,7 +29,7 @@
 				# code...
 				$_SESSION['equipe_id']=$log_equipe;
 				$_SESSION['ticket_equipe']=1;
-				echo 'OK équipe'.$log_equipe['equipe_login'];
+				echo '<p>OK équipe: '.$log_equipe['equipe_login'];'</p>';
 			}
 			
 		}
