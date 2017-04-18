@@ -14,7 +14,7 @@
 		$mdp=$_POST['equipe-passwd'];
 
 		// test login 
-		$sql_log_equipe = "SELECT equipe_id, equipe_login, equipe_mdp, 									equipe_nom, equipe_entreprise, equipe_responsable, equipe_mail, equipe_logo
+		$sql_log_equipe = "SELECT equipe_id, equipe_login, equipe_mdp, 									equipe_nom, equipe_entreprise, equipe_responsable, equipe_mail, equipe_logo, equipe_visible
 							FROM 		equipe ;" ;
 		
 		$log_equipes= $pdo->query($sql_log_equipe);
@@ -28,6 +28,8 @@
 					($log_equipe['equipe_mdp']==$mdp)
 					& 
 					($log_equipe['equipe_mdp']!='')
+					&
+					($log_equipe['equipe_visible'])
 					) {
 
 					$_SESSION['ticket_equipe']=1;
@@ -41,7 +43,7 @@
 
 
 
-					echo '<p>OK équipe: '.$log_equipe['equipe_login'];'</p>';
+					//echo '<p>OK équipe: '.$log_equipe['equipe_login'];'</p>';
 					}
 				
 			}
