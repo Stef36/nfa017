@@ -14,26 +14,35 @@
 		$mdp=$_POST['equipe-passwd'];
 
 		// test login 
-		$sql_log_equipe = "SELECT equipe_id, equipe_login, equipe_mdp
+		$sql_log_equipe = "SELECT equipe_id, equipe_login, equipe_mdp, 									equipe_nom, equipe_entreprise, equipe_responsable, equipe_mail, equipe_logo
 							FROM 		equipe ;" ;
 		
 		$log_equipes= $pdo->query($sql_log_equipe);
 
-		//parcours la table des logs equipe
-		while ( $log_equipe=$log_equipes->fetch()) {
+			//parcours la table des logs equipe
+			while ( $log_equipe=$log_equipes->fetch()) {
 
-			if (
-				($log_equipe['equipe_login']==$log)
-				&
-				($log_equipe['equipe_mdp']==$mdp)
-				) {
-				# code...
-				$_SESSION['equipe_id']=$log_equipe;
-				$_SESSION['ticket_equipe']=1;
-				echo '<p>OK équipe: '.$log_equipe['equipe_login'];'</p>';
+				if (
+					($log_equipe['equipe_login']==$log)
+					&
+					($log_equipe['equipe_mdp']==$mdp)
+					) {
+
+					$_SESSION['ticket_equipe']=1;
+					$_SESSION['equipe_id']=$log_equipe['equipe_id'];
+					$_SESSION['equipe_login']=$log_equipe['equipe_login'];
+					$_SESSION['equipe_nom']=$log_equipe['equipe_nom'];
+					$_SESSION['equipe_entreprise']=$log_equipe['equipe_entreprise'];
+					$_SESSION['equipe_responsable']=$log_equipe['equipe_responsable'];
+					$_SESSION['equipe_mail']=$log_equipe['equipe_mail'];
+					$_SESSION['equipe_logo']=$log_equipe['equipe_logo'];
+
+
+
+					echo '<p>OK équipe: '.$log_equipe['equipe_login'];'</p>';
+					}
+				
 			}
-			
-		}
 
 		}
 
@@ -44,7 +53,7 @@
 			if ($_POST['deconnecter_equipe']=='OK') {
 
 				// fermeture de session
-				//session_start(); 
+ 
   				$_SESSION = array();
   				session_destroy();
 			}
