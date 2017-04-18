@@ -27,7 +27,30 @@
                     </table>
                 </form>
             </span>
-                <?php } ?>
+                <?php }
+
+                if (isset($_SESSION['ticket_equipe'])) {
+
+                	// affichage si équipe connectée
+                 	echo "<p>OK</p>"; ?>
+
+                 	<form name="deconnection_equipe" method="POST">
+                 		<table>
+                 			<input type="hidden" name="deconnecter_equipe" value="OK">
+                 			<tr>
+                 				<th>Se déconnecter</th>
+                 				<td><input type="submit" name="déconnection" id="déconnection" value="true" /></td>
+                 			</tr>
+                 		</table>
+                 	</form>
+
+
+                 <?php } ?>
+
+
+
 
 <p>log_equipe </p>
+
+
 

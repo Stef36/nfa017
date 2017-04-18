@@ -1,4 +1,9 @@
-<?php Session_start()?>
+<!-- ================ Connection bdd via PDO ================ -->
+<?php include("./includes/gestion_connection_equipe.inc.php"); ?>
+
+
+<!-- ================ Connection bdd via PDO ================ -->
+<?php include("./includes/connection.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr-fr" >
