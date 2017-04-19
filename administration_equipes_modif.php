@@ -169,7 +169,7 @@
 				<th><label for="mon_fichier">Fichier (max. 500 Ko)</label></th>
 				<!-- à voir: https://openclassrooms.com/courses/upload-de-fichiers-par-formulaire  -->
 
-     			<td><input type="hidden" name="MAX_FILE_SIZE" value="62500" />
+     			<td><input type="hidden" name="MAX_FILE_SIZE" value="500000" />
      			<input type="file" name="logo_nouveau" id="logo_nouveau" /><br /></td>
 			</tr>	
 			

@@ -75,11 +75,42 @@
 		<?php echo ($equipe_logo);?></br><?php
 
 		$equipe_visible=$_POST ['equipe_visible'];?>
-		<?php echo ($equipe_visible);?></br>		
+		<?php echo ($equipe_visible);?></br>
+
+		<?php		
+
+		/* --------   Partie reservée à l'Upload des logos --------*/
+		
+		$uploaddir = './logos/'; // initialise où seront stockés les logos
+		$uploadfile = $uploaddir . basename($_FILES['logo_nouveau']['name']);
 
 
+		echo '<pre>';
+		if (move_uploaded_file($_FILES['logo_nouveau']['tmp_name'], $uploadfile)) {
+    		echo "Le fichier est valide, et a été téléchargé
+           avec succès. Voici plus d'informations :\n";
+			$equipe_logo=$uploaddir.$_FILES['logo_nouveau']['name'];
 
-	<?php
+
+			} else {
+    			echo "Aucun téléchargement de fichier,</br> 
+    			Ou attaque potentielle par téléchargement de fichiers:";
+				}
+
+		echo 'Informations de débogage :';
+		print_r($_FILES);
+		
+		echo '</br><p> type MIME du fichier:';
+		$type_Mime_fichier=$_FILES['logo_nouveau']['type'];
+		echo $type_Mime_fichier;
+		echo '</p></br>';
+
+
+		echo '</pre>';
+
+	/* ------------------------------------------------------------ */
+
+	
 
 	/* flag qui évite d'actualiser la requete sur la même page */
 	 if ($_SESSION ['flag_requete_update_equipe']==0) {
