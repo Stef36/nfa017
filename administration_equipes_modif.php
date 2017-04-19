@@ -50,7 +50,7 @@
   	
   	$sql_equipe = "	SELECT 		*
 						FROM 		equipe
-						WHERE 		equipe_id= '$choixEquipe' " ;
+						WHERE 		equipe_id = '$choixEquipe' " ;
 			
   	$equipes= $pdo->query($sql_equipe); ?>
  	
@@ -64,10 +64,10 @@
   
     <span id="administration"> 
 
-		<?php echo (' id choix equipe: '. $choixEquipe); ?>
+		<?php echo (' id choix equipe: '. $choixEquipe.'<br/>------------'); ?>
 
-		<H2><?php echo ('Modification de l\'equipe: '.$equipe['equipe_nom'].
-		'<br/> login '.$equipe['equipe_login'].' (id '.$equipe['equipe_id'].')');?><br> 
+		<H2><?php echo ('Modification de l\'équipe: <br/>'.$equipe['equipe_nom'].
+		'<br/> login: '.$equipe['equipe_login'].'<br/> (id '.$equipe['equipe_id'].')');?><br> 
 		
 			<?php	$_SESSION['vientDeBackoffice']=1;
 					$_SESSION ['flag_requete_update_equipe']=0 ?> </H2>
