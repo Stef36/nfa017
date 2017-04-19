@@ -104,7 +104,7 @@
 
 			             		<input type="radio" name="rad-1" id="inscrire-equipe"  value="inscrire-equipe" />Inscrire une équipe.<br />
 
-			             		<input type="radio" name="rad-1" id="invalider-equipe"  value="invalider" />Invalider une équipe.<br />
+
 			             	</td>
 
 			      	</tr>

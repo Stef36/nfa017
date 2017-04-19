@@ -79,21 +79,9 @@
   	
   		include("includes/inscrire-equipe_admin.inc.php");
   	
-  	}
+  	}?>
 
-
-	if ($_SESSION['choix_administration'] == 'instruments'){
-  	
-  		include("includes/instruments_admin.inc.php");
-  	
-  	}
-
-
-  	
-  	if ($_SESSION['choix_administration'] == 'onEnParle'){
-  		include("includes/onEnParle_admin.inc.php");
-  	
-  	} ?>
+    
   	<!-- bouton de retour au choix d'administration -->
 <p><a href="backoffice.php"><img src="./images/boutons/retour.png"></a><p>
 
