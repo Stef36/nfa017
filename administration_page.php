@@ -32,7 +32,7 @@
 
 <section id="centre">
 <!-- ===================== MENU ===================== -->
-	<?php /*include("includes/menu.php"); */ ?>
+	<?php include("includes/menu.php");  ?>
 <!-- ================================================ -->
 
   		<section id="administration">

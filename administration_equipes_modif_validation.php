@@ -58,6 +58,10 @@
  		echo ('equipe_id='.$choixEquipe);
 		?></br>
 
+
+
+
+
 		<?php
 		$equipe_nom=$_POST ['equipe_nom'];?>
 		<?php echo ($equipe_nom);?></br><?php
@@ -69,10 +73,24 @@
 		<?php echo ($equipe_responsable);?></br><?php
 
 		$equipe_mail=$_POST ['equipe_mail'];?>
-		<?php echo ($equipe_mail);?></br><?php
+		<?php echo ($equipe_mail);?></br>
 		
-		$equipe_logo=$_POST ['equipe_logo'];?>
-		<?php echo ($equipe_logo);?></br><?php
+		
+		
+
+				<!-- affichage du logo le cas échéant -->
+		<?php $equipe_logo=$_POST ['equipe_logo'];?>
+		<?php echo ($equipe_logo);?>
+				<?php
+				//pour affichage du logo
+				if ($equipe_logo!='') { // si logo déjà défini
+					 
+				require('./includes/fonctions_utiles.php');
+				afficher_suivant_mime($equipe_logo,$equipe_entreprise , NULL, 'logo_equipe', NULL );
+				} 
+			// sinon pas d'affichage de logo
+					
+				
 
 		$equipe_visible=$_POST ['equipe_visible'];?>
 		<?php echo ($equipe_visible);?></br>
@@ -86,27 +104,30 @@
 
 
 		echo '<pre>';
-		if (move_uploaded_file($_FILES['logo_nouveau']['tmp_name'], $uploadfile)) {
-    		echo "Le fichier est valide, et a été téléchargé
-           avec succès. Voici plus d'informations :\n";
-			$equipe_logo=$uploaddir.$_FILES['logo_nouveau']['name'];
+			if (move_uploaded_file($_FILES['logo_nouveau']['tmp_name'], $uploadfile)) {
+	    		echo "Le fichier est valide, et a été téléchargé
+	           avec succès. Voici plus d'informations :\n";
+				$equipe_logo=$uploaddir.$_FILES['logo_nouveau']['name'];
 
 
-			} else {
-    			echo "Aucun téléchargement de fichier,</br> 
-    			Ou attaque potentielle par téléchargement de fichiers:";
-				}
+				} else {
+	    			echo "Aucun téléchargement de fichier,</br> 
+	    			Ou attaque potentielle par téléchargement de fichiers:";
+					}
 
-		echo 'Informations de débogage :';
-		print_r($_FILES);
-		
-		echo '</br><p> type MIME du fichier:';
-		$type_Mime_fichier=$_FILES['logo_nouveau']['type'];
-		echo $type_Mime_fichier;
-		echo '</p></br>';
+			echo 'Informations de débogage :';
+			print_r($_FILES);
+			
+			echo '</br><p> type MIME du fichier:';
+			$type_Mime_fichier=$_FILES['logo_nouveau']['type'];
+			echo $type_Mime_fichier;
+			echo '</p></br>';
 
 
-		echo '</pre>';
+		echo '</pre>'; ?>
+
+		  	<!-- bouton de retour au choix d'administration -->
+<p><a href="backoffice.php"><img src="./images/boutons/retour.png"></a><p> <?php
 
 	/* ------------------------------------------------------------ */
 

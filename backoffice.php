@@ -102,7 +102,10 @@
 
                       			<input type="radio" name="rad-1" id="visualiser-equipe"  value="visualiser-equipe" />Visualiser la liste des équipes.<br />
 
+                      			<!-- OPTION inutile, inscription via formulaire
+
 			             		<input type="radio" name="rad-1" id="inscrire-equipe"  value="inscrire-equipe" />Inscrire une équipe.<br />
+			             		 -->
 
 
 			             	</td>
