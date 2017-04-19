@@ -89,7 +89,20 @@
 				<th>equipe_id</th>
 				<td><?php echo ($equipe['equipe_id']); ?></td>	
 			</tr>
-				
+
+
+			<!-- si le mdp de l'équipe n'a pas encore été défini -->
+
+
+			<tr>
+				<th>generer equipe_mdp</th>
+				<td>
+					<input type="checkbox" name="generation_mdp" value="1">
+				</td>
+			</tr>
+
+
+
 			<tr>
 				<th>equipe_nom</th>
 				<td>
