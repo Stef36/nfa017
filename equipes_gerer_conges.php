@@ -44,13 +44,17 @@
                 </select>
             </section>
 <!--=======================GESTION DES CONGES=============-->
-                
-                <?php include("includes/gestion_conges.inc.php"); ?>
-                
-                
-                
-                
-                
+                <section id="container">
+                    <?php include("includes/gestion_conges.inc.php"); ?>
+                    <div class="flex photo"><img src="" alt=""> 
+                    </div> 
+                    <section class="flex">
+                        <article >
+                            <?php include("equipe_conges_restants.inc.php"); ?>
+                        </article>
+                          
+                    </section>
+                </section>
                 
     </body>
 </html>

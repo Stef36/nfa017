@@ -22,24 +22,21 @@ H1{
 }
 
 /*===============BLOC CREER UNE EQUIPE===================*/
-#creer_equipe{
+#container{
     border:2px solid blue;
-    
+    display:flex;
+    flex-direction:column;
 }
 
-#creer_equipe > p >a {
+#container > p >a {
+
     color: yellow;
 }
 
 
-#flex{
-    display:flex;
+.flex{
     
-}
-
-#equipe_presentation{
     border:2px dashed green;
-
     width:80%;
     margin:5px;
 }
@@ -138,10 +135,16 @@ H1{
     font-size:20px;
 }
 
-
-
 #gestion_conges{
+    display:inline-block;
     border:2px dashed red;
     height:200px;
-    vertical-align:center;
+    width:30%;
+}
+
+.photo{
+    display:inline-block;
+    border:2px solid white;
+    height:200px;
+    width:200px;
 }
