@@ -111,8 +111,7 @@
 
 
 				} else {
-	    			echo "Aucun téléchargement de fichier,</br> 
-	    			Ou attaque potentielle par téléchargement de fichiers:";
+	    			echo "Aucun téléchargement de fichier,</br>(ou attaque potentielle par téléchargement de fichiers... peu probable) <br/>";
 					}
 
 			echo 'Informations de débogage :';
