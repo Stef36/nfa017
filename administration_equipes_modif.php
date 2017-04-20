@@ -111,7 +111,7 @@
 			<tr>
 				<th>generer equipe_mdp</th>
 				<td>
-					<input type="checkbox" name="generation_mdp" value="1">
+					<input type="checkbox" name="generation_mdp" >
 				</td>
 			</tr>
 

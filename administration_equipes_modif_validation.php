@@ -1,4 +1,6 @@
-<?php Session_start()?>
+<?php Session_start();
+	require('./includes/fonctions_utiles.php');
+?>
 
 <!DOCTYPE html>
 <html lang="fr-fr">
@@ -59,6 +61,36 @@
 		?></br>
 
 
+		<?php
+			if (isset($_POST ['generation_mdp'])) {
+				echo 'generer mdp  -> ';
+
+				// géneration du mdp
+
+				$alibaba=generer_mot_de_passe(4);
+				echo $alibaba.'<br/>';
+
+			} 
+			else {echo 'mot de passe  -> ';
+				
+
+			// affichage du mdp
+
+			 	$sql_alibaba = "	SELECT 		equipe_mdp
+						FROM 		equipe
+						WHERE 		equipe_id = '$choixEquipe' " ;
+			
+  				$alibabas= $pdo->query($sql_alibaba);
+
+  				while ($alibaba = $alibabas -> fetch()){
+  					$alibaba = $alibaba['equipe_mdp'];
+  					echo $alibaba.'<br/>';
+  				} ;
+
+  				};
+
+
+		?>
 
 
 
@@ -85,7 +117,6 @@
 				//pour affichage du logo
 				if ($equipe_logo!='') { // si logo déjà défini
 					 
-				require('./includes/fonctions_utiles.php');
 				afficher_suivant_mime($equipe_logo,$equipe_entreprise , NULL, 'logo_equipe', NULL );
 				} 
 			// sinon pas d'affichage de logo
