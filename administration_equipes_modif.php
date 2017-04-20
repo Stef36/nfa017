@@ -70,7 +70,8 @@
 		'<br/> login: '.$equipe['equipe_login'].'<br/> (id '.$equipe['equipe_id'].')');?><br> 
 		
 			<?php	$_SESSION['vientDeBackoffice']=1;
-					$_SESSION ['flag_requete_update_equipe']=0 ?> </H2>
+					$_SESSION ['flag_requete_update_equipe']=0;
+					$_SESSION['vientDeAdministrationEquipeModif']= 1; ?> </H2>
 
 <!-- ==================================================================  -->
 <!-- bouton de retour au choix d'administration -->

@@ -48,10 +48,11 @@
   	<?php /*recupération en POST des données à transmettre pour la connection à la bd */
   	 /*echo ('log de session: '.$_SESSION['login']); test*/
   	
- if ( isset($_SESSION['login'])) {
- 
- 		
- 		?>
+ if (isset($_SESSION['login']))
+ {		
+
+
+ 			?>
 		<H3>Liste des mises à jour</H3>
 		<p><?php
 
@@ -62,7 +63,7 @@
 
 
 		<?php
-			if (isset($_POST ['generation_mdp'])) {
+			if (isset($_POST ['generation_mdp']) & ($_SESSION['vientDeAdministrationEquipeModif']==1)) {
 				echo 'generer mdp  -> ';
 
 				// géneration du mdp
@@ -71,21 +72,23 @@
 				echo $alibaba.'<br/>';
 
 			} 
-			else {echo 'mot de passe  -> ';
+			else {
+
+				echo 'mot de passe  -> ';
 				
 
-			// affichage du mdp
+				// affichage du mdp
 
 			 	$sql_alibaba = "	SELECT 		equipe_mdp
 						FROM 		equipe
 						WHERE 		equipe_id = '$choixEquipe' " ;
 			
-  				$alibabas= $pdo->query($sql_alibaba);
+  				$recherche_alibabas= $pdo->query($sql_alibaba);
 
-  				while ($alibaba = $alibabas -> fetch()){
-  					$alibaba = $alibaba['equipe_mdp'];
+  				while ($recherche_alibaba = $recherche_alibabas -> fetch()){
+  					$alibaba = $recherche_alibaba['equipe_mdp'];
   					echo $alibaba.'<br/>';
-  				} ;
+  					} ;
 
   				};
 
@@ -162,32 +165,35 @@
 	/* ------------------------------------------------------------ */
 
 	
+	
 
 	/* flag qui évite d'actualiser la requete sur la même page */
 	 if ($_SESSION ['flag_requete_update_equipe']==0) {
 	
-	/*--------INSERTION EN BD -----------------*/
-	
-	$sql_update_equipe = "	UPDATE 	equipe
-							SET equipe_nom = ?, equipe_entreprise = ?, equipe_responsable  = ?, equipe_mail = ?,
-								equipe_logo = ? , equipe_visible =?
-							WHERE equipe_id = ? " ;
-			
-  	/* requete préparée */
-  	$prepar_equipe = $pdo->prepare($sql_update_equipe);
+		/*--------INSERTION EN BD -----------------*/
+		
+		$sql_update_equipe = "	UPDATE 	equipe
+								SET equipe_mdp= ?, equipe_nom = ?, equipe_entreprise = ?, equipe_responsable  = ?, equipe_mail = ?,
+									equipe_logo = ? , equipe_visible =?
+								WHERE equipe_id = ? " ;
+				
+	  	/* requete préparée */
+	  	$prepar_equipe = $pdo->prepare($sql_update_equipe);
 
-  	$nouvelles_valeurs = array ($equipe_nom, $equipe_entreprise, $equipe_responsable, $equipe_mail ,$equipe_logo, $equipe_visible,$choixEquipe  );
-	
-	/* execution de la requete préparée plus haut */
-	$prepar_equipe->execute ($nouvelles_valeurs);
-	
-	/* mise à 1 du flag  */
-	$_SESSION ['flag_requete_update_equipe']= 1;
-	
-	}
-	else
-			{
-			echo ('Votre requète a déjà été enregistrée...inutile d\'insister');}
+	  	$nouvelles_valeurs = array ($alibaba, $equipe_nom, $equipe_entreprise, $equipe_responsable, $equipe_mail ,$equipe_logo, $equipe_visible,$choixEquipe  );
+		
+		/* execution de la requete préparée plus haut */
+		$prepar_equipe->execute ($nouvelles_valeurs);
+		
+		/* mise à 1 du flag  */
+		$_SESSION ['flag_requete_update_equipe'] = 1;
+		
+		}
+
+		else
+			{	
+				echo ('Votre requète a déjà été enregistrée...inutile d\'insister');
+			}
 
 	}
 
@@ -202,6 +208,9 @@
 
 	</section>
 </section> 
+
+<?php $_SESSION['vientDeAdministrationEquipeModif']= 0;
+?>
 
 <!-- ===================== BAS DE PAGE  ===================== -->
 <?php include("includes/basDePage.php"); ?>
