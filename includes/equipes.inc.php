@@ -44,7 +44,22 @@
 	
 	}
 
+
+	// si l'équipe est loggée
 	elseif ($_SESSION['ticket_equipe']==1)
 		 {
+		 	$equipe_id=$_SESSION['equipe_id'];
+
+		 	$sqlEmployeEquipe = "SELECT employe_nom, employe_prenom
+		 						FROM employe_equipe_vue
+		 						WHERE equipe_id = '$equipe_id' ;";
+
+		 	$employesDeLequipe = $pdo -> query($sqlEmployeEquipe);
+
+		 	while ($employeDeLequipe = $employesDeLequipe->fetch()) {
+		 		echo $employeDeLequipe['employe_prenom'].' '.$employeDeLequipe['employe_nom'].'<br/>';
+		 	}
+
+
 		 	}?>
 
