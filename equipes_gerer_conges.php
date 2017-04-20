@@ -43,18 +43,26 @@
                     <option value "">Choisir un employé</option>
                 </select>
             </section>
-<!--=======================GESTION DES CONGES=============-->
+<!--==========================GESTION DES CONGES==================-->
                 <section id="container">
                     <?php include("includes/gestion_conges.inc.php"); ?>
-                    <div class="flex photo"><img src="" alt=""> 
+                    <div class="flex">
+                        <div class ="photo"><img src="" alt="">PHOTO</div>
                     </div> 
-                    <section class="flex">
-                        <article >
-                            <?php include("equipe_conges_restants.inc.php"); ?>
+                </section>
+                <section id="container">
+                    <section class="flex1">
+                        <article id="conges_restants">
+                            <?php include("includes/equipe_conges_restants.inc.php"); ?>
                         </article>
-                          
+                    </section>
+                    <section class="flex2">
+                        <article id="calendrier">
+                        CALENDRIER
+                        </article>
                     </section>
                 </section>
+                
                 
     </body>
 </html>
