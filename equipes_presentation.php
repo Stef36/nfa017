@@ -43,12 +43,14 @@ warm
         <nav>
         <?php include("includes/menu.php"); ?>
     </nav>
-<!--===================COMMENT CREER UNE EQUIPE==============-->
-        <section id="creer_equipe">
+<!--====================================================================-->
+<!--=========================COMMENT CREER UNE EQUIPE===================-->
+<!--====================================================================-->
+        <section class="container">
             <?php include("includes/creer_equipe.inc.php"); ?>
         
-            <section id="flex">
-                <article id="equipe_presentation">
+            <section class="flex">
+                <article class="flex1">
 equipe-presentation
                 <?php include("includes/equipe_presentation.inc.php"); ?>
                 </article>
@@ -62,7 +64,9 @@ log_equipe
                 </aside>
         
             </section></section>
+<!--====================================================================-->
 <!--===========================DESCRIPTION EQUIPE=======================-->
+<!--====================================================================-->
         <section id="description_equipe">
         
 description_equipe

@@ -57,15 +57,6 @@
         
         </section>
         
-        
-        
-
-        
-        
-        
-        
-        
-        
 <!-- ===================== BAS DE PAGE  ===================== -->
         <?php include("includes/basDePage.php"); ?>
         
