@@ -55,7 +55,7 @@
 
  		/* récup des variables */
 		$choixEquipe=$_SESSION['choixEquipe'];
- 		echo ('equipe_id='.$choixEquipe);
+ 		echo ('equipe_id -> '.$choixEquipe);
 		?></br>
 
 
@@ -64,16 +64,16 @@
 
 		<?php
 		$equipe_nom=$_POST ['equipe_nom'];?>
-		<?php echo ($equipe_nom);?></br><?php
+		<?php echo ('equipe_nom -> '.$equipe_nom);?></br><?php
 
 		$equipe_entreprise=$_POST ['equipe_entreprise'];?>
-		<?php echo ($equipe_entreprise);?></br><?php
+		<?php echo ('equipe_entreprise -> '.$equipe_entreprise);?></br><?php
 
 		$equipe_responsable=$_POST ['equipe_responsable'];?>
-		<?php echo ($equipe_responsable);?></br><?php
+		<?php echo ('equipe_responsable -> '.$equipe_responsable);?></br><?php
 
 		$equipe_mail=$_POST ['equipe_mail'];?>
-		<?php echo ($equipe_mail);?></br>
+		<?php echo ('equipe_mail -> '.$equipe_mail);?></br>
 		
 		
 		
