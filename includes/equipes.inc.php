@@ -1,7 +1,7 @@
 <!--==================COMMENT CREER UNE EQUIPE====================-->
-<h2>EQUIPES</h2>
 
-<p>Affichage des équipes</p>
+
+
 
 
 <?php
@@ -10,7 +10,7 @@
 	if ( !isset($_SESSION['ticket_equipe']) OR ($_SESSION['ticket_equipe'])==0)
 	{
 
-
+	?><h2>Les équipes qui nous font confiance:</h2> <?php
 
 	$sqlequipe = "SELECT 		equipe_id, equipe_visible,
 								equipe_login, equipe_nom, equipe_entreprise,
@@ -48,16 +48,32 @@
 	// si l'équipe est loggée
 	elseif ($_SESSION['ticket_equipe']==1)
 		 {
+
+		 	?><h2>Votre équipe est constituée des personnes:</h2> <?php
+
 		 	$equipe_id=$_SESSION['equipe_id'];
 
-		 	$sqlEmployeEquipe = "SELECT employe_nom, employe_prenom
-		 						FROM employe_equipe_vue
+		 	$sqlEmployeEquipe = "SELECT employe_nom, employe_prenom, employe_commentaire
+		 						FROM employe
 		 						WHERE equipe_id = '$equipe_id' ;";
 
 		 	$employesDeLequipe = $pdo -> query($sqlEmployeEquipe);
 
-		 	while ($employeDeLequipe = $employesDeLequipe->fetch()) {
-		 		echo $employeDeLequipe['employe_prenom'].' '.$employeDeLequipe['employe_nom'].'<br/>';
+		 	while ($employeDeLequipe = $employesDeLequipe->fetch()) { ?>
+
+		 		<H3> <?php
+
+		 		echo $employeDeLequipe['employe_prenom'].' '.$employeDeLequipe['employe_nom']; ?>
+		 		</H3> 
+
+		 		<p>	<?php
+		 		echo $employeDeLequipe['employe_commentaire']; ?>
+		 			
+
+		 		</p> <?php
+
+
+		 	
 		 	}
 
 
