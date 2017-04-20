@@ -90,6 +90,20 @@
 				<td><?php echo ($equipe['equipe_id']); ?></td>	
 			</tr>
 
+			<tr>
+				<th>equipe_mdp</th>
+				<td><?php if ($equipe['equipe_mdp']) {
+
+						echo '*** mdp OK ***';
+						} else echo '- - non définit - -'; ?>
+					
+				</td>
+
+
+				
+			</tr>
+
+
 
 			<!-- si le mdp de l'équipe n'a pas encore été défini -->
 
