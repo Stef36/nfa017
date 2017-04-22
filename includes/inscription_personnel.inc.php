@@ -7,13 +7,13 @@
     # code...
 
     // affiche l'employe_id
-    echo 'employe_id -'.$id_selection_employe.'-<br/>'; 
+    // echo 'employe_id -'.$id_selection_employe.'-<br/>'; 
 
     
 
     $sql_employe ="SELECT employe_id, employe_login, employe_mdp, employe_nom, employe_prenom, employe_mail, employe_commentaire, employe_visible, employe_actif, employe_logo
-                                FROM  employe
-                                WHERE employe_id = '$id_selection_employe';";
+                    FROM  employe
+                    WHERE employe_id = '$id_selection_employe';";
 
     $employes= $pdo->query($sql_employe);
 
@@ -35,6 +35,8 @@
 
     <form class="contact_form" action="inscription_personnel.php" Method="post" name="formulaire_modif_employe"  > 
 
+    <ul>
+
     <?php 
 
     // boucle sur tous les champs (sauf contenant '_id')
@@ -43,12 +45,12 @@
         $resultat=$resultat_description['Field'];
 
 
-
+        // ne selectionne que les champs sans "_id"
         if (!preg_match('/_id/',  $resultat))
         {
             
-            //echo $resultat_description['Field'].'<br/>';
-            echo $resultat_description['Type'].'<br/>'; ?>
+            // echo $resultat_description['Field'].'<br/>';
+            // echo $resultat_description['Type'].'<br/>'; ?>
 
 
 
@@ -63,7 +65,7 @@
                 value="<?php echo $employe[$resultat_description['Field']] ; ?>" 
                 onblur="" 
                 required>
-                </li>
+            </li>
             <BR>
 
             <?php
@@ -74,15 +76,10 @@
 
     ?>
 
+    </ul>
 
-
-
-
-
-
-
-
-       
+    </form>
+     
 
     <?php };
 }
