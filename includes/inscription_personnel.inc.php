@@ -3,17 +3,90 @@
 
 <h2>FICHE D'INSCRIPTION</h2>
 
+    <?php 
+    // affiche l'employe_id
+    echo 'employe_id -'.$id_selection_employe.'-<br/>'; 
+
+    
+
+    $sql_employe ="SELECT employe_id, employe_login, employe_mdp, employe_nom, employe_prenom, employe_mail, employe_commentaire, employe_visible, employe_actif, employe_logo
+                                FROM  employe
+                                WHERE employe_id = '$id_selection_employe';";
+
+    $employes= $pdo->query($sql_employe);
+
+    while ( $employe=$employes->fetch()){
 
 
-    <form class="contact_form" action="inscription_personnel.php" Method="post" name="formulaire"  >
+
+
+
+    // on recupère les champs et la description de la table employe
+    $sql_decrit_employe="DESCRIBE employe;";
+
+    $resultats_description= $pdo->query($sql_decrit_employe); ?>
+
+
+
+<!-- -----------------------debut formulaire -------------------------- -->
+    <form class="contact_form" action="inscription_personnel.php" Method="post" name="formulaire_modif_employe"  > 
+
+    <?php 
+
+    // boucle sur tous les champs (sauf contenant '_id')
+    while($resultat_description=$resultats_description->fetch())
+    {
+        $resultat=$resultat_description['Field'];
+
+
+
+        if (!preg_match('/_id/',  $resultat))
+        {
+            
+            //echo $resultat_description['Field'].'<br/>';
+            echo $resultat_description['Type'].'<br/>'; ?>
+
+
+
+            <li><label for="<?php echo $resultat_description['Field']; ?>"> <?php echo $resultat_description['Field']; ?></label>
+                <input 
+                type="text" 
+                id="<?php echo $resultat_description['Field']; ?>" 
+                name="<?php echo $resultat_description['Field']; ?>" 
+                size="40" 
+                placeholder="<?php echo $employe[$resultat_description['Field']] ; ?>"
+
+                value="<?php echo $employe[$resultat_description['Field']] ; ?>" 
+                onblur="" 
+                required>
+                </li>
+            <BR>
+
+            <?php
+        }
+
+    }
+
+
+    ?>
+
+
+
+
+
+
+
+
+<!--
         <ul>
-
 
 
 
             <li><label for="noms">Nom Prénom :</label>
                 <input type="text" id="nom" name="nom" size="40" placeholder="Dupond Bernard" onblur="" required></li>
             <BR>
+
+
             <li><label for="number">Age :</label>
                 <input size="3" type="text" name="age" id="age" placeholder="24"> </li>
             <BR>
@@ -47,6 +120,8 @@
         </fieldset>
         
         
-        
+       --> 
         
     </form>
+
+    <?php };
