@@ -42,15 +42,21 @@
 log_equipe
                 <?php include("includes/log_equipe.inc.php"); ?>
                 </aside>
-                
+ 
+<!--================== SELECTIONNER EMPLOYE ===================-->
+
+        <section id="selectionner_employe">
+            <?php include("includes/selection_employe.inc.php"); ?>
+         </section>
+
+
+
 <!--===================COMMENT CREER UNE EQUIPE==============-->
+
         <section id="creer_personnel">
             <?php include("includes/inscription_personnel.inc.php"); ?>
          </section>
-            <section id="flex">
-        
-       
-        </section>
+
 <!--===========================DESCRIPTION EQUIPE=======================-->
         <section id="attribution_conges">
         
