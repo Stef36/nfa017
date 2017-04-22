@@ -1,21 +1,9 @@
 <!--==================COMMENT CREER UNE EQUIPE====================-->
-<head>
-<link href="./css/stylea.css" rel="stylesheet" type="text/css" />
-</head>
+
 
 <h2>FICHE D'INSCRIPTION</h2>
 
-    <?php
-        $equipe_id = $_SESSION['equipe_id'];
 
-        $sql_inscrit_employe="  SELECT employe_login, employe_mdp, employe_nom, employe_prenom, employe_mail, employe_commentaire, employe_visible, employe_actif, employe_logo
-                                FROM  employe
-                                WHERE equipe_id = '$equipe_id';";
-
-                                echo $equipe_id;
-
-
-    ?>
 
     <form class="contact_form" action="inscription_personnel.php" Method="post" name="formulaire"  >
         <ul>
