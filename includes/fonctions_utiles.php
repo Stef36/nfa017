@@ -1,4 +1,26 @@
 <?php
+
+function converti_type_input_SQL_vers_HTML ($typeSQL){
+
+	if (preg_match('/varchar/',  $typeSQL)){
+		$resultat="text";
+	}
+
+
+	elseif (preg_match('/tinyint/',  $typeSQL)) {
+
+	 	$resultat="radio";
+	 } 
+
+
+	return $resultat;
+
+}
+
+
+
+
+
 function generer_mot_de_passe($nb_caractere)
 {
         $mot_de_passe = "";

@@ -50,7 +50,7 @@
         {
             
             // echo $resultat_description['Field'].'<br/>';
-            // echo $resultat_description['Type'].'<br/>'; ?>
+             echo $resultat_description['Type'].'<br/>'; ?>
 
 
 
