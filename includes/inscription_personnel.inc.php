@@ -4,8 +4,25 @@
 </head>
 
 <h2>FICHE D'INSCRIPTION</h2>
+
+    <?php
+        $equipe_id = $_SESSION['equipe_id'];
+
+        $sql_inscrit_employe="  SELECT employe_login, employe_mdp, employe_nom, employe_prenom, employe_mail, employe_commentaire, employe_visible, employe_actif, employe_logo
+                                FROM  employe
+                                WHERE equipe_id = '$equipe_id';";
+
+                                echo $equipe_id;
+
+
+    ?>
+
     <form class="contact_form" action="inscription_personnel.php" Method="post" name="formulaire"  >
         <ul>
+
+
+
+
             <li><label for="noms">Nom Prénom :</label>
                 <input type="text" id="nom" name="nom" size="40" placeholder="Dupond Bernard" onblur="" required></li>
             <BR>
@@ -24,6 +41,11 @@
             <li><label for="equipe">Equipe :</label>
                 <input size="50" type="text" name="equipe" id="equipe" placeholder="equipe A"></li>
             <BR>
+
+
+
+
+
         </ul>
         <fieldset>
             <center>
