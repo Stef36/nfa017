@@ -54,7 +54,10 @@
 
 
 
-            <li><label for="<?php echo $resultat_description['Field']; ?>"> <?php echo $resultat_description['Field']; ?></label>
+            <li>
+
+
+                <label for="<?php echo $resultat_description['Field']; ?>"> <?php echo $resultat_description['Field']; ?></label>
                 <input 
                 type="text" 
                 id="<?php echo $resultat_description['Field']; ?>" 
@@ -65,6 +68,8 @@
                 value="<?php echo $employe[$resultat_description['Field']] ; ?>" 
                 onblur="" 
                 required>
+
+                
             </li>
             <BR>
 
