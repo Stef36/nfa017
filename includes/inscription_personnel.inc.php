@@ -3,7 +3,9 @@
 
 <h2>FICHE D'INSCRIPTION</h2>
 
-    <?php 
+<?php if (isset($_SESSION['ticket_equipe'])) {
+    # code...
+
     // affiche l'employe_id
     echo 'employe_id -'.$id_selection_employe.'-<br/>'; 
 
@@ -29,6 +31,8 @@
 
 
 <!-- -----------------------debut formulaire -------------------------- -->
+
+
     <form class="contact_form" action="inscription_personnel.php" Method="post" name="formulaire_modif_employe"  > 
 
     <?php 
@@ -77,8 +81,17 @@
 
 
 
-<!--
-        <ul>
+
+       
+
+    <?php };
+}
+
+else { ?>
+
+        <form class="contact_form" action="inscription_personnel.php" Method="post" name="formulaire_modif_employe"  > 
+
+     <ul>
 
 
 
@@ -120,8 +133,11 @@
         </fieldset>
         
         
-       --> 
+      
         
-    </form>
+    </form> <?php
 
-    <?php };
+}
+
+
+
