@@ -13,7 +13,8 @@
         <link rel="icon" href="mes-repos.ico" >
         <link rel="icon" type="image/x-icon" href="img/photos/favicon.ico">
         <title>Information du personnel</title>
-       
+ 
+         <link href="./css/style.css" rel="stylesheet" type="text/css" />      
         <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
     </head>
 <!-- ======================================================= -->
