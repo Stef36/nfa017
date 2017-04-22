@@ -18,7 +18,7 @@
 
         $employes_de_l_equipe= $pdo -> query($sql_employes_de_l_equipe);
 
-                                echo $equipe_id; ?>
+                                echo 'equipe_id->'.$equipe_id; ?>
 
 
 
@@ -30,16 +30,27 @@
 				<?php
      			// si un choix a déjà été effectué
 				 if (isset($_POST['select_employe'])) {
+
+
+
+				 	// met la selection dans une variable
      				$selection_post=$_POST['select_employe'];
+     				//echo $selection_post;
 
-     				// on cherche où se trouve "  ->"
-     				$findme   = ' ->';
+     				// on cherche où commence "->"
+     				$findme   = '-';
      				$pos = strpos($selection_post, $findme);
-     				echo $pos;
+     				//echo $pos;
 
-     				$id_selection_employe= substr($selection_post, 0, $pos);
+     				// on coupe la chaine jusqu'au début de "  ->"
+     				// pour extraire id_employe
+     				$id_selection_employe= substr($selection_post, 0, ($pos-1));
 
-     				echo $id_selection_employe;
+     				if ($id_selection_employe=='nouvel employ') {
+				 		$id_selection_employe=NULL;
+				 	}
+
+     				echo 'employe_id -'.$id_selection_employe.'-';
 
 
      			};?>
@@ -48,16 +59,23 @@
 
      		<select name="select_employe" size="1">
 
-     			<option    <?php if (!isset($_POST['select_employe'])) {
-     				echo "selected";
-     			}; ?>                           >nouvel employe</option>
+     			<option    <?php if (!isset($_POST['select_employe'])) 
+     								{
+     								$id_selection_employe=NULL;
+     								echo "selected"; }; ?>                           >nouvel employe</option>
      			
      			<?php 
 
      				while ( $employe_de_l_equipe=$employes_de_l_equipe->fetch()) {?>
 
-		     			<option>
-		     			<?php echo $employe_de_l_equipe['employe_id'].' -> '. $employe_de_l_equipe['employe_nom'].' '.$employe_de_l_equipe['employe_prenom'];  ?>
+		     			<option  <?php if (
+		     				(isset($_POST['select_employe']))
+		     				 &
+		     				($id_selection_employe==$employe_de_l_equipe['employe_id'])) {
+     				echo "selected";}; ?> >
+		     			<?php echo $employe_de_l_equipe['employe_id'].' -> '. $employe_de_l_equipe['employe_nom'].' '.$employe_de_l_equipe['employe_prenom']; 
+
+		     			?>
 		     				
 		     			</option> 
 
@@ -72,7 +90,9 @@
      		<input type="submit" name="submit" value="OK">
      	
 
-     </form> <?php
+     </form> 
+
+     <p> --------------------------</p><?php
  
   }
 
