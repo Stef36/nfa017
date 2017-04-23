@@ -63,6 +63,26 @@ function generer_mot_de_passe($nb_caractere)
 }
 
 
+function generer_login($nb_caractere, $nom_equipe)
+{
+        $login = "";
+       
+        $chaine = "abcdefghjkmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ";
+        $longeur_chaine = strlen($chaine);
+       
+        for($i = 1; $i <= $nb_caractere; $i++)
+        {
+            $place_aleatoire = mt_rand(0,($longeur_chaine-1));
+            $login .= $chaine[$place_aleatoire];
+        }
+
+        $login .= '_'.$nom_equipe;
+
+        return $login;
+        // pour utiliser et generer un login de 5 caractères + nom de l'equipe:
+		// echo ('voilà votre login : '.generer_mot_de_passe(5, "mon_equipe"));
+}
+
 
 
 
@@ -103,6 +123,14 @@ function generer_mot_de_passe($nb_caractere)
 		<?php 
 		}
 
+	}
+
+	function affiche_variables_session(){
+		?>
+		<pre>
+
+        <?php print_r($_SESSION); ?>
+        </pre> <?php
 	}
 		
 ?>

@@ -151,17 +151,44 @@ if (isset($_SESSION['ticket_equipe'])) {
     // si aucun employé selectionné
     if ($id_selection_employe=='') {
         // création d'un employe
-        echo " ici CREER <br>"; ?>
+        echo " ici CREER <br>";
+
+        affiche_variables_session();
+        
+
+
+        $equipe_nom= $_SESSION['equipe_login'];
+        $login_aleatoire= generer_login(3, $equipe_nom) ;
+        $alibaba_employe= generer_mot_de_passe(3);?>
 
         <form class="contact_form"  Method="post" name="formulaire_modif_employe">
 
             <ul>
 
-                <li><label for="nom ">Nom :</label>
+
+                <li>
+                    <label for="login ">login :</label>
+                    <input type="text" id="employe_login" name="employe_login" size="30" placeholder=""  value="<?php echo $login_aleatoire ;?>" required > 
                     
-                </li>
+                </li><br/>
 
+                <li>
+                    <label for="login ">mot de passe :</label>
+                    <input type="text" id="employe_mdp" name="employe_mdp" size="30" placeholder=""  value="<?php echo $alibaba_employe ;?>" required > 
+                    
+                </li><br/> 
+                               
+                <li>
+                    <label for="nom ">Nom :</label>
+                    <input type="text" id="employe_nom" name="employe_nom" size="50" placeholder="DUPOND"  required >
+                    
+                </li><br/>
 
+                <li>
+                    <label for="nom ">Prénom :</label>
+                    <input type="text" id="employe_nom" name="employe_prenom" size="50" placeholder="Jean"  required >
+                    
+                </li><br/>
                 
 
             </ul>
