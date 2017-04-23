@@ -9,12 +9,6 @@
 if (isset($_SESSION['ticket_equipe'])) {
     # code...
 
-
-
-
-
-
-
     // affiche l'employe_id
     echo 'employe_id -'.$id_selection_employe.'-<br/>'; 
 
@@ -64,8 +58,9 @@ if (isset($_SESSION['ticket_equipe'])) {
 
 
             <li>
-
+                
             <?php 
+            
             // construction des input text
             if ($typeChampHTML=="text") 
                 { ?>

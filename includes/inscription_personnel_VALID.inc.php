@@ -5,14 +5,12 @@
 
 		
 
-	if ( (isset($_POST['valid_modif_employe']))
-		&
-		(!isset($valid_modif_employe))
-		 ) {
+	if ( isset($_POST['valid_modif_employe'])) 
+	{
 
-		if (isset($_SESSION['id_selection_employe'])) {
+		if (isset($_POST['id_selection_employe'])) {
 			
-			echo $_SESSION['id_selection_employe']."<br>";
+			echo $_POST['id_selection_employe']."<br>";
 		}
 		
 
@@ -101,11 +99,6 @@
 	}
 
 	else echo "<br/>-----  AUCUN CHANGEMENT EN BD  ------<br/>";
-
-
-
-
-
 
 
  ?>
