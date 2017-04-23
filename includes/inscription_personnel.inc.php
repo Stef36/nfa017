@@ -50,7 +50,7 @@
         {
             
             // echo $resultat_description['Field'].'<br/>';
-             echo $resultat_description['Type'].'<br/>'; 
+            //echo $resultat_description['Type'].'<br/>'; 
              $typeChampHTML=converti_type_input_SQL_vers_HTML($resultat_description['Type']);?>
 
 
@@ -65,7 +65,7 @@
                 type="text" 
                 id="<?php echo $resultat_description['Field']; ?>" 
                 name="<?php echo $resultat_description['Field']; ?>" 
-                size="40" 
+                size="<?php echo "100";?>" 
                 placeholder="<?php echo $employe[$resultat_description['Field']] ; ?>"
 
                 value="<?php echo $employe[$resultat_description['Field']] ; ?>" 
@@ -85,7 +85,7 @@
                     <?php if ($employe[$resultat_description['Field']]) {
                         echo "checked";
                     } ?>
-                >oui
+                >oui<br>
                  <input 
                 type="radio"
                 id="<?php echo $resultat_description['Field']; ?>" 
@@ -94,7 +94,7 @@
                     <?php if (!$employe[$resultat_description['Field']]) {
                         echo "checked";
                     } ?>
-                >non
+                >non<br>
                
 
             <?php   

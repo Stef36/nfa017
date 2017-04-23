@@ -17,6 +17,29 @@ function converti_type_input_SQL_vers_HTML ($typeSQL){
 
 }
 
+function cherche_caractere_dans_chaine($chaine, $caractère){
+
+	// calcul la position dans la chaine
+	$position=strpos($chaine, $caractère);
+
+	return $position;
+}
+
+function extrait_nombre_entre_parentheses($chaine){
+	// cherche position 1ere parenthese
+	$pos1= strpos($chaine, "(");
+
+	// cherche position 2eme parenthese
+	$pos2= strpos($chaine, ")");
+
+	$longueur_segment= $pos2-$pos1;
+
+	// extrait chaine entre les deux positions
+	$chaine_extraite=substr($chaine, $pos1,$longueur_segment );
+
+
+	return $chaine_extraite;
+}
 
 
 
