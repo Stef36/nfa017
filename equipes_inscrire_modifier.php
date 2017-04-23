@@ -28,7 +28,7 @@
 
 <!-- ===================== TITRE ===================== -->
         <header class="headera">
-            <h1>INFORMATIONS DU PERSONNEL<H1>
+            <h1>INFORMATIONS DU PERSONNEL</h1>
             <h3>INSCRIRE / MODIFIER UNE EQUIPE</h3>
         </header>
 

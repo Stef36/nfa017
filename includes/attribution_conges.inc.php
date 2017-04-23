@@ -1,7 +1,5 @@
 <!--==================COMMENT CREER UNE EQUIPE====================-->
-<head>
-<link href="./css/stylea.css" rel="stylesheet" type="text/css" />
-</head>
+
 
 <h2>ATTRIBUTION DES CONGES</h2>
     <form class="attribution_form" action="inscription_personnel.php" Method="post" name="formulaire"  >

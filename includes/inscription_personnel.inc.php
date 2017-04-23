@@ -3,7 +3,10 @@
 
 <h2>FICHE D'INSCRIPTION</h2>
 
-<?php if (isset($_SESSION['ticket_equipe'])) {
+<?php 
+
+// si une équipe est connectée
+if (isset($_SESSION['ticket_equipe'])) {
     # code...
 
     // affiche l'employe_id
@@ -30,7 +33,7 @@
 
 
 
-<!-- -----------------------debut formulaire -------------------------- -->
+<!-- ====================== debut formulaire ============================-->
 
 
     <form class="contact_form" action="inscription_personnel.php" Method="post" name="formulaire_modif_employe"  > 
@@ -57,8 +60,9 @@
             <li>
 
             <?php 
-
-            if ($typeChampHTML=="text") { ?>
+            // construction des input text
+            if ($typeChampHTML=="text") 
+                { ?>
               
                 <label for="<?php echo $resultat_description['Field']; ?>"> <?php echo $resultat_description['Field']; ?></label>
 
@@ -82,44 +86,46 @@
                 onblur="" 
                
                 > <?php
-            }
-
-            elseif ($typeChampHTML=="radio") { ?>
-
-                <label for="<?php echo $resultat_description['Field']; ?>"> <?php echo $resultat_description['Field']; ?></label>
-                <input 
-                type="radio"
-                id="<?php echo $resultat_description['Field']; ?>" 
-                name="<?php echo $resultat_description['Field']; ?>"
-                value="true" 
-                    <?php if ($employe[$resultat_description['Field']]) {
-                        echo "checked";
-                    } ?>
-                >oui<br>
-                 <input 
-                type="radio"
-                id="<?php echo $resultat_description['Field']; ?>" 
-                name="<?php echo $resultat_description['Field']; ?>"
-                value="false"
-                    <?php if (!$employe[$resultat_description['Field']]) {
-                        echo "checked";
-                    } ?>
-                >non<br>
-               
-
-            <?php   
-            }
+                }
 
 
+                // construction des input radio
+                elseif ($typeChampHTML=="radio") { ?>
 
-             ?>
+                    <label for="<?php echo $resultat_description['Field']; ?>"> <?php echo $resultat_description['Field']; ?></label>
+                    <input 
+                    type="radio"
+                    id="<?php echo $resultat_description['Field']; ?>" 
+                    name="<?php echo $resultat_description['Field']; ?>"
+                    value="true" 
+                        <?php if ($employe[$resultat_description['Field']]) {
+                            echo "checked";
+                        } ?>
+                    >oui<br>
+                     <input 
+                    type="radio"
+                    id="<?php echo $resultat_description['Field']; ?>" 
+                    name="<?php echo $resultat_description['Field']; ?>"
+                    value="false"
+                        <?php if (!$employe[$resultat_description['Field']]) {
+                            echo "checked";
+                        } ?>
+                    >non<br>
+                   
+
+                <?php   
+                }// fin construction des input radio ?> 
+
+
+
+             
 
                 
             </li>
             <BR>
 
             <?php
-        }
+        }// fin de test sans "_id"
 
     }
 
@@ -128,13 +134,25 @@
 
     </ul>
 
+    <ul>
+        <label for="">mettre à jour</label>
+        <input type="submit" name="OK" value="Mettre à jour" >
+
+    </ul>  
+    
+
+
+
     </form>
      
+
+
+
 
     <?php };
 }
 
-else { ?>
+else { // __________________________partie equipe  non connectée_________________ ?>
 
         <form class="contact_form" action="inscription_personnel.php" Method="post" name="formulaire_modif_employe"  > 
 
