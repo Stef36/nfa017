@@ -103,8 +103,8 @@ if (isset($_SESSION['ticket_equipe'])) {
                     type="radio"
                     id="<?php echo $resultat_description['Field']; ?>" 
                     name="<?php echo $resultat_description['Field']; ?>"
-                    value="true" 
-                        <?php if ($employe[$resultat_description['Field']]) {
+                    value="1" 
+                        <?php if ($employe[$resultat_description['Field']]==1) {
                             echo "checked";
                         } ?>
                     >oui<br>
@@ -112,8 +112,8 @@ if (isset($_SESSION['ticket_equipe'])) {
                     type="radio"
                     id="<?php echo $resultat_description['Field']; ?>" 
                     name="<?php echo $resultat_description['Field']; ?>"
-                    value="false"
-                        <?php if (!$employe[$resultat_description['Field']]) {
+                    value="0"
+                        <?php if ($employe[$resultat_description['Field']]==0) {
                             echo "checked";
                         } ?>
                     >non<br>
