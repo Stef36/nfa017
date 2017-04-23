@@ -122,11 +122,7 @@ if (isset($_SESSION['ticket_equipe'])) {
                 <?php   
                 }// fin construction des input radio ?> 
 
-
-
              
-
-                
             </li>
             <BR>
 
@@ -134,7 +130,6 @@ if (isset($_SESSION['ticket_equipe'])) {
         }// fin de test sans "_id"
 
     }
-
 
     ?>
 
@@ -146,19 +141,44 @@ if (isset($_SESSION['ticket_equipe'])) {
 
     </ul>  
     
-
-
-
     </form>
      
 
-
-
-
-
-
     <?php
     };// fin boucle selection employé
+
+
+    // si aucun employé selectionné
+    if ($id_selection_employe=='') {
+        // création d'un employe
+        echo " ici CREER <br>"; ?>
+
+        <form class="contact_form"  Method="post" name="formulaire_modif_employe">
+
+            <ul>
+
+                <li><label for="nom ">Nom :</label>
+                    
+                </li>
+
+
+                
+
+            </ul>
+            <ul>
+                <label for="">Créér une fiche</label>
+                <input type="submit" name="valid_modif_employe" value="Mettre à jour" >
+
+            </ul>
+
+            
+        </form>
+
+
+
+        <?php
+
+    }
 
 
 }// fin partie équipe connectée

@@ -47,7 +47,7 @@
 		/* execution de la requete préparée plus haut */
 		$modif_employe->execute ($nouvelles_valeurs);
 
-		echo "modif FAITES<br/>";
+		echo "modif VALIDES<br/>";
 
 		$valid_modif_employe=1;
 
