@@ -1,7 +1,7 @@
 <?php  // mise en BD des modifications faites en "inscription_personnel.inc.php"
 
 
-	echo "<br>DANS VALID<br>";
+	// echo "<br>DANS VALID<br>";
 
 		
 
@@ -10,11 +10,15 @@
 		(!isset($valid_modif_employe))
 		 ) {
 
-		echo $_SESSION['id_selection_employe']."<br>";
+		if (isset($_SESSION['id_selection_employe'])) {
+			
+			echo $_SESSION['id_selection_employe']."<br>";
+		}
+		
 
 		$valid_modif_employe=$_POST['valid_modif_employe'];
-		echo $_SESSION['id_selection_employe'];
-		echo "modif bientôt FAITES<br/>";
+
+		echo "modifications en préparation...<br/>";
 
 
 		// recupe des POSTS
@@ -47,7 +51,11 @@
 		
 		$equipe_id=$_SESSION['equipe_id'];
 		
-		if ($_SESSION['id_selection_employe']!='') {
+		if (
+			(isset($_SESSION['id_selection_employe']))
+			AND
+			($_SESSION['id_selection_employe']!=''))
+			 {
 
 			$employe_id=$_SESSION['id_selection_employe'];
 
@@ -86,13 +94,13 @@
 		/* execution de la requete préparée plus haut */
 		$modif_employe->execute ($nouvelles_valeurs);
 
-		echo "modif VALIDES<br/>";
+		echo "modifications ou nouvel employé VALIDES<br/>";
 
 		$valid_modif_employe=1;
 
 	}
 
-	else echo "-----  AUCUN CHANGEMENT EN BD  ------<br>";
+	else echo "<br/>-----  AUCUN CHANGEMENT EN BD  ------<br/>";
 
 
 

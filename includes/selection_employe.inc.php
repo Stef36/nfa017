@@ -7,7 +7,8 @@
     {
     	
   
-
+                // entrée en BD des modifications faites en "inscription_personnel.inc.php"
+                include("includes/inscription_personnel_VALID.inc.php");
 
 
         $equipe_id = $_SESSION['equipe_id'];
@@ -19,7 +20,7 @@
 
         $employes_de_l_equipe= $pdo -> query($sql_employes_de_l_equipe);
 
-        echo 'equipe_id->'.$equipe_id; ?>
+        echo 'equipe_id -> '.$equipe_id; ?>
 
 
 
@@ -58,8 +59,7 @@
      			};
 
 
-                // entrée en BD des modifications faites en "inscription_personnel.inc.php"
-                include("includes/inscription_personnel_VALID.inc.php"); 
+
 
                 ?>
 
