@@ -151,9 +151,9 @@ if (isset($_SESSION['ticket_equipe'])) {
     // si aucun employé selectionné
     if ($id_selection_employe=='') {
         // création d'un employe
-        echo " ici CREER <br>";
+        //echo " ici CREER <br>";
 
-        affiche_variables_session();
+        //affiche_variables_session();
         
 
 
