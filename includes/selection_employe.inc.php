@@ -53,9 +53,15 @@
 				 	}
 
      				echo 'employe_id -'.$id_selection_employe.'-';
+                    $_SESSION['id_selection_employe']=$id_selection_employe;
+
+     			};
 
 
-     			};?>
+                // entrée en BD des modifications faites en "inscription_personnel.inc.php"
+                include("includes/inscription_personnel_VALID.inc.php"); 
+
+                ?>
 
 
 

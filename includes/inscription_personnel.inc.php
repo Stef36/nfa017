@@ -9,8 +9,14 @@
 if (isset($_SESSION['ticket_equipe'])) {
     # code...
 
+
+
+
+
+
+
     // affiche l'employe_id
-    // echo 'employe_id -'.$id_selection_employe.'-<br/>'; 
+    echo 'employe_id -'.$id_selection_employe.'-<br/>'; 
 
     
 
@@ -36,7 +42,7 @@ if (isset($_SESSION['ticket_equipe'])) {
 <!-- ====================== debut formulaire ============================-->
 
 
-    <form class="contact_form" action="inscription_personnel.php" Method="post" name="formulaire_modif_employe"  > 
+    <form class="contact_form"  Method="post" name="formulaire_modif_employe"  > 
 
     <ul>
 
@@ -136,7 +142,7 @@ if (isset($_SESSION['ticket_equipe'])) {
 
     <ul>
         <label for="">mettre à jour</label>
-        <input type="submit" name="OK" value="Mettre à jour" >
+        <input type="submit" name="valid_modif_employe" value="Mettre à jour" >
 
     </ul>  
     
@@ -149,8 +155,13 @@ if (isset($_SESSION['ticket_equipe'])) {
 
 
 
-    <?php };
-}
+
+
+    <?php
+    };// fin boucle selection employé
+
+
+}// fin partie équipe connectée
 
 else { // __________________________partie equipe  non connectée_________________ ?>
 
