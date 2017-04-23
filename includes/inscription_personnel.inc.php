@@ -50,13 +50,16 @@
         {
             
             // echo $resultat_description['Field'].'<br/>';
-             echo $resultat_description['Type'].'<br/>'; ?>
-
+             echo $resultat_description['Type'].'<br/>'; 
+             $typeChampHTML=converti_type_input_SQL_vers_HTML($resultat_description['Type']);?>
 
 
             <li>
 
+            <?php 
 
+            if ($typeChampHTML=="text") { ?>
+              
                 <label for="<?php echo $resultat_description['Field']; ?>"> <?php echo $resultat_description['Field']; ?></label>
                 <input 
                 type="text" 
@@ -67,7 +70,39 @@
 
                 value="<?php echo $employe[$resultat_description['Field']] ; ?>" 
                 onblur="" 
-                required>
+               
+                > <?php
+            }
+
+            elseif ($typeChampHTML=="radio") { ?>
+
+                <label for="<?php echo $resultat_description['Field']; ?>"> <?php echo $resultat_description['Field']; ?></label>
+                <input 
+                type="radio"
+                id="<?php echo $resultat_description['Field']; ?>" 
+                name="<?php echo $resultat_description['Field']; ?>"
+                value="true" 
+                    <?php if ($employe[$resultat_description['Field']]) {
+                        echo "checked";
+                    } ?>
+                >oui
+                 <input 
+                type="radio"
+                id="<?php echo $resultat_description['Field']; ?>" 
+                name="<?php echo $resultat_description['Field']; ?>"
+                value="false"
+                    <?php if (!$employe[$resultat_description['Field']]) {
+                        echo "checked";
+                    } ?>
+                >non
+               
+
+            <?php   
+            }
+
+
+
+             ?>
 
                 
             </li>
