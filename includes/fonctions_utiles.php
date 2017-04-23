@@ -27,7 +27,7 @@ function cherche_caractere_dans_chaine($chaine, $caractère){
 
 function extrait_nombre_entre_parentheses($chaine){
 	// cherche position 1ere parenthese
-	$pos1= strpos($chaine, "(");
+	$pos1= strpos($chaine, "(")+1;
 
 	// cherche position 2eme parenthese
 	$pos2= strpos($chaine, ")");

@@ -50,7 +50,7 @@
         {
             
             // echo $resultat_description['Field'].'<br/>';
-            //echo $resultat_description['Type'].'<br/>'; 
+            // echo $resultat_description['Type'].'<br/>'; 
              $typeChampHTML=converti_type_input_SQL_vers_HTML($resultat_description['Type']);?>
 
 
@@ -61,6 +61,16 @@
             if ($typeChampHTML=="text") { ?>
               
                 <label for="<?php echo $resultat_description['Field']; ?>"> <?php echo $resultat_description['Field']; ?></label>
+
+
+                <?php 
+                        $longueur_champ = extrait_nombre_entre_parentheses($resultat_description['Type']);
+                        echo "longueur maxi: ".$longueur_champ." caractères<br>";
+
+                ?>
+
+
+
                 <input 
                 type="text" 
                 id="<?php echo $resultat_description['Field']; ?>" 
