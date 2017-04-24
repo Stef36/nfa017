@@ -97,7 +97,7 @@
 
 		echo "modifications ou nouvel employé VALIDES<br/>";
 
-		$valid_modif_employe=1;
+		$_POST['valid_modif_employe']=NULL;
 
 	}
 

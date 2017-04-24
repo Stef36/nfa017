@@ -40,7 +40,12 @@ if (isset($_SESSION['ticket_equipe'])) {
 
     <ul>
 
+            <input type="number" name="id_selection_employe" value="<?php echo $id_selection_employe; ?>" hidden >
+
+
     <?php 
+
+
 
     // boucle sur tous les champs (sauf contenant '_id')
     while($resultat_description=$resultats_description->fetch())
