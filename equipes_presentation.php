@@ -44,6 +44,10 @@ warm
         <nav>
         <?php include("includes/menu.php"); ?>
     </nav>
+
+<?php affiche_variables_session(); ?>
+
+
 <!--===================COMMENT CREER UNE EQUIPE==============-->
         <section id="creer_equipe">
             <?php include("includes/creer_equipe.inc.php"); ?>

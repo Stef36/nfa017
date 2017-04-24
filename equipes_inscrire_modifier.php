@@ -1,6 +1,5 @@
 <!-- ================ Connection bdd via PDO ================ -->
-<?php include("./includes/gestion_connection_equipe.inc.php");
-affiche_variables_session(); ?>
+<?php include("./includes/gestion_connection_equipe.inc.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr" >
@@ -38,6 +37,10 @@ affiche_variables_session(); ?>
         <?php include("includes/menu.php"); ?>
     </nav>
     
+<?php affiche_variables_session(); ?>
+
+
+
 <!--====================login=============================-->
                 <aside class="log_equipe">
 log_equipe
