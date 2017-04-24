@@ -50,12 +50,12 @@
 		$equipe_id=$_SESSION['equipe_id'];
 		
 		if (
-			(isset($_SESSION['id_selection_employe']))
+			(isset($_POST['id_selection_employe']))
 			AND
-			($_SESSION['id_selection_employe']!=''))
+			($_POST['id_selection_employe']!=''))
 			 {
 
-			$employe_id=$_SESSION['id_selection_employe'];
+			$employe_id=$_POST['id_selection_employe'];
 
 			$sql_modif_employe="	UPDATE	employe
 									SET employe_login=?,employe_mdp=?,
@@ -64,6 +64,8 @@
 									employe_actif=?,employe_logo=?,
 									equipe_id=?
 									WHERE employe_id = ? ";
+
+			echo "UPDATE<br/>";
 
 		}
 
@@ -75,6 +77,7 @@
 									employe_mail=?, employe_commentaire=?, employe_visible=?,
 									employe_actif=?,employe_logo=?,
 									equipe_id=?, employe_id = ? ";
+			echo "INSERT<br/>";
 		};
 
 		
