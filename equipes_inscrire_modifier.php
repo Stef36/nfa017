@@ -1,5 +1,6 @@
 <!-- ================ Connection bdd via PDO ================ -->
-<?php include("./includes/gestion_connection_equipe.inc.php"); ?>
+<?php include("./includes/gestion_connection_equipe.inc.php");
+affiche_variables_session(); ?>
 
 <!DOCTYPE html>
 <html lang="fr" >
