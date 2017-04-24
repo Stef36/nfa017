@@ -10,8 +10,8 @@
         <link rel="icon" href="mes-repos.ico" >
         <link rel="icon" type="image/x-icon" href="img/photos/favicon.ico">
         <title>Information du personnel</title>
-       
         <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
+        <link href="./css/calendar.css" rel="stylesheet" type="text/css" />
     </head>
 <!-- ======================================================= -->
 
@@ -58,11 +58,15 @@
                     </section>
                     <section class="flex2">
                         <article id="calendrier">
+                            <?php include("calendar/calendrier_bo.php"); ?>
                         CALENDRIER
                         </article>
                     </section>
                 </section>
                 
-                
+<!-- ===================== BAS DE PAGE  ===================== -->
+        <?php include("includes/basDePage.php"); ?>
+        
+        <script language="JavaScript" type="text/javascript" src="scripts.js"></script>
     </body>
 </html>
