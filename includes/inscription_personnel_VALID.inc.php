@@ -5,13 +5,16 @@
 
 		
 
-	if ( isset($_POST['valid_modif_employe'])) 
+	if ( isset($_POST['valid_modif_employe']) ) 
 	{
 
+
 		if (isset($_POST['id_selection_employe'])) {
-			
+				
 			echo $_POST['id_selection_employe']."<br>";
-		}
+			}	
+		
+
 		
 
 		$valid_modif_employe=$_POST['valid_modif_employe'];
@@ -65,11 +68,14 @@
 									equipe_id=?
 									WHERE employe_id = ? ";
 
-			echo "UPDATE<br/>";
+			echo "UPDATE en BD de ".$employe_prenom." ".$employe_nom."<br/>";
 
 		}
 
-		else { $employe_id='';
+		elseif ($_POST['id_selection_employe']==''
+					|| $_POST['id_selection_employe']==NULL )
+			{
+		 	 $employe_id='';
 
 				$sql_modif_employe="	INSERT INTO	employe
 									SET employe_login=?,employe_mdp=?,
@@ -77,8 +83,8 @@
 									employe_mail=?, employe_commentaire=?, employe_visible=?,
 									employe_actif=?,employe_logo=?,
 									equipe_id=?, employe_id = ? ";
-			echo "INSERT<br/>";
-		};
+			echo "INSERT en BD de ".$employe_prenom." ".$employe_nom."<br/>";
+			};
 
 		
 
@@ -97,11 +103,12 @@
 
 		echo "modifications ou nouvel employé VALIDES<br/>";
 
-		$_POST['valid_modif_employe']=NULL;
+		
 
 	}
-
+	
 	else echo "<br/>-----  AUCUN CHANGEMENT EN BD  ------<br/>";
+	$_POST['valid_modif_employe']=NULL;
 
 
  ?>

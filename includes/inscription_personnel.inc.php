@@ -163,8 +163,10 @@ if (isset($_SESSION['ticket_equipe'])) {
 
         <form class="contact_form"  Method="post" name="formulaire_modif_employe">
 
-            <ul>
 
+
+            <ul>
+                <li> <input type="number" name="id_selection_employe" value=NULL hidden></li>
 
                 <li>
                     <label for="login ">login :</label>
