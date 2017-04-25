@@ -162,9 +162,14 @@ H1{
 }
 
 #conges_valides{
+<<<<<<< HEAD
     display: block;
     position: relative;
     margin-left: auto;
+=======
+    position: relative;
+    margin-left: 15%;
+>>>>>>> gerer_conges
     margin-right: auto;
 }
 
@@ -172,6 +177,9 @@ H1{
     height:15px; 
     width:50px; 
     display:inline;
+<<<<<<< HEAD
     
+=======
+>>>>>>> gerer_conges
     vertical-align:middle; 
 } 
