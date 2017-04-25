@@ -9,8 +9,11 @@
         <li><input type="radio" name="conges" value="absence_na"><label for="rd5">ABSENCE NON AUTORISEE : </label></li><br>
         <li><input type="radio" name="conges" value="formation"><label for="rd6">FORMATION :</label></li><br>
     </ul>
+<!--===============bouton de refus des conges=================-->
+    <input id="conges_valides" type="submit" value="CONGES REFUSES"/>
 <!--===============bouton de validation des conges=================-->
     <input id="conges_valides" type="submit" value="CONGES VALIDES"/>
 </form>
+
 
 

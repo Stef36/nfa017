@@ -56,15 +56,10 @@
                     <?php include("includes/equipe_conges_restants.inc.php"); ?>
                 </article>
             </section>
-            <section class="flex2">
-                <article id="calendrier">
-                    <?php include("calendar/calendrier_bo.php"); ?>
-                        CALENDRIER
-                </article>
+            <section>
+                Calendrier
             </section>
-                    
         </section>
-                
 <!-- ===================== BAS DE PAGE  ===================== -->
 
         <?php include("includes/basDePage.php"); ?>

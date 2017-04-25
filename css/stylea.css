@@ -162,9 +162,8 @@ H1{
 }
 
 #conges_valides{
-    display: block;
     position: relative;
-    margin-left: auto;
+    margin-left: 15%;
     margin-right: auto;
 }
 
