@@ -38,9 +38,10 @@ if (isset($_SESSION['ticket_equipe'])) {
 
     <form class="contact_form"  Method="post" name="formulaire_modif_employe"  > 
 
-    <input type="number" name="id_selection_employe" value="<?php echo $id_selection_employe; ?>" hidden >
+ 
 
     <ul>
+    <input type="number" name="id_selection_employe" value="<?php echo $id_selection_employe; ?>" hidden ></input>
 
 
     <?php 
