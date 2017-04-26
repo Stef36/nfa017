@@ -1,6 +1,6 @@
 <!-- ================ Connection bdd via PDO ================ -->
 <?php include("./includes/gestion_connection_equipe.inc.php");
-affiche_variables_session() ?>
+//affiche_variables_session() ?>
 
 
 <!-- ================ Connection bdd via PDO ================ -->
@@ -45,7 +45,7 @@ warm
         <?php include("includes/menu.php"); ?>
     </nav>
 
-<?php affiche_variables_session(); ?>
+<?php //affiche_variables_session(); ?>
 
 
 <!--===================COMMENT CREER UNE EQUIPE==============-->

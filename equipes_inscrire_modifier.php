@@ -37,7 +37,7 @@
         <?php include("includes/menu.php"); ?>
     </nav>
     
-<?php affiche_variables_session(); ?>
+<?php //affiche_variables_session(); ?>
 
 
 
