@@ -45,7 +45,7 @@
                     
                     <br>
                     Hébergeur :  <br>
-                    Développement Web : <br>
+                    Développeurs Web : <br>
                     DUFOUR Dominique <br>
                     LARUELLE Stéphane <br>
                     
