@@ -63,7 +63,7 @@
 			 {
 
 			$employe_id=$_POST['id_selection_employe'];
-			
+
 			// actualise l'employe_id
 			$nouvelles_valeurs[10]=$employe_id;
 
@@ -84,34 +84,36 @@
 
 		elseif (($_POST['id_selection_employe']==''
 					|| $_POST['id_selection_employe']==NULL)
-					& !verif_nouvel_employe($employe_login) )
+					) 
 			{
 		 	 $employe_id='';
 
-				$sql_modif_employe="	INSERT INTO	employe
-									SET employe_login=?,employe_mdp=?,
-									employe_nom=?, employe_prenom=?,
-									employe_mail=?, employe_commentaire=?, employe_visible=?,
-									employe_actif=?,employe_logo=?,
-									equipe_id=?, employe_id = ? ";
+
+
+		 	 	$sql_recherche_employe="SELECT employe_login
+		 	 							FROM employe
+		 	 							WHERE employe_login= '$employe_login';";
+		 	 	
+		 	 	$employes_deja_en_base= $pdo -> query($sql_recherche_employe);
+
+		 	 	if (!($employe_deja_en_base=$employes_deja_en_base->fetch()))
+			 	 	 {
+		
+					$sql_modif_employe="	INSERT INTO	employe
+										SET employe_login=?,employe_mdp=?,
+										employe_nom=?, employe_prenom=?,
+										employe_mail=?, employe_commentaire=?, employe_visible=?,
+										employe_actif=?,employe_logo=?,
+										equipe_id=?, employe_id = ? ";
 
 
 
-				applique_requete($sql_modif_employe, $pdo,$nouvelles_valeurs );
+					applique_requete($sql_modif_employe, $pdo,$nouvelles_valeurs );
 
-			echo "INSERT en BD de ".$employe_prenom." ".$employe_nom."<br/>";
+				echo "INSERT en BD de ".$employe_prenom." ".$employe_nom."<br/>";
+				} else echo "IMPOSSIBLE d'actualiser cet employé est déjà en base de données.<br>";
 
 			};
-
-		
-
-
-		
-
-
-	  
-
-		
 
 	}
 	
