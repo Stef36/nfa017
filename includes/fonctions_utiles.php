@@ -1,5 +1,23 @@
 <?php
 
+
+
+function applique_requete($sql_modif_employe, $pdo, $nouvelles_valeurs ){
+				/* requete préparée */
+	  	$modif_employe = $pdo->prepare($sql_modif_employe);
+
+		/* execution de la requete préparée plus haut */
+		$modif_employe->execute ($nouvelles_valeurs);
+
+		echo "requête VALIDE<br/>";
+		}
+
+
+function verif_nouvel_employe($employe_login){
+	return true;
+}
+
+
 function converti_type_input_SQL_vers_HTML ($typeSQL){
 
 	if (preg_match('/varchar/',  $typeSQL)){

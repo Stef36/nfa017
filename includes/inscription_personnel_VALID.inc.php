@@ -12,7 +12,7 @@
 		if (isset($_POST['id_selection_employe'])) {
 				
 			echo $_POST['id_selection_employe']."<br>";
-			}	
+			} 	
 		
 
 		
@@ -51,6 +51,10 @@
 		} else $employe_logo='';
 		
 		$equipe_id=$_SESSION['equipe_id'];
+
+		// prepare le tableau des valeurs à updater ou inserer
+		// $nouvelles_valeurs[10] correspond à l'employe_id
+		$nouvelles_valeurs = array ($employe_login, $employe_mdp,$employe_nom, $employe_prenom, $employe_mail,$employe_commentaire, $employe_visible, $employe_actif,$employe_logo, $equipe_id, NULL );
 		
 		if (
 			(isset($_POST['id_selection_employe']))
@@ -59,6 +63,9 @@
 			 {
 
 			$employe_id=$_POST['id_selection_employe'];
+			
+			// actualise l'employe_id
+			$nouvelles_valeurs[10]=$employe_id;
 
 			$sql_modif_employe="	UPDATE	employe
 									SET employe_login=?,employe_mdp=?,
@@ -67,13 +74,17 @@
 									employe_actif=?,employe_logo=?,
 									equipe_id=?
 									WHERE employe_id = ? ";
+									
+
+			applique_requete($sql_modif_employe, $pdo, $nouvelles_valeurs);
 
 			echo "UPDATE en BD de ".$employe_prenom." ".$employe_nom."<br/>";
-
+ 
 		}
 
-		elseif ($_POST['id_selection_employe']==''
-					|| $_POST['id_selection_employe']==NULL )
+		elseif (($_POST['id_selection_employe']==''
+					|| $_POST['id_selection_employe']==NULL)
+					& !verif_nouvel_employe($employe_login) )
 			{
 		 	 $employe_id='';
 
@@ -83,25 +94,22 @@
 									employe_mail=?, employe_commentaire=?, employe_visible=?,
 									employe_actif=?,employe_logo=?,
 									equipe_id=?, employe_id = ? ";
+
+
+
+				applique_requete($sql_modif_employe, $pdo,$nouvelles_valeurs );
+
 			echo "INSERT en BD de ".$employe_prenom." ".$employe_nom."<br/>";
+
 			};
 
 		
 
 
 		
-		
 
-	  	/* requete préparée */
-	  	$modif_employe = $pdo->prepare($sql_modif_employe);
 
-	  	// prepare le tableau des valeurs à updater
-		$nouvelles_valeurs = array ($employe_login, $employe_mdp,$employe_nom, $employe_prenom, $employe_mail,$employe_commentaire, $employe_visible, $employe_actif,$employe_logo, $equipe_id, $employe_id );
-
-		/* execution de la requete préparée plus haut */
-		$modif_employe->execute ($nouvelles_valeurs);
-
-		echo "modifications ou nouvel employé VALIDES<br/>";
+	  
 
 		
 
