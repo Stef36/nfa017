@@ -20,7 +20,7 @@
 
         $employes_de_l_equipe= $pdo -> query($sql_employes_de_l_equipe);
 
-        echo 'equipe_id -> '.$equipe_id; ?>
+        // echo 'equipe_id -> '.$equipe_id; ?>
 
 
 
@@ -53,7 +53,7 @@
 				 		$id_selection_employe=NULL;
 				 	}
 
-     				echo 'employe_id -'.$id_selection_employe.'-';
+     				//echo 'employe_id -'.$id_selection_employe.'-';
                     $_SESSION['id_selection_employe']=$id_selection_employe;
 
      			};

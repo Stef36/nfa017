@@ -10,7 +10,7 @@ if (isset($_SESSION['ticket_equipe'])) {
     # code...
 
     // affiche l'employe_id
-    echo 'employe_id -'.$id_selection_employe.'-<br/>'; 
+    //echo 'employe_id -'.$id_selection_employe.'-<br/>'; 
 
     
 
@@ -38,9 +38,9 @@ if (isset($_SESSION['ticket_equipe'])) {
 
     <form class="contact_form"  Method="post" name="formulaire_modif_employe"  > 
 
-    <ul>
+    <input type="number" name="id_selection_employe" value="<?php echo $id_selection_employe; ?>" hidden >
 
-            <input type="number" name="id_selection_employe" value="<?php echo $id_selection_employe; ?>" hidden >
+    <ul>
 
 
     <?php 
@@ -166,7 +166,7 @@ if (isset($_SESSION['ticket_equipe'])) {
 
 
             <ul>
-                <li> <input type="number" name="id_selection_employe" value=NULL hidden></li>
+                 <input type="number" name="id_selection_employe" value=NULL hidden>
 
                 <li>
                     <label for="login ">login :</label>

@@ -9,10 +9,12 @@
 	{
 
 
+		/*
 		if (isset($_POST['id_selection_employe'])) {
 				
 			echo $_POST['id_selection_employe']."<br>";
-			} 	
+			} */	
+
 		
 
 		
