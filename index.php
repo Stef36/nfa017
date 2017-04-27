@@ -15,7 +15,7 @@
 
         <!-- charger les feuiles de style  -->
         <link href="./css/style.css" rel="stylesheet" type="text/css" />
-
+ <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
             <!-- animation du mode d'emploi via css dédié  -->
         <link href="./css/mode-emploi.css" rel="stylesheet" type="text/css" />
 

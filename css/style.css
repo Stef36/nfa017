@@ -63,7 +63,7 @@ background-color: #B7AA3F;
 
 /* ------------ logos des équipes */
 .logo_equipe {
-	width : 85px;
-	height: auto;
-	font-size : 0.6em; /* taille texte sous logo */
+    width : 85px;
+    height: auto;
+    font-size : 0.6em; /* taille texte sous logo */
 }
