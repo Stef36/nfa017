@@ -2,7 +2,29 @@
 
 
 <h2>ATTRIBUTION DES CONGES</h2>
-    <form class="attribution_form" action="inscription_personnel.php" Method="post" name="formulaire"  >
+    <form class="attribution_form"  Method="post" name="formulaire"  >
+
+    <?php /* requete selection des types congés */
+
+            $sql_types_conges = "SELECT type_conge_id, type_conge_nom, type_conge_commentaire, type_conge_unite, type_conge_valable, type_conge_logo
+                                FROM type_conge
+                                 ;";
+
+            $types_conges = $pdo-> query($sql_types_conges);
+
+            while ($type_conge=$types_conges->fetch()) {
+
+
+
+                echo "congé: ".$type_conge['type_conge_nom']."<br/>";
+                echo "congé: ".$type_conge['type_conge_unite']."<br/>";
+
+
+            }
+
+     ?>
+
+
         <ul>
             <li><label for="number">Congés payés :</label>
                 <input type="text" id="conges_payes" name="conges_payes" size="3"  onblur=""> jours</li>
