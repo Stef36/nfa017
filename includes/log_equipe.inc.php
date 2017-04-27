@@ -34,15 +34,18 @@
                     // affichage si équipe connectée
                      echo "<p>OK</p>"; ?>
 
-                     <form name="deconnection_equipe" method="POST">
-                         <table>
-                             <input type="hidden" name="deconnecter_equipe" value="OK">
-                             <tr>
-                                 <th>Se déconnecter ?</th>
-                                 <td><input type="submit" name="déconnection" id="déconnection" value="OUI" /></td>
-                             </tr>
-                         </table>
-                     </form>
+
+                 	<form name="deconnection_equipe" method="POST">
+                 		<table>
+
+                 			<tr>
+                 				<th>Se déconnecter ?</th>
+                                <td><input type="hidden" name="deconnecter_equipe" value="OK"/></td>
+                 				<td><input type="submit" name="déconnection" id="déconnection" value="OUI" /></td>
+                 			</tr>
+                 		</table>
+                 	</form>
+
 
 
                  <?php } ?>

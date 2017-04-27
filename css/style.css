@@ -67,3 +67,10 @@ background-color: #B7AA3F;
 	height: auto;
 	font-size : 0.6em; /* taille texte sous logo */
 }
+
+
+.contact_form > ul:nth-child(2) > input:nth-child(2) {
+	height: auto;
+	width : 200px;
+padding: 5px 8px;
+}

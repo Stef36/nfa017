@@ -50,7 +50,7 @@
   	
   	$sql_equipe = "	SELECT 		*
 						FROM 		equipe
-						WHERE 		equipe_id= '$choixEquipe' " ;
+						WHERE 		equipe_id = '$choixEquipe' " ;
 			
   	$equipes= $pdo->query($sql_equipe); ?>
  	
@@ -64,13 +64,14 @@
   
     <span id="administration"> 
 
-		<?php echo (' id choix equipe: '. $choixEquipe); ?>
+		<?php echo (' id choix equipe: '. $choixEquipe.'<br/>------------'); ?>
 
-		<H2><?php echo ('Modification de l\'equipe: '.$equipe['equipe_nom'].
-		'<br/> login '.$equipe['equipe_login'].' (id '.$equipe['equipe_id'].')');?><br> 
+		<H2><?php echo ('Modification de l\'équipe: <br/>'.$equipe['equipe_nom'].
+		'<br/> login: '.$equipe['equipe_login'].'<br/> (id '.$equipe['equipe_id'].')');?><br> 
 		
 			<?php	$_SESSION['vientDeBackoffice']=1;
-					$_SESSION ['flag_requete_update_equipe']=0 ?> </H2>
+					$_SESSION ['flag_requete_update_equipe']=0;
+					$_SESSION['vientDeAdministrationEquipeModif']= 1; ?> </H2>
 
 <!-- ==================================================================  -->
 <!-- bouton de retour au choix d'administration -->
@@ -81,7 +82,7 @@
   		<p>Attention, toute modification influe sur le contenu de la base de donnée...</br>
   		Soyez sûr de ce que vous faites.</p>
   		
-  	<form name="modifEquipe"  method="POST" action="./administration_equipes_modif_validation.php" >
+  	<form name="modifEquipe"  method="POST" action="./administration_equipes_modif_validation.php" enctype="multipart/form-data">
   	
   		<table id="tableau_messages">
 			<tr>
@@ -89,7 +90,34 @@
 				<th>equipe_id</th>
 				<td><?php echo ($equipe['equipe_id']); ?></td>	
 			</tr>
+
+			<tr>
+				<th>equipe_mdp</th>
+				<td><?php if ($equipe['equipe_mdp']) {
+
+						echo '*** mdp OK ***';
+						} else echo '- - non définit - -'; ?>
+					
+				</td>
+
+
 				
+			</tr>
+
+
+
+			<!-- si le mdp de l'équipe n'a pas encore été défini -->
+
+
+			<tr>
+				<th>generer equipe_mdp</th>
+				<td>
+					<input type="checkbox" name="generation_mdp" >
+				</td>
+			</tr>
+
+
+
 			<tr>
 				<th>equipe_nom</th>
 				<td>
@@ -126,14 +154,41 @@
 				</td>
 			</tr>
 
+
+
+			<!-- =============== insertion logo ================-->
 			<tr>
 				<th>equipe_logo</th>
 				<td>
 					<input type="textarea" maxlengthid="300"
 					name="equipe_logo" 
-					value="<?php echo ($equipe['equipe_logo']); ?>">
+					value="<?php echo ($equipe['equipe_logo']); ?>"
+					id="equipe_logo">
+
+
+					<?php
+					//pour affichage du logo
+					if ($equipe['equipe_logo']!='') { // si logo déjà défini
+					 
+					 	require('./includes/fonctions_utiles.php');
+					afficher_suivant_mime($equipe['equipe_logo'],$equipe['equipe_entreprise'] , NULL, 'logo_equipe', NULL );
+					 } 
+					 // sinon pas d'affichage de logo
+					
+					 ?>
 				</td>
 			</tr>
+
+			
+			<tr>
+				<th><label for="mon_fichier">Fichier (max. 500 Ko)</label></th>
+				<!-- à voir: https://openclassrooms.com/courses/upload-de-fichiers-par-formulaire  -->
+
+     			<td><input type="hidden" name="MAX_FILE_SIZE" value="500000" />
+     			<input type="file" name="logo_nouveau" id="logo_nouveau" /><br /></td>
+			</tr>	
+			
+
 
 			<tr>
 				<th>equipe_visible ?</th>

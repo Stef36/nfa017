@@ -10,7 +10,7 @@
 	require('./includes/fonctions_utiles.php');//pour affichage des logos
 
 
-	$sqlequipe = "SELECT 		equipe_id, equipe_visible,
+	$sqlequipe = "SELECT 		equipe_id, equipe_mdp, equipe_visible,
 								equipe_login, equipe_nom, equipe_entreprise,
 								equipe_responsable,
 								equipe_mail, equipe_logo
@@ -27,9 +27,10 @@
 		<table id="tableau_messages">
 			<tr>
 				
-				<th>id <br/>(* visible)</th>
+				<th>id <br/>(*visible)</th>
 				
-				<th>login</th>
+				<th>login<br/>(*mdp-actif)</th>
+				
 				<th>logo</th>				
 				<th>Nom de l'équipe</th>
 				<th>Nom du responsable</th>
@@ -48,9 +49,17 @@
 					
 					<td><input type="radio" name="choixEquipe" id="choixEquipe"  value = "<?php echo $equipe['equipe_id']; ?>" >
 						<?php echo $equipe['equipe_id']; 
-						if ($equipe['equipe_visible']){echo '*';}?>
+						if ($equipe['equipe_visible']){echo '*';};
+
+						?>
 					</td>
-					<td><?php echo $equipe['equipe_login']?></td>
+
+					<td><?php echo $equipe['equipe_login'];
+							if ($equipe['equipe_mdp']) {
+								echo '<br/>***mdp***';
+								};?>
+									
+					</td>
 
 					<!-- insertion du logo -->
 					<td> 

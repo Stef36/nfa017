@@ -13,7 +13,8 @@
         <link rel="icon" href="mes-repos.ico" >
         <link rel="icon" type="image/x-icon" href="img/photos/favicon.ico">
         <title>Information du personnel</title>
-       
+ 
+         <link href="./css/style.css" rel="stylesheet" type="text/css" />      
         <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
     </head>
 <!-- ======================================================= -->
@@ -27,7 +28,7 @@
 
 <!-- ===================== TITRE ===================== -->
         <header class="headera">
-            <h1>INFORMATIONS DU PERSONNEL<H1>
+            <h1>INFORMATIONS DU PERSONNEL</h1>
             <h3>INSCRIRE / MODIFIER UNE EQUIPE</h3>
         </header>
 
@@ -36,19 +37,29 @@
         <?php include("includes/menu.php"); ?>
     </nav>
     
+<?php //affiche_variables_session(); ?>
+
+
+
 <!--====================login=============================-->
                 <aside class="log_equipea">
                 <?php include("includes/log_equipe.inc.php"); ?>
                 </aside>
-                
+ 
+<!--================== SELECTIONNER EMPLOYE ===================-->
+
+        <section id="selectionner_employe">
+            <?php include("includes/selection_employe.inc.php"); ?>
+         </section>
+
+
+
 <!--===================COMMENT CREER UNE EQUIPE==============-->
+
         <section id="creer_personnel">
             <?php include("includes/inscription_personnel.inc.php"); ?>
          </section>
-            <section id="flex">
-        
-       
-        </section>
+
 <!--===========================DESCRIPTION EQUIPE=======================-->
         <section id="attribution_conges">
         

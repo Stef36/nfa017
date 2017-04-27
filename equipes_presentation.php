@@ -1,5 +1,6 @@
 <!-- ================ Connection bdd via PDO ================ -->
-<?php include("./includes/gestion_connection_equipe.inc.php"); ?>
+<?php include("./includes/gestion_connection_equipe.inc.php");
+//affiche_variables_session() ?>
 
 
 <!-- ================ Connection bdd via PDO ================ -->
@@ -43,10 +44,15 @@ warm
         <nav>
         <?php include("includes/menu.php"); ?>
     </nav>
+
+
+<?php //affiche_variables_session(); ?>
 <!--====================================================================-->
 <!--=========================COMMENT CREER UNE EQUIPE===================-->
 <!--====================================================================-->
-        <section class="container">
+
+        <section id="creer_equipe" class="container">
+
             <?php include("includes/creer_equipe.inc.php"); ?>
         
             <section class="flex">
