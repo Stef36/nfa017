@@ -5,8 +5,16 @@
     <form class="attribution_form"  Method="post" name="formulaire"  >
 
 
-        <ul>
-    <?php /* requete selection des types congés */
+
+    <ul>
+        
+    <?php  if (isset($_SESSION['ticket_equipe']) ) {
+        
+   
+        // équipe connectée -----------------------------------
+
+
+     /* requete selection des types congés */
 
             $sql_types_conges = "SELECT type_conge_id, type_conge_nom, type_conge_commentaire, type_conge_unite, type_conge_valable, type_conge_logo
                                 FROM type_conge 
@@ -46,11 +54,47 @@
             <BR> <?php
 
 
-            }
+            } // fin section équipe connectée ---------------------
 
      ?>
 
-        </ul>
+        </ul> <?php
+    } else {
+
+        // équipe non connectée---------------------------------------?> 
+
+
+            <li><label for="number">Congés payés :</label>
+                <input type="text" id="conges_payes" name="conges_payes" size="3"  onblur=""> jours</li>
+            <BR>
+            <li><label for="number">Ancienneté :</label>
+                <input size="3" type="text" name="anciennete" id="anciennete"> jours</li>
+            <BR>
+            <li><label for="number">RTT :</label>
+                <input size="3" type="text" name="rtt" id="rtt"> jours</li>
+            <br>
+            <li><label for="number">Maladie :</label>
+                <input size="3" type="text" name="maladie" id="maladie"> jours</li>
+            <br>
+            <li><label for="number">Abscence non autorisée :</label>
+                <input size="3" type="text" name="abscence" id="abscence">
+            jours</li>
+            <br>
+            <li><label for="number">Formation :</label>
+                <input size="3" type="text" name="formation" id="formation"> jours
+            </li>
+            <br>
+
+
+            </ul><?php
+
+            } ?>
+
+
+
+
+
+                   
 
 
 
