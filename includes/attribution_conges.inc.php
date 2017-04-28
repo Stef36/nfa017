@@ -42,15 +42,13 @@
 
             <li><label for="number"><?php echo $employe_dispose_type_conge['type_conge_nom'];?></label>
 
-                <input type="number" id="<?php echo $employe_dispose_type_conge['type_conge_nom'];?>" name="<?php echo $employe_dispose_type_conge['type_conge_nom'];?>" size="3"  onblur="" 
-                value ="<?php  echo $employe_dispose_type_conge['disposer_quantite'];
-
-                
-
-
-
-                ?>">
-                <?php echo " ".$employe_dispose_type_conge['type_conge_unite']; ?> </li>
+                <input type="number" 
+                    id="<?php echo $employe_dispose_type_conge['type_conge_nom'];?>" 
+                    name="<?php echo $employe_dispose_type_conge['type_conge_nom'];?>"   
+                    onblur="" 
+                    value ="<?php echo $employe_dispose_type_conge['disposer_quantite'];?>"
+                    min="0">
+                <?php echo " ".$employe_dispose_type_conge['type_conge_unite']."(s)"; ?> </li>
             <BR> <?php
 
 
