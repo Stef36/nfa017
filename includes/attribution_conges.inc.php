@@ -31,7 +31,9 @@
                                     LEFT JOIN 
                                     (SELECT * FROM disposer WHERE disposer.employe_id='$id_selection_employe' )
                                     AS D 
-                                    ON T.type_conge_id = D.type_conge_id;";
+                                    ON T.type_conge_id = D.type_conge_id
+                                    WHERE T.type_conge_valable=1
+                                    ORDER BY type_conge_nom;";
 
 
             $employe_dispose_type_conges = $pdo -> query($sql_employe_dispose_combiens_type_conges);
