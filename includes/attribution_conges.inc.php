@@ -26,34 +26,40 @@
 
             // TODO requete fausse....
             $sql_employe_dispose_combiens_type_conges =
-                                "SELECT *
-                                FROM  type_conge T LEFT JOIN disposer D
-                                ON D.type_conge_id = T.type_conge_id
-                                WHERE (D.employe_id = '$id_selection_employe'  OR D.type_conge_id IS NULL)
-                                ORDER BY T.type_conge_nom;";
+                                "   SELECT * 
+                                    FROM `type_conge` T 
+                                    LEFT JOIN 
+                                    (SELECT * FROM disposer WHERE disposer.employe_id='$id_selection_employe' )
+                                    AS D 
+                                    ON T.type_conge_id = D.type_conge_id;";
 
 
-            $employe_dispose_type_conges = $pdo-> query($sql_employe_dispose_combiens_type_conges);
+            $employe_dispose_type_conges = $pdo -> query($sql_employe_dispose_combiens_type_conges);
 
-
+ 
 
             if (true) { 
 
                 // employé connu selectionné
 
-                while ($employe_dispose_type_conge=$employe_dispose_type_conges->fetch()) { 
+                while ($employe_dispose_combien_type_conges=$employe_dispose_type_conges -> fetch() ) 
+                { 
 
-                //echo $employe_dispose_type_conge['type_conge_nom'];?>
+                //echo $sql_employe_dispose_combien_type_conges['type_conge_nom'];
+                    ?>
 
-                <li><label for="number"><?php echo $employe_dispose_type_conge['type_conge_nom'];?></label>
+                <li>
+                    <label for="number"><?php echo $employe_dispose_combien_type_conges['type_conge_nom'];?></label>
 
                     <input type="number" 
-                        id="<?php echo $employe_dispose_type_conge['type_conge_nom'];?>" 
-                        name="<?php echo $employe_dispose_type_conge['type_conge_nom'];?>"   
+                        id="<?php echo $employe_dispose_combien_type_conges['type_conge_nom'];?>" 
+                        name="<?php echo $employe_dispose_combien_type_conges['type_conge_nom'];?>"   
                         onblur="" 
-                        value ="<?php echo $employe_dispose_type_conge['disposer_quantite'];?>"
+                        value ="<?php echo $employe_dispose_combien_type_conges['disposer_quantite'];?>"
                         min="0">
-                    <?php echo " ".$employe_dispose_type_conge['type_conge_unite']."(s)"; ?> </li>
+                    <?php echo " ".$employe_dispose_combien_type_conges['type_conge_unite']."(s)"; ?> 
+                </li>
+
                 <BR> <?php
 
 
