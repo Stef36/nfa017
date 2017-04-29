@@ -11,6 +11,7 @@
         <link rel="icon" type="image/x-icon" href="img/photos/favicon.ico">
         <title>Information du personnel</title>
         <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
+        <link href="./css/style.css" rel="stylesheet" type="text/css" />
         <!--<link href="./css/calendar.css" rel="stylesheet" type="text/css" />-->
     </head>
 <!-- ======================================================= -->
@@ -63,8 +64,7 @@
                         </article>
                     </section>
                 </section>
-                
-=======
+
 <!--====================login=============================-->
         <aside class="log_equipea">
             <?php include("includes/log_equipe.inc.php"); ?>
