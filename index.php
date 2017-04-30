@@ -11,6 +11,7 @@
 
  
         <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico">
+        
         <title>Poser mes repos en ligne</title>
 
         <!-- charger les feuiles de style  -->

@@ -8,9 +8,10 @@
 <meta charset="UTF-8" lang="fr"/>
 <meta name="description"  content="Mes repos deconnection"/>
 
-<link rel="icon" href="soullat2.ico" />
+<link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico">
 
-<title>Mesrepos | deconnection </title>
+
+<title>Deconnection | Poser mes repos en ligne </title>
 <link href="./css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <!-- ======================================================= -->

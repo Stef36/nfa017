@@ -12,7 +12,7 @@
     <meta charset="UTF-8" lang="fr"/>
     <meta name="description"  content="Contenus administrables">
 
-    <link rel="icon" href="icone.ico" />
+    <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico">
 
 
 	<title>Mes Repos | BackOffice </title>
