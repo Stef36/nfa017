@@ -1,7 +1,7 @@
 <?php  // mise en BD des modifications faites en "inscription_personnel.inc.php"
 
 
-	echo "<br>DANS inscription_personnel_VALID<br>";
+	//echo "<br>DANS inscription_personnel_VALID<br>";
 
 		
 
@@ -119,7 +119,7 @@
 
 	}
 	
-	else echo "<br/>-----  AUCUN CHANGEMENT EN BD  ------<br/>";
+	else echo "<br/>-----  AUCUN CHANGEMENT sur FICHE EN BD  ------<br/>";
 	$_POST['valid_modif_employe']=NULL;
 
 
