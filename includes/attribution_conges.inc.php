@@ -36,13 +36,19 @@
                                     ORDER BY type_conge_nom;";
 
 
-            $employe_dispose_type_conges = $pdo -> query($sql_employe_dispose_combiens_type_conges);
+            $employe_dispose_type_conges = $pdo -> query($sql_employe_dispose_combiens_type_conges); ?>
 
- 
+            <H3>N° id_employé: <?php echo " ".$id_selection_employe; ?> </H3>
 
-            if (true) { 
+            <?php
+
+            if ($id_selection_employe!=NULL | $id_selection_employe!='') { 
 
                 // employé connu selectionné
+
+                ?>
+
+                <form class="contact_form"  Method="post" name="formulaire_attribution_conges"  > <?
 
                 while ($employe_dispose_combien_type_conges=$employe_dispose_type_conges -> fetch() ) 
                 { 
@@ -65,11 +71,22 @@
                 <BR> <?php
 
 
-                }
+                } ?>
+
+                <label for="">mettre à jour</label>
+                <input type="submit" name="valid_attribution_conges" value="Mettre à jour" >
+
+                </form> <?php
             } 
 
             else {
-                //nouvel employé
+
+                ?>
+
+                <p>
+                Merci de créer d'abord une fiche de  nouvel employé avant de pouvoir lui attibuer ses congés.
+                </p>
+                 <?php
 
             }
 
