@@ -51,8 +51,32 @@
 
 				$employe_dispose_conges_definit=$pdo-> query($sql_recherche_si_employe_dispose_conges_definit);
 
-				if ( $employe_dispose_conge_definit=$employe_dispose_conges_definit->fetch()) {
-					echo "l'employé dispose dejà de ".$employe_dispose_conge_definit['disposer_quantite']."<br/>";
+
+				$sql_update_disposer=
+							"UPDATE disposer
+							SET disposer_quantite = ? 
+							WHERE employe_id= ? AND type_conge_id= ?;";
+
+
+
+				if ( $employe_dispose_conge_definit=$employe_dispose_conges_definit->fetch()) { 
+
+					$quantite=$employe_dispose_conge_definit['disposer_quantite'];
+					echo "l'employé dispose dejà de ".$quantite."<br/>";
+
+					if ($quantite != $value) {
+					
+					$nouvelles_valeurs= array ($value, $employe_id, $index );
+
+					// update de l'enregistrement
+					applique_requete($sql_update_disposer, $pdo, $nouvelles_valeurs);
+
+					echo "UPDATE en BD  <br/>";
+					}
+
+	
+
+
 				}
 
             	// si $type_conge['type_conge_id']= POST_['id_type_conge']

@@ -2,12 +2,12 @@
 
 
 
-function applique_requete($sql_modif_employe, $pdo, $nouvelles_valeurs ){
+function applique_requete($sql_modif, $pdo, $nouvelles_valeurs ){
 				/* requete préparée */
-	  	$modif_employe = $pdo->prepare($sql_modif_employe);
+	  	$modif = $pdo->prepare($sql_modif);
 
 		/* execution de la requete préparée plus haut */
-		$modif_employe->execute ($nouvelles_valeurs);
+		$modif->execute ($nouvelles_valeurs);
 
 		echo "requête VALIDE<br/>";
 		}
