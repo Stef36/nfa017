@@ -70,9 +70,12 @@ background-color: #B7AA3F;
 }
 
 
-.contact_form > ul:nth-child(2) > input:nth-child(2) {
+.contact_form > ul:nth-child(2) > input:nth-child(2),
+ .attribution_form > ul:nth-child(2) > input:nth-child(2){
 	height: auto;
 	width : 200px;
 padding: 5px 8px;
 
 }
+
+

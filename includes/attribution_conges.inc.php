@@ -2,11 +2,8 @@
 
 
 <h2>ATTRIBUTION DES CONGES</h2>
-    <form class="attribution_form"  Method="post" name="formulaire"  >
 
 
-
-    <ul>
         
     <?php  if (isset($_SESSION['ticket_equipe']) ) {
         
@@ -48,7 +45,9 @@
 
                 ?>
 
-                <form class="contact_form"  Method="post" name="formulaire_attribution_conges"  > <?
+                <form class="attribution_form"  Method="post" name="formulaire_attribution_conges"  > 
+
+                <ul> <?
 
                 while ($employe_dispose_combien_type_conges=$employe_dispose_type_conges -> fetch() ) 
                 { 
@@ -72,9 +71,12 @@
 
 
                 } ?>
+                </ul>
 
-                <label for="">mettre à jour</label>
-                <input type="submit" name="valid_attribution_conges" value="Mettre à jour" >
+                <ul>
+                    <label for="">mettre à jour</label>
+                    <input type="submit" name="valid_attribution_conges" value="Mettre à jour" >
+                </ul>
 
                 </form> <?php
             } 
@@ -91,18 +93,18 @@
             }
 
  
-
-
-
             // fin section équipe connectée ---------------------
 
-     ?>
 
-        </ul> <?php
+
+
+
     } else {
 
         // équipe non connectée---------------------------------------?> 
 
+
+        <form class="attribution_form"  Method="post" name="formulaire_attribution_conges"  >
 
             <li><label for="number">Congés payés :</label>
                 <input type="text" id="conges_payes" name="conges_payes" maxlength="3"  onblur=""> jours</li>
