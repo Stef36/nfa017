@@ -21,15 +21,21 @@
             $types_conges = $pdo-> query($sql_types_conges);
 
 
-            // TODO requete fausse....
+            // requete de selection des type de congés et des congés attribué à l'employé:
             $sql_employe_dispose_combiens_type_conges =
-                                "   SELECT * 
+                                "   SELECT  type_conge_nom,
+                                     T.type_conge_id AS id_type_conge,
+                                        disposer_quantite, type_conge_unite
+
                                     FROM `type_conge` T 
                                     LEFT JOIN 
                                     (SELECT * FROM disposer WHERE disposer.employe_id='$id_selection_employe' )
                                     AS D 
+
                                     ON T.type_conge_id = D.type_conge_id
+
                                     WHERE T.type_conge_valable=1
+
                                     ORDER BY type_conge_nom;";
 
 
@@ -47,7 +53,10 @@
 
                 <form class="attribution_form"  Method="post" name="formulaire_attribution_conges"  > 
 
-                <ul> <?
+                <ul> 
+
+                    <input type="number" name="id_selection_employe" value="<?php echo $id_selection_employe; ?>" hidden ></input>
+<?
 
                 while ($employe_dispose_combien_type_conges=$employe_dispose_type_conges -> fetch() ) 
                 { 
@@ -60,7 +69,7 @@
 
                     <input type="number" 
                         id="<?php echo $employe_dispose_combien_type_conges['type_conge_nom'];?>" 
-                        name="<?php echo $employe_dispose_combien_type_conges['type_conge_nom'];?>"   
+                        name="<?php echo $employe_dispose_combien_type_conges['id_type_conge'];?>"   
                         onblur="" 
                         value ="<?php echo $employe_dispose_combien_type_conges['disposer_quantite'];?>"
                         min="0">
