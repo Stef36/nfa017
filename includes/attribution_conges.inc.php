@@ -11,14 +11,7 @@
         // équipe connectée -----------------------------------
 
 
-     /* requete selection des types congés */
 
-            $sql_types_conges = "SELECT type_conge_id, type_conge_nom, type_conge_commentaire, type_conge_unite, type_conge_valable, type_conge_logo
-                                FROM type_conge 
-                                WHERE type_conge_valable=1
-                                 ;";
-
-            $types_conges = $pdo-> query($sql_types_conges);
 
 
             // requete de selection des type de congés et des congés attribué à l'employé:
@@ -72,7 +65,8 @@
                         name="<?php echo $employe_dispose_combien_type_conges['id_type_conge'];?>"   
                         onblur="" 
                         value ="<?php echo $employe_dispose_combien_type_conges['disposer_quantite'];?>"
-                        min="0">
+                        min="0"
+                        step="0.5">
                     <?php echo " ".$employe_dispose_combien_type_conges['type_conge_unite']."(s)"; ?> 
                 </li>
 
