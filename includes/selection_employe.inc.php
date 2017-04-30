@@ -10,6 +10,9 @@
                 // entrée en BD des modifications faites en "inscription_personnel.inc.php"
                 include("includes/inscription_personnel_VALID.inc.php");
 
+                // entrée en BD des modifications faites en "attribution_conges.inc.php"
+                include("includes/attribution_conges_VALID.inc.php");
+
 
         $equipe_id = $_SESSION['equipe_id'];
 

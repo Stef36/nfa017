@@ -1,7 +1,7 @@
-<?php  // mise en BD des modifications faites en "inscription_personnel.inc.php"
+<?php  // mise en BD des modifications faites en "attribution_conges.inc.php"
 
 
-	echo "<br>DANS inscription_personnel_VALID<br>";
+	echo "<br>DANS attribution_conges_VALID<br>";
 
 		
 
