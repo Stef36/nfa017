@@ -75,7 +75,8 @@
 
                 <ul>
                     <label for="">mettre à jour</label>
-                    <input type="submit" name="valid_attribution_conges" value="Mettre à jour" >
+                    <input type="submit" name="valid_attribution_conges" value="Mettre à jour" onclick="alert();">
+
                 </ul>
 
                 </form> <?php
@@ -128,40 +129,25 @@
             <br>
 
 
-            </ul><?php
+            </ul>
+
+        </form><?php
 
             } ?>
 
 
-
-
-
-                   
-
-
-
-        <fieldset>
-            <center>
-                <legend>Commentaires :</legend>
-            </center>
-            <center><br>
-                <textarea name="message" rows="8" cols="100" placeholder="Tapez votre message" ></textarea>
-                <br>
-            </center>
-            <br>
-        </fieldset>
         
 <!--==========Boutons de réinitialisation et de validation===============-->
-            <center class="bouton">
+            <!-- <center class="bouton"> -->
 <!--=========================UTILITER D'UN BOUTON RESET ?????=============-->
             <!--<input type="Reset" value="Réinitialiser" />-->
 <!--======================================================================-->
-                <input type="submit" value="Valider" onclick="alert();"/>
-            
+            <!-- <input type="submit" value="Valider" onclick="alert();"/>             
             </center>
         <br><br><br><br><br>
         
-    </form>
+    </form>-->
+
     
     
    
