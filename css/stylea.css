@@ -1,7 +1,6 @@
 
 body {
-    background-color:black;
-    color:white;
+    color: black;
   }
 H1{
     color:white;
@@ -103,7 +102,9 @@ H1{
     display:inline-block; 
     float:left; 
     padding:3px; 
-    color:red;
+    color:black;
+    font-size:25px;
+    font-style:bold;
 } 
 
 .contact_form input { 
