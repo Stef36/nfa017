@@ -11,7 +11,7 @@
     </ul>
 
 <!--===============bouton de refus des conges=================-->
-    <input id="conges_valides" type="submit" value="CONGES REFUSES"/>
+    <input id="conges_valides" type="submit" value="CONGES REFUSES"/><br>
 
 <!--===============bouton de validation des conges=================-->
     <input id="conges_valides" type="submit" value="CONGES VALIDES"/>
