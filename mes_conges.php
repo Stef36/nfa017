@@ -51,7 +51,7 @@ warm
         </nav>
 
 
-<?php //affiche_variables_session(); ?>
+<?php affiche_variables_session(); ?>
 <!--====================================================================-->
 <!--=======================   COMMENT UTILISER du côté employé  ========-->
 <!--====================================================================-->
@@ -62,53 +62,35 @@ warm
                 <?php include("includes/comment_utiliser_employe.inc.php"); ?>
             </section>
 
-
         
             <aside id="log-employe">
 
-    
                 <!--====== login            ===============-->
 
-
-log_employe
-                <?php include("includes/log_equipe.inc.php"); ?>
-
-             
-        
+                log_employe
+                <?php include("includes/log_employe.inc.php"); ?>
+     
             </aside>
+
         </section>
 <!--====================================================================-->
-<!--===========================DESCRIPTION EQUIPE=======================-->
+<!--===========================DESCRIPTION EMPLOYE=======================-->
 <!--====================================================================-->
-        <section id="description_equipe">
+        <section id="description_employe">
         
-description_equipe
-        <?php include("includes/description_equipe.inc.php"); ?>
-        
-        
-<!--===========================EQUIPES=======================-->
-        <article id="equipes">
-equipes
-        <?php include("includes/equipes.inc.php"); ?>
-        </article>
+            description_employe
+            <?php include("includes/description_equipe.inc.php"); ?>
+            
+            
+            <!--===========================EQUIPES=======================-->
+            <article id="equipes">
+            equipes
+            <?php include("includes/equipes.inc.php"); ?>
+            </article>
         
         </section>
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+     
 <!-- ===================== BAS DE PAGE  ===================== -->
         <?php include("includes/basDePage.php"); ?>
     </body>

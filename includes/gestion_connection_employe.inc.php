@@ -6,44 +6,42 @@
 		// gestion de la connection
 
 
-	// si on tente de se connecter via le log équipe------------------
+	// si on tente de se connecter via le log employe------------------
 
-	if (isset($_POST['login_equipe'])) {
+	if (isset($_POST['login_employe'])) {
 
-		$log=$_POST['login_equipe'];
-		$mdp=$_POST['equipe-passwd'];
+		$log=$_POST['login_employe'];
+		$mdp=$_POST['employe-passwd'];
 
 		// test login 
-		$sql_log_equipe = "SELECT equipe_id, equipe_login, equipe_mdp, 									equipe_nom, equipe_entreprise, equipe_responsable, equipe_mail, equipe_logo, equipe_visible
-							FROM 		equipe ;" ;
+		$sql_log_employe = "SELECT employe_id, employe_login, employe_mdp, 									employe_nom, employe_prenom, employe_mail, employe_commentaire, employe_visible, employe_actif,  employe_logo, equipe_id
+							FROM 		employe ;" ;
 		
-		$log_equipes= $pdo->query($sql_log_equipe);
+		$log_employes= $pdo->query($sql_log_employe);
 
-			//parcours la table des logs equipe
-			while ( $log_equipe=$log_equipes->fetch()) {
+			//parcours la table des logs employe
+			while ( $log_employe=$log_employes->fetch()) {
 
 				if (
-					($log_equipe['equipe_login']==$log)
+					($log_employe['employe_login']==$log)
 					&
-					($log_equipe['equipe_mdp']==$mdp)
+					($log_employe['employe_mdp']==$mdp)
 					& 
-					($log_equipe['equipe_mdp']!='')
+					($log_employe['employe_mdp']!='')
 					&
-					($log_equipe['equipe_visible'])
+					($log_employe['employe_visible'])
 					) {
 
-					$_SESSION['ticket_equipe']=1;
-					$_SESSION['equipe_id']=$log_equipe['equipe_id'];
-					$_SESSION['equipe_login']=$log_equipe['equipe_login'];
-					$_SESSION['equipe_nom']=$log_equipe['equipe_nom'];
-					$_SESSION['equipe_entreprise']=$log_equipe['equipe_entreprise'];
-					$_SESSION['equipe_responsable']=$log_equipe['equipe_responsable'];
-					$_SESSION['equipe_mail']=$log_equipe['equipe_mail'];
-					$_SESSION['equipe_logo']=$log_equipe['equipe_logo'];
+					$_SESSION['ticket_employe']=1;
+					$_SESSION['employe_id']=$log_employe['employe_id'];
+					$_SESSION['employe_login']=$log_employe['employe_login'];
+					$_SESSION['employe_nom']=$log_employe['employe_nom'];
+					$_SESSION['employe_mail']=$log_employe['employe_mail'];
+					$_SESSION['employe_logo']=$log_employe['employe_logo'];
 
 
 
-					//echo '<p>OK équipe: '.$log_equipe['equipe_login'];'</p>';
+					//echo '<p>OK équipe: '.$log_employe['employe_login'];'</p>';
 					}
 				
 			}
@@ -53,8 +51,8 @@
 
 	// si on tente de se déconnecter via le log équipe------------------
 
-		if (isset($_POST['deconnecter_equipe'])) {
-			if ($_POST['deconnecter_equipe']=='OK') {
+		if (isset($_POST['deconnecter_employe'])) {
+			if ($_POST['deconnecter_employe']=='OK') {
 
 				// fermeture de session
  
