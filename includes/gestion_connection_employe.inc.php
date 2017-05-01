@@ -36,8 +36,7 @@
 					$_SESSION['employe_id']=$log_employe['employe_id'];
 					$_SESSION['employe_login']=$log_employe['employe_login'];
 					$_SESSION['employe_nom']=$log_employe['employe_nom'];
-					$_SESSION['employe_mail']=$log_employe['employe_mail'];
-					$_SESSION['employe_logo']=$log_employe['employe_logo'];
+
 
 
 

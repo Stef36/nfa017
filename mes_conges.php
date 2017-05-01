@@ -82,7 +82,7 @@ warm
             <?php include("includes/description_employe.inc.php"); ?>
             
             
-            <!--===========================EQUIPES=======================-->
+            <!--===========================EMPLOYESS=======================-->
             <article id="employe">
             employes
             <?php include("includes/employes.inc.php"); ?>

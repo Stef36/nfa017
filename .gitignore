@@ -6,3 +6,6 @@ connection.php
 
 # ignorer le repertoire des logos
 /logos
+
+# ignorer le repertoire des avatars(employés)
+/avatars

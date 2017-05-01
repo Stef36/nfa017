@@ -45,29 +45,34 @@
 	}
 
 
-	// si l'équipe est loggée
+	// si l'employé est loggée
 	elseif ($_SESSION['ticket_employe']==1)
 		 {
+			$employe_id= $_SESSION['employe_id'];
+		 	echo "Employe-id: ".$employe_id;
 
-		 	?><h2>Votre équipe est constituée des personnes:</h2> <?php
+		 	?><h2>Votre fiche employé:</h2> <?php
 
-		 	$equipe_id=$_SESSION['equipe_id'];
+		 	
 
-		 	$sqlEmployeEquipe = "SELECT employe_nom, employe_prenom, employe_commentaire
-		 						FROM employe
-		 						WHERE equipe_id = '$equipe_id' ;";
 
-		 	$employesDeLequipe = $pdo -> query($sqlEmployeEquipe);
+		 	$sqlDecritEmploye = "SELECT employe_id, employe_login, employe_mdp, 									employe_nom, employe_prenom, employe_mail, employe_commentaire, employe_visible, employe_actif,  employe_logo, equipe_id
+							FROM 		employe
+							WHERE  employe_id='$employe_id';";
 
-		 	while ($employeDeLequipe = $employesDeLequipe->fetch()) { ?>
+
+
+		 	$fichesEmploye = $pdo -> query($sqlDecritEmploye);
+
+		 	while ($ficheEmploye = $fichesEmploye->fetch()) { ?>
 
 		 		<H3> <?php
 
-		 		echo $employeDeLequipe['employe_prenom'].' '.$employeDeLequipe['employe_nom']; ?>
+		 		echo $ficheEmploye['employe_prenom'].' '.$ficheEmploye['employe_nom']; ?>
 		 		</H3> 
 
 		 		<p>	<?php
-		 		echo $employeDeLequipe['employe_commentaire']; ?>
+		 		echo $ficheEmploye['employe_commentaire']; ?>
 		 			
 
 		 		</p> <?php
