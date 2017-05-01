@@ -77,28 +77,45 @@
 		 		echo $ficheEmploye['employe_prenom'].' '.$ficheEmploye['employe_nom']; ?>
 		 		</H3> 
 
+		 		<section class="flex_employe" >
 
-		 		<p>	<?php
-		 		echo $ficheEmploye['employe_commentaire']; ?>
-		 			
+		 		<span>
 
-		 		</p> 
 
-		 		<p>
-		 			<!-- insertion avatar employé -->
+			 		<p>
+			 			<!-- insertion avatar employé -->
 
-		 			<?php
+			 			<?php
 
-		 			    # affiche le logo de l'équipe
-        			if ($ficheEmploye['employe_logo']!=''){ 
+			 			    # affiche le logo de l'équipe
+	        			if ($ficheEmploye['employe_logo']!=''){ 
 
-                          //affiche le logo via la fonction afficher_suivant_mime() 
-                            
-                          afficher_suivant_mime($ficheEmploye['employe_logo'],NULL,NULL , NULL,  NULL );
+	                          //affiche le logo via la fonction afficher_suivant_mime() 
+	                            
+	                          afficher_suivant_mime($ficheEmploye['employe_logo'],NULL,NULL , NULL,  NULL );
 
-        			} else afficher_suivant_mime("./logos/Dom.jpg","MesRepos" , NULL, 'logo_equipe', NULL ); ?>
+	        			} else afficher_suivant_mime("./logos/Dom.jpg","MesRepos" , NULL, 'logo_equipe', NULL ); ?>
 
-		 		</p><?php
+			 		</p>
+			 	</span>
+
+			 	<span>
+
+			 		<p>Votre login:<br>"<?php
+			 		echo $ficheEmploye['employe_login']; ?>"</p>
+
+			 		<p>Votre mail:<br>"<?php
+			 		echo $ficheEmploye['employe_mail']; ?>"</p>
+
+
+			 		<p>	Le commentaire de votre responsable:<br/>"<?php
+			 		echo $ficheEmploye['employe_commentaire']; ?>"
+			 		</p>
+			 	</span> 
+
+		 		</section>
+
+<?php
 
 
 		 	}

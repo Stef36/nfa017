@@ -80,7 +80,7 @@ padding: 5px 8px;
 
 /* ------------page mes_conges.php --------*/
 
-#flex_employe {
+.flex_employe {
 	border: 1px ridge yellow;
 	display: flex;
 	justify-content: space-around;

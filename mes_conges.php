@@ -56,7 +56,7 @@ warm
 <!--=======================   COMMENT UTILISER du côté employé  ========-->
 <!--====================================================================-->
 
-        <section id="flex_employe" >
+        <section class="flex_employe" >
 
             <section id="employe_presentation">
                 <?php include("includes/comment_utiliser_employe.inc.php"); ?>
