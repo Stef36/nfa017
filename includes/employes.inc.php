@@ -20,7 +20,10 @@
 					FROM 		equipe 
 					ORDER BY    equipe_visible DESC ;" ;
 		
-		$equipes= $pdo->query($sqlequipe);
+		$equipes= $pdo->query($sqlequipe); ?>
+
+
+		<span class="flex_logo"> <?php 
 
 
 		while ($equipe = $equipes->fetch()) {
@@ -39,7 +42,9 @@
 						} else afficher_suivant_mime("./logos/Dom.jpg","MesRepos" , NULL, 'logo_equipe', NULL );
 						
 					}
-			}
+			} ?>
+
+		</span> <?php
 
 	
 	}
