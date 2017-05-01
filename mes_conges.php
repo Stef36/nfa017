@@ -13,11 +13,11 @@
     <head>
 
         <meta charset="UTF-8" lang="fr">
-        <meta name="Mes Repos"  content="poser consulter jours congés travail équipe ">
+        <meta name="Mes Repos"  content="poser consulter jours congés travail côté employe ">
 
         <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico">
   
-        <title>Equipes de travail</title>
+        <title>Mes congés page titre</title>
         <link href="./css/style.css" rel="stylesheet" type="text/css" />
         <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
     </head>
@@ -30,14 +30,12 @@
 
 
 
-<!-- ===================== TITRE ===================== 
-        <header class="headera">
-            <h1>LES EQUIPES DE TRAVAIL<H1>
-                    </header>-->
+<!-- ===================== TITRE ===================== -->
+<?php require ("./includes/header.inc.php"); titre_header('MES CONGES')?>
 <!-- ===================== TITRE ===================== -->
 
 
-<?php require ("./includes/header.inc.php"); titre_header('MES CONGES')?>
+
 
 
 
@@ -50,33 +48,35 @@ warm
 <!-- ===================== MENU ===================== -->
         <nav>
         <?php include("includes/menu.php"); ?>
-    </nav>
+        </nav>
 
 
 <?php //affiche_variables_session(); ?>
 <!--====================================================================-->
-<!--=========================COMMENT CREER UNE EQUIPE===================-->
+<!--=======================   COMMENT UTILISER du côté employé  ========-->
 <!--====================================================================-->
 
-        <section id="creer_equipe" class="container">
+        <section id="flex_employe" >
 
-            <?php include("includes/comment_utiliser_employe.inc.php"); ?>
+            <section id="employe_presentation">
+                <?php include("includes/comment_utiliser_employe.inc.php"); ?>
+            </section>
+
+
         
-            <section class="flex">
-                <article class="flex1">
-equipe-presentation
-                <?php include("includes/equipe_presentation.inc.php"); ?>
-                </article>
-    
-<!--====================login=============================-->
+            <aside id="log-employe">
 
-                <aside class="log_equipea">
-log_equipe
+    
+                <!--====== login            ===============-->
+
+
+log_employe
                 <?php include("includes/log_equipe.inc.php"); ?>
 
-                </aside>
+             
         
-            </section></section>
+            </aside>
+        </section>
 <!--====================================================================-->
 <!--===========================DESCRIPTION EQUIPE=======================-->
 <!--====================================================================-->
