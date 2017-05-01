@@ -9,7 +9,7 @@ if (! isset($_SESSION['ticket_equipe'])) { ?>
 <p>Comment faire ?</p>
 <p>Il faut avoir reçu de son responsable ou du chargé d'équipe un login et un mot de passe.</p>
 
-<p>Cela vous permettra de vous connecter ci dessous.</p>
+<p>Cela vous permettra de vous connecter.</p>
 <p>Vous pourrez ensuite <a href="mes_conges_consulter.php">consulter</a> et <a href="mes_conges_poser.php">poser</a> vos congés en ligne. </p>
 
 <p>Le responsable sera averti automatiquement et donnera sa réponse de son côté sur le site.</p>

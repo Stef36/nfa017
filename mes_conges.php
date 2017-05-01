@@ -79,13 +79,13 @@ warm
         <section id="description_employe">
         
             description_employe
-            <?php include("includes/description_equipe.inc.php"); ?>
+            <?php include("includes/description_employe.inc.php"); ?>
             
             
             <!--===========================EQUIPES=======================-->
-            <article id="equipes">
-            equipes
-            <?php include("includes/equipes.inc.php"); ?>
+            <article id="employe">
+            employes
+            <?php include("includes/employes.inc.php"); ?>
             </article>
         
         </section>
