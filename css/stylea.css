@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
 
 body {
     color: black;
@@ -250,7 +255,17 @@ body {
     list-style:none;
 }
 
+/*=============Flexbox Menu=====================*/
+.container_menu{
+    display:flex;
+    flex-direction:column;
+}
 
+#flex_menu{
+    display:flex;
+    flex-direction:column;
+    height:auto;
+}
 
 
 
