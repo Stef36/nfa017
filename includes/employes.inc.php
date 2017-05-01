@@ -6,7 +6,7 @@
 
 <?php
 
-	// si la connection du chef d'équipe n'est pas active
+	// si la connection de l'employé n'est pas active
 	if ( !isset($_SESSION['ticket_employe']) OR ($_SESSION['ticket_employe'])==0)
 	{
 
@@ -48,10 +48,14 @@
 	// si l'employé est loggée
 	elseif ($_SESSION['ticket_employe']==1)
 		 {
+
+
+
+
 			$employe_id= $_SESSION['employe_id'];
 		 	echo "Employe-id: ".$employe_id;
 
-		 	?><h2>Votre fiche employé:</h2> <?php
+		 	?><h2>VOS COORDONNEES:</h2> <?php
 
 		 	
 
@@ -59,6 +63,8 @@
 		 	$sqlDecritEmploye = "SELECT employe_id, employe_login, employe_mdp, 									employe_nom, employe_prenom, employe_mail, employe_commentaire, employe_visible, employe_actif,  employe_logo, equipe_id
 							FROM 		employe
 							WHERE  employe_id='$employe_id';";
+
+
 
 
 
@@ -71,14 +77,30 @@
 		 		echo $ficheEmploye['employe_prenom'].' '.$ficheEmploye['employe_nom']; ?>
 		 		</H3> 
 
+
 		 		<p>	<?php
 		 		echo $ficheEmploye['employe_commentaire']; ?>
 		 			
 
-		 		</p> <?php
+		 		</p> 
+
+		 		<p>
+		 			<!-- insertion avatar employé -->
+
+		 			<?php
+
+		 			    # affiche le logo de l'équipe
+        			if ($ficheEmploye['employe_logo']!=''){ 
+
+                          //affiche le logo via la fonction afficher_suivant_mime() 
+                            
+                          afficher_suivant_mime($ficheEmploye['employe_logo'],NULL,NULL , NULL,  NULL );
+
+        			} else afficher_suivant_mime("./logos/Dom.jpg","MesRepos" , NULL, 'logo_equipe', NULL ); ?>
+
+		 		</p><?php
 
 
-		 	
 		 	}
 
 
