@@ -77,5 +77,14 @@
 <!-- ===================== BAS DE PAGE  ===================== -->
 
         <?php include("includes/basDePage.php"); ?>
+<!--**********************************************************************************************************-->
+<!--****************************** AFFICHAGE INFORMATION DE LA LARGEUR DE LA PAGE ****************************-->
+                <script type="text/javascript">
+                    {
+                        var $largeur = document.body.clientWidth;
+
+                        document.write('Largeur de la page : ' + $largeur + ' px');
+                    }
+                </script>
     </body>
 </html>
