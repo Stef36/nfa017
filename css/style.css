@@ -82,13 +82,16 @@ padding: 5px 8px;
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+	align-items: baseline;
 }
 /* ------------page mes_conges.php --------*/
 
 .flex_employe {
 	border: 1px ridge yellow;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
+	align-items: baseline;
 }
 
 

@@ -17,8 +17,9 @@
 								equipe_responsable,
 								equipe_mail, equipe_logo
 							
-					FROM 		equipe 
-					ORDER BY    equipe_visible DESC ;" ;
+					FROM 		equipe
+					WHERE 		equipe_visible=1
+					ORDER BY    equipe_nom  ;" ;
 		
 		$equipes= $pdo->query($sqlequipe); ?>
 
@@ -27,22 +28,30 @@
 
 
 		while ($equipe = $equipes->fetch()) {
-			// affichage des logos des équipes
+				// affichage des logos des équipes ?>
+			
+					<span>
 
-
-			if (($equipe['equipe_visible']==TRUE) )  {?>
+			
 						<!-- affiche le nom de l'équipe -->
 						<p><?php echo $equipe['equipe_nom']; ?></p>
 						<?php
+
 						if ($equipe['equipe_logo']!=''){ ?>
 							<!-- affiche le logo via la fonction afficher_suivant_mime() -->
 						<?php
 						afficher_suivant_mime($equipe['equipe_logo'],$equipe['equipe_entreprise'] , NULL, 'logo_equipe', NULL );
 
-						} else afficher_suivant_mime("./logos/Dom.jpg","MesRepos" , NULL, 'logo_equipe', NULL );
+						}
+
+
+						 else afficher_suivant_mime("./logos/question-423604_960_720.png","MesRepos" , NULL, 'logo_equipe', NULL ); ?>
 						
-					}
-			} ?>
+					</span> <?php
+
+				} ?>
+
+
 
 		</span> <?php
 
