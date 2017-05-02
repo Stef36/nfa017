@@ -178,7 +178,7 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 
 
 			/* envoi d'un mail de signalement d'un nouveau message au webmaster */
-			$dest= 'minique.duf@gmail.com';//
+			$dest= 'minique.duf@gmail.com, slaruelle@free.fr';//
 			$sujet= "Nouveau message posté sur le site mesrepos.domduf.com";
 			$misEnFormeMessage = wordwrap($message, 70, "\r\n");
 			
