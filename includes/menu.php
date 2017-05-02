@@ -20,10 +20,10 @@
                     <a href="./equipes_presentation.php">Les équipes</a>
                         <ul>
                             <li id="flex_menu">
-                            <a href="equipes_inscrire_modifier.php">inscrire / modifier</a>
+                            <a href="equipes_inscrire_modifier.php">Inscrire / Modifier</a>
                             </li><hr/>
                             <li id="flex_menu">
-                            <a href="equipes_gerer_conges.php">gerer les congés</a>
+                            <a href="equipes_gerer_conges.php">Gerer les congés</a>
                             </li>
                         </ul>        
                     </li>
@@ -33,19 +33,16 @@
                     <a href="./consulter.php">Mes congés</a>
                         <ul>
                             <li>
-                            <a href="">consulter</a>
+                            <a href="">Consulter</a>
                             </li><hr/>
                             <li>
-                            <a href="">poser</a>
+                            <a href="mes_conges_poser.php">Poser</a>
                             </li>
         
                         </ul>
                     </li>
                     
                     <li>
-
-                    <a href="mes_conges_poser.php">poser</a>
-
                     <a href="./contact.php">Contact</a>
                     </li>
         

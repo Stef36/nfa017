@@ -70,10 +70,9 @@ background-color: #B7AA3F;
 /* ------------ logos des équipes */
 .logo_equipe {
 
-<<<<<<< HEAD
-	width : 200px;
-	height: auto;
-	font-size : 0.6em; /* taille texte sous logo */
+    width : 200px;
+    height: auto;
+    font-size : 0.6em; /* taille texte sous logo */
 
 }
 
@@ -82,24 +81,24 @@ background-color: #B7AA3F;
  .attribution_form > ul:nth-child(2) > input:nth-child(2){
     height: auto;
     width : 200px;
-padding: 5px 8px;
+    padding: 5px 8px;
 
 }
 .flex_logo {
-	border: 1px ridge yellow;
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	align-items: baseline;
+    border: 1px ridge yellow;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: baseline;
 }
 /* ------------page mes_conges.php --------*/
 
 .flex_employe {
-	border: 1px ridge yellow;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: flex-end;
+    border: 1px ridge yellow;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
 }
 
 
