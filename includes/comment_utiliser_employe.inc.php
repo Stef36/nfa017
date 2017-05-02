@@ -2,7 +2,7 @@
 <?php
 
 // ---------   si une équipe est connectée-------------------------------
-if (! isset($_SESSION['ticket_equipe'])) { ?>
+if (! isset($_SESSION['ticket_employe'])) { ?>
 
 <h2>COMMENT UTILISER CE SITE EN ETANT EMPLOYE<br>d'une entreprise ou membre d'une équipe.</h2>
 
@@ -20,5 +20,12 @@ if (! isset($_SESSION['ticket_equipe'])) { ?>
 <?php 
 }
 else { ?>
- 	<h2>------       MES COORDONNEES       ------</h2> <?php
+ 	<h2>------       Bienvenue sur le site Mes Repos!      ------</h2>
+
+ 	<p>Vous avez été inscrit par votre responsable ou par le chargé de votre équipe de travail. </p>
+ 	<p>Vous allez maintenant pouvoir profiter à fond des fonctionnalités du site.</p>
+ 	<p>N'hésitez pas à utiliser le formulaire de contact pour toute question.</p>
+ 	<p>De même pour nous signaler un disfonctionnement, ou si vous avez une idée d'amélioration du site.</p>
+ 	<p>Bon repos !</p>
+ 	<?php
  } ?>

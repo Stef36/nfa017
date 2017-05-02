@@ -67,7 +67,7 @@
 
 
 			$employe_id= $_SESSION['employe_id'];
-		 	echo "Employe-id: ".$employe_id;
+		 	//echo "Employe-id: ".$employe_id;
 
 		 	?><h2>VOS COORDONNEES:</h2> <?php
 
@@ -90,6 +90,10 @@
 
 		 		echo $ficheEmploye['employe_prenom'].' '.$ficheEmploye['employe_nom']; ?>
 		 		</H3> 
+
+		 		<H4>Réferencement sur le site: <?php echo "employe_id -".$employe_id."-";?>
+		 			
+		 		</H4>
 
 		 		<section class="flex_employe" >
 
