@@ -269,10 +269,10 @@ body {
     height:auto;
 }
 /*=========================taille photo===================*/
-)/*========modifier la taille de photo automatiquement=============*/
+/*========modifier la taille de photo automatiquement=============*/
 .photo{
     display:inline-block;
-    border:2px solid red;
+    border:2px solid white;
     height:150px;
     width:150px;
     float:left;
