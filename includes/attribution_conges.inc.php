@@ -48,8 +48,8 @@
 
                 <ul> 
 
-                    <input type="number" name="id_selection_employe" value="<?php echo $id_selection_employe; ?>" hidden ></input>
-<?
+                    <input type="number" name="id_selection_employe" value="<?php echo $id_selection_employe; ?>" hidden ></input><?php
+                
 
                 while ($employe_dispose_combien_type_conges=$employe_dispose_type_conges -> fetch() ) 
                 { 
