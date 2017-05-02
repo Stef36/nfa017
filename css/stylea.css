@@ -272,11 +272,11 @@ body {
 )/*========modifier la taille de photo automatiquement=============*/
 .photo{
     display:inline-block;
-    border:2px solid white;
+    border:2px solid red;
     height:150px;
     width:150px;
     float:left;
-    margin :0 2px 0 2% ;
+    margin :0 2% 0 2% ;
 }
 
 
