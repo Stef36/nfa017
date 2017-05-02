@@ -29,13 +29,13 @@
             </li>
             
             <li>
-            <a href="./consulter.php">Mes congés</a>
+            <a href="./mes_conges.php">Mes congés</a>
                 <ul>
                     <li>
-                    <a href="">consulter</a>
+                    <a href="mes_conges_consulter.php">consulter</a>
                     </li>
                     <li>
-                    <a href="">poser</a>
+                    <a href="mes_conges_poser.php">poser</a>
                     </li>
 
                 </ul>

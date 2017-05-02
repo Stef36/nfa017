@@ -48,7 +48,7 @@ function titre_header($titre)
 
 
 
-<header id="titre-page">
+<header id="titre-page" class="headera">
 		 
  
 	<section>
