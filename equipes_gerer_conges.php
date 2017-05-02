@@ -54,7 +54,7 @@
                 <section id="container">
                     <?php include("includes/gestion_conges.inc.php"); ?>
                     <div class="flex">
-                        <div class ="photo"><img src="" alt="">PHOTO</div>
+                        <div class ="photo"><img src="logos/Minion.jpg" alt="Photo employé"></div>
                     </div> 
                 </section>
                 <section id="container">

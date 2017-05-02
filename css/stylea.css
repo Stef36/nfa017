@@ -168,11 +168,11 @@ H1{
 
 .photo{
     display:inline-block;
-    border:2px solid white;
-    height:200px;
-    width:200px;
+    /* border:2px solid white; */
+    height:auto;
+    max-width:100%;
     float:right;
-    margin :0 35% 0 0 ;
+    margin :0 50% 0 0 ;
 }
 
 #conges_valides{
@@ -269,12 +269,11 @@ body {
     height:auto;
 }
 /*=========================taille photo===================*/
-/*========modifier la taille de photo automatiquement=============*/
 .photo{
     display:inline-block;
-    border:2px solid white;
-    height:150px;
-    width:150px;
+    /* border:2px solid white; */
+    height:auto;
+    max-width:100%;
     float:left;
     margin :0 2% 0 2% ;
 }
