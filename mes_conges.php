@@ -42,7 +42,7 @@
 
 <!--=======voir si possibilité===Menu de demande de validation================-->
         <article id="warm">
-warm
+            <!-- warm -->
         
         </article>
 <!-- ===================== MENU ===================== -->
@@ -87,7 +87,7 @@ warm
             
             <!--===========================EMPLOYESS=======================-->
             <article id="employe">
-            employes
+            <!-- employes -->
             <?php include("includes/employes.inc.php"); ?>
             </article>
         

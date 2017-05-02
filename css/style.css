@@ -91,7 +91,7 @@ padding: 5px 8px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	align-items: baseline;
+	align-items: flex-end;
 }
 
 

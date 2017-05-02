@@ -93,6 +93,8 @@
 
 		 		<section class="flex_employe" >
 
+		 		
+
 		 		<span>
 
 
@@ -108,7 +110,7 @@
 	                            
 	                          afficher_suivant_mime($ficheEmploye['employe_logo'],NULL,NULL , NULL,  NULL );
 
-	        			} else afficher_suivant_mime("./logos/Dom.jpg","MesRepos" , NULL, 'logo_equipe', NULL ); ?>
+	        			} else afficher_suivant_mime("./logos/question-423604_960_720.png","MesRepos" , NULL, 'logo_equipe', NULL ); ?>
 
 			 		</p>
 			 	</span>
@@ -126,6 +128,8 @@
 			 		echo $ficheEmploye['employe_commentaire']; ?>"
 			 		</p>
 			 	</span> 
+
+			 	
 
 		 		</section>
 
