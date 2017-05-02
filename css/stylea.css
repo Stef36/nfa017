@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
 
 body {
     color: black;
@@ -26,7 +31,7 @@ H1{
 /*===============BLOC CREER UNE EQUIPE===================*/
 /*=======================================================*/
 #container{
-    border:2px solid blue;
+    /* border:2px solid blue; */
     display:flex;
     flex-direction:row;
 }
@@ -36,19 +41,19 @@ H1{
 }
 
 .flex{
-    border:2px dashed green;
+    /* border:5px dashed green; */
     width:50%;
     margin:5px;
 }
 
 .flex1{
-    border:2px dashed green;
+    /* border:2px dashed green; */
     width:30%;
     margin:5px;
 }
 
 .flex2{
-    border:2px dashed green;
+    /* border:2px dashed green; */
     width:70%;
     margin:5px;
 }
@@ -77,7 +82,7 @@ H1{
 }
 /*===============================================================*/
 /*=======================PAGE CAT A1=============================*/
-/*===============================================================*/
+/*==============equipes_inscrire_modifier.php====================*/
 #creer_personnel{
     text-align:left;
     border:2px dashed white;
@@ -144,7 +149,7 @@ H1{
 
 /*===============================================================*/
 /*=======================PAGE CAT A2=============================*/
-/*===============================================================*/
+/*===================equipes_gerer_conges.php====================*/
 #choix_employe {
     border:2px dashed blue;
     margin : 10px;
@@ -154,7 +159,7 @@ H1{
 
 #gestion_conges{
     display:inline-block;
-    border:2px dashed red;
+    border:2px dashed yellow;
     height:200px;
     width:30%;
 }
@@ -192,7 +197,77 @@ H1{
 #map {
     
 }
+/*=====================================Responsive=========================*/
+/***********************************************************************/
+/**************@media screen and (max-width: 620px)*********************/
+/***********************************************************************/
+@media screen and (max-width: 620px) {
+body {
+    Background:#bbe0e3;
+    height:100%;
+    list-style:none;
+   
+}
+
+.form_radio li input { 
+    height:15px; 
+    width:50px; 
+    display:inline;
+    vertical-align:middle; 
+} 
+
+/*=====================FLEX BOX==========================*/
+/*===============BLOC CREER UNE EQUIPE===================*/
+/*=======================================================*/
+#container{
+    display:flex;
+    flex-direction:column;
+}
+
+#container > p >a {
+    color: yellow;
+}
+
+.flex{
+    width:100%;
+    margin:5px;
+}
+
+.flex1{
+    width:100%;
+    margin:5px;
+}
+
+.flex2{
+    width:70%;
+    margin:5px;
+}
+
+.flex ul li{
+    padding:0px;
+    margin:0px;
+    list-style:none;
+}
+
+.flex1 ul li{
+    padding:0px;
+    margin:0px;
+    list-style:none;
+}
+
+/*=============Flexbox Menu=====================*/
+.container_menu{
+    display:flex;
+    flex-direction:column;
+}
+
+#flex_menu{
+    display:flex;
+    flex-direction:column;
+    height:auto;
+}
 
 
 
 
+}

@@ -41,7 +41,7 @@ warm
         
         </article>
 <!-- ===================== MENU ===================== -->
-        <nav>
+        <nav class="menu">
         <?php include("includes/menu.php"); ?>
     </nav>
 
