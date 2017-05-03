@@ -33,7 +33,7 @@ else { ?>
  	<?php         
 
 
-			$id_selection_employe=$_SESSION['id_selection_employe'];
+			$id_selection_employe=$_SESSION['employe_id'];
 
  			// requete de selection des type de congés et des congés attribués à l'employé:
             $sql_employe_dispose_combiens_type_conges =
