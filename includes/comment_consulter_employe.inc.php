@@ -35,7 +35,7 @@ else { ?>
 
 			$id_selection_employe=$_SESSION['id_selection_employe'];
 
- 			// requete de selection des type de congés et des congés attribué à l'employé:
+ 			// requete de selection des type de congés et des congés attribués à l'employé:
             $sql_employe_dispose_combiens_type_conges =
                                 "   SELECT  type_conge_nom,
                                      T.type_conge_id AS id_type_conge,
@@ -49,13 +49,38 @@ else { ?>
                                     ON T.type_conge_id = D.type_conge_id
 
                                     WHERE T.type_conge_valable=1
+                                    	AND disposer_quantite != ''
 
-                                    ORDER BY type_conge_nom;";
+                                    ;";
 
 
             $employe_dispose_type_conges = $pdo -> query($sql_employe_dispose_combiens_type_conges);
 
- 		$sql_solde_conges_employe=";";
+
+
+        // requete de selection des congés accordés à l'employé:
+ 		$sql_conges_employe="SELECT conge_id, conge_quantite, conge_accorde,type_conge_id
+ 								FROM conge
+ 								WHERE (employe_id = '$id_selection_employe'
+ 								AND conge_accorde IS TRUE)
+ 								;";
+
+ 			$conge_accordes = $pdo -> query($sql_conges_employe);
+
+
+ 			while($employe_dispose_type_conge= $employe_dispose_type_conges->fetch()){
+
+ 				echo $employe_dispose_type_conge['type_conge_nom'].": -> "
+ 				.$employe_dispose_type_conge['disposer_quantite']."<br>";
+
+ 				$id_type_conge = $employe_dispose_type_conge['id_type_conge'];
+
+
+
+
+ 			}
+
+
 
  		?>
 
