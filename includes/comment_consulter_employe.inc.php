@@ -57,6 +57,10 @@ else { ?>
             $employe_dispose_type_conges = $pdo -> query($sql_employe_dispose_combiens_type_conges);
 
 
+            // tableau des congés attribués
+            
+
+
 
             // tableau des congés accordés à l'employé
             $tab_conges_accordes=array(); ?>
@@ -70,8 +74,8 @@ else { ?>
                     <td>-id-</td>
                     <td>NOM</td>
                     <td>Quantité</td>
-                    <td>base</td>
-                    <td>SOLDE</td>
+                    <td></td>
+
                 </tr>
 
             <?php
@@ -108,21 +112,43 @@ else { ?>
             <br>
 
 
+            <table summary="solde des congés">
+
+                <caption>SOLDE DES CONGES</caption>
+
+                <tr>
+                    <td>-id-</td>
+                    <td>NOM</td>
+                    <td>Quantité</td>
+                    <td></td>
+                </tr>
+
+            </table>
 
 
+<!--
+SELECT T.type_conge_id AS conge_type_id, T.type_conge_nom, C.conge_id, C.conge_datedebut, C.conge_quantite, C.conge_commentaire, C.conge_demande,
+C.conge_consulte, C.conge_accorde, C.employe_id
+
+FROM type_conge AS T LEFT JOIN
+conge AS C 
+ON T.type_conge_id = C.type_conge_id 
 
 
+SELECT conge_id, conge_quantite, conge_accorde,type_conge_id
+                                FROM conge
 
+-->
 
-
-
-
-            
 
                 <?php
             // requete de selection des congés accordés à l'employé:
-            $sql_conges_employe="SELECT conge_id, conge_quantite, conge_accorde,type_conge_id
-                                FROM conge
+            $sql_conges_employe="SELECT T.type_conge_id AS conge_type_id, T.type_conge_nom, C.conge_id, C.conge_datedebut, C.conge_quantite, C.conge_commentaire, C.conge_demande,
+C.conge_consulte, C.conge_accorde, C.employe_id
+                                FROM type_conge AS T LEFT JOIN conge AS C 
+                                ON T.type_conge_id = C.type_conge_id
+
+
                                 WHERE (employe_id = '$id_selection_employe'
                                 AND conge_accorde IS TRUE)
                                 ;";
@@ -132,14 +158,19 @@ else { ?>
             
 
             while ( $conge_accorde=$conge_accordes->fetch()) {
-                echo $conge_accorde['type_conge_id']."->".$conge_accorde['conge_quantite']."<br>";
-                $tab_conges_accordes[$conge_accorde['type_conge_id']]-=$conge_accorde['conge_quantite'];
+
+                //echo $conge_accorde['conge_type_id']."->".$conge_accorde['conge_quantite']."<br>";
+
+                // on soustrait à chaque congé accordé
+                $tab_conges_accordes[$conge_accorde['conge_type_id']]-=$conge_accorde['conge_quantite'];
 
 
-                echo $tab_conges_accordes[$conge_accorde['type_conge_id']]."<br>";
+                //echo $tab_conges_accordes[$conge_accorde['conge_type_id']]."<br>";
             }
 
-            print_r($tab_conges_accordes);
+                //Le tableau PHP $tab_conges_accordes montre pour chaque id type_congé
+                // le solde des congés
+                //print_r($tab_conges_accordes);
 
  		?>
 
