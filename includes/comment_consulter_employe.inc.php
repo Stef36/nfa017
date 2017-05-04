@@ -58,29 +58,88 @@ else { ?>
 
 
 
-        // requete de selection des congés accordés à l'employé:
- 		$sql_conges_employe="SELECT conge_id, conge_quantite, conge_accorde,type_conge_id
- 								FROM conge
- 								WHERE (employe_id = '$id_selection_employe'
- 								AND conge_accorde IS TRUE)
- 								;";
+            // tableau des congés accordés à l'employé
+            $tab_conges_accordes=array(); ?>
 
- 			$conge_accordes = $pdo -> query($sql_conges_employe);
+            <!-- =========== Tableau des congés attribués =====================--> 
+            <table summary="congés attribués au début de cette année">
 
+                <caption>congés attribués au début de cette année:</caption>
 
+                <tr>
+                    <td>-id-</td>
+                    <td>NOM</td>
+                    <td>Quantité</td>
+                    <td>base</td>
+                    <td>SOLDE</td>
+                </tr>
+
+            <?php
  			while($employe_dispose_type_conge= $employe_dispose_type_conges->fetch()){
 
- 				echo $employe_dispose_type_conge['type_conge_nom'].": -> "
- 				.$employe_dispose_type_conge['disposer_quantite']."<br>";
+                ?>  <tr> 
+                        <td><?php echo $employe_dispose_type_conge['id_type_conge']; ?>
+                            
+                        </td> 
 
- 				$id_type_conge = $employe_dispose_type_conge['id_type_conge'];
+                        <td>
+                        <?php echo $employe_dispose_type_conge['type_conge_nom']; ?>    
+                        </td>
+
+                        <td>
+                        <?php echo $employe_dispose_type_conge['disposer_quantite']; ?>
+                        </td>
+
+                        <td>
+                        <?php echo $employe_dispose_type_conge['type_conge_unite']."(s)"; ?>
+                        </td>
+
+                    </tr><?php
+
+                    // définition de l'index du tableau des congés accordés
+                    // utile plus bas
+     				$id_type_conge = $employe_dispose_type_conge['id_type_conge'];
+                    $tab_conges_accordes[$id_type_conge]=$employe_dispose_type_conge['disposer_quantite'];
+                    
+
+ 			}?>
+
+            </table>
+            <br>
 
 
 
 
- 			}
 
 
+
+
+
+
+
+            
+
+                <?php
+            // requete de selection des congés accordés à l'employé:
+            $sql_conges_employe="SELECT conge_id, conge_quantite, conge_accorde,type_conge_id
+                                FROM conge
+                                WHERE (employe_id = '$id_selection_employe'
+                                AND conge_accorde IS TRUE)
+                                ;";
+
+            $conge_accordes = $pdo -> query($sql_conges_employe);
+
+            
+
+            while ( $conge_accorde=$conge_accordes->fetch()) {
+                echo $conge_accorde['type_conge_id']."->".$conge_accorde['conge_quantite']."<br>";
+                $tab_conges_accordes[$conge_accorde['type_conge_id']]-=$conge_accorde['conge_quantite'];
+
+
+                echo $tab_conges_accordes[$conge_accorde['type_conge_id']]."<br>";
+            }
+
+            print_r($tab_conges_accordes);
 
  		?>
 
