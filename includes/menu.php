@@ -73,6 +73,9 @@
 
   </div>
 
+
+
 </nav>
+<?php //affiche_variables_session(); ?>
 
 </div>
