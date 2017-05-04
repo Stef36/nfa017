@@ -20,12 +20,12 @@ H1{
 /*===============================================================*/
 
 .headera{
-    border:2px dashed red;
+    /* border:2px dashed red; */
     text-align:center;
 }
 /*=====================WARM==================*/
 #warm{
-    border:2px solid red;
+    /* border:2px solid red; */
 }
 /*=====================FLEX BOX==========================*/
 /*===============BLOC CREER UNE EQUIPE===================*/
@@ -59,7 +59,7 @@ H1{
 }
 /*===================BLOC LOGIN=======================*/
 .log_equipea{
-    border:2px solid yellow;
+    /* border:2px solid yellow; */
     width: 100%;
     right:10px;
     text-align:center;
@@ -71,12 +71,12 @@ H1{
 
 /*====================BLOC DESCRIPTION EQUIPE==================*/
 #description_equipe{
-    border:2px solid white;
+    /* border:2px solid white; */
     margin:5px;
 }
 
 #equipes{
-    border:2px solid pink;
+    /* border:2px solid pink; */
     margin:30px;
 
 }
@@ -86,7 +86,7 @@ H1{
 /*=====================Fiche inscription=========================*/
 #creer_personnel{
     text-align:left;
-    border:2px dashed white;
+    /* border:2px dashed white; */
 }
 
 
@@ -100,7 +100,7 @@ H1{
 
 /*=======================formulaire attribution congés==========================*/
 #attribution_conges{
-    border:2px dashed red;
+    /* border:2px dashed red; */
     list-style:none;
 }
 
@@ -153,7 +153,7 @@ H1{
 /*=======================PAGE CAT A2=============================*/
 /*===================equipes_gerer_conges.php====================*/
 #choix_employe {
-    border:2px dashed blue;
+    /* border:2px dashed blue; */
     margin : 10px;
     text-align: center;
     font-size:20px;
@@ -161,7 +161,7 @@ H1{
 
 #gestion_conges{
     display:inline-block;
-    border:2px dashed yellow;
+    /* border:2px dashed yellow; */
     height:200px;
     width:30%;
 }
