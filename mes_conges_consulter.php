@@ -69,13 +69,27 @@
             </aside>
 
         </section>
+
+<!--====================================================================-->
+<!--==========================  VISU DES JOURS POSES =====================-->
+<!--====================================================================-->
+
+
+    <section id="conges_details">
+
+    <?php  include("includes/conges_details_employe.inc.php"); ?>
+        
+
+
+    </section>
+
+
 <!--====================================================================-->
 <!--===========================DESCRIPTION EMPLOYE=======================-->
 <!--====================================================================-->
         <section id="description_employe">
         
-        <!-- 
-            description_employe -->
+        <!-- description_employe -->
             <?php //include("includes/description_employe.inc.php"); ?>
 
 
