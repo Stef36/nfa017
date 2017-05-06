@@ -142,33 +142,33 @@
 
   
 
-        <table id="tableau_messages">
-    <tr>
-      <th>id</th>
-      <th>Login<br>souhaité</th>
-      <th>Prénom<br>Nom</th>
-      <th>mail</th>
-      <th>tel</th>
-      <th>Objet</th>
+    <table id="tableau_messages">
+      <tr>
+        <th>id</th>
+        <th>Login<br>souhaité</th>
+        <th>Prénom<br>Nom</th>
+        <th>mail</th>
+        <th>tel</th>
+        <th>Objet</th>
 
-      <th>Message</th>
-      <th>Date Time</th>
-      <th>IP visiteur</th>
-    </tr>
+        <th>Message</th>
+        <th>Date Time</th>
+        <th>IP visiteur</th>
+      </tr>
 
           <?php 
-      while ($message = $messages->fetch()) {
-      ?> <tr>
-        <td><?php echo $message['contact_id'];?></td>
-        <td><?php echo $message['contact_login_souhait'];?></td>    
-        <td><?php echo $message['contact_prenom'].'<br> '.$message['contact_nom'];?></td>
-        <td><?php echo $message['contact_email'];?></td>
-        <td><?php echo $message['contact_telephone'];?></td>
-        <td><?php echo $message['contact_objet'];?></td>
-        <td><?php echo $message['contact_message'];?></td>
-        <td><?php echo $message['contact_dateTime'];?></td>
-        <td><?php echo $message['contact_adresseIP'];?></td>
-        </tr> 
+        while ($message = $messages->fetch()) {
+        ?> <tr>
+          <td><?php echo $message['contact_id'];?></td>
+          <td><?php echo $message['contact_login_souhait'];?></td>    
+          <td><?php echo $message['contact_prenom'].'<br> '.$message['contact_nom'];?></td>
+          <td><?php echo $message['contact_email'];?></td>
+          <td><?php echo $message['contact_telephone'];?></td>
+          <td><?php echo $message['contact_objet'];?></td>
+          <td><?php echo $message['contact_message'];?></td>
+          <td><?php echo $message['contact_dateTime'];?></td>
+          <td><?php echo $message['contact_adresseIP'];?></td>
+          </tr> 
 
 
         <?php 
@@ -187,7 +187,18 @@
 
 
         /* fin de la boucle d'affichage */
-        } 
+        } ?>
+
+        </table> 
+
+
+        <?php
+
+
+
+        // source ouverture, création ecriture de fichier via PHP
+        // Sources:
+        //  https://www.coursinformatique.net/php/ecrire-dans-un-fichier-texte-avec-des-retours-a-la-ligne.html
 
 
         // parametres de l'ecriture du fichier csv
@@ -204,13 +215,8 @@
 
 
         // boucle foreach d'écriture des lignes de $fichier_csv
-        foreach ($fichier_csv as $ligne) {?>
-          <pre> <?php 
-          print_r($ligne);
+        foreach ($fichier_csv as $ligne) {
           fputcsv($messages_recu_csv, $ligne, $delimiteur);
-           ?>
-
-          </pre> <?php
         }
 
         // on ferme le fichier 
@@ -218,17 +224,20 @@
 
 
 
-
         ?>
 
-  
+        <!-- ====== BOUTON DE TELECHARGEMENT du fichier csv ============-->
+        <span id="bouton_telechargement">
+        <a href="./docs/csv/messages_recus.csv">Téléchargez le fichier des messages reçus</a>
+        </span>
+        
 
-    </table>
-
+    <!--  affichage du tableau $fichier_csv ==================
     <pre> <?php 
-    //print_r($fichier_csv); ?>
-      
-    </pre>
+    print_r($fichier_csv); ?>
+    </pre> =================================================-->
+
+
 
     <?php  
 

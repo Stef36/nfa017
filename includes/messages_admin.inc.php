@@ -5,6 +5,8 @@
 	$tri=$_SESSION ['ordre_messages'];?>
 
 <H2> Affichage des messages reçus</H2>
+<H3>Pour telecharger le fichier .csv des messages reçus, RV sur la page 
+<a href="./contact.php">Contact</a></H3>
 
 <!-- ==================================================================  -->		
 		<form name="form_tri" method="POST" action="./administration_page.php">
