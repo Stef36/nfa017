@@ -128,15 +128,15 @@
 
 				</td>
 
-				<td><?php echo $message['contact_login_souhait']?></td>		 
+				<td><?php echo $message['contact_login_souhait'];?></td>		 
 
-				<td><?php echo $message['contact_prenom'].' '.$message['contact_nom']?></td>
-				<td><?php echo $message['contact_email']?></td>
-				<td><?php echo $message['contact_telephone']?></td>
-				<td><?php echo $message['contact_objet']?></td>
-				<td><?php echo $message['contact_message']?></td>
-				<td><?php echo $message['contact_dateTime']?></td>
-				<td><?php echo $message['contact_adresseIP']?></td>
+				<td><?php echo $message['contact_prenom'].' '.$message['contact_nom'];?></td>
+				<td><?php echo $message['contact_email'];?></td>
+				<td><?php echo $message['contact_telephone'];?></td>
+				<td><?php echo $message['contact_objet'];?></td>
+				<td><?php echo $message['contact_message'];?></td>
+				<td><?php echo $message['contact_dateTime'];?></td>
+				<td><?php echo $message['contact_adresseIP'];?></td>
 				</tr>
 				<?php /* fin de la boucle d'affichage */
 				}

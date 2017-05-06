@@ -125,7 +125,18 @@
     
     $messages= $pdo -> query($sqlmessage); 
 
-    $fichier_csv="";?>
+    $fichier_csv=array();  // declaration d'un tableau csv 
+    $fichier_csv[]=array("date",
+                          "id",
+                          "login_souhait",
+                          "prenom",
+                          "nom",
+                          "email",
+                          "telephone",
+                          "objet",
+                          "message",
+                          "adresse_IP");
+    ?>
 
   
 
@@ -159,9 +170,18 @@
 
 
         <?php 
-        // actualise le fichier csv
-        $fichier_csv .=$message['contact_id']." ".$message['contact_login_souhait']." ".$message['contact_prenom'].'  '.$message['contact_nom'].'  '.$message['contact_email'].'  '.$message['contact_telephone'].'  '.$message['contact_objet'].'  '.$message['contact_message'].'  '.$message['contact_dateTime'].'  '.$message['contact_adresseIP']."\r\n" // ajout du saut de ligne  
-        ;
+
+        // actualise le fichier csv en ajoutant une ligne (elle même array)
+        $fichier_csv[] = array( $message['contact_dateTime'],
+                                $message['contact_id'],
+                                $message['contact_login_souhait'],
+                                $message['contact_prenom'],
+                                $message['contact_nom'],
+                                $message['contact_email'],
+                                $message['contact_telephone'],
+                                $message['contact_objet'],
+                                $message['contact_message'],
+                                $message['contact_adresseIP']);
 
 
 
@@ -177,9 +197,12 @@
 
     </table>
 
+    <pre> <?php 
+    //print_r($fichier_csv); ?>
+      
+    </pre>
 
-    <?php 
-    echo "<p>".$fichier_csv."</p>";
+    <?php  
 
     }  ?>
 
