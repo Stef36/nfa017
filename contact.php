@@ -125,11 +125,13 @@
     
     $messages= $pdo -> query($sqlmessage); 
 
-    $fichier_csv=array();  // declaration d'un tableau csv 
+    $fichier_csv=array();  // declaration d'un tableau à ecrire dans fichier csv 
+
+    // première ligne du tableau à ecrire dans fichier csv (en-tête)
     $fichier_csv[]=array("date",
                           "id",
                           "login_souhait",
-                          "prenom",
+                          "prénom",
                           "nom",
                           "email",
                           "telephone",
@@ -171,7 +173,7 @@
 
         <?php 
 
-        // actualise le fichier csv en ajoutant une ligne (elle même array)
+        // actualise le tableau fichier csv en ajoutant une ligne (elle même array)
         $fichier_csv[] = array( $message['contact_dateTime'],
                                 $message['contact_id'],
                                 $message['contact_login_souhait'],
@@ -184,10 +186,36 @@
                                 $message['contact_adresseIP']);
 
 
-
-
         /* fin de la boucle d'affichage */
         } 
+
+
+        // parametres de l'ecriture du fichier csv
+        $chemin="./docs/csv/messages_recus.csv";
+        $delimiteur=','; // delimiteur 
+
+        // ecriture du fichier csv sur le disque du serveur
+        $messages_recu_csv=fopen($chemin, 'w+');
+
+        // Si votre fichier a vocation a être importé dans Excel,
+        // vous devez impérativement utiliser la ligne ci-dessous pour corriger
+        // les problèmes d'affichage des caractères internationaux (les accents par exemple)
+        fprintf($messages_recu_csv, chr(0xEF).chr(0xBB).chr(0xBF));
+
+
+        // boucle foreach d'écriture des lignes de $fichier_csv
+        foreach ($fichier_csv as $ligne) {?>
+          <pre> <?php 
+          print_r($ligne);
+          fputcsv($messages_recu_csv, $ligne, $delimiteur);
+           ?>
+
+          </pre> <?php
+        }
+
+        // on ferme le fichier 
+        fclose($messages_recu_csv);
+
 
 
 
