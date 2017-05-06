@@ -106,6 +106,83 @@
             </div><br>                
 
 
+  <!-- ===================AFFICHE MESSAGES RECUS      ======= -->
+  <!-- =================  si connecté administrateur  ======= -->
+  <!-- =================  POUR csv                    ======= -->
+
+  <?php if ( isset($_SESSION['login']) )
+
+    {
+
+    // connection BD
+    include ("./includes/connection.php");
+
+
+
+    // requete de selection de tous les messages
+    $sqlmessage = "SELECT     *
+                  FROM    contact ;" ;
+    
+    $messages= $pdo -> query($sqlmessage); 
+
+    $fichier_csv="";?>
+
+  
+
+        <table id="tableau_messages">
+    <tr>
+      <th>id</th>
+      <th>Login<br>souhaité</th>
+      <th>Prénom<br>Nom</th>
+      <th>mail</th>
+      <th>tel</th>
+      <th>Objet</th>
+
+      <th>Message</th>
+      <th>Date Time</th>
+      <th>IP visiteur</th>
+    </tr>
+
+          <?php 
+      while ($message = $messages->fetch()) {
+      ?> <tr>
+        <td><?php echo $message['contact_id'];?></td>
+        <td><?php echo $message['contact_login_souhait'];?></td>    
+        <td><?php echo $message['contact_prenom'].'<br> '.$message['contact_nom'];?></td>
+        <td><?php echo $message['contact_email'];?></td>
+        <td><?php echo $message['contact_telephone'];?></td>
+        <td><?php echo $message['contact_objet'];?></td>
+        <td><?php echo $message['contact_message'];?></td>
+        <td><?php echo $message['contact_dateTime'];?></td>
+        <td><?php echo $message['contact_adresseIP'];?></td>
+        </tr> 
+
+
+        <?php 
+        // actualise le fichier csv
+        $fichier_csv .=$message['contact_id']." ".$message['contact_login_souhait']." ".$message['contact_prenom'].'  '.$message['contact_nom'].'  '.$message['contact_email'].'  '.$message['contact_telephone'].'  '.$message['contact_objet'].'  '.$message['contact_message'].'  '.$message['contact_dateTime'].'  '.$message['contact_adresseIP']."\r\n" // ajout du saut de ligne  
+        ;
+
+
+
+
+        /* fin de la boucle d'affichage */
+        } 
+
+
+
+        ?>
+
+  
+
+    </table>
+
+
+    <?php 
+    echo "<p>".$fichier_csv."</p>";
+
+    }  ?>
+
   <!-- ===================== BAS DE PAGE  ===================== -->
 
   <?php include("includes/basDePage.php"); ?>
