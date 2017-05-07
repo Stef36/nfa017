@@ -97,7 +97,7 @@ else { ?>
 
                 
             // requete de selection des congés accordés à l'employé:
-            $sql_conges_employe="SELECT T.type_conge_id AS conge_type_id, T.type_conge_nom, C.conge_id, C.conge_datedebut, C.conge_quantite, C.conge_commentaire, C.conge_demande,C.conge_consulte, C.conge_accorde,
+            $sql_conges_employe="SELECT T.type_conge_id AS conge_type_id, T.type_conge_nom, C.conge_id, C.conge_datedebut, C.conge_quantite, C.conge_commentaire, C.conge_demande,C.conge_consulte, C.conge_accorde, T.type_conge_unite,
                 C.employe_id
                                 FROM type_conge AS T LEFT JOIN conge AS C 
                                 ON T.type_conge_id = C.type_conge_id
@@ -105,6 +105,7 @@ else { ?>
 
                                 WHERE (employe_id = '$id_selection_employe'
                                 AND conge_accorde IS TRUE)
+                                ORDER BY conge_datedebut
                                 ;";
 
             $conge_accordes = $pdo -> query($sql_conges_employe);

@@ -1,5 +1,68 @@
 <?php
 
+function couleur_conge($demande, $consulte, $accorde){
+
+	if (!$demande | ($demande & !$consulte & $accorde==NULL) ) {
+		return 'grey';
+	}
+
+	if ($accorde) {
+	 	return 'green';
+	 } 
+
+	if ($consulte & $accorde==NULL) {
+		return 'yellow';
+	}
+
+	if ($consulte & $accorde==0 ){
+		return 'red';
+	}
+
+
+
+
+	
+}
+
+
+
+function formate_date($date_entree){
+
+	$timestamp= strtotime($date_entree);
+
+	$jour= date('d', $timestamp);
+	$mois= converti_Mois_Anglais_Francais(date('n', $timestamp));
+	$annee =date('Y', $timestamp);
+
+	$heure = date('H', $timestamp);
+	$min = date('i', $timestamp);
+
+	$heure_min= $heure.'h'.$min.'min';
+	
+	
+	if (strcmp($heure_min, "00h00min")){
+
+		return ($jour.' '.$mois.' '.$annee.' à '.$heure_min);
+
+	}
+	
+
+	 else return ($jour.' '.$mois.' '.$annee) ;
+	
+}
+
+
+function converti_Mois_Anglais_Francais($month){
+	$mois= array();
+	$mois=['jan.','fev.', 'mars','avril','mai', 'juin', 'juil.','août', 'sept.','oct', 'nov.','déc.'];
+
+	$retourFrench=$mois[$month-1];
+	return $retourFrench;
+
+}
+
+
+
 
 
 function applique_requete($sql_modif, $pdo, $nouvelles_valeurs ){

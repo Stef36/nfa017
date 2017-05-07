@@ -9,3 +9,6 @@ connection.php
 
 # ignorer le repertoire des avatars(employés)
 /avatars
+
+# ignorer le repertoire des fichiers telechargeables
+/csv
