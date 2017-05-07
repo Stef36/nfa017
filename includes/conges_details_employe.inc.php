@@ -45,11 +45,15 @@ else { ?>
                     <td></td>
                 </tr>  <?php
 
+
+
+
+
             while ( $conge_accorde=$conge_accordes->fetch()){ 
                 // voir requete ligne 100 de comment_consulter_employe.inc.php?>
 
                 <tr> 
-                    <td><?php echo $conge_accorde['conge_datedebut'];?></td>        
+                    <td><?php echo formate_date($conge_accorde['conge_datedebut']);?></td>        
                     <td><?php echo $conge_accorde['type_conge_nom'];?></td>
                     <td><?php echo $conge_accorde['conge_quantite'];?></td>
                     <td><?php echo $conge_accorde['type_conge_unite'];?></td>
