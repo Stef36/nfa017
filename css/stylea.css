@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
 
 body {
     color: black;
@@ -15,18 +20,18 @@ H1{
 /*===============================================================*/
 
 .headera{
-    border:2px dashed red;
+    /* border:2px dashed red; */
     text-align:center;
 }
 /*=====================WARM==================*/
 #warm{
-    border:2px solid red;
+    /* border:2px solid red; */
 }
 /*=====================FLEX BOX==========================*/
 /*===============BLOC CREER UNE EQUIPE===================*/
 /*=======================================================*/
 #container{
-    border:2px solid blue;
+    /* border:2px solid blue; */
     display:flex;
     flex-direction:row;
 }
@@ -36,25 +41,25 @@ H1{
 }
 
 .flex{
-    border:2px dashed green;
+    /* border:5px dashed green; */
     width:50%;
     margin:5px;
 }
 
 .flex1{
-    border:2px dashed green;
+    /* border:2px dashed green; */
     width:30%;
     margin:5px;
 }
 
 .flex2{
-    border:2px dashed green;
+    /* border:2px dashed green; */
     width:70%;
     margin:5px;
 }
 /*===================BLOC LOGIN=======================*/
 .log_equipea{
-    border:2px solid yellow;
+    /* border:2px solid yellow; */
     width: 100%;
     right:10px;
     text-align:center;
@@ -66,26 +71,24 @@ H1{
 
 /*====================BLOC DESCRIPTION EQUIPE==================*/
 #description_equipe{
-    border:2px solid white;
+    /* border:2px solid white; */
     margin:5px;
 }
 
 #equipes{
-    border:2px solid pink;
+    /* border:2px solid pink; */
     margin:30px;
 
 }
 /*===============================================================*/
 /*=======================PAGE CAT A1=============================*/
-/*===============================================================*/
+/*==============equipes_inscrire_modifier.php====================*/
+/*=====================Fiche inscription=========================*/
 #creer_personnel{
     text-align:left;
-    border:2px dashed white;
+    /* border:2px dashed white; */
 }
 
-#attribution_conges{
-    border:2px dashed red;
-}
 
 /*=======================couleur du placeholder====================*/
 ::-moz-placeholder { 
@@ -95,7 +98,12 @@ H1{
     color: grey; 
 }
 
-/*=======================formulaire inscription==========================*/
+/*=======================formulaire attribution congés==========================*/
+#attribution_conges{
+    /* border:2px dashed red; */
+    list-style:none;
+}
+
 .contact_form ul li label { 
     width:250px;
     margin-top: 3px; 
@@ -119,19 +127,18 @@ H1{
     width:200px;
 }
 
-.attribution_form ul li label { 
+.attribution_form label { 
     width:250px;
     margin-top: 3px; 
     display:inline-block; 
     float:left; 
     padding:3px; 
-    color:white;
+    color:black;
 } 
 
 .attribution_form input { 
-
     height:20px; 
-    width:50px; 
+    width:60px; 
     padding:5px 8px; 
 } 
 
@@ -144,9 +151,9 @@ H1{
 
 /*===============================================================*/
 /*=======================PAGE CAT A2=============================*/
-/*===============================================================*/
+/*===================equipes_gerer_conges.php====================*/
 #choix_employe {
-    border:2px dashed blue;
+    /* border:2px dashed blue; */
     margin : 10px;
     text-align: center;
     font-size:20px;
@@ -154,18 +161,18 @@ H1{
 
 #gestion_conges{
     display:inline-block;
-    border:2px dashed red;
+    /* border:2px dashed yellow; */
     height:200px;
     width:30%;
 }
 
 .photo{
     display:inline-block;
-    border:2px solid white;
-    height:200px;
-    width:200px;
+    /* border:2px solid white; */
+    height:auto;
+    max-width:100%;
     float:right;
-    margin :0 35% 0 0 ;
+    margin :0 50% 0 0 ;
 }
 
 #conges_valides{
@@ -192,7 +199,84 @@ H1{
 #map {
     
 }
+/*=====================================Responsive=========================*/
+/***********************************************************************/
+/**************@media screen and (max-width: 620px)*********************/
+/***********************************************************************/
+@media screen and (max-width: 620px) {
+body {
+    Background:#bbe0e3;
+    height:100%;
+    list-style:none;
+   
+}
+
+.form_radio li input { 
+    height:15px; 
+    width:50px; 
+    display:inline;
+    vertical-align:middle; 
+} 
+
+/*=====================FLEX BOX==========================*/
+/*===============BLOC CREER UNE EQUIPE===================*/
+/*=======================================================*/
+#container{
+    display:flex;
+    flex-direction:column;
+}
+
+#container > p >a {
+    color: yellow;
+}
+
+.flex{
+    width:100%;
+    margin:5px;
+}
+
+.flex1{
+    width:100%;
+    margin:5px;
+}
+
+.flex2{
+    width:70%;
+    margin:5px;
+}
+
+.flex ul li{
+    padding:0px;
+    margin:0px;
+    list-style:none;
+}
+
+.flex1 ul li{
+    padding:0px;
+    margin:0px;
+    list-style:none;
+}
+
+/*=============Flexbox Menu=====================*/
+.container_menu{
+    display:flex;
+    flex-direction:column;
+}
+
+#flex_menu{
+    display:flex;
+    flex-direction:column;
+    height:auto;
+}
+/*=========================taille photo===================*/
+.photo{
+    display:inline-block;
+    /* border:2px solid white; */
+    height:auto;
+    max-width:100%;
+    float:left;
+    margin :0 2% 0 2% ;
+}
 
 
-
-
+}

@@ -39,7 +39,9 @@
                 <aside class="log_equipea">
                 <?php include("includes/log_equipe.inc.php"); ?>
                 </aside>
-                
+                <br>
+                <hr>
+                <br>
 <!--===========liste déroulante pour la selection de l'employé==========-->
             <section id="choix_employe">
             <span>Choisissez un employé avec la liste déroulante pour avoir les informations le concernant</span>
@@ -50,13 +52,18 @@
                     <option value "">Choisir un employé</option>
                 </select>
             </section>
+            <br>
+                <hr>
+                <br>
 <!--==========================GESTION DES CONGES==================-->
                 <section id="container">
                     <?php include("includes/gestion_conges.inc.php"); ?>
                     <div class="flex">
-                        <div class ="photo"><img src="" alt="">PHOTO</div>
+                        <div class ="photo"><img src="logos/Minion.jpg" alt="Photo employé"></div>
                     </div> 
-                </section>
+                </section><br>
+                <hr>
+                <br>
                 <section id="container">
                     <section class="flex1">
                         <article id="conges_restants">
@@ -70,12 +77,21 @@
                     </section>
                 </section>
 
-
+<br>
 
 
 
 <!-- ===================== BAS DE PAGE  ===================== -->
 
         <?php include("includes/basDePage.php"); ?>
+<!--**********************************************************************************************************-->
+<!--****************************** AFFICHAGE INFORMATION DE LA LARGEUR DE LA PAGE ****************************-->
+                <script type="text/javascript">
+                    {
+                        var $largeur = document.body.clientWidth;
+
+                        document.write('Largeur de la page : ' + $largeur + ' px');
+                    }
+                </script>
     </body>
 </html>

@@ -46,7 +46,9 @@
                 <aside class="log_equipea">
                 <?php include("includes/log_equipe.inc.php"); ?>
                 </aside>
- 
+                <br>
+                <hr>
+                <br>
 <!--================== SELECTIONNER EMPLOYE ===================-->
 
         <section id="selectionner_employe">
@@ -60,7 +62,9 @@
         <section id="creer_personnel">
             <?php include("includes/inscription_personnel.inc.php"); ?>
          </section>
-
+        <br>
+                <hr>
+                <br>
 <!--===========================DESCRIPTION EQUIPE=======================-->
         <section id="attribution_conges">
         
@@ -73,6 +77,18 @@
         <?php include("includes/basDePage.php"); ?>
         
         <script language="JavaScript" type="text/javascript" src="scripts.js"></script>
+        
+<!--**********************************************************************************************************-->
+<!--****************************** AFFICHAGE INFORMATION DE LA LARGEUR DE LA PAGE ****************************-->
+                <script type="text/javascript">
+                    {
+                        var $largeur = document.body.clientWidth;
+
+                        document.write('Largeur de la page : ' + $largeur + ' px');
+                    }
+                </script>
+        
+        
     </body>
 
 </html>
