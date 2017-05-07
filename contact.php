@@ -41,7 +41,7 @@
     $_SESSION['formulaire_entreeBD']="0"; ?>
 
   <!-- Début du FORMULAIRE -->
-    <form name="preInscription"  method="POST" action="contact_enregistrement.php" onsubmit="return valider()" >
+    <form name="preInscription"  method="POST" action="contact_enregistrement.php"  id="preInscription" onsubmit="return valider()" >
   
     
   <div>
@@ -257,6 +257,14 @@
   <script src='./javascripts/validationChamps.js' type = 'text/javascript' ></script>
   <script src='./javascripts/date.js' type = 'text/javascript' ></script>
   <script src='./javascripts/kapcha.js' type = 'text/javascript' ></script>
+<!--**********************************************************************************************************-->
+<!--****************************** AFFICHAGE INFORMATION DE LA LARGEUR DE LA PAGE ****************************-->
+                <script type="text/javascript">
+                    {
+                        var $largeur = document.body.clientWidth;
 
+                        document.write('Largeur de la page : ' + $largeur + ' px');
+                    }
+                </script>
 </body>
 </html>

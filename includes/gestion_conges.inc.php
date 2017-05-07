@@ -1,5 +1,5 @@
 <section class="flex">
-    <h2>GESTION DES CONGES</h2>
+    <H2>GESTION DES CONGES</H2>
     <ul>
         <li>NOM : </li><br>
         <li>PRENOM : </li><br>

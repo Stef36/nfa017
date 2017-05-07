@@ -15,6 +15,7 @@ H1{
 H2{
     color:black;
     text-align:center;
+    font-size:1.5em;
 }
 
 .footer{
@@ -327,10 +328,26 @@ body {
     vertical-align:middle; 
 }
 
+.flex ul li{
+    padding:0px;
+    margin:0px;
+    list-style:none;
+    font-size : 2.2em;
+    font-weight:bold;
+    
+}
+.form_radio li label { 
+    font-size : 2em;
+    font-weight:bold;
+} 
 
-
-
-
+.form_radio li input { 
+    font-size : 2em;
+} 
+/*===========a revoir ne fonctionne pas===============*/
+#preInscription{
+    font-size : 2em;
+}
 
 
 

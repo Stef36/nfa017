@@ -33,8 +33,8 @@
         <nav>
         <?php include("includes/menu.php"); ?>
         </nav>
-
-
+<br>
+<hr>
 <!--==========s==========login=============================-->
                 <aside class="log_equipea">
                 <?php include("includes/log_equipe.inc.php"); ?>
@@ -54,7 +54,6 @@
             </section>
             <br>
                 <hr>
-                <br>
 <!--==========================GESTION DES CONGES==================-->
                 <section id="container">
                     <?php include("includes/gestion_conges.inc.php"); ?>
@@ -63,7 +62,6 @@
                     </div> 
                 </section><br>
                 <hr>
-                <br>
                 <section id="container">
                     <section class="flex1">
                         <article id="conges_restants">
