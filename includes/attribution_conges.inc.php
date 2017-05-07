@@ -2,7 +2,7 @@
 
 
 <h2>ATTRIBUTION DES CONGES</h2>
-
+<br>
 
         
     <?php  if (isset($_SESSION['ticket_equipe']) ) {
@@ -109,7 +109,7 @@
 
 
         <form class="attribution_form"  Method="post" name="formulaire_attribution_conges"  >
-
+        <ul id="formulaire_attribution_conges">
             <li><label for="number">Congés payés :</label>
                 <input type="text" id="conges_payes" name="conges_payes" maxlength="3"  onblur=""> jours</li>
             <BR>
