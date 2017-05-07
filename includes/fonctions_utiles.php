@@ -1,5 +1,30 @@
 <?php
 
+function couleur_conge($demande, $consulte, $accorde){
+
+	if (!$demande) {
+		return 'grey';
+	}
+
+	if ($accorde) {
+	 	return 'green';
+	 } 
+
+	if ($consulte & $accorde==NULL) {
+		return 'yellow';
+	}
+
+	if ($consulte & $accorde==0 ){
+		return 'red';
+	}
+
+
+
+	
+}
+
+
+
 function formate_date($date_entree){
 
 	$timestamp= strtotime($date_entree);

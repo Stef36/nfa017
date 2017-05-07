@@ -95,3 +95,26 @@ padding: 5px 8px;
 }
 
 
+
+/* ------------page mes_conges_consulter.php --------*/
+
+
+/* couleur des congés suivant leurs statuts  */
+.green {
+	background-color: green;
+}
+
+.yellow {
+	background-color: yellow;
+
+}
+
+.red {
+	background-color: red;
+
+}
+
+.grey {
+	background-color: grey;
+
+}
