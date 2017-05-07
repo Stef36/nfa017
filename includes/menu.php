@@ -30,10 +30,10 @@
 
                     
                     <li id="flex_menu">
-                    <a href="./consulter.php">Mes congés</a>
+                    <a href="./mes_conges.php">Mes congés</a>
                         <ul>
                             <li>
-                            <a href="">Consulter</a>
+                            <a href="mes_conges_consulter.php">Consulter</a>
                             </li><hr/>
                             <li>
                             <a href="mes_conges_poser.php">Poser</a>
