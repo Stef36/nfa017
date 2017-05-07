@@ -279,4 +279,27 @@ body {
 }
 
 
+.container_menu{
+    font-size : 3em;
+}
+
+.log_equipe{
+    font-size : 3em;
+    
+}
+#login_equipe{
+    font-size : 0.8em;
+    
+}
+ #equipe-passwd{
+    font-size : 0.8em;
+    
+}
+
+
+
+
+
+
+
 }
