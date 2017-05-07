@@ -49,7 +49,8 @@ else { ?>
             <table>  
 
                 <caption>DETAILS DES CONGES POSES<br>
-                <p> légende:                <span class="grey">Vous n'avez pas encore posé</span>
+                <p> légende:
+                <span class="grey">Pas posé ou pas consulté</span>
                 <span class="yellow">Vu, en attente</span>
                 <span class="red">Refusé</span>
                 <span class="green">Accordé</span>

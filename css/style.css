@@ -101,7 +101,7 @@ padding: 5px 8px;
 
 /* couleur des congés suivant leurs statuts  */
 .green {
-	background-color: green;
+	background-color: lawngreen;
 }
 
 .yellow {
@@ -110,11 +110,11 @@ padding: 5px 8px;
 }
 
 .red {
-	background-color: red;
+	background-color: tomato;
 
 }
 
 .grey {
-	background-color: grey;
+	background-color: silver;
 
 }

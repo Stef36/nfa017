@@ -2,7 +2,7 @@
 
 function couleur_conge($demande, $consulte, $accorde){
 
-	if (!$demande) {
+	if (!$demande | ($demande & !$consulte & $accorde==NULL) ) {
 		return 'grey';
 	}
 
@@ -17,6 +17,7 @@ function couleur_conge($demande, $consulte, $accorde){
 	if ($consulte & $accorde==0 ){
 		return 'red';
 	}
+
 
 
 
