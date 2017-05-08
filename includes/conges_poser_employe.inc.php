@@ -24,12 +24,36 @@ else { ?>
     <!--  ===============     le cas échéant      ================-->
     <p>
         <?php if(isset($_POST['type_conge_id'])) {
-            echo 'type_conge_id->'.$_POST['type_conge_id'].' <br>';
-            echo 'conge_date->'.$_POST['conge_date'].' '.$_POST['conge_time'].' <br>';
-            echo 'conge_quantite-> '.$_POST['conge_quantite'].' <br>';
-            echo 'conge_commentaire-> '.$_POST['conge_commentaire'].' <br>';
-            echo 'conge_demande-> '.$_POST['conge_demande'].' <br>';
 
+
+            echo 'type_conge_id->'.$_POST['type_conge_id'].' <br>';
+            $type_conge_id=$_POST['type_conge_id'];
+
+            echo 'conge_date->'.$_POST['conge_date'].' '.$_POST['conge_time'].' <br>';
+            $conge_datedebut=$_POST['conge_date'].' '.$_POST['conge_time'];
+            
+            echo 'conge_quantite-> '.$_POST['conge_quantite'].' <br>';
+            $conge_quantite=$_POST['conge_quantite'];
+
+            echo 'conge_commentaire-> '.$_POST['conge_commentaire'].' <br>';
+
+            echo 'conge_demande-> '.$_POST['conge_demande'].' <br>';
+            $conge_demande=$_POST['conge_demande'];
+
+            $employe_id=$_SESSION['employe_id'];
+
+
+
+
+
+            // requete d'insertion en BD
+            $sql_insert_conge= "INSERT INTO conge
+                                SET conge_datedebut=?, conge_quantite=?, conge_demande=?, employe_id=?, type_conge_id=? ; ";
+
+            $nouvelles_valeurs= array($conge_datedebut, $conge_quantite,$conge_demande, $employe_id, $type_conge_id );
+
+            // insert de l'enregistrement
+            applique_requete($sql_insert_conge, $pdo, $nouvelles_valeurs);
 
             } ?>
     </p>
@@ -91,7 +115,7 @@ else { ?>
                 Heure éventuelle
                 <input type="time" 
                 name="conge_time" 
-                value="<?php echo "08:00:00"?>" >
+                value="<?php echo "00:00:00"?>" >
 
                 </input>
                 </p>
