@@ -48,7 +48,7 @@
 
 
 <ol>
-    <li>Le chef d'équipe interréssé par le site envoie un mail par le biais du menu "contact" </li>
+    <li>Le chef d'équipe interressé par le site envoie un mail par le biais du menu "contact" </li>
 
     <li>Le webmaster (en BO (Back-Office) reçoit ce mail et créé un login et un mdp à ce chef d'équipe, et lui envoie par mail (fictif)</li>
 

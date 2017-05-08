@@ -9,6 +9,13 @@ body {
   }
 H1{
     color:white;
+    text-align:center;
+}
+
+H2{
+    color:black;
+    text-align:center;
+    font-size:1.5em;
 }
 
 .footer{
@@ -196,12 +203,29 @@ H1{
 .mentionslegales{
     color: black;
 }
-
-/*===========================google map===================================*/
-#map {
-    
+/*==============================contact=============================*/
+#rem{
+    display:block;
+    width:600px;
+    height:100px;
+    margin:auto;
 }
-/*=====================================Responsive=========================*/
+
+
+/*=========================google map================================*/
+#map {
+    display:block;
+    margin:auto;
+}
+
+/*===========================mentions legales========================*/
+#mentions{
+    font-weight:bold;
+    font-size:1.5em;
+}
+
+
+/*===================================RESPONSIVE=======================*/
 /***********************************************************************/
 /**************@media screen and (max-width: 980px)*********************/
 /***********************************************************************/
@@ -279,6 +303,154 @@ body {
     float:left;
     margin :0 2% 0 2% ;
 }
+
+
+.container_menu{
+    font-size : 3em;
+}
+
+.log_equipe{
+    font-size : 3em;
+}
+#login_equipe{
+    font-size : 0.8em;
+     
+}
+#equipe-passwd{
+    font-size : 0.8em;
+    
+}
+#fiche_inscription li label{
+    font-size : 3em;
+    padding:0px;
+    font-weight:bold;
+}
+
+#fiche_inscription li input{
+    font-size : 2.2em;
+    padding:0px;
+    width:800px;
+}
+
+#formulaire_attribution_conges li label{
+    font-size : 2.2em;
+    padding:0px;
+    width:400px;
+    font-weight:bold;
+}
+
+#formulaire_attribution_conges li input{
+    font-size : 2.2em;
+    padding:0px;
+    width:60px;
+    height:30px;
+    vertical-align:middle; 
+}
+
+.flex ul li{
+    padding:0px;
+    margin:0px;
+    list-style:none;
+    font-size : 2.2em;
+    font-weight:bold;
+    
+}
+.form_radio li label { 
+    font-size : 2em;
+    font-weight:bold;
+} 
+
+.form_radio li input { 
+    font-size : 2em;
+} 
+
+/*=======================contact.php============================*/
+#preInscription{
+    font-size : 2.5em;
+    font-weight:bold;
+}
+
+#preInscription div input{
+    font-size : 1em;
+    padding:0px;
+}
+
+#kapcharep{
+    font-size : 1em;
+}
+
+#rem{
+    font-size : 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

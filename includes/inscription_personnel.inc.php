@@ -36,7 +36,7 @@ if (isset($_SESSION['ticket_equipe'])) {
 <!-- ====================== debut formulaire ============================-->
 
 
-    <form class="contact_form"  Method="post" name="formulaire_modif_employe"  > 
+    <form class="contact_form"  Method="post" name="formulaire_modif_employe"id="formulaire_modif_employe"  > 
 
  
 
@@ -215,24 +215,24 @@ if (isset($_SESSION['ticket_equipe'])) {
 
 else { // __________________________partie equipe  non connectée_________________ ?>
 
-        <form class="contact_form" action="inscription_personnel.php" Method="post" name="formulaire_modif_employe"  > 
+        <form class="contact_form" action="inscription_personnel.php" Method="post" name="formulaire_modif_employe" id="formulaire_modif_employe" > 
 
-     <ul>
+     <ul id="fiche_inscription">
 
 
 
-            <li><label for="noms">Nom Prénom :</label>
+            <li><label for="noms" id="noms">Nom Prénom :</label>
                 <input type="text" id="nom" name="nom" size="40" placeholder="Dupond Bernard" onblur="" required></li>
             <BR>
 
 
-            <li><label for="number">Age :</label>
+            <li><label for="number" id="number">Age :</label>
                 <input size="3" type="text" name="age" id="age" placeholder="24"> </li>
             <BR>
-            <li><label for="adresse">Adresse :</label>
+            <li><label for="adresse" id="adress">Adresse :</label>
                 <input size="50" type="text" name="adresse" id="adresse" placeholder="24, rue des spectateurs - 36000 Chateauroux"></li>
             <BR>
-            <li><label for="text">Fonction :</label>
+            <li><label for="text" id="fonctions">Fonction :</label>
                 <input size="50" type="text" name="fonction" id="fonction" placeholder="Electricien"></li>
             <BR>
             <li><label for="adresse_mail">Adresse mail :</label>

@@ -71,7 +71,6 @@ equipe-presentation
 <!--====================login=============================-->
 
                 <aside class="log_equipea">
-log_equipe
                 <?php include("includes/log_equipe.inc.php"); ?>
 
                 </aside>
@@ -83,8 +82,7 @@ log_equipe
 <!--===========================DESCRIPTION EQUIPE=======================-->
 <!--====================================================================-->
         <section id="description_equipe">
-        
-description_equipe
+
         <?php include("includes/description_equipe.inc.php"); ?>
         
         <br>
@@ -92,7 +90,6 @@ description_equipe
                 <br>
 <!--===========================EQUIPES=======================-->
         <article id="equipes">
-equipes
         <?php include("includes/equipes.inc.php"); ?>
         </article>
         

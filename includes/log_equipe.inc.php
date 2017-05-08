@@ -7,6 +7,7 @@
             <span>
                 
                 <H2>Responsable d'une équipe,</br> connectez vous:</H2>
+                <br>
                     <form name="formConnect" method="POST" >
                     <table class="log_equipe">
                         <tr>
