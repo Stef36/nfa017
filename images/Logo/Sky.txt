@@ -1,0 +1,5 @@
+sky.jpg:
+https://pixabay.com/fr/ciel-ciel-bleu-nature-954670/
+
+beach:
+https://pixabay.com/fr/plage-de-vacances-r%C3%A9cup%C3%A9ration-mer-138877/

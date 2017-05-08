@@ -9,17 +9,19 @@
 
 
   <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico">
-  
+  <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
   <link href="./css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+<!--==============================logo========================-->
+        <?php include("./includes/logo.inc.php"); ?>
 
-  <!-- ===================== TITRE ===================== -->
+<!-- ======================== TITRE ========================== -->
 
   <?php require ("./includes/header.inc.php"); titre_header('Formulaire de Contact')?>
 
 
-  <!-- ===================== MENU ===================== -->
+  <!-- ========================= MENU ======================== -->
   <?php include("includes/menu.php"); ?>
 
   <section id="">

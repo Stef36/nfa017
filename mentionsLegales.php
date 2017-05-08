@@ -12,9 +12,12 @@
         <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
         <link href="./css/style.css" rel="stylesheet" type="text/css" />
     </head>
+    <header>
+    <!--==============================logo========================-->
+        <?php include("includes/logo.inc.php"); ?>
         <title>Poser mes repos en ligne</title>
 
-            <h1>Mentions légales - Poser mes repos en ligne</h1>
+            <h1>Mentions légales - mes repos.com</h1>
             <br><br>
         </header>
         <hr/>
