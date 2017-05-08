@@ -24,10 +24,12 @@ else { ?>
     <!--  ===============     le cas échéant      ================-->
     <p>
         <?php if(isset($_POST['type_conge_id'])) {
-            echo 'conge_id->'.$_POST['type_conge_id'].' <br>';
+            echo 'type_conge_id->'.$_POST['type_conge_id'].' <br>';
             echo 'conge_date->'.$_POST['conge_date'].' '.$_POST['conge_time'].' <br>';
             echo 'conge_quantite-> '.$_POST['conge_quantite'].' <br>';
             echo 'conge_commentaire-> '.$_POST['conge_commentaire'].' <br>';
+            echo 'conge_demande-> '.$_POST['conge_demande'].' <br>';
+
 
             } ?>
     </p>
@@ -110,6 +112,15 @@ else { ?>
             </div>
 
             <div id="valide">
+            <p>Vous pouvez choisir de ne pas poser tout de suite</p>
+            <input type="radio" 
+            name="conge_demande" 
+            value="1" checked=""> Je pose
+            <input type="radio" 
+            name="conge_demande" 
+            value="0" > Je ne pose pas encore.          
+            </input>
+
             <p>Vous pouvez entrer un commentaire:</p>
             <input type="text" name="conge_commentaire"/>
             <p>Prêt ?</p>
