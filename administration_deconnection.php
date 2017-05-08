@@ -18,7 +18,8 @@
 
 
 <body>
-
+<!--==============================logo========================-->
+        <?php include("includes/logo.inc.php"); ?>
 
   		<?php  	session_start();
   				$_SESSION = array();

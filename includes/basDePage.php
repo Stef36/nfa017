@@ -7,6 +7,6 @@
     <a href="./mentionsLegales.php">Mentions légales.</a><br/>
     <a href="./notesVersion.php">Notes de versions et derniers changements</a><br/>
 <!--==================== Copyright ===================================-->
-     <p>© Poser mes repos en ligne 2017 - All Rights Reserved.</p>
+     <p>© Mes Repos.com - 2017 - All Rights Reserved.</p>
 </footer>
 

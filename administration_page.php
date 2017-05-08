@@ -20,7 +20,8 @@
 
 
 <body>
-
+<!--==============================logo========================-->
+        <?php include("includes/logo.inc.php"); ?>
 <?php //include_once("./includes/analyticstracking.inc.php"); ?> 
 
 <!-- ===================== TITRE ===================== -->

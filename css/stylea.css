@@ -30,9 +30,11 @@ H2{
     /* border:2px dashed red; */
     text-align:center;
 }
-/*=====================WARM==================*/
-#warm{
+/*=====================logo==================*/
+.logo{
     /* border:2px solid red; */
+    margin:auto;
+    border-radius:30px;
 }
 /*=====================FLEX BOX==========================*/
 /*===============BLOC CREER UNE EQUIPE===================*/

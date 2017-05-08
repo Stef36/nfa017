@@ -6,6 +6,8 @@
 <!-- ======================================================= -->
     <head>
 
+
+
         <meta charset="UTF-8" lang="fr">
         <meta name="Mes Repos"  content="poser consulter jours congés travail équipe ">
 
@@ -26,7 +28,8 @@
 
 
     <body>
-
+<!--==============================logo========================-->
+        <?php include("includes/logo.inc.php"); ?>
 
 <!-- ===================== TITRE ===================== -->
 
