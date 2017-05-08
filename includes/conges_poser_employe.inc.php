@@ -185,7 +185,7 @@ else { ?>
 
     <section class="formulaire_pose_conge">
 
-        <form method="post" name="formulaire_pose_conge" class="flex_employe" >
+        <form method="post" name="formulaire_pose_conge"  >
              
 
             <div id="type_conge"> <?php
@@ -256,6 +256,10 @@ else { ?>
             </div>
 
             <div id="valide">
+
+
+
+
             <p>Vous pouvez choisir de ne pas poser tout de suite</p>
             <input type="radio" 
             name="conge_demande" 
