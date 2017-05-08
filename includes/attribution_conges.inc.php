@@ -78,7 +78,7 @@
 
                 <ul>
                     <label for="">mettre à jour</label>
-                    <input type="submit" name="valid_attribution_conges" value="Mettre à jour" onclick="alert();">
+                    <input type="submit" name="valid_attribution_conges" value="Mettre à jour" >
 
                 </ul>
 

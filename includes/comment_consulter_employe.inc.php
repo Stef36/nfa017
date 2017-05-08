@@ -1,7 +1,7 @@
 <!--==================COMMENT CREER UNE EQUIPE====================-->
 <?php
 
-// ---------   si une équipe est connectée-------------------------------
+// ---------   si aucun employé n'est connecté-------------------------------
 if (! isset($_SESSION['ticket_employe'])) { ?>
 
 <h2>POUR CONSULTER VOS CONGES EN ETANT EMPLOYE<br>d'une entreprise ou membre d'une équipe.</h2>
@@ -16,7 +16,11 @@ if (! isset($_SESSION['ticket_employe'])) { ?>
 
 <?php 
 }
-else { ?>
+
+
+// ---------   si un employé est connecté-------------------------------
+
+else {?>
  	<h2>------       Bienvenue sur le site Mes Repos!      ------</h2>
 
  	<p>Vous avez été inscrit par votre responsable ou par le chargé de votre équipe de travail. </p>

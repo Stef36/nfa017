@@ -13,11 +13,11 @@
     <head>
 
         <meta charset="UTF-8" lang="fr">
-        <meta name="Mes Repos"  content="consulter jours congés travail côté employe ">
+        <meta name="Mes Repos"  content="poser jours congés travail côté employe ">
 
         <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico">
   
-        <title>Mes congés | Consulter mes Congés</title>
+        <title>Mes congés | Poser mes Congés</title>
         <link href="./css/style.css" rel="stylesheet" type="text/css" />
         <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
     </head>
@@ -31,7 +31,7 @@
 
 
 <!-- ===================== TITRE ===================== -->
-<?php require ("./includes/header.inc.php"); titre_header('CONSULTER MES CONGES')?>
+<?php require ("./includes/header.inc.php"); titre_header('POSER MES CONGES')?>
 <!-- ===================== TITRE ===================== -->
 
 
@@ -52,7 +52,7 @@
 <!--=======================   COMMENT UTILISER du côté employé  ========-->
 <!--====================================================================-->
 
-        <section class="flex_employe" >
+        <section  class="flex_employe" >
 
             <section id="employe_presentation">
                 <?php include("includes/comment_consulter_employe.inc.php"); ?>
@@ -71,13 +71,13 @@
         </section>
 
 <!--====================================================================-->
-<!--==========================  VISU DES JOURS POSES =====================-->
+<!--======================== FORMULAIRE  POSER  CONGES =================-->
 <!--====================================================================-->
 
 
-    <section id="conges_details" class="flex_employe">
+    <section id="conges_poser" class="flex_employe">
 
-    <?php  include("includes/conges_details_employe.inc.php"); ?>
+    <?php  include("includes/conges_poser_employe.inc.php"); ?>
         
 
 

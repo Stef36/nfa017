@@ -1,7 +1,7 @@
 <!--==================COMMENT CREER UNE EQUIPE====================-->
 <?php
 
-// ---------   si une équipe est connectée-------------------------------
+// ---------   si un employé est connectée-------------------------------
 if (! isset($_SESSION['ticket_employe'])) { ?>
 
 <h2>ICI bientôt les détails de vos congés posée et/ou accordés</h2>
