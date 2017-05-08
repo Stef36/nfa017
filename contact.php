@@ -5,11 +5,11 @@
 <head>
     <meta charset="UTF-8" lang="fr">
     <meta name="Mes Repos"  content="poser consulter jours congés travail équipe ">
-	 <title>Contact | Poser mes repos en ligne</title>
+     <title>Contact | Poser mes repos en ligne</title>
 
 
   <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico">
-  
+  <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
   <link href="./css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
