@@ -71,22 +71,21 @@
 
 
         <!-- TODO fonction js de verif de format de login souhaité -->
-        <input type="text" name="login_souhait" size="50"placeholder="nomEquipe-ENTREPRISE" onblur="logFunc()">Le login souhaité.<br/>
+        <input type="text" name="login_souhait" size="50"placeholder="nomEquipe-ENTREPRISE" onblur="logFunc()"><br/>
 
         <INPUT TYPE="radio" NAME="CHOIX" VALUE="information">information<BR> 
         <INPUT TYPE="radio" NAME="CHOIX" VALUE="amelioration">suggestion d'amélioration<BR> 
        
         <label for="Remarques"><span id="errRem"></span></label><br/> 
         <textarea onblur="remFunc()" placeholder="(merci d'éviter les caractères spéciaux)" name="rem" id="rem"></textarea>
-
+ <br/>
       </fieldset> 
     </div>
     
       <input type="hidden" name="ip" id="ip" value= "<?php echo get_ip() ?>" />
         
     <br/>
-    
-  <br/>
+
  
     <p>Avant d'envoyer,additionnez ces deux nombres:<br/>  
       <label for="kapcharep"><span id="n1"></span> + <span id="n2"> </span> =</label>
@@ -104,10 +103,10 @@
     // ne charge pas la map si connecté comme administrateur ?>
 
 <!--==============================GOOGLE MAP================================-->
-    <div id="map" >
+    <div >
                 <a>Où sommes nous ?</a><br><br>
                 <a href="" onmouseover="javascript:map('id_div_1'); return false;">
-               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241425.24280187566!2d1.9475511813183024!3d48.04466644576435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5aacf14d343fb%3A0x1c0dc8da45484380!2s45170+Neuville-aux-Bois!5e0!3m2!1sfr!2sfr!4v1493323796756" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></a> <br>
+               <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241425.24280187566!2d1.9475511813183024!3d48.04466644576435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5aacf14d343fb%3A0x1c0dc8da45484380!2s45170+Neuville-aux-Bois!5e0!3m2!1sfr!2sfr!4v1493323796756" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></a> <br>
                 
             </div><br> 
     <?php } ?>               

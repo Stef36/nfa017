@@ -33,7 +33,7 @@
             <br>
             <ul>
 <!--========================= Description des mentions légales =================================-->
-                <h2>
+                <section id="mentions">
                     <li>Dénomination sociale de la société : SAS poser ses congés</li>
                     <li>Adresse postale : Rue du cinoche 36999 Trifoully les oies</li>
                     <li>Numéro de téléphone : 02 54 22 33 44</li>
@@ -52,7 +52,7 @@
                     DUFOUR Dominique <br>
                     LARUELLE Stéphane <br>
                     
-                </h2>
+                </section>
             </ul>
             <br>
             <br>
