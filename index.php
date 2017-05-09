@@ -1,5 +1,8 @@
-<?php Session_start()?>
 
+<?php Session_start()?>
+<!--=======================COOKIE========================-->
+<?php setcookie('bienvenue','Bienvenue', time()+ 3,'/'); ?>
+<?php echo $_COOKIE['bienvenue']; ?>
 <!DOCTYPE html>
 <html lang="fr-fr" >
 
@@ -30,6 +33,9 @@
     <body>
 <!--==============================logo========================-->
         <?php include("includes/logo.inc.php"); ?>
+<!--====================================COOKIE==============================-->
+
+
 
 <!-- ===================== TITRE ===================== -->
 

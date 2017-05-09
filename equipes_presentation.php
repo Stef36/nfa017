@@ -2,7 +2,9 @@
 <?php include("./includes/gestion_connection_equipe.inc.php");
 //affiche_variables_session() ?>
 
-
+<!--=======================COOKIE========================-->
+<?php setcookie('bienvenue','Bienvenue', time()+ 365*24*3600); ?>
+<?php echo $_COOKIE['bienvenue']; ?>
 <!-- ================ Connection bdd via PDO ================ -->
 <?php include("./includes/connection.php"); ?>
 
@@ -29,18 +31,14 @@
         <?php include("includes/logo.inc.php"); ?>
 
 
-
+<!--=======================COOKIE========================-->
 
 <!-- ===================== TITRE ===================== -->
         <header class="headera">
             <h1>LES EQUIPES DE TRAVAIL<H1>
         </header>
 
-<!--=======voir si possibilité===Menu de demande de validation================-->
-        <article id="warm">
-warm
-        
-        </article>
+
 <!-- ===================== MENU ===================== -->
         <nav class="menu">
         <?php include("includes/menu.php"); ?>
