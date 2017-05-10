@@ -179,9 +179,11 @@ else { ?>
 
     <h2>Formulaire de demande de congés.</h2>
 
-    <H3>
-        Vous pouvez ici selectionner et poser vos congés.
-    </H3>
+    <H3>Modifier un congé déjà posé:</H3>
+
+    <?php include("./includes/conges_modifier_employe.inc.php"); ?>
+
+    <H3>Vous pouvez ici selectionner et poser vos congés.</H3>
 
     <section class="formulaire_pose_conge">
 
