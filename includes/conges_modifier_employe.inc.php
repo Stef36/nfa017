@@ -22,17 +22,17 @@
             $conge_demandes = $pdo -> query($sql_conges_demandes); ?>
 
 
-            <table>  
+            <form method="POST" name="modif_conge" id="modif_conge">  
+
+
+            <table>
 
                 <caption>DETAILS DES CONGES POSES<br>
-                <p> légende:
+                 légende:
                 <span class="grey">Pas posé ou pas consulté</span>
                 <span class="yellow">Vu, en attente</span>
                 <span class="red">Refusé</span>
                 <span class="green">Accordé</span>
-
-                </p>
-
                 </caption>
 
                 <tr>
@@ -46,16 +46,23 @@
                     <td>consulté</td>
                     <td>accordé</td>
                     <td></td>
-                </tr>  <?php
+                </tr> 
+
+
+                </table>
+
+  <select name="select_conge">
+                 <?php
 
 
 
 
-
+      
             while ( $conge_accorde=$conge_demandes->fetch()){ 
                 // voir requete ligne 100 de comment_consulter_employe.inc.php?>
 
-                <tr  class="<?php echo couleur_conge($conge_accorde['conge_demande'], $conge_accorde['conge_consulte'],$conge_accorde['conge_accorde'] ); ?>"> 
+                <option class="<?php echo couleur_conge($conge_accorde['conge_demande'], $conge_accorde['conge_consulte'],$conge_accorde['conge_accorde'] ); ?>">
+                <tr  > 
                     <td><?php echo $conge_accorde['type_conge_nom'];?></td>
                     <td><?php echo formate_date($conge_accorde['conge_datedebut']);?></td>        
                     <td><?php echo $conge_accorde['conge_quantite'];?></td>
@@ -71,10 +78,13 @@
                    
                   
 
-                </tr> <?php
+                </tr> 
+                </option>
+
+              <?php
 
                 
             } ?>
+  </select>
 
-
-            </table> 
+            </form> 
