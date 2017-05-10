@@ -1,3 +1,4 @@
+<?php  	session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr-fr">
 
@@ -21,7 +22,7 @@
 <!--==============================logo========================-->
         <?php include("includes/logo.inc.php"); ?>
 
-  		<?php  	session_start();
+  		<?php  
   				$_SESSION = array();
   				session_destroy(); ?>
 <!-- ===================== TITRE ===================== -->

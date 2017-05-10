@@ -1,4 +1,3 @@
-<!-- ================ Connection bdd via PDO ================ -->
 <?php include("./includes/gestion_connection_employe.inc.php");
 //affiche_variables_session() ?>
 

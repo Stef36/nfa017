@@ -1,4 +1,4 @@
-<?php  Session_start();
+<?php  session_start();
 
 		// ================ Connection bdd via PDO ================
  		include("./includes/connection.php"); 
