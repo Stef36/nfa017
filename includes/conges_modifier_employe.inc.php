@@ -61,7 +61,7 @@
             while ( $conge_accorde=$conge_demandes->fetch()){ 
                 // voir requete ligne 100 de comment_consulter_employe.inc.php?>
 
-                <option class="<?php echo couleur_conge($conge_accorde['conge_demande'], $conge_accorde['conge_consulte'],$conge_accorde['conge_accorde'] ); ?>">
+                <option class="<?php echo couleur_conge($conge_accorde['conge_demande'], $conge_accorde['conge_consulte'],$conge_accorde['conge_accorde'] ); ?>"><?php echo $conge_accorde['conge_id']; ?>
                 <tr  > 
                     <td><?php echo $conge_accorde['type_conge_nom'];?></td>
                     <td><?php echo formate_date($conge_accorde['conge_datedebut']);?></td>        
@@ -87,4 +87,5 @@
             } ?>
   </select>
 
+            <input type="submit" name="envoi">
             </form> 
