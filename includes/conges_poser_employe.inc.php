@@ -177,13 +177,30 @@ else { ?>
 
     <article>
 
-    <h2>Formulaire de demande de congés.</h2>
+    
 
-    <H3>Modifier un congé déjà posé:</H3>
+    <?php 
 
-    <?php include("./includes/conges_modifier_employe.inc.php"); ?>
+        if (isset($_POST['select_conge_pour_modif'])){ ?>
+        <H2>Modifier un congé déjà posé:</H2>
+        <H3>Vous pouvez ici changer une ou des caracteristiques de votre congé.</H3>
 
-    <H3>Vous pouvez ici selectionner et poser vos congés.</H3>
+        
+
+        
+
+    <?php } 
+        else { ?>
+
+         <h2>Formulaire de demande de congés.</h2>
+         <H3>Vous pouvez ici selectionner et poser vos congés.</H3>
+       <?php }?>
+
+    
+
+    <?php //include("./includes/conges_modifier_employe.inc.php"); ?>
+
+    
 
     <section class="formulaire_pose_conge">
 

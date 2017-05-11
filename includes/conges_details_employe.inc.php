@@ -45,7 +45,7 @@ else { ?>
 
             $conge_demandes = $pdo -> query($sql_conges_demandes); ?>
 
-
+   <form method="POST" name="formulaire_modif_conge" action="./mes_conges_poser.php">
             <table>  
 
                 <caption>DETAILS DES CONGES POSES<br>
@@ -75,7 +75,7 @@ else { ?>
 
 
 
-            <form method="post" name="formulaire_modif_conge" action="./mes_conges_poser.php">
+         
 
             <?php
             while ( $conge_accorde=$conge_demandes->fetch()){ 
@@ -85,9 +85,10 @@ else { ?>
 
 
                     <td><?php // si (date > date du jour) ET (conge !accordé)
+                                // on permet de selectionner pour modifier
 
                         if ($conge_accorde['conge_accorde']!=1) { ?>
-                              <input type="radio" name="select_conge" value="<?php echo $conge_accorde['conge_id']; ?>"></td>
+                              <input type="radio" name="select_conge_pour_modif" value="<?php echo $conge_accorde['conge_id']; ?>"></td>
                         <?php }
                          ?>
 
@@ -116,12 +117,18 @@ else { ?>
 
                 
             } ?>
-            </form>
+
+
+
 
 
 
 
             </table>
+
+            <input type="submit" name="valider" value="OK pour modifier"/>
+            <p>Vous serez redirigés sur la page "Poser mes congés.</p>
+            </form>
 
 
 
