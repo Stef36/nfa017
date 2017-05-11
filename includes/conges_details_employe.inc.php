@@ -60,7 +60,7 @@ else { ?>
                 </caption>
 
                 <tr>
-
+                    <td>select <br/>pour modifier</td>
                     <td>NOM du congé</td>
                     <td>date</td>
                     <td>Qté </td>
@@ -70,16 +70,33 @@ else { ?>
                     <td>consulté</td>
                     <td>accordé</td>
                     <td></td>
-                </tr>  <?php
+                </tr>  
 
 
 
 
+            <form method="post" name="formulaire_modif_conge" action="./mes_conges_poser.php">
 
+            <?php
             while ( $conge_accorde=$conge_demandes->fetch()){ 
                 // voir requete ligne 100 de comment_consulter_employe.inc.php?>
 
                 <tr  class="<?php echo couleur_conge($conge_accorde['conge_demande'], $conge_accorde['conge_consulte'],$conge_accorde['conge_accorde'] ); ?>"> 
+
+
+                    <td><?php // si (date > date du jour) ET (conge !accordé)
+
+                        if ($conge_accorde['conge_accorde']!=1) { ?>
+                              <input type="radio" name="select_conge" value="<?php echo $conge_accorde['conge_id']; ?>"></td>
+                        <?php }
+                         ?>
+
+
+                      
+
+
+
+
                     <td><?php echo $conge_accorde['type_conge_nom'];?></td>
                     <td><?php echo formate_date($conge_accorde['conge_datedebut']);?></td>        
                     <td><?php echo $conge_accorde['conge_quantite'];?></td>
@@ -99,7 +116,7 @@ else { ?>
 
                 
             } ?>
-
+            </form>
 
 
 
