@@ -230,23 +230,21 @@ else { ?>
             if (isset($_POST['select_conge_pour_modif'])){
 
                 // requete de recherche des caracteristique du congé
-
                 $conge_id=$_POST['select_conge_pour_modif'];
 
                 $sql_donnees_du_conge =
-                                "SELECT type_conge_id, conge_datedebut,conge_quantite,conge_commentaire 
+                                "SELECT conge_id, type_conge_id, conge_datedebut,conge_quantite,conge_commentaire 
                                 FROM conge 
                                 WHERE conge_id='$conge_id';";
 
 
                 // on applique la requête à l'objet
-
                 $donnees_du_conge=$pdo->query($sql_donnees_du_conge);
 
                 // on recupère les variables
                 while ( $donnee_du_conge=$donnees_du_conge->fetch()) {
                     # code...
-                    echo "id_conge à modifier => ".$donnee_du_conge['type_conge_id'];
+                    echo "id_conge à modifier => ".$donnee_du_conge['conge_id'];
                     $type_conge_a_modif=$donnee_du_conge['type_conge_id'];
                     $date_debut_conge_a_modif=$donnee_du_conge['conge_datedebut'];
                     $quantite_conge_a_modif=$donnee_du_conge['conge_quantite'];
