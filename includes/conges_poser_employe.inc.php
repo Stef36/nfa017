@@ -234,7 +234,7 @@ else { ?>
                 $conge_id=$_POST['select_conge_pour_modif'];
 
                 $sql_donnees_du_conge =
-                                "SELECT C.type_conge_id, conge_datedebut 
+                                "SELECT C.type_conge_id, conge_datedebut,conge_quantite,conge_commentaire 
                                 FROM conge AS C JOIN type_conge AS T
                                 ON C.type_conge_id= T.type_conge_id
                                 WHERE conge_id='$conge_id';";
@@ -250,7 +250,9 @@ else { ?>
                     echo "id_conge à modifier => ".$donnee_du_conge['type_conge_id'];
                     $type_conge_a_modif=$donnee_du_conge['type_conge_id'];
                     $date_debut_conge_a_modif=$donnee_du_conge['conge_datedebut'];
-
+                    $quantite_conge_a_modif=$donnee_du_conge['conge_quantite'];
+                    $commentaire_conge_a_modif=
+                    htmlentities($donnee_du_conge['conge_commentaire'],ENT_QUOTES, "UTF-8");
 
                 }
 
@@ -322,6 +324,16 @@ else { ?>
             name="conge_quantite"
             min="0"
             step="0.5"
+
+                <?php
+                // si on veut modifier le congé
+                if (isset($_POST['select_conge_pour_modif']))
+                {
+                // on préselectionne la valeur déjà demandée
+                echo "value='$quantite_conge_a_modif'";                 
+                }
+                ?>
+
             >
                 
             </div>
@@ -342,7 +354,22 @@ else { ?>
             </input>
 
             <p>Vous pouvez entrer un commentaire:</p>
-            <input type="text" name="conge_commentaire"/>
+            <input 
+            type="text" 
+            name="conge_commentaire"
+                <?php
+                // si on veut modifier le congé
+                if (isset($_POST['select_conge_pour_modif']))
+                {
+                // on préselectionne la valeur déjà demandée
+                echo "value='$commentaire_conge_a_modif'";                 
+                }
+                ?>
+
+            />
+
+
+
             <p>Prêt ?</p>
             <input type="submit" name= "envoi" value= "Envoyer">
             <input type = "reset" name = "annule" value = "Annuler">    
