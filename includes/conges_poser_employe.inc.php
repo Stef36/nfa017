@@ -234,9 +234,8 @@ else { ?>
                 $conge_id=$_POST['select_conge_pour_modif'];
 
                 $sql_donnees_du_conge =
-                                "SELECT C.type_conge_id, conge_datedebut,conge_quantite,conge_commentaire 
-                                FROM conge AS C JOIN type_conge AS T
-                                ON C.type_conge_id= T.type_conge_id
+                                "SELECT type_conge_id, conge_datedebut,conge_quantite,conge_commentaire 
+                                FROM conge 
                                 WHERE conge_id='$conge_id';";
 
 
