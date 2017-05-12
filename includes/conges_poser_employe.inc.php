@@ -209,6 +209,9 @@ else { ?>
 
             <div id="type_conge"> <?php
 
+
+            // requete de recherche des différents type de congés proposés //
+
             $sql_employe_dispose_type_conges =
                                 "   SELECT  type_conge_id, type_conge_nom,
                                       type_conge_unite, type_conge_logo
@@ -220,15 +223,65 @@ else { ?>
                                         
                                     ;";
 
-
-
             $employe_dispose_type_conges = $pdo -> query($sql_employe_dispose_type_conges);
+
+
+            // si on veut modifier un congé, en venant de mes_conges_consulter.php
+            if (isset($_POST['select_conge_pour_modif'])){
+
+                // requete de recherche des caracteristique du congé
+
+                $conge_id=$_POST['select_conge_pour_modif'];
+
+                $sql_donnees_du_conge =
+                                "SELECT C.type_conge_id, conge_datedebut 
+                                FROM conge AS C JOIN type_conge AS T
+                                ON C.type_conge_id= T.type_conge_id
+                                WHERE conge_id='$conge_id';";
+
+
+                // on applique la requête à l'objet
+
+                $donnees_du_conge=$pdo->query($sql_donnees_du_conge);
+
+                // on recupère les variables
+                while ( $donnee_du_conge=$donnees_du_conge->fetch()) {
+                    # code...
+                    echo "id_conge à modifier => ".$donnee_du_conge['type_conge_id'];
+                    $type_conge_a_modif=$donnee_du_conge['type_conge_id'];
+                    $date_debut_conge_a_modif=$donnee_du_conge['conge_datedebut'];
+
+
+                }
+
+            }
+
+
+
+
+
+
 
             while($employe_dispose_type_conge= $employe_dispose_type_conges->fetch()){ ?>
                 <p>
                     <input type="radio" 
                             name="type_conge_id" 
-                            value="<?php echo $employe_dispose_type_conge['type_conge_id']; ?>" >
+                            value="<?php echo $employe_dispose_type_conge['type_conge_id']; ?>"
+
+                            <?php 
+
+                            // si on veut modifier le congé
+                            if (isset($_POST['select_conge_pour_modif']))
+                                {
+                                    if ($type_conge_a_modif==$employe_dispose_type_conge['type_conge_id']) {
+                                        # code...
+                                        echo "checked='checked'";
+                                    }
+                                
+                            } ?>
+
+
+                             >
 
                     <?php
                     echo $employe_dispose_type_conge['type_conge_nom'].' en '.$employe_dispose_type_conge['type_conge_unite'];
