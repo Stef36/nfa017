@@ -402,13 +402,15 @@ else { ?>
             // si on veut modifier le congé
             if (isset($_POST['select_conge_pour_modif']))
             {
-            // bouton "modifier" ?>
-            <input type="number" name="conge_id" value="<?php echo $conge_id; ?>" hidden >
+             ?>
 
+
+            <input type="number" name="conge_id" value="<?php echo $conge_id; ?>" hidden >
+            
             <input type="submit" name= "modifier" value= "modifier"> <?php
             } else { ?>
             
-            <input type="submit" name= "nouveau" value= "nouveau"><?php
+            <input type="submit" name= "nouveau" value= "nouveau congé"><?php
             }?>
 
            
