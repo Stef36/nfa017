@@ -36,7 +36,7 @@ else { ?>
 
 
                                 WHERE employe_id = '$id_selection_employe'
-                                ORDER BY conge_datedebut
+                                ORDER BY conge_datedebut , conge_id
                                 ;";
 
 
@@ -60,7 +60,7 @@ else { ?>
                 </caption>
 
                 <tr>
-                    <td>select <br/>pour modifier</td>
+                    <td>-select-</td>
                     <td>NOM du congé</td>
                     <td>date</td>
                     <td>Qté </td>
@@ -84,14 +84,20 @@ else { ?>
                 <tr  class="<?php echo couleur_conge($conge_accorde['conge_demande'], $conge_accorde['conge_consulte'],$conge_accorde['conge_accorde'] ); ?>"> 
 
 
-                    <td><?php // si (date > date du jour) ET (conge !accordé)
+                    <td><?php   // si (date > date du jour) ET (conge !accordé)
                                 // on permet de selectionner pour modifier
 
+                                //echo $conge_accorde['conge_id'];
+
                         if ($conge_accorde['conge_accorde']!=1) { ?>
-                              <input type="radio" name="select_conge_pour_modif" value="<?php echo $conge_accorde['conge_id']; ?>"></td>
-                        <?php }
+                              <input type="radio" name="select_conge_pour_modif" value="<?php echo $conge_accorde['conge_id']; ?>">
+                        <?php } 
+
+                       
                          ?>
 
+
+                    </td>
 
                       
 

@@ -174,14 +174,14 @@ else { ?>
 
             // ajout à la fin du tableau des nouvelles valeures
             $nouvelles_valeurs[]=$conge_id_a_modifier;
-            print_r($nouvelles_valeurs);
+            //print_r($nouvelles_valeurs);
 
 
             $sql_modif_conge= "UPDATE conge
                                 SET conge_datedebut=?, conge_quantite=?, conge_commentaire=?, conge_demande=?, employe_id=?, type_conge_id=?
                                 WHERE conge_id= ? ; ";
             // modif de l'enregistrement
-            //applique_requete($sql_modif_conge, $pdo, $nouvelles_valeurs);
+            applique_requete($sql_modif_conge, $pdo, $nouvelles_valeurs);
             }
 
 
