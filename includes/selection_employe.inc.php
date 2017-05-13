@@ -31,7 +31,7 @@
 
 
      <!-- formulaire de selection de l'employé -->
-     <form method="post" name="selection_employe">
+     <form method="post" name="selection_employe" action="#selectionner_employe">
 
 
                 <?php
@@ -68,7 +68,7 @@
 
 
 
-             <select name="select_employe" size="1">
+             <select   name="select_employe" size="1" onchange="this.form.submit()">
 
                  <option    <?php if (!isset($_POST['select_employe'])) 
                                      {
@@ -103,8 +103,8 @@
                  
              </select>
 
-             <input type="submit" name="submit" value="OK">
-         
+             <!-- <input type="submit" name="submit" value="OK"> -->
+         <noscript><input type="submit" value="Changer" /></noscript>
 
      </form> 
 
