@@ -159,16 +159,45 @@ else { ?>
 
 
 
+            $nouvelles_valeurs= array($conge_datedebut, $conge_quantite,$conge_commentaire, $conge_demande, $employe_id, $type_conge_id );
 
+
+
+
+
+            if (isset($_POST['modifier'])/* conge à modifier */) {// modifier ligne du conge
+                # code...
+                //echo 'modifier';
+
+            // recuperation de l'id du conge à modifier
+            $conge_id_a_modifier=$_POST['conge_id'];
+
+            // ajout à la fin du tableau des nouvelles valeures
+            $nouvelles_valeurs[]=$conge_id_a_modifier;
+            print_r($nouvelles_valeurs);
+
+
+            $sql_modif_conge= "UPDATE conge
+                                SET conge_datedebut=?, conge_quantite=?, conge_commentaire=?, conge_demande=?, employe_id=?, type_conge_id=?
+                                WHERE conge_id= ? ; ";
+            // modif de l'enregistrement
+            //applique_requete($sql_modif_conge, $pdo, $nouvelles_valeurs);
+            }
+
+
+
+            elseif (isset($_POST['nouveau'])) {  // creer nouvelle ligne en BD table conge
 
             // requete d'insertion en BD
             $sql_insert_conge= "INSERT INTO conge
                                 SET conge_datedebut=?, conge_quantite=?, conge_commentaire=?, conge_demande=?, employe_id=?, type_conge_id=? ; ";
 
-            $nouvelles_valeurs= array($conge_datedebut, $conge_quantite,$conge_commentaire, $conge_demande, $employe_id, $type_conge_id );
-
             // insert de l'enregistrement
             applique_requete($sql_insert_conge, $pdo, $nouvelles_valeurs);
+            }
+
+
+            
 
             } ?>
     
@@ -368,7 +397,21 @@ else { ?>
 
 
             <p>Prêt ?</p>
-            <input type="submit" name= "envoi" value= "Envoyer">
+
+            <?php
+            // si on veut modifier le congé
+            if (isset($_POST['select_conge_pour_modif']))
+            {
+            // bouton "modifier" ?>
+            <input type="number" name="conge_id" value="<?php echo $conge_id; ?>" hidden >
+
+            <input type="submit" name= "modifier" value= "modifier"> <?php
+            } else { ?>
+            
+            <input type="submit" name= "nouveau" value= "nouveau"><?php
+            }?>
+
+           
             <input type = "reset" name = "annule" value = "Annuler">    
             </div>
             
