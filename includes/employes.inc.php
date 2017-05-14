@@ -102,7 +102,7 @@
 		 		<span>
 
 
-			 		<p>
+			 		
 			 			<!-- insertion avatar employé -->
 
 			 			<?php
@@ -116,7 +116,7 @@
 
 	        			} else afficher_suivant_mime("./logos/question-423604_960_720.png","MesRepos" , NULL, 'logo_equipe', NULL ); ?>
 
-			 		</p>
+			 		
 			 	</span>
 
 			 	<span>
