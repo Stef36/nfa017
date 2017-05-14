@@ -134,6 +134,13 @@ else { ?>
  	
 
 
+
+    
+
+ 	<!--  =================== article  ==========================-->
+
+    <article>
+
     <!--  =============== insertion en BD du congé================-->
     <!--  ===============     le cas échéant      ================-->
     
@@ -159,29 +166,73 @@ else { ?>
 
 
 
+            $nouvelles_valeurs= array($conge_datedebut, $conge_quantite,$conge_commentaire, $conge_demande, $employe_id, $type_conge_id );
 
+
+
+
+
+            if (isset($_POST['modifier'])/* conge à modifier */) {// modifier ligne du conge
+                # code...
+                //echo 'modifier';
+
+            // recuperation de l'id du conge à modifier
+            $conge_id_a_modifier=$_POST['conge_id'];
+
+            // ajout à la fin du tableau des nouvelles valeures
+            $nouvelles_valeurs[]=$conge_id_a_modifier;
+            //print_r($nouvelles_valeurs);
+
+
+            $sql_modif_conge= "UPDATE conge
+                                SET conge_datedebut=?, conge_quantite=?, conge_commentaire=?, conge_demande=?, employe_id=?, type_conge_id=?
+                                WHERE conge_id= ? ; ";
+            // modif de l'enregistrement
+            applique_requete($sql_modif_conge, $pdo, $nouvelles_valeurs);
+            }
+
+
+
+            elseif (isset($_POST['nouveau'])) {  // creer nouvelle ligne en BD table conge
 
             // requete d'insertion en BD
             $sql_insert_conge= "INSERT INTO conge
                                 SET conge_datedebut=?, conge_quantite=?, conge_commentaire=?, conge_demande=?, employe_id=?, type_conge_id=? ; ";
 
-            $nouvelles_valeurs= array($conge_datedebut, $conge_quantite,$conge_commentaire, $conge_demande, $employe_id, $type_conge_id );
-
             // insert de l'enregistrement
             applique_requete($sql_insert_conge, $pdo, $nouvelles_valeurs);
+            }
+
+
+            
 
             } ?>
+
+
     
 
- 	<!--  =================== article  ==========================-->
+    <?php 
 
-    <article>
+        if (isset($_POST['select_conge_pour_modif'])){ ?>
+        <H2>Modifier un congé déjà posé:</H2>
+        <H3>Vous pouvez ici changer une ou des caracteristiques de votre congé.</H3>
 
-    <h2>Formulaire de demande de congés.</h2>
+        
 
-    <H3>
-        Vous pouvez ici selectionner et poser vos congés.
-    </H3>
+        
+
+    <?php } 
+        else { ?>
+
+         <h2>Formulaire de demande de congés.</h2>
+         <H3>Vous pouvez ici selectionner et poser vos congés.</H3>
+       <?php }?>
+
+    
+
+    <?php //include("./includes/conges_modifier_employe.inc.php"); ?>
+
+    
 
     <section class="formulaire_pose_conge">
 
@@ -189,6 +240,9 @@ else { ?>
              
 
             <div id="type_conge"> <?php
+
+
+            // requete de recherche des différents type de congés proposés //
 
             $sql_employe_dispose_type_conges =
                                 "   SELECT  type_conge_id, type_conge_nom,
@@ -201,22 +255,71 @@ else { ?>
                                         
                                     ;";
 
-
-
             $employe_dispose_type_conges = $pdo -> query($sql_employe_dispose_type_conges);
+
+
+            // si on veut modifier un congé, en venant de mes_conges_consulter.php
+            if (isset($_POST['select_conge_pour_modif'])){
+
+                // requete de recherche des caracteristique du congé
+                $conge_id=$_POST['select_conge_pour_modif'];
+
+                $sql_donnees_du_conge =
+                                "SELECT conge_id, type_conge_id, conge_datedebut,conge_quantite,conge_commentaire 
+                                FROM conge 
+                                WHERE conge_id='$conge_id';";
+
+
+                // on applique la requête à l'objet
+                $donnees_du_conge=$pdo->query($sql_donnees_du_conge);
+
+                // on recupère les variables
+                while ( $donnee_du_conge=$donnees_du_conge->fetch()) {
+                    # code...
+                    echo "id_conge à modifier => ".$donnee_du_conge['conge_id'];
+                    $type_conge_a_modif=$donnee_du_conge['type_conge_id'];
+                    $date_debut_conge_a_modif=$donnee_du_conge['conge_datedebut'];
+                    $quantite_conge_a_modif=$donnee_du_conge['conge_quantite'];
+                    $commentaire_conge_a_modif=
+                    htmlentities($donnee_du_conge['conge_commentaire'],ENT_QUOTES, "UTF-8");
+
+                }
+
+            }
+
+
+
+
+
+
 
             while($employe_dispose_type_conge= $employe_dispose_type_conges->fetch()){ ?>
                 <p>
                     <input type="radio" 
                             name="type_conge_id" 
-                            value="<?php echo $employe_dispose_type_conge['type_conge_id']; ?>" >
+                            value="<?php echo $employe_dispose_type_conge['type_conge_id']; ?>"
+
+                            <?php 
+
+                            // si on veut modifier le congé
+                            if (isset($_POST['select_conge_pour_modif']))
+                                {
+                                    if ($type_conge_a_modif==$employe_dispose_type_conge['type_conge_id']) {
+                                        # code...
+                                        echo "checked='checked'";
+                                    }
+                                
+                            } ?>
+
+
+                             >
 
                     <?php
                     echo $employe_dispose_type_conge['type_conge_nom'].' en '.$employe_dispose_type_conge['type_conge_unite'];
 
                     } ?> 
 
-                    </input>
+                   
                 </p>
                 
             </div>
@@ -224,19 +327,45 @@ else { ?>
             <div>
             <div id="date_conge">
 
-                <p> Date de début
+                <p> Date de début (année <?php echo date('Y');?>)
+
                 <input type="date" 
                 name="conge_date" 
-                value="<?php echo date('Y-m-d')?>" >
-                </input>
+
+                min="<?php echo date('Y')?>-01-01"
+                max="<?php echo date('Y')?>-12-31"
+
+                <?php if (isset($_POST['select_conge_pour_modif'])){ 
+
+                $timestampmodif= strtotime($date_debut_conge_a_modif);?>
+
+                value="<?php echo date('Y-m-d',$timestampmodif) ?>" <?php
+                    
+                } else { ?>
+
+                value="<?php echo date('Y-m-d') ?>" <?php
+
+
+                } ?> />
+                
                 </p>
                 
                 <p>Heure éventuelle
                 <input type="time" 
                 name="conge_time" 
-                value="<?php echo "00:00:00"?>" >
 
-                </input>
+
+
+
+                <?php if (isset($_POST['select_conge_pour_modif'])){ 
+                $timestampmodif= strtotime($date_debut_conge_a_modif);?>
+                 value="<?php echo date('H:i',$timestampmodif)?>" <?php
+                    
+                } else { ?>
+                value="<?php echo "00:00"?>" <?php
+                } ?> />
+
+                
                 </p>
 
 
@@ -250,6 +379,16 @@ else { ?>
             name="conge_quantite"
             min="0"
             step="0.5"
+
+                <?php
+                // si on veut modifier le congé
+                if (isset($_POST['select_conge_pour_modif']))
+                {
+                // on préselectionne la valeur déjà demandée
+                echo "value='$quantite_conge_a_modif'";                 
+                }
+                ?>
+
             >
                 
             </div>
@@ -266,13 +405,44 @@ else { ?>
             value="1" checked=""> Je pose
             <input type="radio" 
             name="conge_demande" 
-            value="NULL" > Je ne pose pas encore.          
-            </input>
+            value="NULL" /> Je ne pose pas encore.          
+            
 
             <p>Vous pouvez entrer un commentaire:</p>
-            <input type="text" name="conge_commentaire"/>
+            <input 
+            type="text" 
+            name="conge_commentaire"
+                <?php
+                // si on veut modifier le congé
+                if (isset($_POST['select_conge_pour_modif']))
+                {
+                // on préselectionne la valeur déjà demandée
+                echo "value='$commentaire_conge_a_modif'";                 
+                }
+                ?>
+
+            />
+
+
+
             <p>Prêt ?</p>
-            <input type="submit" name= "envoi" value= "Envoyer">
+
+            <?php
+            // si on veut modifier le congé
+            if (isset($_POST['select_conge_pour_modif']))
+            {
+             ?>
+
+
+            <input type="number" name="conge_id" value="<?php echo $conge_id; ?>" hidden >
+            
+            <input type="submit" name= "modifier" value= "modifier"> <?php
+            } else { ?>
+            
+            <input type="submit" name= "nouveau" value= "nouveau congé"><?php
+            }?>
+
+           
             <input type = "reset" name = "annule" value = "Annuler">    
             </div>
             

@@ -1,28 +1,4 @@
-<!--==================COMMENT CREER UNE EQUIPE====================-->
-<?php
-
-// ---------   si un employé est connectée-------------------------------
-if (! isset($_SESSION['ticket_employe'])) { ?>
-
-<h2>ICI bientôt les détails de vos congés posée et/ou accordés</h2>
-
-
-
-<p>Bons congés !</p>
-
-<?php 
-}
-else { ?>
- 	<h2>Voici le détails de vos congés posés.</h2>
-
-
-
- 	<!--  =================== SOLDE DES CONGES ==========================-->
-
-
- 	
-
- 	<?php         
+<?php         
 
 			$id_selection_employe=$_SESSION['employe_id'];
 
@@ -36,7 +12,7 @@ else { ?>
 
 
                                 WHERE employe_id = '$id_selection_employe'
-                                ORDER BY conge_datedebut , conge_id
+                                ORDER BY conge_datedebut
                                 ;";
 
 
@@ -45,22 +21,22 @@ else { ?>
 
             $conge_demandes = $pdo -> query($sql_conges_demandes); ?>
 
-   <form method="POST" name="formulaire_modif_conge" action="./mes_conges_poser.php">
-            <table>  
+
+            <form method="POST" name="modif_conge" id="modif_conge">  
+
+
+            <table>
 
                 <caption>DETAILS DES CONGES POSES<br>
-                <p> légende:
+                 légende:
                 <span class="grey">Pas posé ou pas consulté</span>
                 <span class="yellow">Vu, en attente</span>
                 <span class="red">Refusé</span>
                 <span class="green">Accordé</span>
-
-                </p>
-
                 </caption>
 
                 <tr>
-                    <td>-select-</td>
+
                     <td>NOM du congé</td>
                     <td>date</td>
                     <td>Qté </td>
@@ -70,40 +46,23 @@ else { ?>
                     <td>consulté</td>
                     <td>accordé</td>
                     <td></td>
-                </tr>  
+                </tr> 
+
+
+                </table>
+
+  <select name="select_conge">
+                 <?php
 
 
 
 
-         
-
-            <?php
+      
             while ( $conge_accorde=$conge_demandes->fetch()){ 
                 // voir requete ligne 100 de comment_consulter_employe.inc.php?>
 
-                <tr  class="<?php echo couleur_conge($conge_accorde['conge_demande'], $conge_accorde['conge_consulte'],$conge_accorde['conge_accorde'] ); ?>"> 
-
-
-                    <td><?php   // si (date > date du jour) ET (conge !accordé)
-                                // on permet de selectionner pour modifier
-
-                                //echo $conge_accorde['conge_id'];
-
-                        if ($conge_accorde['conge_accorde']!=1) { ?>
-                              <input type="radio" name="select_conge_pour_modif" value="<?php echo $conge_accorde['conge_id']; ?>">
-                        <?php } 
-
-                       
-                         ?>
-
-
-                    </td>
-
-                      
-
-
-
-
+                <option class="<?php echo couleur_conge($conge_accorde['conge_demande'], $conge_accorde['conge_consulte'],$conge_accorde['conge_accorde'] ); ?>"><?php echo $conge_accorde['conge_id']; ?>
+                <tr  > 
                     <td><?php echo $conge_accorde['type_conge_nom'];?></td>
                     <td><?php echo formate_date($conge_accorde['conge_datedebut']);?></td>        
                     <td><?php echo $conge_accorde['conge_quantite'];?></td>
@@ -119,24 +78,14 @@ else { ?>
                    
                   
 
-                </tr> <?php
+                </tr> 
+                </option>
+
+              <?php
 
                 
             } ?>
+  </select>
 
-
-
-
-
-
-
-            </table>
-
-            <input type="submit" name="valider" value="OK pour modifier"/>
-            <p>Vous serez redirigés sur la page "Poser mes congés.</p>
-            </form>
-
-
-
- 	<?php
- } ?>
+            <input type="submit" name="envoi">
+            </form> 

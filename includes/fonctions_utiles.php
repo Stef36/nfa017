@@ -181,13 +181,15 @@ function generer_login($nb_caractere, $nom_equipe)
 			<img id = "<?php echo $id; ?>" class= "<?php echo $class;?>" src="<?php echo $fichier ;?>" alt="<?php echo $alt; ?> www.mesrepos.domduf.com"/>
 			</p>
 
-			<!-- <p><?php echo $typeMime ; ?></p> -->
+				
 				<?php 
 				if ($credit){ ?>
-				<p class= "<?php echo $class;?>">logo &copy <?php echo $credit ;?></p>
-		</span>
-			<?php }?>
-		<?php 
+			<p class= "<?php echo $class;?>">logo &copy <?php echo $credit ;?></p>
+		
+			<?php } ?>
+
+		</span> <?php
+		
 		}
 	
 	elseif ( $typeMime == 'video/webm' OR $typeMime == 'video/mp4' OR $typeMime == 'video/3gpp') /*'video/x-flv'*/
