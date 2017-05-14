@@ -324,9 +324,11 @@ else { ?>
             <div>
             <div id="date_conge">
 
-                <p> Date de début
+                <p> Date de début (année <?php echo date('Y');?>)
                 <input type="date" 
                 name="conge_date" 
+                min="<?php echo date('Y')?>-01-01"
+                max="<?php echo date('Y')?>-12-31"
 
                 <?php if (isset($_POST['select_conge_pour_modif'])){ 
 
