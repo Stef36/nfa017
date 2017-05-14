@@ -134,6 +134,13 @@ else { ?>
  	
 
 
+
+    
+
+ 	<!--  =================== article  ==========================-->
+
+    <article>
+
     <!--  =============== insertion en BD du congé================-->
     <!--  ===============     le cas échéant      ================-->
     
@@ -200,11 +207,7 @@ else { ?>
             
 
             } ?>
-    
 
- 	<!--  =================== article  ==========================-->
-
-    <article>
 
     
 
@@ -316,7 +319,7 @@ else { ?>
 
                     } ?> 
 
-                    </input>
+                   
                 </p>
                 
             </div>
@@ -325,8 +328,10 @@ else { ?>
             <div id="date_conge">
 
                 <p> Date de début (année <?php echo date('Y');?>)
+
                 <input type="date" 
                 name="conge_date" 
+
                 min="<?php echo date('Y')?>-01-01"
                 max="<?php echo date('Y')?>-12-31"
 
@@ -341,7 +346,7 @@ else { ?>
                 value="<?php echo date('Y-m-d') ?>" <?php
 
 
-                } ?>
+                } ?> />
                 
                 </p>
                 
@@ -358,7 +363,7 @@ else { ?>
                     
                 } else { ?>
                 value="<?php echo "00:00"?>" <?php
-                } ?>
+                } ?> />
 
                 
                 </p>
