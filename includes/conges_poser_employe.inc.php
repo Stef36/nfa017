@@ -155,9 +155,9 @@ else { ?>
 
            
             $conge_datedebut=$_POST['conge_date'].' '.$_POST['conge_time'].':00';
-            echo $conge_datedebut.' <br>';
+            //echo $conge_datedebut.' <br>';
 
-            echo var_dump(validateDate($conge_datedebut));
+            //echo var_dump(validateDate($conge_datedebut));
 
 
             //echo 'conge_quantite-> '.$_POST['conge_quantite'].' <br>';
