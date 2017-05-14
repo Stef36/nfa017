@@ -327,16 +327,16 @@ else { ?>
                 <p> Date de début
                 <input type="date" 
                 name="conge_date" 
-                value="<?php echo date('Y-m-d')?>" >
-                </input>
+                value="<?php echo date('Y-m-d')?>" />
+                
                 </p>
                 
                 <p>Heure éventuelle
                 <input type="time" 
                 name="conge_time" 
-                value="<?php echo "00:00:00"?>" >
+                value="<?php echo "00:00:00"?>" />
 
-                </input>
+                
                 </p>
 
 
@@ -376,8 +376,8 @@ else { ?>
             value="1" checked=""> Je pose
             <input type="radio" 
             name="conge_demande" 
-            value="NULL" > Je ne pose pas encore.          
-            </input>
+            value="NULL" /> Je ne pose pas encore.          
+            
 
             <p>Vous pouvez entrer un commentaire:</p>
             <input 
