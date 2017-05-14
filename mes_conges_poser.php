@@ -76,9 +76,37 @@
 
     <section id="conges_poser" class="flex_employe">
 
-    <?php  
+    <?php 
+
+    if (isset($_POST['effacer_confirme']) 
+        & isset($_POST['effacer'])
+        & isset($_POST['select_conge_pour_modif'])) {
+
+            if ($_POST['effacer']=="true") {
+                include("includes/efface_conge.inc.php");
+            }
+            elseif ($_POST['effacer']=="false") {?>
+
+            <p class = "yellow"> Vous n'avez pas effectué une bonne démarche de suppression de votre congé...'
+            </p> 
+        </p> 
+        <p>
+        <a href="./mes_conges_consulter.php">retour</a>
+        </p>
+        
+        <?php
+        }
+        
+        } 
+
+    else {
+
+    include("includes/conges_poser_employe.inc.php"); 
+
+    }
+
     
-    include("includes/conges_poser_employe.inc.php"); ?>
+    ?>
         
 
 

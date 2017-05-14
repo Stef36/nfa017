@@ -132,9 +132,23 @@ else { ?>
 
             </table>
 
+            <span>
             <input type="submit" name="valider" value="OK pour modifier"/>
             <p>Vous serez redirigés sur la page "Poser mes congés.</p>
+            </span>
+
+            <span class ="red">
+                <input type="radio" name="effacer" value="false" checked="" />non
+                <input type="radio" name="effacer" value="true" />OUI
+                <p>EFFACER CE CONGE</p>
+
+                <input type="submit" name="effacer_confirme" value="OK"/>
+            </span>            
+
+
             </form>
+
+
 
 
 

@@ -1,7 +1,9 @@
-<!--==================COMMENT CREER UNE EQUIPE====================-->
 <?php
 
-// ---------   si aucun  employé n' est connectée-------------------------------
+// ----------------------------------------------------------------------
+// ---------   si aucun  employé n' est connectée------------------------
+// ----------------------------------------------------------------------
+
 if (! isset($_SESSION['ticket_employe'])) { ?>
 
 
@@ -127,8 +129,9 @@ if (! isset($_SESSION['ticket_employe'])) { ?>
 <?php 
 }
 
-
-// ---------   si un employé est connectée-------------------------------
+// ----------------------------------------------------------------------
+// ---------   si un employé est connecté -------------------------------
+// ----------------------------------------------------------------------
 
 else { ?>
  	
@@ -150,9 +153,13 @@ else { ?>
             //echo 'type_conge_id->'.$_POST['type_conge_id'].' <br>';
             $type_conge_id=$_POST['type_conge_id'];
 
-            //echo 'conge_date->'.$_POST['conge_date'].' '.$_POST['conge_time'].' <br>';
-            $conge_datedebut=$_POST['conge_date'].' '.$_POST['conge_time'];
-            
+           
+            $conge_datedebut=$_POST['conge_date'].' '.$_POST['conge_time'].':00';
+            echo $conge_datedebut.' <br>';
+
+            echo var_dump(validateDate($conge_datedebut));
+
+
             //echo 'conge_quantite-> '.$_POST['conge_quantite'].' <br>';
             $conge_quantite=$_POST['conge_quantite'];
 
@@ -169,11 +176,18 @@ else { ?>
             $nouvelles_valeurs= array($conge_datedebut, $conge_quantite,$conge_commentaire, $conge_demande, $employe_id, $type_conge_id );
 
 
+            // test de validite avant requete et enregistrement en BD
+            if (!validateDate($conge_datedebut)) {?>
+
+                <H3 class="red"> <?php
+                echo '!! ERREUR de choix dans la date... recommencez SVP !!'; ?>
+                </H3> <?php
+            }
 
 
+            // modifier ligne du conge
+            elseif (isset($_POST['modifier'])/* conge à modifier */) {// modifier ligne du conge
 
-            if (isset($_POST['modifier'])/* conge à modifier */) {// modifier ligne du conge
-                # code...
                 //echo 'modifier';
 
             // recuperation de l'id du conge à modifier
@@ -192,8 +206,8 @@ else { ?>
             }
 
 
-
-            elseif (isset($_POST['nouveau'])) {  // creer nouvelle ligne en BD table conge
+            // creer nouvelle ligne en BD table conge
+            elseif (isset($_POST['nouveau'])) {  
 
             // requete d'insertion en BD
             $sql_insert_conge= "INSERT INTO conge
@@ -206,22 +220,19 @@ else { ?>
 
             
 
-            } ?>
+            } 
 
 
-    
 
-    <?php 
+
 
         if (isset($_POST['select_conge_pour_modif'])){ ?>
         <H2>Modifier un congé déjà posé:</H2>
         <H3>Vous pouvez ici changer une ou des caracteristiques de votre congé.</H3>
 
-        
+            <?php
 
-        
-
-    <?php } 
+        } 
         else { ?>
 
          <h2>Formulaire de demande de congés.</h2>

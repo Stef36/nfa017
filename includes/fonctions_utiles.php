@@ -1,5 +1,14 @@
 <?php
 
+function validateDate($date, $format = 'Y-m-d H:i:s'){
+	// source http://php.net/manual/fr/function.checkdate.php
+	    $d = DateTime::createFromFormat($format, $date);
+	    return $d && $d->format($format) == $date;
+	}
+
+
+
+
 function couleur_conge($demande, $consulte, $accorde){
 
 	if (!$demande | ($demande & !$consulte & $accorde==NULL) ) {
