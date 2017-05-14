@@ -327,14 +327,36 @@ else { ?>
                 <p> Date de début
                 <input type="date" 
                 name="conge_date" 
-                value="<?php echo date('Y-m-d')?>" />
+
+                <?php if (isset($_POST['select_conge_pour_modif'])){ 
+
+                $timestampmodif= strtotime($date_debut_conge_a_modif);?>
+
+                value="<?php echo date('Y-m-d',$timestampmodif) ?>" <?php
+                    
+                } else { ?>
+
+                value="<?php echo date('Y-m-d') ?>" <?php
+
+
+                } ?>
                 
                 </p>
                 
                 <p>Heure éventuelle
                 <input type="time" 
                 name="conge_time" 
-                value="<?php echo "00:00:00"?>" />
+
+
+
+
+                <?php if (isset($_POST['select_conge_pour_modif'])){ 
+                $timestampmodif= strtotime($date_debut_conge_a_modif);?>
+                 value="<?php echo date('H:i',$timestampmodif)?>" <?php
+                    
+                } else { ?>
+                value="<?php echo "00:00"?>" <?php
+                } ?>
 
                 
                 </p>
