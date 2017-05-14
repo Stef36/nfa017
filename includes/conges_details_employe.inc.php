@@ -137,17 +137,17 @@ else { ?>
             <p>Vous serez redirigés sur la page "Poser mes congés.</p>
             </span>
 
-
-            </form>
-
-            <form method="POST" name="formulaire_efface_conge" action="#conges_details">
-            <span>
-                <input type="radio" name="Vous êtes sûr de vouloir EFFACER ?" value="effacer"/>
+            <span class ="red">
+                <input type="radio" name="effacer" value="false" checked="" />non
+                <input type="radio" name="effacer" value="true" />OUI
                 <p>EFFACER CE CONGE</p>
 
-                <input type="submit" name="effacer" value="OK pour effacer"/>
-            </span>
+                <input type="submit" name="effacer_confirme" value="OK"/>
+            </span>            
+
+
             </form>
+
 
 
 

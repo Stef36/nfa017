@@ -1,7 +1,9 @@
-<!--==================COMMENT CREER UNE EQUIPE====================-->
 <?php
 
-// ---------   si aucun  employé n' est connectée-------------------------------
+// ----------------------------------------------------------------------
+// ---------   si aucun  employé n' est connectée------------------------
+// ----------------------------------------------------------------------
+
 if (! isset($_SESSION['ticket_employe'])) { ?>
 
 
@@ -127,8 +129,9 @@ if (! isset($_SESSION['ticket_employe'])) { ?>
 <?php 
 }
 
-
-// ---------   si un employé est connectée-------------------------------
+// ----------------------------------------------------------------------
+// ---------   si un employé est connecté -------------------------------
+// ----------------------------------------------------------------------
 
 else { ?>
  	
@@ -217,22 +220,19 @@ else { ?>
 
             
 
-            } ?>
+            } 
 
 
-    
 
-    <?php 
+
 
         if (isset($_POST['select_conge_pour_modif'])){ ?>
         <H2>Modifier un congé déjà posé:</H2>
         <H3>Vous pouvez ici changer une ou des caracteristiques de votre congé.</H3>
 
-        
+            <?php
 
-        
-
-    <?php } 
+        } 
         else { ?>
 
          <h2>Formulaire de demande de congés.</h2>
