@@ -63,7 +63,7 @@ else { ?>
                     <td>-select-</td>
                     <td>NOM du congé</td>
                     <td>date</td>
-                    <td>Qté </td>
+                    <td colspan="2">Qté </td>
                     <td></td>
                     <td>commentaire</td>
                     <td>demandé</td>
@@ -106,7 +106,7 @@ else { ?>
 
                     <td><?php echo $conge_accorde['type_conge_nom'];?></td>
                     <td><?php echo formate_date($conge_accorde['conge_datedebut']);?></td>        
-                    <td><?php echo $conge_accorde['conge_quantite'];?></td>
+                    <td colspan="2"><?php echo $conge_accorde['conge_quantite'];?></td>
                     <td><?php echo $conge_accorde['type_conge_unite'];?></td>
                     <td><?php echo $conge_accorde['conge_commentaire'];?></td>
 
