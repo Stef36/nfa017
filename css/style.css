@@ -126,6 +126,24 @@ background-color: #B7AA3F;
 
 }
 
+
+table {
+ border-width:1px; 
+ border-style:solid; 
+ border-color:black;
+
+  border-collapse:collapse;
+ }
+
+td { 
+ border-width:1px;
+ border-style:solid; 
+ border-color:grey;
+ padding: 3px;
+ }
+
+
+
 <<<<<<< HEAD
 =======
 /*=====================================Responsive=========================*/
