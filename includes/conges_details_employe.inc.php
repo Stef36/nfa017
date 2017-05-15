@@ -77,18 +77,22 @@ else { ?>
          
 
             <?php
+
+            //echo date('Y-m-d H:i:s').'<br>';
             while ( $conge_accorde=$conge_demandes->fetch()){ 
                 // voir requete ligne 100 de comment_consulter_employe.inc.php?>
 
                 <tr  class="<?php echo couleur_conge($conge_accorde['conge_demande'], $conge_accorde['conge_consulte'],$conge_accorde['conge_accorde'] ); ?>"> 
 
 
-                    <td><?php   // si (date > date du jour) ET (conge !accordé)
+                    <td><?php   // si (date > date du jour) 
                                 // on permet de selectionner pour modifier
 
                                 //echo $conge_accorde['conge_id'];
 
-                        if ($conge_accorde['conge_accorde']!=1) { ?>
+                        if (date('Y-m-d ', strtotime($conge_accorde['conge_datedebut']) )
+                            > date('Y-m-d ')) { 
+                                ?>
                               <input type="radio" name="select_conge_pour_modif" value="<?php echo $conge_accorde['conge_id']; ?>">
                         <?php } 
 
