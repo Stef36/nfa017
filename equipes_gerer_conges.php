@@ -50,9 +50,9 @@
 
 <!--================a connecter à la BD===================-->
                 <h2>Choix de l'employé : </h2>
-                <select name="employe">
-                    <option value "">Choisir un employé</option>
-                </select>
+                <section id="selectionner_employe">
+                    <?php include("includes/choix_employe.inc.php"); ?>
+                </section>
             </section>
             <br>
                 <hr>
