@@ -68,7 +68,7 @@ else { ?>
                     <td>demandé</td>
                     <td>consulté</td>
                     <td>accordé</td>
-                    <td></td>
+                    
                 </tr>  
 
 

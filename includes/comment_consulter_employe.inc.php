@@ -143,9 +143,7 @@ else {?>
                     <td>-id-</td>
                     <td>NOM du congé</td>
                     <td>Qté Attribuée<br>pour l'année</td>
-                    <td></td>
                     <td>SOLDE</td>
-                    <td></td>
                 </tr>
 
                 <?php
@@ -156,11 +154,9 @@ else {?>
                     <tr>
                         <td><?php echo $tab_id[$i]; ?></td>
                         <td><?php echo $tab_NOM[$i]; ?></td>
-                        <td><?php echo $tab_qt_attribuee[$i]; ?></td>
-                        <td><?php echo $tab_inite[$i]."(s)"; ?></td>
-                        <td><?php echo $tab_conges_accordes[$tab_id[$i]]; ?></td>
-                        <td><?php echo $tab_inite[$i]."(s)"; ?></td>
-                        <td></td>
+                        <td><?php echo $tab_qt_attribuee[$i].' '.$tab_inite[$i]."(s)"; ?></td>
+                        <td><?php echo $tab_conges_accordes[$tab_id[$i]].' '.$tab_inite[$i]."(s)"; ?></td>
+                        
                     </tr> 
                    <?php 
                     }  ?>
