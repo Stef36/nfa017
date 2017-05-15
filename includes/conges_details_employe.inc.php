@@ -63,8 +63,7 @@ else { ?>
                     <td>-select-</td>
                     <td>NOM du congé</td>
                     <td>date</td>
-                    <td colspan="2">Qté </td>
-                    <td></td>
+                    <td colspan="2">Quantité </td>
                     <td>commentaire</td>
                     <td>demandé</td>
                     <td>consulté</td>
@@ -78,18 +77,22 @@ else { ?>
          
 
             <?php
+
+            //echo date('Y-m-d H:i:s').'<br>';
             while ( $conge_accorde=$conge_demandes->fetch()){ 
                 // voir requete ligne 100 de comment_consulter_employe.inc.php?>
 
                 <tr  class="<?php echo couleur_conge($conge_accorde['conge_demande'], $conge_accorde['conge_consulte'],$conge_accorde['conge_accorde'] ); ?>"> 
 
 
-                    <td><?php   // si (date > date du jour) ET (conge !accordé)
+                    <td><?php   // si (date > date du jour) 
                                 // on permet de selectionner pour modifier
 
                                 //echo $conge_accorde['conge_id'];
 
-                        if ($conge_accorde['conge_accorde']!=1) { ?>
+                        if (date('Y-m-d ', strtotime($conge_accorde['conge_datedebut']) )
+                            > date('Y-m-d ')) { 
+                                ?>
                               <input type="radio" name="select_conge_pour_modif" value="<?php echo $conge_accorde['conge_id']; ?>">
                         <?php } 
 
@@ -106,8 +109,7 @@ else { ?>
 
                     <td><?php echo $conge_accorde['type_conge_nom'];?></td>
                     <td><?php echo formate_date($conge_accorde['conge_datedebut']);?></td>        
-                    <td colspan="2"><?php echo $conge_accorde['conge_quantite'];?></td>
-                    <td><?php echo $conge_accorde['type_conge_unite'];?></td>
+                    <td colspan="2"><?php echo $conge_accorde['conge_quantite'].' '. $conge_accorde['type_conge_unite'];?></td>
                     <td><?php echo $conge_accorde['conge_commentaire'];?></td>
 
 
