@@ -38,7 +38,10 @@ function couleur_conge($demande, $consulte, $accorde){
 function formate_date($date_entree){
 
 	$timestamp= strtotime($date_entree);
+	$tab_jour_semaine=array('dim','lun','mar','mer','jeu','ven','sam');
 
+	$jour_lettre= date('w', $timestamp);
+	$jour_lettre=$tab_jour_semaine[$jour_lettre];
 	$jour= date('d', $timestamp);
 	$mois= converti_Mois_Anglais_Francais(date('n', $timestamp));
 	$annee =date('Y', $timestamp);
@@ -51,12 +54,12 @@ function formate_date($date_entree){
 	
 	if (strcmp($heure_min, "00h00min")){
 
-		return ($jour.' '.$mois.' '.$annee.' à '.$heure_min);
+		return ($jour_lettre.' '.$jour.' '.$mois.' '.$annee.' à '.$heure_min);
 
 	}
 	
 
-	 else return ($jour.' '.$mois.' '.$annee) ;
+	 else return ($jour_lettre.' '.$jour.' '.$mois.' '.$annee) ;
 	
 }
 
