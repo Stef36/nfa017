@@ -1,8 +1,8 @@
 
 <?php Session_start()?>
 <!--=======================COOKIE========================-->
-<?php setcookie('bienvenue','Bienvenue', time()+ 3,'/'); ?>
-<?php echo $_COOKIE['bienvenue']; ?>
+<?php setcookie('bienvenue','Bienvenue', time() +5, null, null, false, true); ?>
+
 <!DOCTYPE html>
 <html lang="fr-fr" >
 
@@ -31,14 +31,17 @@
 
 
     <body>
-<!--==============================logo========================-->
+    
+    
         <?php include("includes/logo.inc.php"); ?>
-<!--====================================COOKIE==============================-->
+<!--==============================logo========================-->
+
 
 
 
 <!-- ===================== TITRE ===================== -->
-
+<!--====================================COOKIE==============================-->
+<?php echo $_COOKIE['bienvenue']; ?>
 
 <?php require ("./includes/header.inc.php"); titre_header('Bientôt un site gratuit pour poser ses jours de congé en ligne')?>
 
@@ -47,7 +50,7 @@
 
 
 <!-- ===================== MENU ===================== -->
-        <?php include("includes/menu.php"); ?>
+       <p> <?php include("includes/menu.php"); ?></p>
 
 
 <section id="provisoire">

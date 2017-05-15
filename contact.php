@@ -1,4 +1,5 @@
 <?php session_start();?>
+<?php setcookie('bienvenue','Bienvenue', time() +5, null, null, false, true); ?>
 
 <!DOCTYPE html>
 <html>
@@ -15,6 +16,9 @@
 <body>
 <!--==============================logo========================-->
         <?php include("./includes/logo.inc.php"); ?>
+
+<!--====================================COOKIE==============================-->
+<?php echo $_COOKIE['bienvenue']; ?>
 
 <!-- ======================== TITRE ========================== -->
 

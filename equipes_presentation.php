@@ -2,9 +2,9 @@
 <?php include("./includes/gestion_connection_equipe.inc.php");
 //affiche_variables_session() ?>
 
-<!--=======================COOKIE========================-->
-<?php setcookie('bienvenue','Bienvenue', time()+ 365*24*3600); ?>
-<?php echo $_COOKIE['bienvenue']; ?>
+
+
+
 <!-- ================ Connection bdd via PDO ================ -->
 <?php include("./includes/connection.php"); ?>
 
@@ -31,7 +31,8 @@
         <?php include("includes/logo.inc.php"); ?>
 
 
-<!--=======================COOKIE========================-->
+<!--====================================COOKIE==============================-->
+<?php echo $_COOKIE['bienvenue']; ?>
 
 <!-- ===================== TITRE ===================== -->
         <header class="headera">
