@@ -35,16 +35,18 @@
             <h1>LES EQUIPES DE TRAVAIL<H1>
         </header>
 
-<!--=======voir si possibilité===Menu de demande de validation================-->
-        <article id="warm">
-warm
-        
-        </article>
+
 <!-- ===================== MENU ===================== -->
         <nav class="menu">
         <?php include("includes/menu.php"); ?>
     </nav>
 
+
+<!--=======voir si possibilité===Menu de demande de validation================-->
+        <article id="warm">
+warm
+        <?php include("includes/warm_equipe.inc.php"); ?>
+        </article>
 
 <?php //affiche_variables_session(); ?>
 <!--====================================================================-->
