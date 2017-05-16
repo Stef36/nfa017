@@ -92,10 +92,10 @@ equipe-presentation
                 <hr>
                 <br>
 <!--===========================EQUIPES=======================-->
-        <article id="equipes">
-        <?php include("includes/equipes.inc.php"); ?>
-        </article>
+            <article id="equipes">
         
+            <?php include("includes/employes.inc.php"); ?>
+            </article>
         </section>
         
         
