@@ -62,7 +62,6 @@ warm
                 <br>
             <section class="flex">
                 <article class="flex1">
-equipe-presentation
                 <?php include("includes/equipe_presentation.inc.php"); ?>
                 </article>
     <br>
@@ -94,7 +93,7 @@ equipe-presentation
 <!--===========================EQUIPES=======================-->
             <article id="equipes">
         
-            <?php include("includes/employes.inc.php"); ?>
+            <?php include("includes/equipes.inc.php"); ?>
             </article>
         </section>
         
