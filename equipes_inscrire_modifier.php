@@ -49,7 +49,7 @@
                 <?php include("includes/log_equipe.inc.php"); ?>
                 </aside>
                 <br>
-                <hr>
+               
                 <br>
 <!--================== SELECTIONNER EMPLOYE ===================-->
 
@@ -65,9 +65,8 @@
             <?php include("includes/inscription_personnel.inc.php"); ?>
          </section>
         <br>
-                C
-                <br>
-<!--===========================DESCRIPTION EQUIPE=======================-->
+                <br><hr><br>
+<!--=========================DESCRIPTION EQUIPE====================-->
         <section id="attribution_conges">
         
         <?php include("includes/attribution_conges.inc.php"); ?>
@@ -80,8 +79,8 @@
         
         <script language="JavaScript" type="text/javascript" src="scripts.js"></script>
         
-<!--**********************************************************************************************************-->
-<!--****************************** AFFICHAGE INFORMATION DE LA LARGEUR DE LA PAGE ****************************-->
+<!--**********************************************************-->
+<!--***** AFFICHAGE INFORMATION DE LA LARGEUR DE LA PAGE *****-->
                 <script type="text/javascript">
                     {
                         var $largeur = document.body.clientWidth;
