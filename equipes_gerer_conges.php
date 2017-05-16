@@ -53,11 +53,14 @@
                 <section id="selectionner_employe">
                     <?php include("includes/choix_employe.inc.php"); ?>
                 </section>
+                
             </section>
             <br>
                 <hr>
 <!--==========================GESTION DES CONGES==================-->
                 <section id="container">
+                
+                
                     <?php include("includes/gestion_conges.inc.php"); ?>
                     <div class="flex">
                         <div class ="photo"><img src="logos/Minion.jpg" alt="Photo employé"></div>
