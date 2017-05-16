@@ -1,5 +1,6 @@
 <?php include("./includes/gestion_connection_equipe.inc.php"); ?>
-
+<!-- ================ Connection bdd via PDO ================ -->
+<?php include("./includes/connection.php"); ?>
 <!DOCTYPE html>
 <html lang="fr" >
 
@@ -48,14 +49,17 @@
 
 <!--================a connecter à la BD===================-->
                 <h2>Choix de l'employé : </h2>
-                <select name="employe">
-                    <option value "">Choisir un employé</option>
-                </select>
+                <section id="selectionner_employe">
+                    <?php include("includes/choix_employe.inc.php"); ?>
+                </section>
+                
             </section>
             <br>
                 <hr>
 <!--==========================GESTION DES CONGES==================-->
                 <section id="container">
+                
+                
                     <?php include("includes/gestion_conges.inc.php"); ?>
                     <div class="flex">
                         <div class ="photo"><img src="logos/Minion.jpg" alt="Photo employé"></div>
