@@ -79,7 +79,7 @@ if (isset($_SESSION['ticket_equipe'])){
                     <td>demandé</td>
                     <td>consulté</td>
                     <td>accordé</td>
-                    <td></td>
+                    
                 </tr> <?php
 
 	while ($warm_equipe = $warms_equipe->fetch() ) { ?>
