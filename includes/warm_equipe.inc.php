@@ -5,6 +5,38 @@
 if (isset($_SESSION['ticket_equipe'])){
 
 
+	// mise à jour suivant choix du chef d'équipe d'accorder ou non le congé
+	if (isset($_POST['select_conge_pour_accord'])) { ?>
+
+		<H3><?php echo '<br>Congé n° '.$_POST['select_conge_pour_accord'].' réponse enregistrée: '.$_POST['accept'].'<br>'; ?> 
+		</H3><?php
+		
+
+			if ($_POST['accept']=="Conge OK") {
+				$reponse=array(1, 1);
+			}
+			elseif ($_POST['accept']=="En Attente") {
+				$reponse=array(1, NULL);
+			}
+			elseif ($_POST['accept']=="Refus") {
+				$reponse=array(1,0);
+			}
+
+
+			$reponse[]=$_POST['select_conge_pour_accord'];
+
+			//print_r($reponse).'<br>';
+
+		$sql_reponse_chef="UPDATE conge
+							SET  conge_consulte=?, conge_accorde=?
+                            WHERE conge_id= ? ;";
+
+		applique_requete($sql_reponse_chef, $pdo, $reponse);
+	}
+
+
+
+
 	$equipe_id=$_SESSION['equipe_id'];
 	echo 'ALERTE demande de congé équipe '.$equipe_id;
 
@@ -101,8 +133,8 @@ if (isset($_SESSION['ticket_equipe'])){
 
 <span>
 	<input type="submit" name="accept" value="Conge OK">
-	<input type="submit" name="attente" value="En Attente">
-	<input type="submit" name="refus" value="Refus">
+	<input type="submit" name="accept" value="En Attente">
+	<input type="submit" name="accept" value="Refus">
 
 </span>
 
