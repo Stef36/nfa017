@@ -18,9 +18,8 @@ if (isset($_SESSION['ticket_equipe'])){
 
 						WHERE equipe_id='$equipe_id'
 						AND conge_demande !=0
-						AND conge_consulte IS NULL
-						AND (conge_accorde IS NULL OR conge_accorde = 0)
-
+						AND conge_accorde IS NULL
+						
 						ORDER BY C.employe_id, conge_datedebut ;";
 
 	$warms_equipe=$pdo-> query($sql_warm_equipe); ?>
@@ -100,7 +99,12 @@ if (isset($_SESSION['ticket_equipe'])){
 
 </table> 
 
+<span>
+	<input type="submit" name="accept" value="Conge OK">
+	<input type="submit" name="attente" value="En Attente">
+	<input type="submit" name="refus" value="Refus">
 
+</span>
 
 </form><?php
 
