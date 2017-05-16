@@ -9,17 +9,24 @@ if (isset($_SESSION['ticket_equipe'])){
 	echo 'ALERTE demande de congé équipe '.$equipe_id;
 
 	$sql_warm_equipe="SELECT *
-						FROM employe AS E JOIN conge AS C
+						FROM employe AS E 
+
+						JOIN conge AS C
 						ON E.employe_id= C.employe_id
-						WHERE equipe_id='$equipe_id'
-						AND conge_accorde != 0
+
+						JOIN type_conge AS T ON T.type_conge_id= C.type_conge_id
+
+						WHERE equipe_id='$equipe_id' 
+						AND conge_consulte IS NULL
+						AND (conge_accorde IS NULL OR conge_accorde = 0)
+
 						ORDER BY C.employe_id, conge_datedebut ;";
 
 	$warms_equipe=$pdo-> query($sql_warm_equipe); ?>
 
 <table>  
 
-                <caption>DETAILS DES CONGES POSES<br>
+                <caption>NOUVELLES DEMANDES DE CONGES<br>
                 <p> légende:
                 <span class="grey">Pas posé ou pas consulté</span>
                 <span class="yellow">Vu, en attente</span>
@@ -31,10 +38,11 @@ if (isset($_SESSION['ticket_equipe'])){
                 </caption>
                 <tr>
                     <td>-select-</td>
-                    <td>NOM du congé</td>
+                    <td>NOM demandeur</td>
+                    <td>TYPE du congé</td>
                     <td>date</td>
                     <td>Qté </td>
-                    <td></td>
+                    
                     <td>commentaire</td>
                     <td>demandé</td>
                     <td>consulté</td>
@@ -65,12 +73,12 @@ if (isset($_SESSION['ticket_equipe'])){
                       
 
 
+                    <td><?php echo $warm_equipe['employe_prenom'].' '.$warm_equipe['employe_nom'];?></td>
 
 
-                    <td><?php //echo $warm_equipe['type_conge_nom'];?></td>
+                    <td><?php echo $warm_equipe['type_conge_nom'];?></td>
                     <td><?php echo formate_date($warm_equipe['conge_datedebut']);?></td>        
-                    <td><?php echo $warm_equipe['conge_quantite'];?></td>
-                    <td><?php echo $warm_equipe['type_conge_unite'];?></td>
+                    <td><?php echo $warm_equipe['conge_quantite'].' '.$warm_equipe['type_conge_unite'];?></td>
                     <td><?php echo $warm_equipe['conge_commentaire'];?></td>
 
 
