@@ -60,12 +60,12 @@
 
 
 <!--===================COMMENT CREER UNE EQUIPE==============-->
-
+<hr>
         <section id="creer_personnel">
             <?php include("includes/inscription_personnel.inc.php"); ?>
          </section>
         <br>
-                <hr>
+                C
                 <br>
 <!--===========================DESCRIPTION EQUIPE=======================-->
         <section id="attribution_conges">
