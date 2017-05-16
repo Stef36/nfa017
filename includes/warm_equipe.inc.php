@@ -16,14 +16,15 @@ if (isset($_SESSION['ticket_equipe'])){
 
 						JOIN type_conge AS T ON T.type_conge_id= C.type_conge_id
 
-						WHERE equipe_id='$equipe_id' 
+						WHERE equipe_id='$equipe_id'
+						AND conge_demande !=0
 						AND conge_consulte IS NULL
 						AND (conge_accorde IS NULL OR conge_accorde = 0)
 
 						ORDER BY C.employe_id, conge_datedebut ;";
 
 	$warms_equipe=$pdo-> query($sql_warm_equipe); ?>
-
+<form method="POST" name="formulaire_accepter_conge" >
 <table>  
 
                 <caption>NOUVELLES DEMANDES DE CONGES<br>
@@ -61,7 +62,7 @@ if (isset($_SESSION['ticket_equipe'])){
                                 //echo $warm_equipe['conge_id'];
 
                         if ($warm_equipe['conge_accorde']!=1) { ?>
-                              <input type="radio" name="select_conge_pour_modif" value="<?php echo $warm_equipe['conge_id']; ?>">
+                              <input type="radio" name="select_conge_pour_accord" value="<?php echo $warm_equipe['conge_id']; ?>">
                         <?php } 
 
                        
@@ -97,7 +98,11 @@ if (isset($_SESSION['ticket_equipe'])){
 
 	} ?>
 
-</table> <?php
+</table> 
+
+
+
+</form><?php
 
 
 
