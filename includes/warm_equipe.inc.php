@@ -38,7 +38,7 @@ if (isset($_SESSION['ticket_equipe'])){
 
 
 	$equipe_id=$_SESSION['equipe_id'];
-	echo 'ALERTE demande de congé équipe '.$equipe_id;
+	
 
 	$sql_warm_equipe="SELECT *
 						FROM employe AS E 
@@ -54,91 +54,116 @@ if (isset($_SESSION['ticket_equipe'])){
 						
 						ORDER BY C.employe_id, conge_datedebut ;";
 
-	$warms_equipe=$pdo-> query($sql_warm_equipe); ?>
-<form method="POST" name="formulaire_accepter_conge" >
-<table>  
+	$warms_equipe=$pdo-> query($sql_warm_equipe); 
 
-                <caption>NOUVELLES DEMANDES DE CONGES<br>
-                <p> légende:
-                <span class="grey">Pas posé ou pas consulté</span>
-                <span class="yellow">Vu, en attente</span>
-                <span class="red">Refusé</span>
-                <span class="green">Accordé</span>
+	$compteur=0; // compte les nouvelles demande de congé
+	while ($warm_equipe = $warms_equipe->fetch() ){
+		$compteur+=1;
+		// echo $compteur.'<br>';
+		}
 
-                </p>
-
-                </caption>
-                <tr>
-                    <td>-select-</td>
-                    <td>NOM demandeur</td>
-                    <td>TYPE du congé</td>
-                    <td>date</td>
-                    <td>Qté </td>
-                    
-                    <td>commentaire</td>
-                    <td>demandé</td>
-                    <td>consulté</td>
-                    <td>accordé</td>
-                    
-                </tr> <?php
-
-	while ($warm_equipe = $warms_equipe->fetch() ) { ?>
-
-<tr  class="<?php echo couleur_conge($warm_equipe['conge_demande'], $warm_equipe['conge_consulte'],$warm_equipe['conge_accorde'] ); ?>"> 
-
-
-                    <td><?php   // si (date > date du jour) ET (conge !accordé)
-                                // on permet de selectionner pour modifier
-
-                                //echo $warm_equipe['conge_id'];
-
-                        if ($warm_equipe['conge_accorde']!=1) { ?>
-                              <input type="radio" name="select_conge_pour_accord" value="<?php echo $warm_equipe['conge_id']; ?>">
-                        <?php } 
-
-                       
-                         ?>
-
-
-                    </td>
-
-                      
-
-
-                    <td><?php echo $warm_equipe['employe_prenom'].' '.$warm_equipe['employe_nom'];?></td>
-
-
-                    <td><?php echo $warm_equipe['type_conge_nom'];?></td>
-                    <td><?php echo formate_date($warm_equipe['conge_datedebut']);?></td>        
-                    <td><?php echo $warm_equipe['conge_quantite'].' '.$warm_equipe['type_conge_unite'];?></td>
-                    <td><?php echo $warm_equipe['conge_commentaire'];?></td>
-
-
-
-
-                    <td><?php echo $warm_equipe['conge_demande'];?></td>
-                    <td><?php echo $warm_equipe['conge_consulte'];?></td>
-                    <td><?php echo $warm_equipe['conge_accorde'];?></td>
-                   
-                  
-
-                </tr> <?php
-
-
+		if ($compteur!=0) {
+			// on affiche le formulaire si on a detecté des demande de congé
+		
+		?>
+		<H3 class="red">ALERTE demande de congé équipe <?php echo$equipe_id; ?></H3>
 		
 
-	} ?>
+		<form method="POST" name="formulaire_accepter_conge" >
 
-</table> 
 
-<span>
-	<input type="submit" name="accept" value="Conge OK">
-	<input type="submit" name="accept" value="En Attente">
-	<input type="submit" name="accept" value="Refus">
+		<table>  
 
-</span>
+		                <caption>NOUVELLES DEMANDES DE CONGES<br>
+		                <p> légende:
+		                <span class="grey">Pas posé ou pas consulté</span>
+		                <span class="yellow">Vu, en attente</span>
+		                <span class="red">Refusé</span>
+		                <span class="green">Accordé</span>
 
-</form><?php
+		                </p>
+
+		                </caption>
+		                <tr>
+		                    <td>-select-</td>
+		                    <td>NOM demandeur</td>
+		                    <td>TYPE du congé</td>
+		                    <td>date</td>
+		                    <td>Qté </td>
+		                    
+		                    <td>commentaire</td>
+		                    <td>demandé</td>
+		                    <td>consulté</td>
+		                    <td>accordé</td>
+		                    
+		                </tr> <?php
+			$warms_equipe=$pdo-> query($sql_warm_equipe);
+			while ($warm_equipe = $warms_equipe->fetch() ) { ?>
+
+		<tr  class="<?php echo couleur_conge($warm_equipe['conge_demande'], $warm_equipe['conge_consulte'],$warm_equipe['conge_accorde'] ); ?>"> 
+
+
+		                    <td><?php   // si (date > date du jour) ET (conge !accordé)
+		                                // on permet de selectionner pour modifier
+
+		                                //echo $warm_equipe['conge_id'];
+
+		                        if ($warm_equipe['conge_accorde']!=1) { ?>
+		                              <input type="radio" name="select_conge_pour_accord" value="<?php echo $warm_equipe['conge_id']; ?>">
+		                        <?php } 
+
+		                       
+		                         ?>
+
+
+		                    </td>
+
+		                      
+
+
+		                    <td><?php echo $warm_equipe['employe_prenom'].' '.$warm_equipe['employe_nom'];?></td>
+
+
+		                    <td><?php echo $warm_equipe['type_conge_nom'];?></td>
+		                    <td><?php echo formate_date($warm_equipe['conge_datedebut']);?></td>        
+		                    <td><?php echo $warm_equipe['conge_quantite'].' '.$warm_equipe['type_conge_unite'];?></td>
+		                    <td><?php echo $warm_equipe['conge_commentaire'];?></td>
+
+
+
+
+		                    <td><?php echo $warm_equipe['conge_demande'];?></td>
+		                    <td><?php echo $warm_equipe['conge_consulte'];?></td>
+		                    <td><?php echo $warm_equipe['conge_accorde'];?></td>
+		                   
+		                  
+
+		                </tr> <?php
+
+
+				
+
+			} ?>
+
+		</table> 
+
+		<span>
+			<input type="submit" name="accept" value="Conge OK">
+			<input type="submit" name="accept" value="En Attente">
+			<input type="submit" name="accept" value="Refus">
+
+		</span>
+
+		</form><?php
+
+
+	} else {?>
+
+		<H3 class="green">Aucune nouvelle demande de congé pour l'instant.</H3> <?php
+
+		} 
+
+	
 
 
 

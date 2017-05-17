@@ -33,6 +33,13 @@
         <nav>
         <?php include("includes/menu.php"); ?>
         </nav>
+
+<!--=======voir si possibilité===Menu de demande de validation================-->
+        <article id="warm">
+
+        <?php include("includes/warm_equipe.inc.php"); ?>
+        </article>
+
 <br>
 <hr>
 <!--==========s==========login=============================-->

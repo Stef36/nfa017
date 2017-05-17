@@ -44,7 +44,7 @@
 
 <!--=======voir si possibilité===Menu de demande de validation================-->
         <article id="warm">
-warm
+
         <?php include("includes/warm_equipe.inc.php"); ?>
         </article>
 
