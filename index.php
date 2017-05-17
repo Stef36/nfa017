@@ -18,8 +18,8 @@
 
         <!-- charger les feuiles de style  -->
         <link href="./css/style.css" rel="stylesheet" type="text/css" />
- <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
-            <!-- animation du mode d'emploi via css dédié  -->
+        <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
+        <!-- animation du mode d'emploi via css dédié  -->
         <link href="./css/mode-emploi.css" rel="stylesheet" type="text/css" />
 
     </head>
@@ -29,19 +29,19 @@
 
     <body>
 <!--==============================logo========================-->
-        <?php include("includes/logo.inc.php"); ?>
+    <?php include("includes/logo.inc.php"); ?>
 
 <!-- ===================== TITRE ===================== -->
 
 
-<?php require ("./includes/header.inc.php"); titre_header('Bientôt un site gratuit pour poser ses jours de congé en ligne')?>
+    <?php require ("./includes/header.inc.php"); titre_header('Bientôt un site gratuit pour poser ses jours de congé en ligne')?>
 
 
 
 
 
 <!-- ===================== MENU ===================== -->
-        <?php include("includes/menu.php"); ?>
+    <?php include("includes/menu.php"); ?>
 
 
 <section id="provisoire">
@@ -50,11 +50,11 @@
 <ol>
     <li>Le chef d'équipe interressé par le site envoie un mail par le biais du menu "contact" </li>
 
-    <li>Le webmaster (en BO (Back-Office) reçoit ce mail et créé un login et un mdp à ce chef d'équipe, et lui envoie par mail (fictif)</li>
+    <li>Le webmaster, en BO (Back-Office) reçoit ce mail et créé un login et un mdp à ce chef d'équipe, et lui envoie par mail.</li>
 
-    <li>Le chef d'équipe peut se logger (en menu "Les équipes") et construire son équipe en menu "Les équipes" /"Inscrire-Modifier" , en créant chaque employé, en remplissant les champs NOM, prénom, etc, y compris le mail de l'employé.</li>
+    <li>Le chef d'équipe peut se logger (via menu "Les équipes") et construire son équipe (via  menu "Les équipes" /"Inscrire-Modifier") , en créant chaque employé, en remplissant les champs NOM, prénom, etc, y compris le mail de l'employé.</li>
 
-    <li>Les employés reçoivent individuellement un mail avec leur loggin (créés par le chef d'équipe) et le mdp (créé aléatoirement sur 4 caractères en PHP 5) les employés peuvent se logger en menu "Mes congés" </li>
+    <li>Les employés reçoivent individuellement un mail avec leur loggin (créés par le chef d'équipe) et le mdp. Les employés peuvent se logger en menu "Mes congés" </li>
 
 </ol>
 
