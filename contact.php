@@ -71,7 +71,7 @@
 
 
         <!-- TODO fonction js de verif de format de login souhaité -->
-        <input type="text" name="login_souhait" size="50"placeholder="nomEquipe-ENTREPRISE" onblur="logFunc()"><br/>
+        <input type="text" name="login_souhait" size="50" placeholder="nomEquipe-ENTREPRISE" onblur="logFunc()"><br/>
 
         <INPUT TYPE="radio" NAME="CHOIX" VALUE="information">information<BR> 
         <INPUT TYPE="radio" NAME="CHOIX" VALUE="amelioration">suggestion d'amélioration<BR> 
