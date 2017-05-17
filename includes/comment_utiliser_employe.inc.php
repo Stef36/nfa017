@@ -27,5 +27,6 @@ else { ?>
  	<p>N'hésitez pas à utiliser le formulaire de contact pour toute question.</p>
  	<p>De même pour nous signaler un disfonctionnement, ou si vous avez une idée d'amélioration du site.</p>
  	<p>Bon repos !</p>
+ 	<p>Vous pouvez  <a href="mes_conges_consulter.php">consulter</a> et <a href="mes_conges_poser.php">poser</a> vos congés en ligne. </p>
  	<?php
  } ?>

@@ -11,6 +11,8 @@ if (! isset($_SESSION['ticket_employe'])) { ?>
 
 <p>La section ci-dessous vous permettra de récapituler en un coup d'oeil:<br> les congés que vous avez posés, qui ont été accordés... ou refusés.</p>
 
+<p>Vous pouvez  <a href="mes_conges_consulter.php">consulter</a> et <a href="mes_conges_poser.php">poser</a> vos congés en ligne. </p>
+
 
 <p>Bons congés !</p>
 
@@ -27,6 +29,7 @@ else {?>
  	<p>Vous allez maintenant pouvoir profiter à fond des fonctionnalités du site.</p>
  	<p>N'hésitez pas à utiliser le formulaire de contact pour toute question.</p>
  	<p>De même pour nous signaler un disfonctionnement, ou si vous avez une idée d'amélioration du site.</p>
+    <p>Vous pouvez  <a href="mes_conges_consulter.php">consulter</a> et <a href="mes_conges_poser.php">poser</a> vos congés en ligne. </p>
  	<p>Bon repos !</p>
 
  	<!--  =================== SOLDE DES CONGES ==========================-->
