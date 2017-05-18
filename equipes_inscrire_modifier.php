@@ -24,19 +24,26 @@
 <!--==============================logo========================-->
         <?php include("includes/logo.inc.php"); ?>
 
-
-
-
 <!-- ===================== TITRE ===================== -->
+<?php require ("./includes/header.inc.php"); titre_header('INSCRIRE / MODIFIER UNE EQUIPE')?>
+<!-- ===================== TITRE ===================== -->
+
+
+<!-- ===================== TITRE ===================== 
         <header class="headera">
             <h1>INFORMATIONS DU PERSONNEL</h1>
             <h3>INSCRIRE / MODIFIER UNE EQUIPE</h3>
-        </header>
+        </header>-->
 
 <!-- ===================== MENU ===================== -->
         <nav>
         <?php include("includes/menu.php"); ?>
     </nav>
+
+
+ <p>Vous pourrez ensuite vous connecter sur cette page (en tant que responsable d'équipe) pour saisir les noms et les congés alloués à chaque employés dont vous êtes en charge.</p>
+ <p>Ici pour <a href="./equipes_inscrire_modifier.php">construire</a> l'équipe et attribuer les congés, ou <a href="./equipes_gerer_conges.php">là</a> pour gérer les congés</p>
+
     
 <?php //affiche_variables_session(); ?>
 
