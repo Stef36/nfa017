@@ -1,5 +1,6 @@
 <?php include("./includes/gestion_connection_equipe.inc.php"); ?>
-
+<!-- ================ Connection bdd via PDO ================ -->
+<?php include("./includes/connection.php"); ?>
 <!DOCTYPE html>
 <html lang="fr" >
 
@@ -23,16 +24,26 @@
     <body>
 <!--==============================logo========================-->
         <?php include("includes/logo.inc.php"); ?>
+
 <!-- ===================== TITRE ===================== -->
+<?php require ("./includes/header.inc.php"); titre_header('GESTION DES CONGES')?>
+<!-- ===================== TITRE ===================== -->
+
+
+<!-- ===================== TITRE ===================== 
         <header class="headera">
             <h1>INFORMATIONS DU PERSONNEL<H1>
             <h3>GESTION DES CONGES</h3>
-        </header>
+        </header>-->
 
 <!-- ===================== MENU ===================== -->
         <nav>
         <?php include("includes/menu.php"); ?>
         </nav>
+
+
+ <p>Sur cette page, vous pourrez, en tant que responsable de votre équipe, consulter et confirmer les congés posés par les employés.</p>
+ <p>Ici pour <a href="./equipes_inscrire_modifier.php">construire</a> l'équipe et attribuer les congés, ou <a href="./equipes_gerer_conges.php">là</a> pour gérer les congés</p>       
 
 <!--=======voir si possibilité===Menu de demande de validation================-->
         <article id="warm">
@@ -55,14 +66,17 @@
 
 <!--================a connecter à la BD===================-->
                 <h2>Choix de l'employé : </h2>
-                <select name="employe">
-                    <option value "">Choisir un employé</option>
-                </select>
+                <section id="selectionner_employe">
+                    <?php include("includes/choix_employe.inc.php"); ?>
+                </section>
+                
             </section>
             <br>
                 <hr>
 <!--==========================GESTION DES CONGES==================-->
                 <section id="container">
+                
+                
                     <?php include("includes/gestion_conges.inc.php"); ?>
                     <div class="flex">
                         <div class ="photo"><img src="logos/Minion.jpg" alt="Photo employé"></div>

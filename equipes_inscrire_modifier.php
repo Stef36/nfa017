@@ -1,5 +1,6 @@
 <?php include("./includes/gestion_connection_equipe.inc.php"); ?>
-
+<!-- ================ Connection bdd via PDO ================ -->
+<?php include("./includes/connection.php"); ?>
 <!DOCTYPE html>
 <html lang="fr" >
 
@@ -24,19 +25,26 @@
 <!--==============================logo========================-->
         <?php include("includes/logo.inc.php"); ?>
 
-
-
-
 <!-- ===================== TITRE ===================== -->
+<?php require ("./includes/header.inc.php"); titre_header('INSCRIRE / MODIFIER UNE EQUIPE')?>
+<!-- ===================== TITRE ===================== -->
+
+
+<!-- ===================== TITRE ===================== 
         <header class="headera">
             <h1>INFORMATIONS DU PERSONNEL</h1>
             <h3>INSCRIRE / MODIFIER UNE EQUIPE</h3>
-        </header>
+        </header>-->
 
 <!-- ===================== MENU ===================== -->
         <nav>
         <?php include("includes/menu.php"); ?>
     </nav>
+
+
+ <p>Vous pourrez ensuite vous connecter sur cette page (en tant que responsable d'équipe) pour saisir les noms et les congés alloués à chaque employés dont vous êtes en charge.</p>
+ <p>Ici pour <a href="./equipes_inscrire_modifier.php">construire</a> l'équipe et attribuer les congés, ou <a href="./equipes_gerer_conges.php">là</a> pour gérer les congés</p>
+
     
 <?php //affiche_variables_session(); ?>
 
@@ -51,7 +59,7 @@
                 <?php include("includes/log_equipe.inc.php"); ?>
                 </aside>
                 <br>
-                <hr>
+               
                 <br>
 <!--================== SELECTIONNER EMPLOYE ===================-->
 
@@ -62,14 +70,13 @@
 
 
 <!--===================COMMENT CREER UNE EQUIPE==============-->
-
+<hr>
         <section id="creer_personnel">
             <?php include("includes/inscription_personnel.inc.php"); ?>
          </section>
         <br>
-                <hr>
-                <br>
-<!--===========================DESCRIPTION EQUIPE=======================-->
+                <br><hr><br>
+<!--=========================DESCRIPTION EQUIPE====================-->
         <section id="attribution_conges">
         
         <?php include("includes/attribution_conges.inc.php"); ?>
@@ -82,8 +89,8 @@
         
         <script language="JavaScript" type="text/javascript" src="scripts.js"></script>
         
-<!--**********************************************************************************************************-->
-<!--****************************** AFFICHAGE INFORMATION DE LA LARGEUR DE LA PAGE ****************************-->
+<!--**********************************************************-->
+<!--***** AFFICHAGE INFORMATION DE LA LARGEUR DE LA PAGE *****-->
                 <script type="text/javascript">
                     {
                         var $largeur = document.body.clientWidth;
