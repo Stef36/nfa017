@@ -12,3 +12,6 @@ connection.php
 
 # ignorer le repertoire des fichiers telechargeables
 /csv
+
+# ignorer le .htacess
+.htaccess
