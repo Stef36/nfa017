@@ -67,7 +67,6 @@
                 <br>
             <section class="flex">
                 <article class="flex1">
-equipe-presentation
                 <?php include("includes/equipe_presentation.inc.php"); ?>
                 </article>
     <br>
@@ -83,6 +82,9 @@ equipe-presentation
             </section></section><br>
                 <hr>
                 <br>
+                
+
+                
 <!--====================================================================-->
 <!--===========================DESCRIPTION EQUIPE=======================-->
 <!--====================================================================-->
@@ -94,10 +96,10 @@ equipe-presentation
                 <hr>
                 <br>
 <!--===========================EQUIPES=======================-->
-        <article id="equipes">
-        <?php include("includes/equipes.inc.php"); ?>
-        </article>
+            <article id="equipes">
         
+            <?php include("includes/equipes.inc.php"); ?>
+            </article>
         </section>
         
         

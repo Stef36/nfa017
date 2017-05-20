@@ -1,5 +1,6 @@
 <?php include("./includes/gestion_connection_equipe.inc.php"); ?>
-
+<!-- ================ Connection bdd via PDO ================ -->
+<?php include("./includes/connection.php"); ?>
 <!DOCTYPE html>
 <html lang="fr" >
 
@@ -58,7 +59,7 @@
                 <?php include("includes/log_equipe.inc.php"); ?>
                 </aside>
                 <br>
-                <hr>
+               
                 <br>
 <!--================== SELECTIONNER EMPLOYE ===================-->
 
@@ -69,14 +70,13 @@
 
 
 <!--===================COMMENT CREER UNE EQUIPE==============-->
-
+<hr>
         <section id="creer_personnel">
             <?php include("includes/inscription_personnel.inc.php"); ?>
          </section>
         <br>
-                <hr>
-                <br>
-<!--===========================DESCRIPTION EQUIPE=======================-->
+                <br><hr><br>
+<!--=========================DESCRIPTION EQUIPE====================-->
         <section id="attribution_conges">
         
         <?php include("includes/attribution_conges.inc.php"); ?>
@@ -89,8 +89,8 @@
         
         <script language="JavaScript" type="text/javascript" src="scripts.js"></script>
         
-<!--**********************************************************************************************************-->
-<!--****************************** AFFICHAGE INFORMATION DE LA LARGEUR DE LA PAGE ****************************-->
+<!--**********************************************************-->
+<!--***** AFFICHAGE INFORMATION DE LA LARGEUR DE LA PAGE *****-->
                 <script type="text/javascript">
                     {
                         var $largeur = document.body.clientWidth;

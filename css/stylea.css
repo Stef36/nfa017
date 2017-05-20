@@ -50,7 +50,7 @@ H2{
 }
 
 .flex{
-    /* border:5px dashed green; */
+     /* border:5px dashed green;  */
     width:50%;
     margin:5px;
 }
@@ -85,7 +85,7 @@ H2{
 }
 
 #equipes{
-    /* border:2px solid pink; */
+    /* border:2px solid pink;  */
     margin:30px;
 
 }
@@ -235,6 +235,11 @@ body {
     height:100%;
     list-style:none;
    
+}
+
+.logo{
+    max-width: 100%;
+    height: auto;
 }
 
 .form_radio li input { 
