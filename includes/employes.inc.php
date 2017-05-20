@@ -10,15 +10,17 @@
     if ( !isset($_SESSION['ticket_employe']) OR ($_SESSION['ticket_employe'])==0)
     {
 
-    ?><h2>Les équipes qui nous font confiance :</h2> <?php
+    ?>
 
-    $sqlequipe = "SELECT         equipe_id, equipe_visible,
+    <h2>Les équipes qui nous font confiance :</h2> <?php
+
+    $sqlequipe = "SELECT        equipe_id, equipe_visible,
                                 equipe_login, equipe_nom, equipe_entreprise,
                                 equipe_responsable,
                                 equipe_mail, equipe_logo
                             
-                    FROM         equipe
-                    WHERE         equipe_visible=1
+                    FROM        equipe
+                    WHERE       equipe_visible=1
                     ORDER BY    equipe_nom  ;" ;
         
         $equipes= $pdo->query($sqlequipe); ?>
