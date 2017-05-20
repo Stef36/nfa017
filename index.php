@@ -9,7 +9,7 @@
 
 
         <meta charset="UTF-8" lang="fr">
-        <meta name="Mes Repos"  content="poser consulter jours congés travail équipe ">
+        <meta name="Mes Repos"  content="poser et consulter ses jours congés employeurs  employes">
 
  
         <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico">
@@ -34,7 +34,7 @@
 <!-- ===================== TITRE ===================== -->
 
 
-    <?php require ("./includes/header.inc.php"); titre_header('Bientôt un site gratuit pour poser ses jours de congé en ligne')?>
+    <?php require ("./includes/header.inc.php"); titre_header('POSER ET CONSUTER SES JOURS DE CONGE EN LIGNE')?>
 
 
 

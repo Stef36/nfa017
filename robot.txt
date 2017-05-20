@@ -4,3 +4,5 @@ Disallow: /backoffice.php/
 Disallow: /connection_back_office.php/
 Disallow: /administration_page.php/
 Disallow: /repertoire-docs/
+
+Sitemap: http://mesrepos.domduf.com/sitemap.xml
