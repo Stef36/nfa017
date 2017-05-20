@@ -99,41 +99,7 @@
 
                  
 
-<<<<<<< HEAD
-			 	<span>
 
-
-				 		
-				 			<!-- insertion avatar employé -->
-
-				 			<?php
-
-				 			    # affiche le logo de l'équipe
-		        			if ($ficheEmploye['employe_logo']!=''){ 
-
-		                          //affiche le logo via la fonction afficher_suivant_mime() 
-		                            
-		                          afficher_suivant_mime($ficheEmploye['employe_logo'],NULL,NULL , NULL,  NULL );
-
-		        			} else afficher_suivant_mime("./logos/question-423604_960_720.png","MesRepos" , NULL, 'logo_equipe', NULL ); ?>
-
-				 		
-				 	</span>
-
-				 	<span>
-
-				 		<p>Votre login:<br>"<?php
-				 		echo $ficheEmploye['employe_login']; ?>"</p>
-
-				 		<p>Votre mail:<br>"<?php
-				 		echo $ficheEmploye['employe_mail']; ?>"</p>
-
-
-				 		<p>	Le commentaire de votre responsable:<br/>"<?php
-				 		echo $ficheEmploye['employe_commentaire']; ?>"
-				 		</p>
-				 	</span> 
-=======
                  <span>
 
 
@@ -167,7 +133,7 @@
                      echo $ficheEmploye['employe_commentaire']; ?>"
                      </p>
                  </span> 
->>>>>>> employe
+
 
                  
 
