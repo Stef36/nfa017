@@ -7,9 +7,13 @@
 body {
     color: black;
   }
-H1{
-    color:white;
+H1{    
+    position: absolute;
+    top :30px;
+    left: 33%;
+    color:#362938;
     text-align:center;
+    font-size:2em;
 }
 
 H2{
