@@ -11,11 +11,11 @@
         <meta charset="UTF-8" lang="fr">
 
  
-        <meta name="description" content="poser et consulter ses jours de congés gestion par employeurs  consultation par employes">
+        <meta name="description" content="poser et consulter gratuitement ses jours de congés -> gestion par employeurs  -> consultation par employes">
 
         <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico">
         
-        <title>Poser mes repos en ligne</title>
+        <title>Poser et consulter mes repos et jours de congé en ligne</title>
 
         <!-- charger les feuiles de style  -->
         <link href="./css/style.css" rel="stylesheet" type="text/css" />
@@ -49,13 +49,33 @@
 
 
 <ol>
-    <li>Le chef d'équipe interressé par le site envoie un mail par le biais du menu "contact" </li>
 
-    <li>Le webmaster, en BO (Back-Office) reçoit ce mail et créé un login et un mdp à ce chef d'équipe, et lui envoie par mail.</li>
+    <li>
+        <h2>Le chef d'équipe interressé par le site demande son inscription via le menu "contact" </h2>
+    </li>
 
-    <li>Le chef d'équipe peut se logger (via menu "Les équipes") et construire son équipe (via  menu "Les équipes" /"Inscrire-Modifier") , en créant chaque employé, en remplissant les champs NOM, prénom, etc, y compris le mail de l'employé.</li>
+        <p>Vous avez entendu parler du site "mesrepos", et vous êtes interréssés par une centralisation claire de la gestion des congés de vos employés</p>
 
-    <li>Les employés reçoivent individuellement un mail avec leur loggin (créés par le chef d'équipe) et le mdp. Les employés peuvent se logger en menu "Mes congés" </li>
+        <p>Vous aimeriez avoir une vue des congés à un instant "t" de l'ensemble des travailleurs sous votre responsabilité.</p>
+
+    <li>
+    <h2>Le responsable du site créé un login et un mot de passe, et lui communique une confirmation de création d'équipe par envoi personnalisé.</h2>
+    </li>
+
+        <p>L'inscription se fait de manière personnalisée. Aucune information n'est traitée automatiquement lors de l'inscription. Vous êtes sûr de la fiabilité.</p>
+
+    <li>
+        <h2>La construction de votre équipe peut commencer en ligne.
+        </h2>
+    </li>
+
+        <p>Le responsable peut se logger (via menu "Les équipes") et construire son équipe (via  menu "Les équipes" /"Inscrire-Modifier") , en créant une chaque employé, en remplissant les champs NOM, prénom, etc, y compris le mail de l'employé.</p>
+
+    <li>
+        <h2>Les employés peuvent poser et consulter leurs congés et leurs jours de repos.</h2>
+    </li>
+
+        <p>Les employés reçoivent individuellement un mail avec leur loggin (créés par le chef d'équipe) et le mdp. Les employés peuvent se logger en menu "Mes congés"</p>
 
 </ol>
 
