@@ -5,9 +5,19 @@
 }
 
 body {
-  background-color:DarkKhaki;/*#dabf00*/
+  background-color:Khaki;/*#dabf00DarkKhaki*/
 }
 
+
+/* -------------        DISPOSITION du menu écran PC  -------------------- */
+#provisoire ol, #provisoire li{
+    margin:10px 15px;
+    padding: 2px;
+}
+
+#provisoire {
+
+}
 
 /* -------------        DISPOSITION du menu écran PC  -------------------- */
 nav > input,
