@@ -9,9 +9,10 @@
 
 
         <meta charset="UTF-8" lang="fr">
-        <meta name="Mes Repos"  content="poser et consulter ses jours congés employeurs  employes">
 
  
+        <meta name="description" content="poser et consulter ses jours de congés gestion par employeurs  consultation par employes">
+
         <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico">
         
         <title>Poser mes repos en ligne</title>

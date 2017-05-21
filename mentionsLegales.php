@@ -34,20 +34,13 @@
             <ul>
 <!--========================= Description des mentions légales =================================-->
                 <section id="mentions">
-                    <li>Dénomination sociale de la société : SAS poser ses congés</li>
-                    <li>Adresse postale : Rue du cinoche 36999 Trifoully les oies</li>
-                    <li>Numéro de téléphone : 02 54 22 33 44</li>
+                    <li>Dénomination : Site gratuit pédagogique CP09 du Cnam</li>
                     <li>Email de contact 1 : dominique.dufour.auditeur@lecnam.net</li>
                     <li>Email de contact 2 : stephane.laruelle.auditeur@lecnam.net</li>
-                    <li>N° de RCS : Paris 439 035 326 00098</li>
-                    <li>N° de SIRET : 439 035 326 00098</li>
-                    <li>Capital de la société : 1€</li>
-                    <li>TVA intracommunautaire : FR 254 390 365 27</li>
-                    <li>Directeur Ressources Humaine : Dominique DUFOUR</li>
-                    <li>Responsable des équipes : Stéphane LARUELLE </li>
+                    <li>Co-auteurs : Dominique DUFOUR et Stéphane LARUELLE</li>
                     
                     <br>
-                    Hébergeur :  <br>
+                    Hébergeur :  1and1<br>
                     Développeurs Web : <br>
                     DUFOUR Dominique <br>
                     LARUELLE Stéphane <br>
@@ -58,7 +51,7 @@
             <br>
             <br>
             <h2> Commentaires : <br>
-                Ce site a été développé avec l'aide de Notepad++, GitHub & Gimp qui nous a permis de développer de façon graphique ce site. <br><br><br>
+                Ce site a été développé avec l'aide de Notepad++, Sublime Text, GitHub & Gimp qui nous a permis de développer de façon graphique ce site. <br><br><br>
             </h2>
 
         <footer>
