@@ -43,7 +43,7 @@
 
 
  <p>Sur cette page, vous pourrez, en tant que responsable de votre équipe, consulter et confirmer les congés posés par les employés.</p>
- <p>Ici pour <a href="./equipes_inscrire_modifier.php">construire</a> l'équipe et attribuer les congés, ou <a href="./equipes_gerer_conges.php">là</a> pour gérer les congés</p>       
+ <p>Ici pour <a href="./equipes-inscrire-modifier.php">construire</a> l'équipe et attribuer les congés, ou <a href="./equipes_gerer_conges.php">là</a> pour gérer les congés</p>       
 
 <!--=======voir si possibilité===Menu de demande de validation================-->
         <article id="warm">

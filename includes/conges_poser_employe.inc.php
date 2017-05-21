@@ -269,7 +269,7 @@ else { ?>
             $employe_dispose_type_conges = $pdo -> query($sql_employe_dispose_type_conges);
 
 
-            // si on veut modifier un congé, en venant de mes_conges_consulter.php
+            // si on veut modifier un congé, en venant de mes-conges-consulter.php
             if (isset($_POST['select_conge_pour_modif'])){
 
                 // requete de recherche des caracteristique du congé

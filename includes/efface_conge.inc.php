@@ -15,7 +15,7 @@
         echo 'Vous avez effacé le congé (id => '.$_POST['select_conge_pour_modif'].')'; ?>
         </p> 
         <p>
-        <a href="./mes_conges_consulter.php">retour</a>
+        <a href="./mes-conges-consulter.php">retour</a>
         </p>
         
         <?php

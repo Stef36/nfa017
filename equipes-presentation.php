@@ -44,7 +44,7 @@
     </nav>
 
  <p>Voici un récapitulatif de votre équipe de travail.</p>
- <p>Ici pour <a href="./equipes_inscrire_modifier.php">construire</a> l'équipe et attribuer les congés, ou <a href="./equipes_gerer_conges.php">là</a> pour gérer les congés</p>  
+ <p>Ici pour <a href="./equipes-inscrire-modifier.php">construire</a> l'équipe et attribuer les congés, ou <a href="./equipes_gerer_conges.php">là</a> pour gérer les congés</p>  
 
 <!--=======voir si possibilité===Menu de demande de validation================-->
         <article id="warm">

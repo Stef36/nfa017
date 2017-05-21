@@ -46,7 +46,7 @@ else { ?>
 
             $conge_demandes = $pdo -> query($sql_conges_demandes); ?>
 
-   <form method="POST" name="formulaire_modif_conge" action="./mes_conges_poser.php">
+   <form method="POST" name="formulaire_modif_conge" action="./mes-conges-poser.php">
             <table>  
 
                 <caption>DETAILS DES CONGES POSES<br>

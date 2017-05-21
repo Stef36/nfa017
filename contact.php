@@ -43,7 +43,7 @@
     $_SESSION['formulaire_entreeBD']="0"; ?>
 
   <!-- Début du FORMULAIRE -->
-    <form name="preInscription"  method="POST" action="contact_enregistrement.php"  id="preInscription" onsubmit="return valider()" >
+    <form name="preInscription"  method="POST" action="contact-enregistrement.php"  id="preInscription" onsubmit="return valider()" >
   
     
   <div>

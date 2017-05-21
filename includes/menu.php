@@ -17,26 +17,26 @@
                     </li>
                     
                     <li id="flex_menu">
-                    <a href="./equipes_presentation.php">Les équipes</a>
+                    <a href="./equipes-presentation.php">Les équipes</a>
                         <ul>
                             <li id="flex_menu">
-                            <a href="equipes_inscrire_modifier.php">Inscrire / Modifier</a>
+                            <a href="equipes-inscrire-modifier.php">Inscrire / Modifier</a>
                             </li><hr/>
                             <li id="flex_menu">
-                            <a href="equipes_gerer_conges.php">Gerer les congés</a>
+                            <a href="equipes-gerer-conges.php">Gerer les congés</a>
                             </li>
                         </ul>        
                     </li>
 
                     
                     <li id="flex_menu">
-                    <a href="./mes_conges.php">Mes congés</a>
+                    <a href="./mes-conges.php">Mes congés</a>
                         <ul>
                             <li>
-                            <a href="mes_conges_consulter.php">Consulter</a>
+                            <a href="mes-conges-consulter.php">Consulter</a>
                             </li><hr/>
                             <li>
-                            <a href="mes_conges_poser.php">Poser</a>
+                            <a href="mes-conges-poser.php">Poser</a>
                             </li>
         
                         </ul>
