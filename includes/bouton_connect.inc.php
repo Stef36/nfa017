@@ -4,18 +4,15 @@
 
   		
   		if (!isset ($_SESSION['login'])) { /* si non connecté */?> 
-    	<p>
-        <a href="./connection_back_office.php">
-        <img class="bouton" src="./images/boutons/connection.png" 
-        alt="bouton de connection"></a>
+    	<p id="administration_connection">
+        <a href="./connection_back_office.php" alt="bouton de connection au backoffice">Connection backoffice
+       </a>
       </p>
     	<?php }
     	
     	else { /* si connecte */ ?>
-    	<p id="administration"> <?php echo $_SESSION['login']; ?>
-        <a href="./connection_back_office.php">
-         <img class="bouton" src="./images/boutons/deconnection.png" 
-         alt="bouton de déconnection">
+    	<p id="administration_deconnection"> <?php echo $_SESSION['login']; ?>
+        <a href="./connection_back_office.php" alt="bouton de deconnection du backoffice">déconnection backoffice
         </a>
       </p>
     	

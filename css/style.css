@@ -143,6 +143,52 @@ td {
  }
 
 
+/*======================== boutons de/connection=======================*/
+
+#administration_connection {
+    position: absolute;
+    top :25px;
+    right: 25px;
+    border: groove 4px;
+    border-radius: 8px;
+    width: 120px;
+    text-align: center;
+    padding: 3px;
+
+    background-color: PaleGreen;
+
+}
+#administration_connection:hover {
+    background-color: Lime;
+}
+
+
+#administration_connection a{
+    text-decoration:none;}
+
+
+
+#administration_deconnection{
+    position: absolute;
+    top :25px;
+    right: 25px;
+    border: groove 4px;
+    border-radius: 8px;  
+
+    width: 120px;
+    text-align: center;
+    padding: 5px;
+
+    background-color:Moccasin ;
+}
+
+#administration_deconnection:hover {
+    background-color: PeachPuff;
+}
+
+#administration_deconnection a{
+    text-decoration:none;}
+
 /*=====================================Responsive=========================*/
 /***********************************************************************/
 /**************@media screen and (max-width: 980px)*********************/

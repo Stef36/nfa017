@@ -13,7 +13,7 @@
  
         <meta name="description" content="poser et consulter gratuitement ses jours de congés -> gestion par employeurs  -> consultation par employes">
 
-        <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico" alt="favicon site mesrepos.domduf.com">
         
         <title>Poser et consulter mes repos et jours de congé en ligne</title>
 
@@ -56,7 +56,7 @@
 
         <p>Vous avez entendu parler du site "mesrepos", et vous êtes interréssés par une centralisation claire de la gestion des congés de vos employés</p>
 
-        <p>Vous aimeriez avoir une vue des congés à un instant "t" de l'ensemble des travailleurs sous votre responsabilité.</p>
+        <p>Vous aimeriez avoir gratuitement une vue des congés à un instant "t" de l'ensemble des travailleurs sous votre responsabilité.</p>
 
     <li>
     <h2>Le responsable du site créé un login et un mot de passe, et lui communique une confirmation de création d'équipe par envoi personnalisé.</h2>
@@ -72,7 +72,7 @@
         <p>Le responsable peut se logger (via menu "Les équipes") et construire son équipe (via  menu "Les équipes" /"Inscrire-Modifier") , en créant une chaque employé, en remplissant les champs NOM, prénom, etc, y compris le mail de l'employé.</p>
 
     <li>
-        <h2>Les employés peuvent poser et consulter leurs congés et leurs jours de repos.</h2>
+        <h2>Les employés peuvent poser et consulter leurs congés et leurs jours de repos gratuitement .</h2>
     </li>
 
         <p>Les employés reçoivent individuellement un mail avec leur loggin (créés par le chef d'équipe) et le mdp. Les employés peuvent se logger en menu "Mes congés"</p>
@@ -85,10 +85,10 @@
 
     <p id="animation">
 
-        <img src="./images/animation-accueuil/4.jpg" id="image4">
-        <img src="./images/animation-accueuil/3.jpg" id="image3">    
-        <img src="./images/animation-accueuil/2.jpg" id="image2">
-        <img src="./images/animation-accueuil/1.jpg" id="image1">
+        <img src="./images/animation-accueuil/4.jpg" id="image4" alt="les employes peuvent consulter et poser leurs conges en ligne mesrepos.domduf.com">
+        <img src="./images/animation-accueuil/3.jpg" id="image3" alt="le responsable drh construit son equipe et attribue conges mesrepos.domduf.com">    
+        <img src="./images/animation-accueuil/2.jpg" id="image2" alt="le responsable site mesrepos donne gratuitement login responsable equipe mesrepos.domduf.com">
+        <img src="./images/animation-accueuil/1.jpg" id="image1" alt="le responsable equipe drh contacte responsable site mesrepos mesrepos.domduf.com">
 
 
 

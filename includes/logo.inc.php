@@ -2,7 +2,7 @@
 
 <header >
  
-    <a href="index.php"><img src="./images/Logo/MRepos.com40.png" alt="logo" class="logo"></a><br/>
+    <a href="index.php"><img src="./images/Logo/MRepos.com40.png" alt="logo site mesrepos.domduf.com" class="logo"></a><br/>
 
 </header>
 
