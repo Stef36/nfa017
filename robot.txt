@@ -1,8 +1,17 @@
 User-agent: *
 
-Disallow: /backoffice.php/
-Disallow: /connection_back_office.php/
-Disallow: /administration_page.php/
-Disallow: /repertoire-docs/
+Disallow: /avatars/
+Disallow: /compteur/
+Disallow: /css/
+Disallow: /docs/
+Disallow: /images/
+Disallow: /includes/
+Disallow: /javascripts/
+Disallow: /logos/
+
+Disallow: /administration*
+Disallow: /backoffice*
+
+
 
 Sitemap: http://mesrepos.domduf.com/sitemap.xml
