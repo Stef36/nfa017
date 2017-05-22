@@ -46,9 +46,9 @@
         
         </article>
 <!-- ===================== MENU ===================== -->
-        <nav>
+
         <?php include("includes/menu.php"); ?>
-        </nav>
+
 
 
 <?php //affiche_variables_session(); ?>

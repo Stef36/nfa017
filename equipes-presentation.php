@@ -39,9 +39,9 @@
 
 
 <!-- ===================== MENU ===================== -->
-        <nav class="menu">
+        
         <?php include("includes/menu.php"); ?>
-    </nav>
+ 
 
  <p>Voici un récapitulatif de votre équipe de travail.</p>
  <p>Ici pour <a href="./equipes-inscrire-modifier.php">construire</a> l'équipe et attribuer les congés, ou <a href="./equipes-gerer-conges.php">là</a> pour gérer les congés</p>  
