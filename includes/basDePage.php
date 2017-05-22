@@ -3,9 +3,9 @@
     <hr/>
     <p>Site exercice du CNAM NFA017-083-021.</p>
     <p>Dominique D. et Stéphane L.</p>
-    <a href="./planDuSite.php">Plan du site et documents utiles.</a><br/>
+    <a href="./plan-du-site.php">Plan du site et documents utiles.</a><br/>
     <a href="./mentions-legales.php">Mentions légales.</a><br/>
-    <a href="./notesVersion.php">Notes de versions et derniers changements</a><br/>
+
 <!--==================== Copyright ===================================-->
      <p>© Mes Repos.com - 2017 - All Rights Reserved.</p>
 </footer>
