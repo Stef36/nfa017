@@ -17,7 +17,7 @@
 
         <title>Information du personnel</title>
         <link href="./css/style.css" rel="stylesheet" type="text/css" />
-                <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
+        <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
 
         <!--<link href="./css/calendar.css" rel="stylesheet" type="text/css" />-->
     </head>
@@ -78,7 +78,9 @@
                 
             </section>
             <br>
+            
                 <hr>
+                
 <!--==========================GESTION DES CONGES==================-->
                 <section id="container">
                 
