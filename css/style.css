@@ -212,6 +212,21 @@ td {
 #administration_deconnection a{
     text-decoration:none;}
 
+
+/*======================= lien plan du site   ==================*/
+
+#plan-site a {
+
+       font-size:20px;
+       color: Olive;
+       text-decoration:none;
+       margin:15px;
+       
+
+
+}
+
+
 /*=====================================Responsive=========================*/
 /***********************************************************************/
 /**************@media screen and (max-width: 980px)*********************/
