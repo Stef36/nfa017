@@ -8,7 +8,8 @@
     <head>
 
         <meta charset="UTF-8" lang="fr">
-        <meta name="Mes Repos"  content="poser consulter jours congés travail équipe ">
+
+        <meta name="description" content="poser et consulter gratuitement ses jours de congés -> gestion par employeurs inscription des membres de travail">
 
         <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico">
   
@@ -26,7 +27,7 @@
         <?php include("includes/logo.inc.php"); ?>
 
 <!-- ===================== TITRE ===================== -->
-<?php require ("./includes/header.inc.php"); titre_header('INSCRIRE / MODIFIER UNE EQUIPE')?>
+<?php require ("./includes/header.inc.php"); titre_header('INSCRIRE DES MEMBRES <br>/<br>MODIFIER UNE EQUIPE de TRAVAIL')?>
 <!-- ===================== TITRE ===================== -->
 
 
@@ -41,10 +42,15 @@
         <?php include("includes/menu.php"); ?>
     </nav>
 
+    <section id="image-article">
+        <img src="./images/Le-chef-equipe-se-connecte-et-cree-son-equipe.jpg" alt="Le chef d'équipe peut se connecter et construire son équipe">
 
- <p>Vous pourrez ensuite vous connecter sur cette page (en tant que responsable d'équipe) pour saisir les noms et les congés alloués à chaque employés dont vous êtes en charge.</p>
- <p>Ici pour <a href="./equipes-inscrire-modifier.php">construire</a> l'équipe et attribuer les congés, ou <a href="./equipes-gerer-conges.php">là</a> pour gérer les congés</p>
 
+        <H2>Sur cette page, vous pouvez inscrire et/ou modifier les fiches des membres de votre équipe.</H2>
+     <p>Vous pourrez ensuite vous connecter sur cette page (en tant que responsable d'équipe) pour saisir les noms et les congés alloués à chaque employés dont vous êtes en charge.</p>
+
+     <p>Ici pour <a href="./equipes-inscrire-modifier.php">construire</a> l'équipe et attribuer les congés, ou <a href="./equipes-gerer-conges.php">là</a> pour gérer les congés</p>
+    </section>
     
 <?php //affiche_variables_session(); ?>
 
