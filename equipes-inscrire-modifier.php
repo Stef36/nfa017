@@ -38,9 +38,9 @@
         </header>-->
 
 <!-- ===================== MENU ===================== -->
-        <nav>
+
         <?php include("includes/menu.php"); ?>
-    </nav>
+
 <!-- ======== SECTION illustration de l'article ======= -->
     <section id="image-article">
         <img src="./images/Le-chef-equipe-se-connecte-et-cree-son-equipe.jpg" alt="Le chef d'équipe peut se connecter et construire son équipe">

@@ -39,9 +39,9 @@
         </header>-->
 
 <!-- ===================== MENU ===================== -->
-        <nav>
+
         <?php include("includes/menu.php"); ?>
-        </nav>
+
 
 
     <section id="image-article">
