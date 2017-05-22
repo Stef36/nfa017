@@ -41,13 +41,16 @@
         <nav>
         <?php include("includes/menu.php"); ?>
     </nav>
-
+<!-- ======== SECTION illustration de l'article ======= -->
     <section id="image-article">
         <img src="./images/Le-chef-equipe-se-connecte-et-cree-son-equipe.jpg" alt="Le chef d'équipe peut se connecter et construire son équipe">
 
 
-        <H2>Sur cette page, vous pouvez inscrire et/ou modifier les fiches des membres de votre équipe.</H2>
-     <p>Vous pourrez ensuite vous connecter sur cette page (en tant que responsable d'équipe) pour saisir les noms et les congés alloués à chaque employés dont vous êtes en charge.</p>
+        <H2>Sur cette page, vous <?php if (!isset($_SESSION['ticket_equipe'])) 
+                                        {echo "pourrez";} else echo "pouvez"; ?>
+            inscrire et/ou modifier les fiches des membres de votre équipe.</H2>
+     <p>Vous <?php if (!isset($_SESSION['ticket_equipe'])) 
+                                        {echo "pourrez";} else echo "pouvez"; ?> ensuite vous connecter sur cette page (en tant que responsable d'équipe) pour saisir les noms et les congés alloués à chaque employés dont vous êtes en charge.</p>
 
      <p>Ici pour <a href="./equipes-inscrire-modifier.php">construire</a> l'équipe et attribuer les congés, ou <a href="./equipes-gerer-conges.php">là</a> pour gérer les congés</p>
     </section>

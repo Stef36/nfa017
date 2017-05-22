@@ -47,7 +47,7 @@
     <section id="image-article">
         <img src="./images/Le-chef-equipe-gere-les-conges-de-chaque-employe.jpg" alt="Le chef equipe gere les conges de chaque employe">
 
-        <p>Sur cette page, vous pourrez, en tant que responsable de votre équipe, consulter et confirmer les congés posés par les employés.</p>
+        <H2>Sur cette page, vous pourrez, en tant que responsable de votre équipe, consulter et confirmer les congés posés par les employés.</H2>
         <p>Ici pour <a href="./equipes-inscrire-modifier.php">construire</a> l'équipe et attribuer les congés, ou <a href="./equipes-gerer-conges.php">là</a> pour gérer les congés</p>
     </section>       
 
