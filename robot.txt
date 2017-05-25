@@ -2,9 +2,9 @@ User-agent: *
 
 Disallow: /avatars/
 Disallow: /compteur/
-Disallow: /css/
+
 Disallow: /docs/
-Disallow: /images/
+
 Disallow: /includes/
 Disallow: /javascripts/
 Disallow: /logos/
