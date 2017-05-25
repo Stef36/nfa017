@@ -164,7 +164,7 @@ else { ?>
             $conge_quantite=$_POST['conge_quantite'];
 
             //echo 'conge_commentaire-> '.$_POST['conge_commentaire'].' <br>';
-            $conge_commentaire=$_POST['conge_commentaire'];
+            $conge_commentaire=htmlentities($_POST['conge_commentaire']);
 
             //echo 'conge_demande-> '.$_POST['conge_demande'].' <br>';
             $conge_demande=$_POST['conge_demande'];
@@ -292,7 +292,7 @@ else { ?>
                     $date_debut_conge_a_modif=$donnee_du_conge['conge_datedebut'];
                     $quantite_conge_a_modif=$donnee_du_conge['conge_quantite'];
                     $commentaire_conge_a_modif=
-                    htmlentities($donnee_du_conge['conge_commentaire'],ENT_QUOTES, "UTF-8");
+                    html_entity_decode($donnee_du_conge['conge_commentaire'],ENT_COMPAT, "UTF-8");
 
                 }
 
