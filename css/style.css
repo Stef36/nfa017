@@ -165,6 +165,18 @@ td {
  padding: 3px;
  }
 
+/*======================== boutons submit =======================*/
+.bouton-submit{
+
+
+    background-color:  gold;
+    font-size : 1.3em;
+    padding: 3px;
+    margin: 5px 15px;
+
+
+}
+
 
 /*======================== boutons de/connection=======================*/
 
