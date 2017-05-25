@@ -119,7 +119,7 @@
 
   	else 	{ ?>
   	<H2>Vous n'êtes plus connectés.</H2>
-  	<p><a href="connection_back_office.php"><img src="./images/boutonRetour.png"></a><p>
+  	<p><a href="connection-back-office.php"><img src="./images/boutonRetour.png"></a><p>
   	 
   	 
   	<?php	}  ?>
