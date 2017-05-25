@@ -97,10 +97,13 @@
         <?php include("includes/basDePage.php"); ?>
         
         <script language="JavaScript" type="text/javascript" src="scripts.js"></script>
+        <script language="JavaScript" type="text/javascript" src="./javascripts/email-validation.js"></script>
+
+
         
 <!--**********************************************************-->
 <!--***** AFFICHAGE INFORMATION DE LA LARGEUR DE LA PAGE *****-->
-                <script type="text/javascript">
+    <script type="text/javascript">
                     {
                         var $largeur = document.body.clientWidth;
 

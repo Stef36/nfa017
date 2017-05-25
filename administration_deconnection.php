@@ -13,7 +13,10 @@
 
 
 <title>Deconnection | Poser mes repos en ligne </title>
+
 <link href="./css/style.css" rel="stylesheet" type="text/css" />
+<link href="./css/stylea.css" rel="stylesheet" type="text/css" />
+
 </head>
 <!-- ======================================================= -->
 

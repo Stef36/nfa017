@@ -17,6 +17,7 @@
 
 	<title>Mes Repos | BackOffice </title>
 	<link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
 
 </head>
 <!-- ======================================================= -->
@@ -139,7 +140,7 @@
 	<!-- =================   SECTION NON AUTORISEE ADMINISTRATION  ===================== -->
 	<span>
 		<H2>Désolé <?php echo ($_SESSION['login']);?>, mot de passe et/ou login incorrect...
-		<a href="connection_back_office.php"><img src="./images/boutonRetour.png"></a></H2>
+		<a href="connection-back-office.php"><img src="./images/boutonRetour.png"></a></H2>
 		
 	</span>
 	
