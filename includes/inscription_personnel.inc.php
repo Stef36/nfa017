@@ -36,7 +36,7 @@ if (isset($_SESSION['ticket_equipe'])) {
 <!-- ====================== debut formulaire ============================-->
 
 
-    <form class="contact_form"  Method="post" name="formulaire_modif_employe"id="formulaire_modif_employe"  > 
+    <form class="contact_form"  Method="post" name="formulaire_modif_employe" id="formulaire_modif_employe"  > 
 
  
 
@@ -90,9 +90,34 @@ if (isset($_SESSION['ticket_equipe'])) {
                 placeholder="<?php echo $employe[$resultat_description['Field']] ; ?>"
 
                 value="<?php echo $employe[$resultat_description['Field']] ; ?>" 
-                onblur="" 
+                
+                    <?php // si le champ est du type email on appelle email-validation.js
+                    if ($resultat_description['Field']=='employe_mail') {?>
+
+
+                    onchange="emailFunc()"
+
+
+
+
+                    <?php }
+                    ?>
                
-                > <?php
+                > 
+
+                                    <?php // si le champ est du type email on appelle email-validation.js
+                    if ($resultat_description['Field']=='employe_mail') {?>
+
+
+                    <p id="errMail"></p>
+
+
+                    <?php }
+                    ?>
+
+
+
+                <?php
                 }
 
 

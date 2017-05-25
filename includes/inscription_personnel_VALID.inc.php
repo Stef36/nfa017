@@ -25,19 +25,20 @@
 
 
         // recupe des POSTS
-        $employe_login=$_POST['employe_login'];
-        $employe_mdp=$_POST['employe_mdp'];
-        $employe_nom=$_POST['employe_nom'];
-        $employe_prenom=$_POST['employe_prenom'];
+        $employe_login=htmlentities($_POST['employe_login']);
+        $employe_mdp=htmlentities($_POST['employe_mdp']);
+        $employe_nom=htmlentities($_POST['employe_nom']);
+        $employe_prenom=htmlentities($_POST['employe_prenom']);
 
         if (isset($_POST['employe_mail'])) {
-            $employe_mail=$_POST['employe_mail'];
+            // verifier mail par JS email-validatio.js 
+            $employe_mail=htmlentities($_POST['employe_mail']);
         } else $employe_mail='';
         
 
         if (isset($_POST['employe_commentaire'])) {
             
-            $employe_commentaire=$_POST['employe_commentaire'];
+            $employe_commentaire=htmlentities($_POST['employe_commentaire']);
         } else $employe_commentaire='';
             
         if (isset($_POST['employe_visible'])) {
@@ -49,7 +50,7 @@
         } else $employe_actif=0;
 
         if (isset($_POST['employe_logo'])) {
-            $employe_logo=$_POST['employe_logo'];
+            $employe_logo=htmlentities($_POST['employe_logo']);
         } else $employe_logo='';
         
         $equipe_id=$_SESSION['equipe_id'];
