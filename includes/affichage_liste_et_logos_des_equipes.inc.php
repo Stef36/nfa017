@@ -20,7 +20,7 @@
         while ($equipe = $equipes->fetch()) {
                 // affichage des logos des équipes ?>
             
-                    <span>
+                    <span class="nom_equipe">
 
             
                         <!-- affiche le nom de l'équipe -->

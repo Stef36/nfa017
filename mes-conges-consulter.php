@@ -89,12 +89,7 @@
 <!--===========================DESCRIPTION EMPLOYE=======================-->
 <!--====================================================================-->
         <section id="description_employe">
-        
-        <!-- description_employe -->
-            <?php //include("includes/description_employe.inc.php"); ?>
-
-
-            
+           
             
             <!--===========================EMPLOYESS=======================-->
             <article id="employe">

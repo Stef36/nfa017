@@ -91,12 +91,22 @@ background-color: #B7AA3F;
 
 
 /* ------------ logos des équipes */
+
+.nom_equipe {
+    width : 250px;
+    text-align: center;
+    font-size : 1.2em;
+    margin: 7px;
+    padding:10px 5px ;
+    border: 3px Khaki ridge;
+}
+
 .logo_equipe {
 
     width : 200px;
     height: auto;
     font-size : 0.6em; /* taille texte sous logo */
-
+    position: center;
 }
 
 
