@@ -13,7 +13,7 @@
  
         <meta name="description" content="poser et consulter gratuitement ses jours de congés -> gestion par employeurs  -> consultation par employes">
 
-        <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico" alt="favicon site mesrepos.domduf.com">
+        <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico" >
         
         <title>Poser et consulter mes repos et jours de congé en ligne</title>
 
