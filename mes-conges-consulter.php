@@ -64,7 +64,7 @@
 
                 <!--====== login            ===============-->
 
-                log_employe
+                
                 <?php include("includes/log_employe.inc.php"); ?>
      
             </aside>
@@ -79,8 +79,6 @@
     <section id="conges_details" class="flex_employe">
 
     <?php  include("includes/conges_details_employe.inc.php"); ?>
-        
-
 
     </section>
 

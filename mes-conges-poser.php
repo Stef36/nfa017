@@ -62,8 +62,6 @@
             <aside id="log-employe">
 
                 <!--====== login            ===============-->
-
-                log_employe
                 <?php include("includes/log_employe.inc.php"); ?>
      
             </aside>

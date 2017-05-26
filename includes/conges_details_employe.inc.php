@@ -4,11 +4,8 @@
 // ---------   si un employé est connectée-------------------------------
 if (! isset($_SESSION['ticket_employe'])) { ?>
 
-<h2>ICI bientôt les détails de vos congés posée et/ou accordés</h2>
+<h3>Une fois connecté, vous pourrez consulter ici vos congés posés et/ou accordés</h3>
 
-
-
-<p>Bons congés !</p>
 
 <?php 
 }
