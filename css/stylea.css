@@ -298,7 +298,7 @@ body {
     flex-direction:column;
 }
 
-#flex_menu{
+.flex_menu{
     display:flex;
     flex-direction:column;
     height:auto;
