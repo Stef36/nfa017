@@ -165,17 +165,25 @@ td {
  padding: 3px;
  }
 
-/*======================== boutons submit =======================*/
-.bouton-submit{
+/*======================== boutons formulaires =======================*/
+/* sources: http://css.mammouthland.net/formulaire-form-input-css.php */
 
-
-    background-color:  gold;
-    font-size : 1.3em;
-    padding: 3px;
-    margin: 5px 15px;
-
-
+input[type=submit]{
+    background-color:  LightSteelBlue;
+    font-size : 1em;
+    padding: 2px;
+    margin: 4px;
+    font-weight: bold;
 }
+
+input[type=reset]{
+    background-color:  BlanchedAlmond;
+    font-size : 1em;
+    padding: 2px;
+    margin: 4px;
+    font-weight: bold;
+}
+
 
 
 /*======================== boutons de/connection=======================*/
