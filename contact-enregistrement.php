@@ -178,9 +178,22 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 		<?php 
 
 
-			/* envoi d'un mail de signalement d'un nouveau message au webmaster */
+
+		// selection des memebres à qui envoyer mail
+    	$sqlmembre = "SELECT    mem_nom, mem_prenom,
+                            	mem_email, 
+                            	mem_persona, 
+                            
+                    	FROM         membre 
+                    	WHERE mem_persona=Gestionnaire 
+                    	AND mem_actif=1;" ;
+        
+        $membresMail= $pdo->query($sqlmembre); 
+
+
+			/* envoi d'un mail de signalement d'un nouveau message aux webmasters */
 			$dest= 'minique.duf@gmail.com';
-			$dest2 ='dominique.duf@wanadoo.fr';
+			$dest2 ='dominique.dufour@mesrepos.domduf.com';
 			$dest3 = 'slaruelle@free.fr';
 			$sujet= "Nouveau message posté sur le site mesrepos.domduf.com";
 			$misEnFormeMessage = wordwrap($message, 70, "\r\n");
