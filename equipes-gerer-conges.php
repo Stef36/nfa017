@@ -17,7 +17,7 @@
 
         <title>Information du personnel</title>
         <link href="./css/style.css" rel="stylesheet" type="text/css" />
-                <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
+        <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
 
         <!--<link href="./css/calendar.css" rel="stylesheet" type="text/css" />-->
     </head>
@@ -52,7 +52,7 @@
     </section>       
 
 <!--=======voir si possibilité===Menu de demande de validation================-->
-        <article id="warm">
+        <article>
 
         <?php include("includes/warm_equipe.inc.php"); ?>
         </article>
@@ -78,28 +78,45 @@
                 
             </section>
             <br>
+            
                 <hr>
+                
 <!--==========================GESTION DES CONGES==================-->
+    <section>
+    
+    
+
+
+
+
+
+    </section>
+<!--================================================================-->
+<!--================================================================-->
+<!--================================================================-->
+<!--================================================================-->
+<!--================================================================-->
                 <section id="container">
-                
-                
                     <?php include("includes/gestion_conges.inc.php"); ?>
                     <div class="flex">
                         <div class ="photo"><img src="logos/Minion.jpg" alt="Photo employé"></div>
                     </div> 
                 </section><br>
                 <hr>
-                <section id="container">
-                    <section class="flex1">
-                        <article id="conges_restants">
+                
+                        
+
+
+<!--======================================================-->
+
                             <?php include("includes/equipe_conges_restants.inc.php"); ?>
-                        </article>
+                       
+<section id="container">
+                    <section class="flex1">
+<article id="conges_restants">
+                       </article>
                     </section>
-                    <section class="flex2">
-                        <article id="calendrier">
-                        CALENDRIER
-                        </article>
-                    </section>
+                    
                 </section>
 
 <br>

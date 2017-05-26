@@ -93,7 +93,7 @@
 
                  </section>
 
-				<?php
+                <?php
 
 
              }

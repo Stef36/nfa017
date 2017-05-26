@@ -15,7 +15,7 @@
 
         <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico" >
         
-        <title>Poser et consulter mes repos et jours de congé en ligne</title>
+        <title>Poser et consulter mes repos et jours de congés en ligne</title>
 
         <!-- charger les feuiles de style  -->
         <link href="./css/style.css" rel="stylesheet" type="text/css" />
@@ -36,8 +36,6 @@
 
 
     <?php require ("./includes/header.inc.php"); titre_header('POSER ET CONSULTER <br>SES JOURS DE CONGE <br>EN LIGNE')?>
-
-
 
 
 

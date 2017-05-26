@@ -36,16 +36,16 @@
                      //echo "<p>OK</p>"; ?>
 
 
-                 	<form name="deconnection_equipe" method="POST">
-                 		<table>
+                     <form name="deconnection_equipe" method="POST">
+                         <table>
 
-                 			<tr>
-                 				<th>Se déconnecter ?</th>
+                             <tr>
+                                 <th>Se déconnecter ?</th>
                                 <td><input type="hidden" name="deconnecter_equipe" value="OK"/></td>
-                 				<td><input type="submit" name="déconnection" id="déconnection" value="OUI" /></td>
-                 			</tr>
-                 		</table>
-                 	</form>
+                                 <td><input type="submit" name="déconnection" id="déconnection" value="OUI" /></td>
+                             </tr>
+                         </table>
+                     </form>
 
 
 
