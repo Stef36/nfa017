@@ -21,7 +21,7 @@
                         <ul>
                             <li class="flex_menu">
                             <a href="equipes-inscrire-modifier.php">Inscrire / Modifier</a>
-                            </li><hr/>
+                            </li>
                             <li class="flex_menu">
                             <a href="equipes-gerer-conges.php">Gerer les congés</a>
                             </li>
@@ -34,7 +34,7 @@
                         <ul>
                             <li>
                             <a href="mes-conges-consulter.php">Consulter</a>
-                            </li><hr/>
+                            </li>
                             <li>
                             <a href="mes-conges-poser.php">Poser</a>
                             </li>
