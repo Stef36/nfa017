@@ -15,7 +15,7 @@
 
         <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico" alt="favicon site mesrepos.domduf.com">
         
-        <title>Poser et consulter mes repos et jours de congé en ligne</title>
+        <title>Poser et consulter mes repos et jours de congés en ligne</title>
 
         <!-- charger les feuiles de style  -->
         <link href="./css/style.css" rel="stylesheet" type="text/css" />
@@ -35,7 +35,7 @@
 <!-- ===================== TITRE ===================== -->
 
 
-    <?php require ("./includes/header.inc.php"); titre_header('POSER ET CONSUTER <br>SES JOURS DE CONGE <br>EN LIGNE')?>
+    <?php require ("./includes/header.inc.php"); titre_header('POSER ET CONSUTER <br>SES JOURS DE CONGES <br>EN LIGNE')?>
 
 
 
