@@ -66,7 +66,7 @@ if (isset($_SESSION['ticket_equipe'])){
 			// on affiche le formulaire si on a detecté des demande de congé
 		
 		?>
-		<H3 class="red">ALERTE demande de congé équipe <?php echo$equipe_id; ?></H3>
+		<H3 class="red">ALERTE demande de congés équipe <?php echo$equipe_id; ?></H3>
 		
 
 		<form method="POST" name="formulaire_accepter_conge" >
