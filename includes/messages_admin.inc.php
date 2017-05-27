@@ -6,7 +6,7 @@
 
 <H2> Affichage des messages reçus</H2>
 <H3>Pour telecharger le fichier .csv des messages reçus, RV sur la page 
-<a href="./contact.php">Contact</a></H3>
+<a href="./contact.php" class="liens-direct">Contact</a></H3>
 
 <!-- ==================================================================  -->		
 		<form name="form_tri" method="POST" action="./administration_page.php">
@@ -35,11 +35,13 @@
 				
   			</table>
   		</form>
+  		<br>
   		
 <!-- ==================================================================  -->
-<p><a href="backoffice.php"><img src="./images/boutons/retour.png"></a><p>
+<p><a href="backoffice.php" class="liens-direct">Retour</a><p>
 <!-- ==================================================================  -->
 
+	<br>
 
 <?php
 
@@ -148,9 +150,4 @@
 
 		</table>
 		
-<H2> Création du fichier CSV de la liste des messages.</H2>
-
-
-		
-
-			
+		<br>

@@ -178,7 +178,7 @@ td {
 /*======================== boutons formulaires =======================*/
 /* sources: http://css.mammouthland.net/formulaire-form-input-css.php */
 
-input[type=submit], input[type=reset]{
+input[type=submit], input[type=reset], select, .liens-direct, .deconnection {
     background-color:  LightSteelBlue;
     font-size : 1em;
     padding: 2px;
@@ -187,11 +187,30 @@ input[type=submit], input[type=reset]{
     border-radius: 7px;
 }
 
+
+
 input[type=reset]{
     background-color:  BlanchedAlmond;
-
 }
 
+/*select {
+    background-color:  DarkKhaki;
+
+}*/
+
+.liens-direct, .deconnection {
+    padding: 5px 10px;
+    background-color:  #B7AA3F;
+    text-decoration: none;
+    color: #4B3E39;
+    border:solid 2px;
+}
+
+.deconnection {
+
+    background-color:  Moccasin;
+
+}
 
 
 /*======================== boutons de/connection=======================*/

@@ -84,7 +84,7 @@
 
     
   	<!-- bouton de retour au choix d'administration -->
-<p><a href="backoffice.php"><img src="./images/boutons/retour.png"></a><p>
+    <p><a href="backoffice.php" class="liens-direct">Retour page d'administration</a><p>
 
     <?php
   	}
@@ -101,6 +101,7 @@
 ?>
 
 		</section>
+    <br>
 </section>
 
 

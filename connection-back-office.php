@@ -74,18 +74,13 @@
               <H2 ><?php echo $_SESSION['login'];?>, vous êtes connecté,</br> que voulez vous faire ?</H2>
 
  
-              <table> 
-            <tr>
+
                       
-                      <td><a href="backoffice.php"><img src="./images/boutons/retour.png"></a></td>
-                  </tr>
-            
-            <tr>
+                      <a href="backoffice.php" class="liens-direct">Retour</a>
+
                       
-                      <td><a href="administration_deconnection.php"><img src="./images/boutons/deconnection.png"></a></td>
-                  </tr>
-    
-              </table>
+                     <a href="administration_deconnection.php"  class="deconnection">Se déconnecter, bye !</a></td>
+
 
               
           </span>
