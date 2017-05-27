@@ -16,7 +16,7 @@
 
         <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico">
   
-        <title>Equipes de travail</title>
+        <title>Mes Congés | Les équipes </title>
         <link href="./css/style.css" rel="stylesheet" type="text/css" />
         <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
     </head>

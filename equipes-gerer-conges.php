@@ -15,7 +15,7 @@
         <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico">
   
 
-        <title>Information du personnel</title>
+        <title>Mes Congés | Gérer congés employés</title>
         <link href="./css/style.css" rel="stylesheet" type="text/css" />
         <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
 
