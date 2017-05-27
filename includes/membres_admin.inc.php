@@ -27,8 +27,9 @@
                 <th>login</th>
                 <th>Membre<br/>actif ?</th>
                 <th>Prénom Nom</th>
+                <th>Mail</th>
                 <th>Date naissance</th>
-                <th>description</th>
+                <th>Description</th>
             </tr>
 
         
@@ -47,6 +48,7 @@
                     <td><?php echo $membre['mem_login']?></td>
                     <td><?php if ($membre['mem_actif']){ echo ' X ';}?></td>
                     <td><?php echo $membre['mem_prenom'].' '.$membre['mem_nom']?></td>
+                    <td><?php echo $membre['mem_email']?></td>
                     <td><?php echo $membre['mem_date_naiss']?></td>
                     <td><?php echo $membre['mem_description']?></td>
                 
