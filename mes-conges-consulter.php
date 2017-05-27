@@ -96,7 +96,7 @@
 
             
             
-            <!--===========================EMPLOYESS=======================-->
+<!--===========================EMPLOYES=======================-->
             <article id="employe">
             <!-- employes -->
             <?php include("includes/employes.inc.php"); ?>

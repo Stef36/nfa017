@@ -1,45 +1,29 @@
+<h2>CONGES RESTANTS</h2>
+
 <!--==================COMMENT CREER UNE EQUIPE====================-->
 <?php
 
-// ---------   si aucun employé n'est connecté-------------------------------
+// ---------   si un employé est connectée-------------------------------
 if (! isset($_SESSION['ticket_employe'])) { ?>
 
-<h2>POUR CONSULTER VOS CONGES EN ETANT EMPLOYE<br>d'une entreprise ou membre d'une équipe.</h2>
+<h2>L'employé n'a pas encore pris de congés</h2>
 
 
-<p>Une fois inscrit par votre responsable, vous pourrez consulter ici le solde de vos congés.</p>
-
-<p>La section ci-dessous vous permettra de récapituler en un coup d'oeil:<br> les congés que vous avez posés, qui ont été accordés... ou refusés.</p>
-
-<p>Vous pouvez  <a href="mes-conges-consulter.php">consulter</a> et <a href="mes-conges-poser.php">poser</a> vos congés en ligne. </p>
-
-
-<p>Bons congés !</p>
 
 <?php 
 }
+else { ?>
+ 	<h2>Voici le détails des congés posés.</h2>
 
 
-// ---------   si un employé est connecté-------------------------------
-
-else {?>
-     <h2>------       Bienvenue sur le site Mes Repos!      ------</h2>
-
-     <p>Vous avez été inscrit par votre responsable ou par le chargé de votre équipe de travail. </p>
-     <p>Vous allez maintenant pouvoir profiter à fond des fonctionnalités du site.</p>
-     <p>N'hésitez pas à utiliser le formulaire de contact pour toute question.</p>
-     <p>De même pour nous signaler un disfonctionnement, ou si vous avez une idée d'amélioration du site.</p>
-    <p>Vous pouvez  <a href="mes-conges-consulter.php">consulter</a> et <a href="mes-conges-poser.php">poser</a> vos congés en ligne. </p>
-     <p>Bon repos !</p>
-
-     <!--  =================== SOLDE DES CONGES ==========================-->
 
 
-     <H2>Voici le solde de vos congés:</H2>
+ 	<!--  =================== SOLDE DES CONGES ==========================-->
 
-     <?php         
 
-            $id_selection_employe=$_SESSION['employe_id'];
+ <?php         
+
+            $id_selection_employe=$_SESSION['id_selection_employe'];
 
              // requete de selection des type de congés et des congés attribués à l'employé:
             $sql_employe_dispose_combiens_type_conges =
@@ -169,11 +153,36 @@ else {?>
             <br><?php
 
          ?>
-
-
-
-
-
-
-     <?php
+ 	<?php
  } ?>
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<hr><hr><hr><hr><hr><hr>
+<form method="POST">
+    <ul class="form_radio">
+        <li><input type="radio" name="conges" value="conges_payes" checked>
+        <label for="rd1">CONGES PAYES : </label></li><br>
+        <li><input type="radio" name="conges" value="anciennete"> <label for="rd2">ANCIENNETE : </label></li><br>
+        <li><input type="radio" name="conges" value="rtt"><label for="rd3">RTT : </label></li><br>
+        <li><input type="radio" name="conges" value="maladie" ><label for="rd4">MALADIE : </label></li><br>
+        <li><input type="radio" name="conges" value="absence_na"><label for="rd5">ABSENCE NON AUTORISEE : </label></li><br>
+        <li><input type="radio" name="conges" value="formation"><label for="rd6">FORMATION :</label></li><br>
+    </ul>
+-->
+<!--===============bouton de refus des conges=================-->
+    <!-- <input id="conges_valides" type="submit" value="CONGES REFUSES"/><br>
+
+<!--===============bouton de validation des conges=================-->
+    <!-- <input id="conges_valides" type="submit" value="CONGES VALIDES"/>
+</form>-->
+

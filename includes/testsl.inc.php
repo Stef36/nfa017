@@ -1,45 +1,44 @@
-<!--==================COMMENT CREER UNE EQUIPE====================-->
+<h3>Test includes</H3>
+
+<hr>
+<h2>Choix de l'employé : </h2>
+                <section id="selectionner_employe">
+                    <?php include("includes/selection_employe.inc.php"); ?>
+                </section>
+            <br>
+<!--==================================================-->
+<!--===========================SQL====================-->
+<!--==================================================-->
 <?php
+    if (isset($_session['id_selection_employe']))
+    {
+        
 
-// ---------   si aucun employé n'est connecté-------------------------------
-if (! isset($_SESSION['ticket_employe'])) { ?>
+    }
+?>
+<!--==================================================-->
+<!--==================================================-->
+<!--==================================================-->
+<hr>
+  <?php echo 'Nom employe :' 
+  
+  ?><br><br>
+  <?php echo 'Prénom employe :' 
+  
+  ?><br><br>
+  <?php echo 'Equipe :' 
+  
+  ?>
+  
+  
+  <hr><hr><hr>
+<!--==================================================-->
+<!--=================affichage tableau conges - OK - =================================-->
+<!--==================================================-->
+  
+  <?php         
 
-<h2>POUR CONSULTER VOS CONGES EN ETANT EMPLOYE<br>d'une entreprise ou membre d'une équipe.</h2>
-
-
-<p>Une fois inscrit par votre responsable, vous pourrez consulter ici le solde de vos congés.</p>
-
-<p>La section ci-dessous vous permettra de récapituler en un coup d'oeil:<br> les congés que vous avez posés, qui ont été accordés... ou refusés.</p>
-
-<p>Vous pouvez  <a href="mes-conges-consulter.php">consulter</a> et <a href="mes-conges-poser.php">poser</a> vos congés en ligne. </p>
-
-
-<p>Bons congés !</p>
-
-<?php 
-}
-
-
-// ---------   si un employé est connecté-------------------------------
-
-else {?>
-     <h2>------       Bienvenue sur le site Mes Repos!      ------</h2>
-
-     <p>Vous avez été inscrit par votre responsable ou par le chargé de votre équipe de travail. </p>
-     <p>Vous allez maintenant pouvoir profiter à fond des fonctionnalités du site.</p>
-     <p>N'hésitez pas à utiliser le formulaire de contact pour toute question.</p>
-     <p>De même pour nous signaler un disfonctionnement, ou si vous avez une idée d'amélioration du site.</p>
-    <p>Vous pouvez  <a href="mes-conges-consulter.php">consulter</a> et <a href="mes-conges-poser.php">poser</a> vos congés en ligne. </p>
-     <p>Bon repos !</p>
-
-     <!--  =================== SOLDE DES CONGES ==========================-->
-
-
-     <H2>Voici le solde de vos congés:</H2>
-
-     <?php         
-
-            $id_selection_employe=$_SESSION['employe_id'];
+            $id_selection_employe=$_SESSION['id_selection_employe'];
 
              // requete de selection des type de congés et des congés attribués à l'employé:
             $sql_employe_dispose_combiens_type_conges =
@@ -176,4 +175,3 @@ else {?>
 
 
      <?php
- } ?>
