@@ -96,7 +96,7 @@
 
 <!--=================  CARTE IDENTITE EMPLOYE ================-->
 
-    <section id="container" class="flex">
+    <section  >
 
     <?php include("includes/employes_vu_par_employeur.inc.php"); ?>
       
