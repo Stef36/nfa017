@@ -90,7 +90,7 @@
                 ?>
 
                 <p>
-                Merci de créer d'abord une fiche de  nouvel employé avant de pouvoir lui attibuer ses congés.
+                Merci de créer d'abord une fiche de nouvel employé avant de pouvoir lui attibuer ses congés.
                 </p>
                  <?php
 

@@ -1,4 +1,4 @@
-<!--================== LOG EQUIPE====================-->
+<!--================== LOG EMPLOYE====================-->
 
             
 
@@ -35,16 +35,16 @@
                      echo "<p>OK</p>"; ?>
 
 
-                 	<form name="deconnection_employe" method="POST">
-                 		<table>
+                     <form name="deconnection_employe" method="POST">
+                         <table>
 
-                 			<tr>
-                 				<th>Se déconnecter ?</th>
+                             <tr>
+                                 <th>Se déconnecter ?</th>
                                 <td><input type="hidden" name="deconnecter_employe" value="OK"/></td>
-                 				<td><input type="submit" name="déconnection" id="déconnection" value="OUI" /></td>
-                 			</tr>
-                 		</table>
-                 	</form>
+                                 <td><input type="submit" name="déconnection" id="déconnection" value="OUI" /></td>
+                             </tr>
+                         </table>
+                     </form>
 
 
 
