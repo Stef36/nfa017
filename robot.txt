@@ -7,7 +7,7 @@ Disallow: /docs/
 
 Disallow: /includes/
 Disallow: /javascripts/
-Disallow: /logos/
+
 
 Disallow: /administration*
 Disallow: /backoffice*
