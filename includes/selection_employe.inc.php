@@ -27,7 +27,7 @@
 
 
 
-     <H2>Selectionnez ou incrire un nouvel employé:</H2>
+     <H2>Selectionnez un employé:</H2>
 
 
      <!-- formulaire de selection de l'employé -->
@@ -56,7 +56,7 @@
                          $id_selection_employe=NULL;
                      }
 
-                     //echo 'employe_id -'.$id_selection_employe.'-';
+                     echo 'employe_id -'.$id_selection_employe.'-';
                     $_SESSION['id_selection_employe']=$id_selection_employe;
 
                  };
