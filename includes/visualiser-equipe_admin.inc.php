@@ -1,9 +1,11 @@
 
 <H2> Gestion des équipes de travailleurs </H2>
 
-<!-- bouton de retour au choix d'administration -->
-<p><a href="backoffice.php"><img src="./images/boutons/retour.png"></a><p>
+<br>
 
+<!-- bouton de retour au choix d'administration -->
+<p><a href="backoffice.php" class="liens-direct">Retour</a><p>
+<br>
 
 <?php
 
@@ -93,3 +95,4 @@
 		</table>		
 		<input type="submit" name="soumission" id="soumission" value="Selectionner pour modifier" />
 		</form>
+		<br>

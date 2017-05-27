@@ -1,10 +1,11 @@
 
 <H2> Gestion des membres du Back-Office </H2>
+<br>
 
 <!-- bouton de retour au choix d'administration -->
-<p><a href="backoffice.php"><img src="./images/boutons/retour.png"></a><p>
+<p><a href="backoffice.php" class="liens-direct">Retour</a><p>
 
-
+<br>
 <?php
 
     $sqlmembre = "SELECT     mem_id, mem_login, mem_nom, mem_prenom,
@@ -59,5 +60,7 @@
         </table>        
         <input type="submit" name="soumission" id="soumission" value="Selectionner pour modifier" />
         </form>
+
+        <br>
         
             
