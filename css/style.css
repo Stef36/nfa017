@@ -175,6 +175,24 @@ td {
  padding: 3px;
  }
 
+/*======================== boutons formulaires =======================*/
+/* sources: http://css.mammouthland.net/formulaire-form-input-css.php */
+
+input[type=submit], input[type=reset]{
+    background-color:  LightSteelBlue;
+    font-size : 1em;
+    padding: 2px;
+    margin: 4px;
+    font-weight: bold;
+    border-radius: 7px;
+}
+
+input[type=reset]{
+    background-color:  BlanchedAlmond;
+
+}
+
+
 
 /*======================== boutons de/connection=======================*/
 

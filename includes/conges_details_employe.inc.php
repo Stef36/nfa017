@@ -133,8 +133,10 @@ else { ?>
             </table>
 
             <span>
-            <input type="submit" name="valider" value="OK pour modifier"/>
-            <p>Vous serez redirigés sur la page "Poser mes congés.</p>
+                
+                <input class= "bouton-submit" type="submit" name="valider" value="OK pour modifier"/>
+                
+                <p>Vous serez redirigés sur la page "Poser mes congés.</p>
             </span>
 
             <span class ="red">
