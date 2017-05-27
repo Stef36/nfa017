@@ -1,17 +1,9 @@
 User-agent: *
-
 Disallow: /avatars/
 Disallow: /compteur/
-
 Disallow: /docs/
-
 Disallow: /includes/
 Disallow: /javascripts/
-Disallow: /logos/
-
 Disallow: /administration*
 Disallow: /backoffice*
-
-
-
 Sitemap: http://mesrepos.domduf.com/sitemap.xml

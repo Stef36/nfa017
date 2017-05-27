@@ -15,6 +15,7 @@ if (! isset($_SESSION['ticket_equipe'])) { ?>
 
 <?php 
 }
+
 else { ?>
  	<h2>------       VOTRE EQUIPE       ------</h2> <?php
  } ?>

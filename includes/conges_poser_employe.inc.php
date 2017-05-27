@@ -124,7 +124,7 @@ if (! isset($_SESSION['ticket_employe'])) { ?>
 
     </article>
 
-<p>Bons congés !</p>
+
 
 <?php 
 }

@@ -23,7 +23,8 @@
 
 		 	$sqlEmployeEquipe = "SELECT employe_nom, employe_prenom, employe_commentaire
 		 						FROM employe
-		 						WHERE equipe_id = '$equipe_id' ;";
+		 						WHERE equipe_id = '$equipe_id' 
+		 						AND employe_visible=1;";
 
 		 	$employesDeLequipe = $pdo -> query($sqlEmployeEquipe);
 

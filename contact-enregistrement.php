@@ -62,9 +62,10 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 <section id="centre">
 
 	<!-- ===================== MENU ===================== -->
-	<?php include("includes/menu.php"); echo session_cache_expire();?>
+	<?php include("includes/menu.php"); 
 
-  	<!-- =========================== Resultat ici ========================= -->
+	//echo session_cache_expire();?>
+
 	<div>
 
 	<?php
@@ -74,8 +75,10 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 
 	/* si les données du formulaire ne sont pas déjà entrées en BD */
 	if( !isset($_SESSION['formulaire_entreeBD']) || $_SESSION['formulaire_entreeBD']== 0 ) 
-		
 		{ 
+
+
+
 		/* mise à 1 de l'indicateur d'entrée des données du formulaire en BD */
 		$_SESSION['formulaire_entreeBD']=1;
 
@@ -178,10 +181,32 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 		<?php 
 
 
-			/* envoi d'un mail de signalement d'un nouveau message au webmaster */
-			$dest= 'minique.duf@gmail.com';
-			$dest2 ='dominique.duf@wanadoo.fr';
-			$dest3 = 'slaruelle@free.fr';
+
+		// selection des membres à qui envoyer un mail lors de reception de nouveau message
+    	$sqlmembre = "SELECT    mem_nom, mem_prenom,
+                            	mem_email, 
+                            	mem_persona
+                            
+                    	FROM         membre 
+                    	WHERE mem_persona='Gestionnaire'
+                    	AND mem_actif=1
+                    	AND mem_email !='';" ;
+        
+        $membresMail= $pdo->query($sqlmembre); 
+
+
+        while ($membreMail= $membresMail -> fetch()) {
+
+        	$destinataire=$membreMail['mem_email']; ?>
+
+        	<p>
+        	<?php echo 'envoi mail à: '.$membreMail['mem_prenom'].' '.$membreMail['mem_nom']; ?>
+        	</p> <?php
+        
+
+
+			/* envoi d'un mail de signalement d'un nouveau message aux webmasters */
+
 			$sujet= "Nouveau message posté sur le site mesrepos.domduf.com";
 			$misEnFormeMessage = wordwrap($message, 70, "\r\n");
 			
@@ -189,12 +214,14 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 					<H5>Adresse Mail: <a href=\"mailto:".$monMail."\">$monMail</a></H5>".
 					"<H5>adresse IP: ".$adresseIP."</H5>".
 					"<H5>Tel: ".$monTel."</H5><H6>Sujet: ".$choix."<br>Login souhaité: ".$contact_login_souhait."</H6><p>Voici le texte: <br>".$misEnFormeMessage."<p>";
+
 			$headers  = 'MIME-Version: 1.0' . "\r\n";
+
      		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-			
-			mail($dest,$sujet,$corp,$headers);
-			mail($dest2,$sujet,$corp,$headers);
-			mail($dest3,$sujet,$corp,$headers);
+	
+			mail($destinataire,$sujet,$corp,$headers);
+
+			}
 
 			
 		}

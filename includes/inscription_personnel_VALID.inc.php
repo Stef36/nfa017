@@ -43,11 +43,11 @@
             
         if (isset($_POST['employe_visible'])) {
             $employe_visible=$_POST['employe_visible'];
-        } else $employe_visible=0;
+        } else $employe_visible=1;
 
         if (isset($_POST['employe_actif'])) {
             $employe_actif=$_POST['employe_actif'];
-        } else $employe_actif=0;
+        } else $employe_actif=1;
 
         if (isset($_POST['employe_logo'])) {
             $employe_logo=htmlentities($_POST['employe_logo']);

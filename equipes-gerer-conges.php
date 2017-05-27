@@ -109,7 +109,11 @@
 
 <!--======================================================-->
 
+<<<<<<< HEAD
                             <?php include("includes/employes_conges_restants.inc.php"); ?>
+=======
+                            <?php include("includes/equipe_conges_restants.inc.php"); ?>
+>>>>>>> ae1a192a827b6f7e137a8846d9b941b6ee62b683
                        
 <section id="container">
                     <section class="flex1">

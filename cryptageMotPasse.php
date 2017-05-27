@@ -6,11 +6,11 @@ if (isset($_POST['login']) AND isset($_POST['pass']))
 
     $login = $_POST['login'];
 
-    $pass_crypte = crypt($_POST['pass']); // On crypte le mot de passe
+    //$pass_crypte = crypt($_POST['pass']); // On crypte le mot de passe
 	$pass_crypteP= password_hash($_POST['pass'], PASSWORD_DEFAULT);  // Crypté PHP
 
     //echo '<p>Ligne à copier dans le .htpasswd :<br />' . $login . ':' . $pass_crypte . '</p>';
-	echo '<p>Plus sécurisé, à copier dans le .htpasswd :<br />' .$login . ':' . $pass_crypteP .'</p>';   
+	echo '<p>à copier dans le .htpasswd :<br />' .$login . ':' . $pass_crypteP .'</p>';   
 
 }
 

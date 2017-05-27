@@ -1,10 +1,11 @@
 
 <H2> Gestion des membres du Back-Office </H2>
+<br>
 
 <!-- bouton de retour au choix d'administration -->
-<p><a href="backoffice.php"><img src="./images/boutons/retour.png"></a><p>
+<p><a href="backoffice.php" class="liens-direct">Retour</a><p>
 
-
+<br>
 <?php
 
     $sqlmembre = "SELECT     mem_id, mem_login, mem_nom, mem_prenom,
@@ -27,8 +28,9 @@
                 <th>login</th>
                 <th>Membre<br/>actif ?</th>
                 <th>Prénom Nom</th>
+                <th>Mail</th>
                 <th>Date naissance</th>
-                <th>description</th>
+                <th>Description</th>
             </tr>
 
         
@@ -47,6 +49,7 @@
                     <td><?php echo $membre['mem_login']?></td>
                     <td><?php if ($membre['mem_actif']){ echo ' X ';}?></td>
                     <td><?php echo $membre['mem_prenom'].' '.$membre['mem_nom']?></td>
+                    <td><?php echo $membre['mem_email']?></td>
                     <td><?php echo $membre['mem_date_naiss']?></td>
                     <td><?php echo $membre['mem_description']?></td>
                 
@@ -59,5 +62,7 @@
         </table>        
         <input type="submit" name="soumission" id="soumission" value="Selectionner pour modifier" />
         </form>
+
+        <br>
         
             

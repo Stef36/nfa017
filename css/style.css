@@ -91,12 +91,22 @@ background-color: #B7AA3F;
 
 
 /* ------------ logos des équipes */
+
+.nom_equipe {
+    width : 250px;
+    text-align: center;
+    font-size : 1.2em;
+    margin: 7px;
+    padding:10px 5px ;
+    border: 3px Khaki ridge;
+}
+
 .logo_equipe {
 
     width : 200px;
     height: auto;
     font-size : 0.6em; /* taille texte sous logo */
-
+    position: center;
 }
 
 
@@ -164,6 +174,43 @@ td {
  border-color:grey;
  padding: 3px;
  }
+
+/*======================== boutons formulaires =======================*/
+/* sources: http://css.mammouthland.net/formulaire-form-input-css.php */
+
+input[type=submit], input[type=reset], select, .liens-direct, .deconnection {
+    background-color:  LightSteelBlue;
+    font-size : 1em;
+    padding: 2px;
+    margin: 4px;
+    font-weight: bold;
+    border-radius: 7px;
+}
+
+
+
+input[type=reset]{
+    background-color:  BlanchedAlmond;
+}
+
+/*select {
+    background-color:  DarkKhaki;
+
+}*/
+
+.liens-direct, .deconnection {
+    padding: 5px 10px;
+    background-color:  #B7AA3F;
+    text-decoration: none;
+    color: #4B3E39;
+    border:solid 2px;
+}
+
+.deconnection {
+
+    background-color:  Moccasin;
+
+}
 
 
 /*======================== boutons de/connection=======================*/

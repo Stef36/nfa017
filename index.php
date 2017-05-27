@@ -13,7 +13,7 @@
  
         <meta name="description" content="poser et consulter gratuitement ses jours de congés -> gestion par employeurs  -> consultation par employes">
 
-        <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico" alt="favicon site mesrepos.domduf.com">
+        <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico" >
         
         <title>Poser et consulter mes repos et jours de congés en ligne</title>
 
@@ -35,9 +35,13 @@
 <!-- ===================== TITRE ===================== -->
 
 
+<<<<<<< HEAD
     <?php require ("./includes/header.inc.php"); titre_header('POSER ET CONSUTER <br>SES JOURS DE CONGES <br>EN LIGNE')?>
 
 
+=======
+    <?php require ("./includes/header.inc.php"); titre_header('POSER ET CONSULTER <br>SES JOURS DE CONGE <br>EN LIGNE')?>
+>>>>>>> ae1a192a827b6f7e137a8846d9b941b6ee62b683
 
 
 
@@ -52,30 +56,41 @@
 
     <li>
         <h2>Le chef d'équipe interressé par le site demande son inscription via le menu "contact" </h2>
-    </li>
 
         <p>Vous avez entendu parler du site "mesrepos", et vous êtes interréssés par une centralisation claire de la gestion des congés de vos employés</p>
 
         <p>Vous aimeriez avoir gratuitement une vue des congés à un instant "t" de l'ensemble des travailleurs sous votre responsabilité.</p>
-
-    <li>
-    <h2>Le responsable du site créé un login et un mot de passe, et lui communique une confirmation de création d'équipe par envoi personnalisé.</h2>
     </li>
 
+
+
+    <li>
+        <h2>Le responsable du site créé un login et un mot de passe, et lui communique une confirmation de création d'équipe par envoi personnalisé.</h2>
+
         <p>L'inscription se fait de manière personnalisée. Aucune information n'est traitée automatiquement lors de l'inscription. Vous êtes sûr de la fiabilité.</p>
+        
+    </li>
+
+
 
     <li>
         <h2>La construction de votre équipe peut commencer en ligne.
         </h2>
-    </li>
 
         <p>Le responsable peut se logger (via menu "Les équipes") et construire son équipe (via  menu "Les équipes" /"Inscrire-Modifier") , en créant une chaque employé, en remplissant les champs NOM, prénom, etc, y compris le mail de l'employé.</p>
 
-    <li>
-        <h2>Les employés peuvent poser et consulter leurs congés et leurs jours de repos gratuitement .</h2>
     </li>
 
+
+
+    <li>
+        <h2>Les employés peuvent poser et consulter leurs congés et leurs jours de repos gratuitement .</h2>
+
         <p>Les employés reçoivent individuellement un mail avec leur loggin (créés par le chef d'équipe) et le mdp. Les employés peuvent se logger en menu "Mes congés"</p>
+
+    </li>
+
+
 
 </ol>
 

@@ -103,7 +103,7 @@
 			$_SESSION ['flag_requete_ajout_equipe']= 1;?>
 
 		<!-- ========================bouton retour ===========================  -->
-		<p><a href="backoffice.php"><img src="./images/boutons/retour.png"></a><p>
+		<p><a href="backoffice.php" class="liens-direct">Retour</a><p>
 		<!-- ==================================================================  -->
 		<?php
 	

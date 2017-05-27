@@ -33,7 +33,7 @@
                 if (isset($_SESSION['ticket_equipe'])) {
 
                     // affichage si équipe connectée
-                     echo "<p>OK</p>"; ?>
+                     //echo "<p>OK</p>"; ?>
 
 
                      <form name="deconnection_equipe" method="POST">

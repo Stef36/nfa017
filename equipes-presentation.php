@@ -62,15 +62,15 @@
         <section id="creer_equipe" class="container">
 
             <?php include("includes/creer_equipe.inc.php"); ?>
-        <br>
-                <hr>
-                <br>
+            <br>
+            <hr>
+            <br>
             <section class="flex">
                 <article class="flex1">
                 <?php include("includes/equipe_presentation.inc.php"); ?>
                 </article>
-    <br>
-                <hr>
+                <br>
+                
                 <br>
 <!--====================login=============================-->
 
@@ -79,20 +79,17 @@
 
                 </aside>
         
-            </section></section><br>
-                <hr>
-                <br>
-                
+            </section>
 
-                
+        </section>
+
+        <br>
+                                
 <!--====================================================================-->
 <!--===========================DESCRIPTION EQUIPE=======================-->
 <!--====================================================================-->
         <section id="description_equipe">
 
-        <?php include("includes/description_equipe.inc.php"); ?>
-        
-        <br>
                 <hr>
                 <br>
 <!--===========================EQUIPES=======================-->

@@ -1,7 +1,7 @@
 <!-- ici se trouve le menu, que l'on retrouve sur chaque page du site-->
 <div id = posMenu> <!-- permet de mettre en boite flex le menu -->
 
-<nav id = "navigation"  role="navigation" class="menu">  
+<nav id = "navigation"  class="menu">  
 
     <input type="checkbox" id="toggle-nav" aria-label="open/close navigation">
   <label for="toggle-nav" class="nav-button"></label>
@@ -12,29 +12,29 @@
 
             <ul class="container_menu"> <!-- liste non ordonnée -->
         
-                    <li id="flex_menu">
+                    <li class="flex_menu">
                     <a href="./index.php" >Accueil</a>
                     </li>
                     
-                    <li id="flex_menu">
+                    <li class="flex_menu">
                     <a href="./equipes-presentation.php">Les équipes</a>
                         <ul>
-                            <li id="flex_menu">
+                            <li class="flex_menu">
                             <a href="equipes-inscrire-modifier.php">Inscrire / Modifier</a>
-                            </li><hr/>
-                            <li id="flex_menu">
+                            </li>
+                            <li class="flex_menu">
                             <a href="equipes-gerer-conges.php">Gerer les congés</a>
                             </li>
                         </ul>        
                     </li>
 
                     
-                    <li id="flex_menu">
+                    <li class="flex_menu">
                     <a href="./mes-conges.php">Mes congés</a>
                         <ul>
                             <li>
                             <a href="mes-conges-consulter.php">Consulter</a>
-                            </li><hr/>
+                            </li>
                             <li>
                             <a href="mes-conges-poser.php">Poser</a>
                             </li>
