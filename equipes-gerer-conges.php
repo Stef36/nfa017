@@ -77,49 +77,40 @@
 
 
 <!--===========liste déroulante pour la selection de l'employé==========-->
+
             <section id="choix_employe">
-            <span>Choisissez un employé avec la liste déroulante pour avoir les informations le concernant</span>
+
+                <p>Choisissez un employé avec la liste déroulante pour avoir les informations le concernant</p>
 
 
-                <h2>Choix de l'employé : </h2>
                 <section id="selectionner_employe">
-                    <?php include("includes/selection_employe.inc.php"); ?>
+                        <?php include("includes/selection_employe.inc.php"); ?>
                 </section>
                 
             </section>
+
             <br>
-            
-                <hr>
+            <hr>
                 
-<!--==========================GESTION DES CONGES==================-->
-    <section>
-    
-    
 
 
+<!--=================  CARTE IDENTITE EMPLOYE ================-->
 
+    <section id="container" class="flex">
 
-
+    <?php include("includes/employes_vu_par_employeur.inc.php"); ?>
+      
     </section>
-<!--================================================================-->
-<!--================================================================-->
-<!--================================================================-->
-<!--================================================================-->
-<!--================================================================-->
-                <section id="container">
-                    <?php include("includes/gestion_conges.inc.php"); ?>
-                    <div class="flex">
-                        <div class ="photo"><img src="logos/Minion.jpg" alt="Photo employé"></div>
-                    </div> 
-                </section><br>
-                <hr>
+
+    <br>
+    <hr>
                 
                         
 
 
 <!--======================================================-->
 
-                            <?php include("includes/equipe_conges_restants.inc.php"); ?>
+    <?php include("includes/equipe_conges_restants.inc.php"); ?>
                        
 <section id="container">
                     <section class="flex1">
