@@ -35,13 +35,11 @@
 <!-- ===================== TITRE ===================== -->
 
 
-<<<<<<< HEAD
+
     <?php require ("./includes/header.inc.php"); titre_header('POSER ET CONSUTER <br>SES JOURS DE CONGES <br>EN LIGNE')?>
 
 
-=======
-    <?php require ("./includes/header.inc.php"); titre_header('POSER ET CONSULTER <br>SES JOURS DE CONGE <br>EN LIGNE')?>
->>>>>>> ae1a192a827b6f7e137a8846d9b941b6ee62b683
+
 
 
 
