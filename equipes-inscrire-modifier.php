@@ -57,11 +57,7 @@
     
 <?php //affiche_variables_session(); ?>
 
-<!--=======voir si possibilité===Menu de demande de validation================-->
-        <article id="warm">
 
-        <?php include("includes/warm_equipe.inc.php"); ?>
-        </article>
 
 <!--====================login=============================-->
                 <aside class="log_equipea">
