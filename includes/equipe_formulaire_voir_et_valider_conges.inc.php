@@ -38,19 +38,21 @@ if (isset($_SESSION['ticket_equipe'])){
 
 
     $equipe_id=$_SESSION['equipe_id'];
-    
+    $id_selection_employe=$_SESSION['id_selection_employe'];
 
-    $sql_warm_equipe="SELECT *
-                        FROM employe AS E 
+    $sql_warm_equipe="SELECT conge_id, conge_datedebut,conge_quantite,
+                            conge_demande,conge_consulte,conge_accorde,
+                            conge_commentaire, 
+                            C.employe_id,
+                            type_conge_nom, type_conge_unite, type_conge_valable  
+                        FROM  conge AS C
+                        JOIN type_conge AS T
 
-                        JOIN conge AS C
-                        ON E.employe_id= C.employe_id
+                        ON T.type_conge_id= C.type_conge_id
 
-                        JOIN type_conge AS T ON T.type_conge_id= C.type_conge_id
-
-                        WHERE equipe_id='$equipe_id'
+                        
                         AND conge_demande !=0
-                        AND conge_accorde IS NULL
+                        AND C.employe_id='$id_selection_employe'
                         
                         ORDER BY C.employe_id, conge_datedebut ;";
 
@@ -66,7 +68,7 @@ if (isset($_SESSION['ticket_equipe'])){
             // on affiche le formulaire si on a detecté des demande de congé
         
         ?>
-        <H3 class="warm">ALERTE demande de congés équipe <?php echo$equipe_id; ?></H3>
+        <H3 class="warm">ALERTE<br>NOUVELLE demande de congés.</H3>
         
 
         <form method="POST" name="formulaire_accepter_conge" >
@@ -74,7 +76,7 @@ if (isset($_SESSION['ticket_equipe'])){
 <br>
         <table>  
 
-                        <caption>NOUVELLES DEMANDES DE CONGES<br>
+                        <caption>DEMANDES DE CONGES<br>
                         <p> légende:
                         <span class="grey">Pas posé ou pas consulté</span>
                         <span class="yellow">Vu, en attente</span>
@@ -86,7 +88,7 @@ if (isset($_SESSION['ticket_equipe'])){
                         </caption>
                         <tr>
                             <td>-select-</td>
-                            <td>NOM demandeur</td>
+                            
                             <td>TYPE du congé</td>
                             <td>date</td>
                             <td>Qté </td>
@@ -118,10 +120,7 @@ if (isset($_SESSION['ticket_equipe'])){
 
                             </td>
 
-                              
 
-
-                            <td><?php echo $warm_equipe['employe_prenom'].' '.$warm_equipe['employe_nom'];?></td>
 
 
                             <td><?php echo $warm_equipe['type_conge_nom'];?></td>
