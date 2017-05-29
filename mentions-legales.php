@@ -51,8 +51,10 @@
             <br>
             <br>
             <h2> Commentaires : <br>
-                Ce site a été développé avec l'aide de Notepad++, Sublime Text, GitHub & Gimp qui nous a permis de développer de façon graphique ce site. <br><br><br>
+                Ce site a été développé avec l'aide de Notepad++, Sublime Text,Linux (Debian) GitHub & Gimp qui nous a permis de développer de façon graphique ce site. <br><br><br>
             </h2>
+            <p>Attention, ce site est encore en cours de développement, certaines fonctionalités ne sont pas implémentées.</p>
+            <p>Merci de patienter notament pour la partie "Gérer les congés"</p>
 
         <footer>
 <!-- ===================== BAS DE PAGE  ===================== -->
