@@ -25,12 +25,12 @@ else { ?>
 
  	<?php         
 
-			$id_selection_employe=$_SESSION['employe_id'];
+			$id_selection_employe=$_SESSION['id_selection_employe'];
 
 
 
             // requete de selection des congés demandés par l'employé:
-            $sql_conges_demandes="SELECT T.type_conge_id AS conge_type_id, T.type_conge_nom, C.conge_id, C.conge_datedebut, C.conge_quantite, C.conge_commentaire, C.conge_demande,C.conge_consulte, C.conge_accorde, T.type_conge_unite,
+            $sql_conges_demandes="SELECT T.type_conge_id AS conge_type_id, T.type_conge_nom, C.conge_id, C.conge_datedebut, C.conge_quantite, C.conge_demande, C.conge_consulte, C.conge_accorde, T.type_conge_unite,
                 C.employe_id
                                 FROM type_conge AS T LEFT JOIN conge AS C 
                                 ON T.type_conge_id = C.type_conge_id
@@ -65,7 +65,6 @@ else { ?>
                     <td>NOM du congé</td>
                     <td>date</td>
                     <td colspan="2">Quantité </td>
-                    <td>commentaire</td>
                     <td>demandé</td>
                     <td>consulté</td>
                     <td>accordé</td>
@@ -111,7 +110,7 @@ else { ?>
                     <td><?php echo $conge_accorde['type_conge_nom'];?></td>
                     <td><?php echo formate_date($conge_accorde['conge_datedebut']);?></td>        
                     <td colspan="2"><?php echo $conge_accorde['conge_quantite'].' '. $conge_accorde['type_conge_unite'];?></td>
-                    <td><?php echo $conge_accorde['conge_commentaire'];?></td>
+
 
 
 

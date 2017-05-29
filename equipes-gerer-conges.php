@@ -54,11 +54,7 @@
 
     </section>       
 
-<!--===============   WARM DEMADE VALIDATION     ================-->
 
-        <article>
-        <?php include("includes/warm_equipe.inc.php"); ?>
-        </article>
 
 <br>
 <hr>
@@ -110,7 +106,7 @@
 
 <!--======================================================-->
 
-    <?php include("includes/equipe_conges_restants.inc.php"); ?>
+    <?php include("includes/equipe_formulaire_voir_et_valider_conges.inc.php"); ?>
                        
 <section id="container">
                     <section class="flex1">
