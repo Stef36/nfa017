@@ -68,19 +68,21 @@ if (isset($_SESSION['ticket_equipe'])){
             // on affiche le formulaire si on a detecté des demande de congé
         
         ?>
-        <H3 class="warm">ALERTE<br>NOUVELLE demande de congés.</H3>
+       
         
 
         <form method="POST" name="formulaire_accepter_conge" >
 
 <br>
+
+
         <table>  
 
-                        <caption>DEMANDES DE CONGES<br>
+                        <caption><H3>DEMANDES DE CONGES</H3><br>
                         <p> légende:
                         <span class="grey">Pas posé ou pas consulté</span>
                         <span class="yellow">Vu, en attente</span>
-                        <span class="red">Refusé</span>
+                        <span class="red">Refusé ou annulé</span>
                         <span class="green">Accordé</span>
 
                         </p>
@@ -88,11 +90,9 @@ if (isset($_SESSION['ticket_equipe'])){
                         </caption>
                         <tr>
                             <td>-select-</td>
-                            
                             <td>TYPE du congé</td>
                             <td>date</td>
                             <td>Qté </td>
-                            
                             <td>commentaire</td>
                             <td>demandé</td>
                             <td>consulté</td>
@@ -105,17 +105,9 @@ if (isset($_SESSION['ticket_equipe'])){
         <tr  class="<?php echo couleur_conge($warm_equipe['conge_demande'], $warm_equipe['conge_consulte'],$warm_equipe['conge_accorde'] ); ?>"> 
 
 
-                            <td><?php   // si (date > date du jour) ET (conge !accordé)
-                                        // on permet de selectionner pour modifier
-
-                                        //echo $warm_equipe['conge_id'];
-
-                                if ($warm_equipe['conge_accorde']!=1) { ?>
+                            <td>
                                       <input type="radio" name="select_conge_pour_accord" value="<?php echo $warm_equipe['conge_id']; ?>">
-                                <?php } 
-
-                               
-                                 ?>
+                              
 
 
                             </td>
@@ -158,7 +150,7 @@ if (isset($_SESSION['ticket_equipe'])){
 
     } else {?>
 
-        <H3 class="green">Aucune nouvelle demande de congés pour l'instant.</H3> <?php
+        <H3 class="green">Aucune demande de congés pour l'instant.</H3> <?php
 
         } 
 
