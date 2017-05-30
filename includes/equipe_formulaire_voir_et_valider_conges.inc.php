@@ -2,7 +2,8 @@
 
 
 
-if (isset($_SESSION['ticket_equipe'])){
+if (isset($_SESSION['ticket_equipe']) & 
+    isset ($_SESSION['id_selection_employe'])){
 
 
     // mise à jour suivant choix du chef d'équipe d'accorder ou non le congé
@@ -36,6 +37,9 @@ if (isset($_SESSION['ticket_equipe'])){
 
 
 
+//-------------------------------------------------------
+
+
 
     $equipe_id=$_SESSION['equipe_id'];
     $id_selection_employe=$_SESSION['id_selection_employe'];
@@ -64,7 +68,8 @@ if (isset($_SESSION['ticket_equipe'])){
         // echo $compteur.'<br>';
         }
 
-        if ($compteur!=0) {
+        if ($compteur!=0
+            ) {
             // on affiche le formulaire si on a detecté des demande de congé
         
         ?>
@@ -146,6 +151,12 @@ if (isset($_SESSION['ticket_equipe'])){
         </span>
 
         </form><?php
+
+
+
+
+
+
 
 
     } else {?>
