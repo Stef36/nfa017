@@ -199,7 +199,8 @@ input[type=reset]{
 }*/
 
 .liens-direct, .deconnection {
-    padding: 5px 10px;
+    margin:4px;
+    padding: 2px 10px;
     background-color:  #B7AA3F;
     text-decoration: none;
     color: #4B3E39;
