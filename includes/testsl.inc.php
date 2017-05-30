@@ -34,8 +34,10 @@
                                      T.type_conge_id AS id_type_conge,
                                         disposer_quantite, type_conge_unite
                                     FROM `type_conge` T 
+                                    
                                     LEFT JOIN 
                                     (SELECT * FROM disposer WHERE disposer.employe_id='$id_selection_employe' )
+                                    
                                     AS D 
                                     ON T.type_conge_id = D.type_conge_id
                                     WHERE T.type_conge_valable=1

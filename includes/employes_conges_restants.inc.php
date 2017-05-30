@@ -1,6 +1,6 @@
 <h2>CONGES RESTANTS</h2>
 
-<!--==================COMMENT CREER UNE EQUIPE====================-->
+
 <?php
 
 // ---------   si un employé est connectée-------------------------------
@@ -13,12 +13,12 @@ if (! isset($_SESSION['ticket_employe'])) { ?>
 <?php 
 }
 else { ?>
- 	<h2>Voici le détails des congés posés.</h2>
+<h2>Voici le détails des congés posés.</h2>
 
 
 
 
- 	<!--  =================== SOLDE DES CONGES ==========================-->
+<!--  =================== SOLDE DES CONGES ==========================-->
 
 
  <?php         
@@ -156,33 +156,4 @@ else { ?>
  	<?php
  } ?>
 
-
-
-
-
-
-
-
-
-
-<!--
-
-<hr><hr><hr><hr><hr><hr>
-<form method="POST">
-    <ul class="form_radio">
-        <li><input type="radio" name="conges" value="conges_payes" checked>
-        <label for="rd1">CONGES PAYES : </label></li><br>
-        <li><input type="radio" name="conges" value="anciennete"> <label for="rd2">ANCIENNETE : </label></li><br>
-        <li><input type="radio" name="conges" value="rtt"><label for="rd3">RTT : </label></li><br>
-        <li><input type="radio" name="conges" value="maladie" ><label for="rd4">MALADIE : </label></li><br>
-        <li><input type="radio" name="conges" value="absence_na"><label for="rd5">ABSENCE NON AUTORISEE : </label></li><br>
-        <li><input type="radio" name="conges" value="formation"><label for="rd6">FORMATION :</label></li><br>
-    </ul>
--->
-<!--===============bouton de refus des conges=================-->
-    <!-- <input id="conges_valides" type="submit" value="CONGES REFUSES"/><br>
-
-<!--===============bouton de validation des conges=================-->
-    <!-- <input id="conges_valides" type="submit" value="CONGES VALIDES"/>
-</form>-->
 
