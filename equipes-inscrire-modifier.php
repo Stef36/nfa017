@@ -27,7 +27,7 @@
         <?php include("includes/logo.inc.php"); ?>
 
 <!-- ===================== TITRE ===================== -->
-<?php require ("./includes/header.inc.php"); titre_header('INSCRIRE DES MEMBRES <br>/<br>MODIFIER UNE EQUIPE de TRAVAIL')?>
+<?php require ("./includes/header.inc.php"); titre_header('INSCRIRE DES MEMBRES, MODIFIER UNE EQUIPE de TRAVAIL')?>
 <!-- ===================== TITRE ===================== -->
 
 
