@@ -6,4 +6,6 @@ Disallow: /includes/
 Disallow: /javascripts/
 Disallow: /administration*
 Disallow: /backoffice*
+Disallow: /plan-du-site.php
+Disallow: /mentions-legales.php
 Sitemap: http://mesrepos.domduf.com/sitemap.xml

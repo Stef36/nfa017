@@ -11,11 +11,11 @@
         <meta charset="UTF-8" lang="fr">
 
  
-        <meta name="description" content="poser et consulter gratuitement ses jours de congés -> gestion par employeurs  -> consultation par employes">
+        <meta name="description" content="gerer et consulter gratuitement ses jours de congés, gestion par employeurs, consultation par employes">
 
         <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico" >
         
-        <title>Poser et consulter mes repos et jours de congés en ligne</title>
+        <title>Poser, consulter, gerer mes repos et jours de conges en ligne</title>
 
         <!-- charger les feuiles de style  -->
         <link href="./css/style.css" rel="stylesheet" type="text/css" />
@@ -35,7 +35,7 @@
 <!-- ===================== TITRE ===================== -->
 
 
-    <?php require ("./includes/header.inc.php"); titre_header('POSER ET CONSULTER <br>SES JOURS DE CONGE <br>EN LIGNE')?>
+    <?php require ("./includes/header.inc.php"); titre_header('POSER, CONSULTER ET GERER GRATUITEMENT SES JOURS DE CONGE EN LIGNE')?>
 
 
 
