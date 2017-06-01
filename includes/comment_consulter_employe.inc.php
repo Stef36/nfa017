@@ -11,7 +11,7 @@ if (! isset($_SESSION['ticket_employe'])) { ?>
 
 <p>La section ci-dessous vous permettra de récapituler en un coup d'oeil:<br> les congés que vous avez posés, qui ont été accordés... ou refusés.</p>
 
-<p>Vous pouvez  <a href="mes-conges-consulter.php">consulter</a> et <a href="mes-conges-poser.php">poser</a> vos congés en ligne. </p>
+<p>Vous pourrez  <a href="mes-conges-consulter.php" class="liens-direct">consulter vos congés ici</a>et pourrez   <a href="mes-conges-poser.php" class="liens-direct">poser vos congés</a>. </p>
 
 
 <p>Bons congés !</p>

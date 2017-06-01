@@ -52,7 +52,7 @@
      <p>Vous <?php if (!isset($_SESSION['ticket_equipe'])) 
                                         {echo "pourrez";} else echo "pouvez"; ?> ensuite vous connecter sur cette page (en tant que responsable d'équipe) pour saisir les noms et les congés alloués à chaque employés dont vous êtes en charge.</p>
 
-     <p>Ici pour <a href="./equipes-inscrire-modifier.php">construire</a> l'équipe et attribuer les congés, ou <a href="./equipes-gerer-conges.php">là</a> pour gérer les congés</p>
+     <p>Ici pour <a href="./equipes-inscrire-modifier.php" class="liens-direct">construire l'équipe</a>  et attribuer les congés, ou là pour<a href="./equipes-gerer-conges.php" class="liens-direct">gérer les congés</a> </p>
     </section>
     
 <?php //affiche_variables_session(); ?>
