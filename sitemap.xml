@@ -8,32 +8,42 @@
 
 <url>
   <loc>http://mesrepos.domduf.com/</loc>
+  <priority>0.8</priority>
 </url>
 <url>
   <loc>http://mesrepos.domduf.com/index.php</loc>
+  <priority>0.8</priority>
 </url>
 <url>
   <loc>http://mesrepos.domduf.com/equipes-presentation.php</loc>
+  <priority>0.8</priority>
 </url>
 <url>
   <loc>http://mesrepos.domduf.com/equipes-inscrire-modifier.php</loc>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://mesrepos.domduf.com/equipes-gerer-conges.php</loc>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://mesrepos.domduf.com/mes-conges.php</loc>
+  <priority>0.8</priority>
 </url>
 <url>
   <loc>http://mesrepos.domduf.com/mes-conges-consulter.php</loc>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://mesrepos.domduf.com/mes-conges-poser.php</loc>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://mesrepos.domduf.com/contact.php</loc>
+  <priority>0.5</priority>
 </url>
 <url>
   <loc>http://mesrepos.domduf.com/mentions-legales.php</loc>
+  <priority>0.4</priority>
 </url>
 </urlset>
