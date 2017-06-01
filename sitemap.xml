@@ -42,8 +42,4 @@
   <loc>http://mesrepos.domduf.com/contact.php</loc>
   <priority>0.5</priority>
 </url>
-<url>
-  <loc>http://mesrepos.domduf.com/mentions-legales.php</loc>
-  <priority>0.4</priority>
-</url>
 </urlset>
