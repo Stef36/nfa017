@@ -29,7 +29,7 @@ else {?>
  	<p>Vous allez maintenant pouvoir profiter à fond des fonctionnalités du site.</p>
  	<p>N'hésitez pas à utiliser le formulaire de contact pour toute question.</p>
  	<p>De même pour nous signaler un disfonctionnement, ou si vous avez une idée d'amélioration du site.</p>
-    <p>Vous pouvez  <a href="mes-conges-consulter.php">consulter</a> et <a href="mes-conges-poser.php">poser</a> vos congés en ligne. </p>
+    <p>Vous pouvez  <a href="mes-conges-consulter.php" class="liens-direct">consulter</a> et <a href="mes-conges-poser.php" class="liens-direct">poser vos congés</a> en ligne. </p>
  	<p>Bon repos !</p>
 
  	<!--  =================== SOLDE DES CONGES ==========================-->
