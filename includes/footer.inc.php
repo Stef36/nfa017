@@ -1,11 +1,23 @@
 
 <?php
 
-    $sql_name = "SELECT employe_nom, employe_prenom
-                FROM employe
-                WHERE employe_nom='DUFOUR', employe_prenom='Dominique', employe_nom='LARUELLE', employe_prenom='Stéphane';
-                
-                ";
+    $sql_requete_noms = "SELECT employe_nom,
+                        employe_prenom
+                        FROM employe
+                        WHERE employe_nom='LARUELLE' 
+                ;";
         
-        $names = $pdo -> query($sql_name);?>
+        $noms_prenoms = $pdo -> query($sql_requete_noms);
+         while ($nom_prenom = $noms_prenoms -> fetch()){ ?>
         
+
+
+                    <p><?php echo $nom_prenom['employe_nom'];?></p>
+                    <br>
+                    <p><?php echo $nom_prenom['employe_prenom'];?></p>
+                    
+                     <?php
+            }
+              
+            
+            ?>
