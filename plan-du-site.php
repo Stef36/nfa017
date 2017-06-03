@@ -50,31 +50,31 @@
 
 
     <li>
-      <a a href="http://mesrepos.domduf.com/index.php">Index</a>
+      <a a href="./index.php">Index</a>
     </li>
     <li>
-      <a a href="http://mesrepos.domduf.com/equipes-presentation.php">Presentation  équipe</a>
+      <a a href="./equipes-presentation.php">Presentation  équipe</a>
     </li>
     <li>
-      <a a href="http://mesrepos.domduf.com/equipes-inscrire-modifier.php">equipes-inscrire-modifier</a>
+      <a a href="./equipes-inscrire-modifier.php">equipes-inscrire-modifier</a>
     </li>
     <li>
-      <a a href="http://mesrepos.domduf.com/equipes-gerer-conges.php">equipes-gerer-conges</a>
+      <a a href="./equipes-gerer-conges.php">equipes-gerer-conges</a>
     </li>
     <li>
-      <a a href="http://mesrepos.domduf.com/mes-conges.php">mes-conges</a>
+      <a a href="./mes-conges.php">mes-conges</a>
     </li>
     <li>
-      <a a href="http://mesrepos.domduf.com/mes-conges-consulter.php">mes-conges-consulter</a>
+      <a a href="./mes-conges-consulter.php">mes-conges-consulter</a>
     </li>
     <li>
-      <a a href="http://mesrepos.domduf.com/mes-conges-poser.php">mes-conges-poser</a>
+      <a a href="./mes-conges-poser.php">mes-conges-poser</a>
     </li>
     <li>
-      <a a href="http://mesrepos.domduf.com/contact.php">contact</a>
+      <a a href="./contact.php">contact</a>
     </li>
     <li>
-      <a a href="http://mesrepos.domduf.com/mentions-legales.php">mentions-legales</a>
+      <a a href="./mentions-legales.php">mentions-legales</a>
     </li>
 
 
