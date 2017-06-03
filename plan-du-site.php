@@ -1,5 +1,6 @@
 <?php session_start(); ?>
-
+<!-- ================ Connection bdd via PDO ================ -->
+<?php include("./includes/connection.php"); ?>
 <!DOCTYPE html>
 <html lang="fr-fr" >
 
