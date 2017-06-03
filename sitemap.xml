@@ -7,39 +7,43 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>http://mesrepos.domduf.com/</loc>
-  <priority>0.8</priority>
+  <loc>http://mesrepos.com/</loc>
+  <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://mesrepos.domduf.com/index.php</loc>
-  <priority>0.8</priority>
+  <loc>http://mesrepos.com/index.php</loc>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://mesrepos.domduf.com/equipes-presentation.php</loc>
-  <priority>0.8</priority>
+  <loc>http://mesrepos.com/connection-back-office.php</loc>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://mesrepos.domduf.com/equipes-inscrire-modifier.php</loc>
-  <priority>0.6</priority>
+  <loc>http://mesrepos.com/equipes-presentation.php</loc>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://mesrepos.domduf.com/equipes-gerer-conges.php</loc>
-  <priority>0.6</priority>
+  <loc>http://mesrepos.com/equipes-inscrire-modifier.php</loc>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://mesrepos.domduf.com/mes-conges.php</loc>
-  <priority>0.8</priority>
+  <loc>http://mesrepos.com/equipes-gerer-conges.php</loc>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://mesrepos.domduf.com/mes-conges-consulter.php</loc>
-  <priority>0.6</priority>
+  <loc>http://mesrepos.com/mes-conges.php</loc>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://mesrepos.domduf.com/mes-conges-poser.php</loc>
-  <priority>0.6</priority>
+  <loc>http://mesrepos.com/mes-conges-consulter.php</loc>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://mesrepos.domduf.com/contact.php</loc>
-  <priority>0.5</priority>
+  <loc>http://mesrepos.com/mes-conges-poser.php</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://mesrepos.com/contact.php</loc>
+  <priority>0.80</priority>
 </url>
 </urlset>
