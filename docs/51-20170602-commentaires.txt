@@ -38,7 +38,7 @@
   Footer prenoms :  ne viennent pas de la bdd
 
 -mysqli-pdo-securite-
-  sql : select * : pas bon
+  sql : select * : pas bon----------------------------------RESOLU
   page message.php - securité : htmlentities : ok
   page reception contact : ok
   backoffice - cnx : ok
