@@ -9,4 +9,4 @@ Disallow: /backoffice*
 Disallow: /plan-du-site.php
 Disallow: /mentions-legales.php
 Disallow: /connection-back-office.php
-Sitemap: http://mesrepos.domduf.com/sitemap.xml
+Sitemap: http://domduf.com/sitemap.xml
