@@ -89,7 +89,7 @@
         <section id="description_employe">
            
             
-            <!--===========================EMPLOYESS=======================-->
+<!--===========================EMPLOYES=======================-->
             <article id="employe">
             <!-- employes -->
             <?php include("includes/employes.inc.php"); ?>

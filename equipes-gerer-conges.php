@@ -107,7 +107,9 @@
 
 <!--======================================================-->
 
+
     <?php include("includes/equipe_formulaire_voir_et_valider_conges.inc.php"); ?>
+
                        
 <section id="container">
                     <section class="flex1">

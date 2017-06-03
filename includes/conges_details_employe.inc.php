@@ -10,19 +10,19 @@ if (! isset($_SESSION['ticket_employe'])) { ?>
 <?php 
 }
 else { ?>
- 	<h2>Voici le détails de vos congés posés.</h2>
+     <h2>Voici le détails de vos congés posés.</h2>
 
 
 
 
- 	<!--  =================== SOLDE DES CONGES ==========================-->
+     <!--  =================== SOLDE DES CONGES ==========================-->
 
 
- 	
+     
 
- 	<?php         
+     <?php         
 
-			$id_selection_employe=$_SESSION['employe_id'];
+            $id_selection_employe=$_SESSION['employe_id'];
 
 
 
@@ -154,5 +154,5 @@ else { ?>
 
 
 
- 	<?php
+     <?php
  } ?>

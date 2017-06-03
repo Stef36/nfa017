@@ -1,4 +1,6 @@
 <?php session_start(); ?>
+<!-- ================ Connection bdd via PDO ================ -->
+<?php include("./includes/connection.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr-fr" >
@@ -35,7 +37,9 @@
 <!-- ===================== TITRE ===================== -->
 
 
+
     <?php require ("./includes/header.inc.php"); titre_header('POSER, CONSULTER ET GERER GRATUITEMENT SES JOURS DE CONGE EN LIGNE')?>
+
 
 
 

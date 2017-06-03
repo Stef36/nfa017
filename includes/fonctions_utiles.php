@@ -1,75 +1,75 @@
 <?php
 
 function validateDate($date, $format = 'Y-m-d H:i:s'){
-	// source http://php.net/manual/fr/function.checkdate.php
-	    $d = DateTime::createFromFormat($format, $date);
-	    return $d && $d->format($format) == $date;
-	}
+    // source http://php.net/manual/fr/function.checkdate.php
+        $d = DateTime::createFromFormat($format, $date);
+        return $d && $d->format($format) == $date;
+    }
 
 
 
 
 function couleur_conge($demande, $consulte, $accorde){
 
-	if (!$demande | ($demande & !$consulte & $accorde==NULL) ) {
-		return 'grey';
-	}
+    if (!$demande | ($demande & !$consulte & $accorde==NULL) ) {
+        return 'grey';
+    }
 
-	if ($accorde) {
-	 	return 'green';
-	 } 
+    if ($accorde) {
+         return 'green';
+     } 
 
-	if ($consulte & $accorde==NULL) {
-		return 'yellow';
-	}
+    if ($consulte & $accorde==NULL) {
+        return 'yellow';
+    }
 
-	if ($consulte & $accorde==0 ){
-		return 'red';
-	}
-
-
+    if ($consulte & $accorde==0 ){
+        return 'red';
+    }
 
 
-	
+
+
+    
 }
 
 
 
 function formate_date($date_entree){
 
-	$timestamp= strtotime($date_entree);
-	$tab_jour_semaine=array('dim','lun','mar','mer','jeu','ven','sam');
+    $timestamp= strtotime($date_entree);
+    $tab_jour_semaine=array('dim','lun','mar','mer','jeu','ven','sam');
 
-	$jour_lettre= date('w', $timestamp);
-	$jour_lettre=$tab_jour_semaine[$jour_lettre];
-	$jour= date('d', $timestamp);
-	$mois= converti_Mois_Anglais_Francais(date('n', $timestamp));
-	$annee =date('Y', $timestamp);
+    $jour_lettre= date('w', $timestamp);
+    $jour_lettre=$tab_jour_semaine[$jour_lettre];
+    $jour= date('d', $timestamp);
+    $mois= converti_Mois_Anglais_Francais(date('n', $timestamp));
+    $annee =date('Y', $timestamp);
 
-	$heure = date('H', $timestamp);
-	$min = date('i', $timestamp);
+    $heure = date('H', $timestamp);
+    $min = date('i', $timestamp);
 
-	$heure_min= $heure.'h'.$min.'min';
-	
-	
-	if (strcmp($heure_min, "00h00min")){
+    $heure_min= $heure.'h'.$min.'min';
+    
+    
+    if (strcmp($heure_min, "00h00min")){
 
-		return ($jour_lettre.' '.$jour.' '.$mois.' '.$annee.' à '.$heure_min);
+        return ($jour_lettre.' '.$jour.' '.$mois.' '.$annee.' à '.$heure_min);
 
-	}
-	
+    }
+    
 
-	 else return ($jour_lettre.' '.$jour.' '.$mois.' '.$annee) ;
-	
+     else return ($jour_lettre.' '.$jour.' '.$mois.' '.$annee) ;
+    
 }
 
 
 function converti_Mois_Anglais_Francais($month){
-	$mois= array();
-	$mois=['jan.','fev.', 'mars','avril','mai', 'juin', 'juil.','août', 'sept.','oct', 'nov.','déc.'];
+    $mois= array();
+    $mois=['jan.','fev.', 'mars','avril','mai', 'juin', 'juil.','août', 'sept.','oct', 'nov.','déc.'];
 
-	$retourFrench=$mois[$month-1];
-	return $retourFrench;
+    $retourFrench=$mois[$month-1];
+    return $retourFrench;
 
 }
 
@@ -78,60 +78,60 @@ function converti_Mois_Anglais_Francais($month){
 
 
 function applique_requete($sql_modif, $pdo, $nouvelles_valeurs ){
-				/* requete préparée */
-	  	$modif = $pdo->prepare($sql_modif);
+                /* requete préparée */
+          $modif = $pdo->prepare($sql_modif);
 
-		/* execution de la requete préparée plus haut */
-		$modif->execute ($nouvelles_valeurs);
+        /* execution de la requete préparée plus haut */
+        $modif->execute ($nouvelles_valeurs);
 
-		echo "requête VALIDE<br/>";
-		}
+        echo "requête VALIDE<br/>";
+        }
 
 
 function verif_nouvel_employe($employe_login){
-	return true;
+    return true;
 }
 
 
 function converti_type_input_SQL_vers_HTML ($typeSQL){
 
-	if (preg_match('/varchar/',  $typeSQL)){
-		$resultat="text";
-	}
+    if (preg_match('/varchar/',  $typeSQL)){
+        $resultat="text";
+    }
 
 
-	elseif (preg_match('/tinyint/',  $typeSQL)) {
+    elseif (preg_match('/tinyint/',  $typeSQL)) {
 
-	 	$resultat="radio";
-	 } 
+         $resultat="radio";
+     } 
 
 
-	return $resultat;
+    return $resultat;
 
 }
 
 function cherche_caractere_dans_chaine($chaine, $caractère){
 
-	// calcul la position dans la chaine
-	$position=strpos($chaine, $caractère);
+    // calcul la position dans la chaine
+    $position=strpos($chaine, $caractère);
 
-	return $position;
+    return $position;
 }
 
 function extrait_nombre_entre_parentheses($chaine){
-	// cherche position 1ere parenthese
-	$pos1= strpos($chaine, "(")+1;
+    // cherche position 1ere parenthese
+    $pos1= strpos($chaine, "(")+1;
 
-	// cherche position 2eme parenthese
-	$pos2= strpos($chaine, ")");
+    // cherche position 2eme parenthese
+    $pos2= strpos($chaine, ")");
 
-	$longueur_segment= $pos2-$pos1;
+    $longueur_segment= $pos2-$pos1;
 
-	// extrait chaine entre les deux positions
-	$chaine_extraite=substr($chaine, $pos1,$longueur_segment );
+    // extrait chaine entre les deux positions
+    $chaine_extraite=substr($chaine, $pos1,$longueur_segment );
 
 
-	return $chaine_extraite;
+    return $chaine_extraite;
 }
 
 
@@ -152,7 +152,7 @@ function generer_mot_de_passe($nb_caractere)
 
         return $mot_de_passe;
         // pour utiliser et generer un mdp de 5 caractères:
-		// echo ('voilà votre mdp: '.generer_mot_de_passe(5));
+        // echo ('voilà votre mdp: '.generer_mot_de_passe(5));
 }
 
 
@@ -173,7 +173,7 @@ function generer_login($nb_caractere, $nom_equipe)
 
         return $login;
         // pour utiliser et generer un login de 5 caractères + nom de l'equipe:
-		// echo ('voilà votre login : '.generer_mot_de_passe(5, "mon_equipe"));
+        // echo ('voilà votre login : '.generer_mot_de_passe(5, "mon_equipe"));
 }
 
 
@@ -181,51 +181,51 @@ function generer_login($nb_caractere, $nom_equipe)
 
 /* fonction d'affichage suivant le type MIME  */
 
-	function afficher_suivant_mime($fichier, $credit, $id, $class, $alt) {
+    function afficher_suivant_mime($fichier, $credit, $id, $class, $alt) {
 
-		$typeMime = finfo_file(finfo_open(FILEINFO_MIME_TYPE), $fichier) ;
+        $typeMime = finfo_file(finfo_open(FILEINFO_MIME_TYPE), $fichier) ;
 
-	if ( $typeMime == 'image/jpeg' OR $typeMime =='image/png'OR $typeMime =='image/gif') 
+    if ( $typeMime == 'image/jpeg' OR $typeMime =='image/png'OR $typeMime =='image/gif') 
 
-		{?>
-		<span>
-			<p>
-			<img id = "<?php echo $id; ?>" class= "<?php echo $class;?>" src="<?php echo $fichier ;?>" alt="<?php echo $alt; ?> www.mesrepos.domduf.com"/>
-			</p>
+        {?>
+        <span>
+            <p>
+            <img id = "<?php echo $id; ?>" class= "<?php echo $class;?>" src="<?php echo $fichier ;?>" alt="<?php echo $alt; ?> www.mesrepos.domduf.com"/>
+            </p>
 
-				
-				<?php 
-				if ($credit){ ?>
-			<p class= "<?php echo $class;?>">logo &copy <?php echo $credit ;?></p>
-		
-			<?php } ?>
+                
+                <?php 
+                if ($credit){ ?>
+            <p class= "<?php echo $class;?>">logo &copy <?php echo $credit ;?></p>
+        
+            <?php } ?>
 
-		</span> <?php
-		
-		}
-	
-	elseif ( $typeMime == 'video/webm' OR $typeMime == 'video/mp4' OR $typeMime == 'video/3gpp') /*'video/x-flv'*/
-		
-		{?>
-		<video src="<?php echo $fichier ; ?>" controls poster="./images/Video-Icon-crop-1.png" preload="none" alt ="<?php echo $alt ; ?> www.soullatitude.com" >  <?php echo $alt ; ?> www.soullatitude.com </video>
-		<p>vidéo de type: <?php echo $typeMime ; ?></p>
+        </span> <?php
+        
+        }
+    
+    elseif ( $typeMime == 'video/webm' OR $typeMime == 'video/mp4' OR $typeMime == 'video/3gpp') /*'video/x-flv'*/
+        
+        {?>
+        <video src="<?php echo $fichier ; ?>" controls poster="./images/photos/minion.jpg" preload="none" alt ="<?php echo $alt ; ?> www.soullatitude.com" >  <?php echo $alt ; ?> www.soullatitude.com </video>
+        <p>vidéo de type: <?php echo $typeMime ; ?></p>
 
-			<?php 
-			if ($credit){ ?>
-			<p>Vidéo &copy <?php echo $credit ;?></p>
-			<?php }?>
+            <?php 
+            if ($credit){ ?>
+            <p>Vidéo &copy <?php echo $credit ;?></p>
+            <?php }?>
 
-		<?php 
-		}
+        <?php 
+        }
 
-	}
+    }
 
-	function affiche_variables_session(){
-		?>
-		<pre>
+    function affiche_variables_session(){
+        ?>
+        <pre>
 
         <?php print_r($_SESSION); ?>
         </pre> <?php
-	}
-		
+    }
+        
 ?>
