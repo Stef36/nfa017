@@ -1,0 +1,63 @@
+*NFA083*
+-SEO-
+  Google Search : OK
+  GA : ok
+  nb pages indexées : 28
+  urls : avec et sans www : choisir,
+    remplacer underscore, 
+    accueil : avec et sans index.php : choisir
+  qualité pages indexées : enlever pages mention legales, connexion
+  cnam-serp : ok
+  serp resultat : pas present 10 prem. page
+  h1 : propre et différents : ok
+  structure h1,hn : ok
+  nb mots : 296 ok
+  meta description : parfois coupée
+  sitemap : ok
+  robots.txt : ok
+  htaccess : redirection www vers sans non effective
+  vit affichage : inf 4sec : OK
+-xampp-phpmyadmin-git-
+  GIT : OK
+  BDD : plusieurs tables avec des personnes => complexe
+  Footer prenoms : ne viennent pas de la bdd
+-hosting-ndd-github-
+  NDD : sous-domaine chez 1&1 : ok
+  Hosting : clienthosting.fr : ok
+  Github : https://github.com/Stef36/nfa017/network : ok
+-nfa083-general-
+  CDC : ok
+  cnam-sprint : preuves pas toutes présentes
+
+
+*NFA017*
+-php-include-fonctions-
+  conditions, boucles : ok
+  require, include : ok
+  function : ok
+  Footer prenoms :  ne viennent pas de la bdd
+
+-mysqli-pdo-securite-
+  sql : select * : pas bon
+  page message.php - securité : htmlentities : ok
+  page reception contact : ok
+  backoffice - cnx : ok
+  backoffice - liste articles modifiables : ok
+  backoffice - liste messages : ok
+
+-php-session-cookies-fichiers-
+  bouton connexion : ok
+  prenom connecté : ok
+  bouton deconnexion : ok
+  bienvenue : pas vu
+  fichier csv : le séparateur devrait être des point virgules
+    l'avez-vous ouvert dans un tableur ?
+-nfa017-general-
+  cdc : ok
+  rangement fichiers : ok
+  code commentaires ok
+  code lisibilité : trop aéré ? beaucoup de scroll
+    melange tab et espaces => espaces partout
+  cnam-sprint : preuves pas toutes présentes
+
+Beau travail au global !!!

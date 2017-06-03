@@ -49,7 +49,7 @@ else {?>
 
                                     FROM `type_conge` T 
                                     LEFT JOIN 
-                                    (SELECT * FROM disposer WHERE disposer.employe_id='$id_selection_employe' )
+                                    (SELECT disposer_quantite, employe_id, type_conge_id FROM disposer WHERE disposer.employe_id='$id_selection_employe' )
                                     AS D 
 
                                     ON T.type_conge_id = D.type_conge_id

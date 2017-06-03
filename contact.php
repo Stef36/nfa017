@@ -126,7 +126,7 @@
 
 
     // requete de selection de tous les messages
-    $sqlmessage = "SELECT     *
+    $sqlmessage = "SELECT     contact_id, contact_login_souhait, contact_prenom, contact_nom,  contact_email, contact_telephone, contact_objet,  contact_message, contact_dateTime, contact_adresseIP
                   FROM    contact ;" ;
     
     $messages= $pdo -> query($sqlmessage); 
