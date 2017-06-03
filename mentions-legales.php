@@ -35,12 +35,32 @@
             </h2>
             <br>
             <ul>
-<!--========================= Description des mentions légales =================================-->
+<!--========== Description des mentions légales ==============-->
                 <section id="mentions">
                     <li>Dénomination : Site gratuit pédagogique CP09 du Cnam</li>
-                    <li>Email de contact 1 : dominique.dufour.auditeur@lecnam.net</li>
-                    <li>Email de contact 2 : stephane.laruelle.auditeur@lecnam.net</li>
-                    <li>Co-auteurs : Dominique DUFOUR et Stéphane LARUELLE</li>
+
+                    <!-- cherche en BD les co-auteurs -->
+
+
+                    <?php  $sql_cherche_co_auteurs="SELECT mem_nom, mem_prenom 
+                                                    FROM membre 
+                                                    WHERE mem_prenom != 'Philippe'
+                                                    AND mem_prenom != 'David';";
+
+                        $co_auteurs=  $pdo->query($sql_cherche_co_auteurs);
+
+
+                        while ($co_auteur =$co_auteurs->fetch()) { ?>
+
+                            <li>Co-auteur : <?php echo $co_auteur['mem_prenom'].' '.$co_auteur['mem_nom']; ?></li> <?php
+                            
+                        }
+
+
+
+
+                                                    ?>
+
                     
                     <br>
                     Hébergeur :  1and1<br>
