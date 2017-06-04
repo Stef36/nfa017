@@ -1,5 +1,13 @@
 <?php
 
+function pose_cookie_bienvenue($page){
+	$page=utf8_encode($page);
+	setcookie($page, time() , time() +7, null, null, false, true);
+	echo $page;
+	echo $_COOKIE[$page];
+}
+
+
 function validateDate($date, $format = 'Y-m-d H:i:s'){
 	// source http://php.net/manual/fr/function.checkdate.php
 	    $d = DateTime::createFromFormat($format, $date);
