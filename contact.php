@@ -1,4 +1,7 @@
-<?php session_start();?>
+<?php session_start();
+require ("./includes/fonctions_utiles.php");
+$page=sha1($_SERVER['HTTP_REFERER']);
+pose_cookie_bienvenue($page); ?>
 
 <!DOCTYPE html>
 <html>
@@ -15,6 +18,8 @@
 <body>
 <!--==============================logo========================-->
         <?php include("./includes/logo.inc.php"); ?>
+
+         <?php verif_cookie_bienvenue($page); ?>
 
 <!-- ======================== TITRE ========================== -->
 

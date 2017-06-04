@@ -1,9 +1,10 @@
 <?php
 
+//pose le cookie bienvenue
 function pose_cookie_bienvenue($page){
 	
-	setcookie($page, time() , time() +15, null, null, false, true);
-	//echo $page;
+	setcookie($page, time() , time() +3600, null, null, false, true);
+	echo $page;
 	
 }
 
@@ -18,7 +19,7 @@ function verif_cookie_bienvenue($page){
               ?><p>dernier chargement de la page le <?php echo $date_connection ;?></p><?php
               }else 
               {// sinon affiche bienvenue ?> 
-              <p id="cookie_bienvenue"><?php echo "Bienvenue sur le site !"; ?></p><?php
+              <p id="cookie_bienvenue"><?php echo "Bienvenue sur cette page !"; ?></p><?php
               }
 }
 

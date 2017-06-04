@@ -28,7 +28,7 @@
 <!--==============================logo========================-->
         <?php include("includes/logo.inc.php"); ?>
 
-
+        <?php verif_cookie_bienvenue($page); ?>
 
 
 <!-- ===================== TITRE ===================== -->

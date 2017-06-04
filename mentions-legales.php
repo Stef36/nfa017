@@ -1,3 +1,8 @@
+<?php session_start();
+require ("./includes/fonctions_utiles.php");
+$page=sha1($_SERVER['HTTP_REFERER']);
+pose_cookie_bienvenue($page); ?>
+
 <!DOCTYPE html>
 <html lang="fr" >
 <!-- ======================================================= -->
@@ -15,16 +20,20 @@
     <header>
     <!--==============================logo========================-->
         <?php include("includes/logo.inc.php"); ?>
-        <title>Poser mes repos en ligne</title>
 
-            <h1>Mentions légales - mes repos.com</h1>
-            <br><br>
+        <?php verif_cookie_bienvenue($page); ?>
+
+    <!-- ===================== TITRE ===================== -->
+
+
+    <?php require ("./includes/header.inc.php"); titre_header('MENTIONS LEGALES')?>
+
         </header>
-        <hr/>
+        
 <!-- ===================== MENU ===================== -->
         <?php include("includes/menu.php"); ?>
         
-        <hr/>
+     
         <SECTION class="mentionslegales">
             <br>
             <h2>
