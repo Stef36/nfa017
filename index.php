@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php include("./includes/session_start_et_pose_cookie_bienvenue.inc.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr-fr" >

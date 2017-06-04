@@ -214,7 +214,20 @@ input[type=reset]{
 }
 
 
-/*======================== boutons de/connection=======================*/
+/*======================== boutons cookie et de/connection=======================*/
+
+#cookie_bienvenue {
+    position: absolute;
+    top :95px;
+    right: 20px;
+    border: groove 4px;
+    border-radius: 8px;
+    width: 160px;
+    text-align: center;
+    padding: 2px;
+
+    background-color: #DABF00;  
+}
 
 #administration_connection {
     position: absolute;
