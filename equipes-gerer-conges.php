@@ -1,7 +1,9 @@
-<?php include("./includes/gestion_connection_equipe.inc.php");
+<?php 
 require ("./includes/fonctions_utiles.php");
 $page='equipe_gerer_conges';
-pose_cookie_bienvenue($page);  ?>
+pose_cookie_bienvenue($page); 
+
+include("./includes/gestion_connection_equipe.inc.php"); ?>
 <!-- ================ Connection bdd via PDO ================ -->
 <?php include("./includes/connection.php"); ?>
 <!DOCTYPE html>
