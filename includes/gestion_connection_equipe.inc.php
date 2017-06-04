@@ -1,8 +1,12 @@
 <?php  session_start();
+require ("./includes/fonctions_utiles.php");//pour affichage des logos etc
+$page=sha1($_SERVER['HTTP_REFERER']);
+pose_cookie_bienvenue($page);
+
 
 		// ================ Connection bdd via PDO ================
  		include("./includes/connection.php"); 
-		require('./includes/fonctions_utiles.php');//pour affichage des logos
+		
 		// gestion de la connection
 
 

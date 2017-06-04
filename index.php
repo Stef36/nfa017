@@ -1,6 +1,6 @@
 <?php session_start();
 require ("./includes/fonctions_utiles.php");
-$page=$_SERVER['HTTP_REFERER'];
+$page=sha1($_SERVER['HTTP_REFERER']);
 pose_cookie_bienvenue($page); ?>
 
 
@@ -33,22 +33,13 @@ pose_cookie_bienvenue($page); ?>
 
 
     <body>
-            <?php if (isset($_COOKIE['$page'])) {
-              // n'affiche rien si le cookie est sur l'ordi client
-              $timestamp_date_connection=$_COOKIE[$_COOKIE[$_SERVER['HTTP_REFERER']]];
-              $date_connection= date('j/m/Y à G:i:s',$timestamp_date_connection);
-
-              ?><p>dernier rafraississement de la page le <?php echo $date_connection ;?></p><?php
-              }else 
-              {// sinon affiche bienvenue ?> 
-              <p id="cookie_bienvenue"><?php echo "Bienvenue sur le site !"; ?></p><?php
-              } ?>
-
-
 
 
 <!--==============================logo========================-->
     <?php include("includes/logo.inc.php"); ?>
+
+
+     <?php verif_cookie_bienvenue($page); ?>
 
 <!-- ===================== TITRE ===================== -->
 

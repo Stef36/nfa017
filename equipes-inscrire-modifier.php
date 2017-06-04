@@ -26,6 +26,8 @@
 <!--==============================logo========================-->
         <?php include("includes/logo.inc.php"); ?>
 
+         <?php verif_cookie_bienvenue($page); ?>
+
 <!-- ===================== TITRE ===================== -->
 <?php require ("./includes/header.inc.php"); titre_header('INSCRIRE DES MEMBRES, MODIFIER UNE EQUIPE de TRAVAIL')?>
 <!-- ===================== TITRE ===================== -->

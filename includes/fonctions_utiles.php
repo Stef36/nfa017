@@ -1,10 +1,25 @@
 <?php
 
 function pose_cookie_bienvenue($page){
-	$page=utf8_encode($page);
-	setcookie($page, time() , time() +7, null, null, false, true);
-	echo $page;
-	echo $_COOKIE[$page];
+	
+	setcookie($page, time() , time() +15, null, null, false, true);
+	//echo $page;
+	
+}
+
+
+function verif_cookie_bienvenue($page){
+
+	if (isset($_COOKIE[$page])) {
+              // n'affiche rien si le cookie est sur l'ordi client
+              $timestamp_date_connection=$_COOKIE[$page];
+              $date_connection= date('j/m/Y à G:i:s',$timestamp_date_connection);
+
+              ?><p>dernier chargement de la page le <?php echo $date_connection ;?></p><?php
+              }else 
+              {// sinon affiche bienvenue ?> 
+              <p id="cookie_bienvenue"><?php echo "Bienvenue sur le site !"; ?></p><?php
+              }
 }
 
 

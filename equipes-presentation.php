@@ -1,5 +1,4 @@
-<?php include("./includes/gestion_connection_equipe.inc.php");
-//affiche_variables_session() ?>
+<?php include("./includes/gestion_connection_equipe.inc.php"); ?>
 
 
 <!-- ================ Connection bdd via PDO ================ -->
@@ -27,7 +26,8 @@
 <!--==============================logo========================-->
         <?php include("includes/logo.inc.php"); ?>
 
-
+        <?php verif_cookie_bienvenue($page); ?>
+        
 <!-- ===================== TITRE ===================== -->
 <?php require ("./includes/header.inc.php"); titre_header('LES EQUIPES DE TRAVAIL')?>
 <!-- ===================== TITRE ===================== -->
