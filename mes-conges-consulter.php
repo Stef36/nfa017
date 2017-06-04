@@ -1,4 +1,9 @@
-<?php include("./includes/gestion_connection_employe.inc.php");
+<?php 
+require ("./includes/fonctions_utiles.php");
+$page='mes_conges_consulter';
+pose_cookie_bienvenue($page);
+
+include("./includes/gestion_connection_employe.inc.php");
 
 //affiche_variables_session() ?>
 
