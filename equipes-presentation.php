@@ -1,4 +1,9 @@
-<?php include("./includes/gestion_connection_equipe.inc.php"); ?>
+<?php 
+require ("./includes/fonctions_utiles.php");
+$page='equipe_presentation';
+pose_cookie_bienvenue($page);
+
+include("./includes/gestion_connection_equipe.inc.php"); ?>
 
 
 <!-- ================ Connection bdd via PDO ================ -->

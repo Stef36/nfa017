@@ -1,6 +1,6 @@
 <?php session_start();
 require ("./includes/fonctions_utiles.php");
-$page=sha1($_SERVER['HTTP_REFERER']);
+$page='index';
 pose_cookie_bienvenue($page); ?>
 
 
