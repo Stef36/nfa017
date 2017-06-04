@@ -4,7 +4,7 @@
 function pose_cookie_bienvenue($page){
 	
 	setcookie($page, time() , time() +3600, null, null, false, true);
-	//echo $page;
+	echo $page;
 	
 }
 
