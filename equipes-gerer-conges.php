@@ -29,14 +29,6 @@
 
 <!-- ===================== TITRE ===================== -->
 <?php require ("./includes/header.inc.php"); titre_header('GESTION DES CONGES')?>
-<!-- ===================== TITRE ===================== -->
-
-
-<!-- ===================== TITRE ===================== 
-        <header class="headera">
-            <h1>INFORMATIONS DU PERSONNEL<H1>
-            <h3>GESTION DES CONGES</h3>
-        </header>-->
 
 <!-- ===================== MENU ===================== -->
 
@@ -60,12 +52,12 @@
 <br>
 <hr>
 <!--==========s==========login=============================-->
-                <aside class="log_equipea">
-                <?php include("includes/log_equipe.inc.php"); ?>
-                </aside>
-                <br>
-                <hr>
-                <br>
+        <aside class="log_equipea">
+        <?php include("includes/log_equipe.inc.php"); ?>
+        </aside>
+        <br>
+        <hr>
+        <br>
 <!--===========liste déroulante pour la selection de l'employé==========-->
             <section id="choix_employe">
             <span>Choisissez un employé avec la liste déroulante pour avoir les informations le concernant</span>
@@ -96,25 +88,16 @@
 
 <!--======================================================-->
 
-<<<<<<< HEAD
-
-                            <?php include("includes/employes_conges_restants.inc.php"); ?>
-
-=======
-                            <?php include("includes/employes_conges_restants.inc.php"); ?>
->>>>>>> tableau_conges
-                       
-<section id="container">
+                
+                <section id="container">
                     <section class="flex1">
-<article id="conges_restants">
-                       </article>
+                        <article id="conges_restants">
+                            <?php include("includes/employes_conges_restants.inc.php"); ?>
+                        </article>
                     </section>
-                    
                 </section>
 
 <br>
-
-
 
 <!-- ===================== BAS DE PAGE  ===================== -->
 
