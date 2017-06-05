@@ -18,6 +18,7 @@
 <!--==================================================-->
 <!--==================================================-->
 <!--==================================================-->
+<<<<<<< HEAD
 <hr>
   <?php echo 'Nom employe :' 
   
@@ -28,13 +29,22 @@
   <?php echo 'Equipe :' 
   
   ?>
+=======
+
+>>>>>>> tableau_conges
   
   
   <hr><hr><hr>
 <!--==================================================-->
+<<<<<<< HEAD
 <!--=================affichage tableau conges - OK - =================================-->
 <!--==================================================-->
   
+=======
+<!--=================affichage tableau conges - OK - ========================-->
+<!--==================================================-->
+  <p>Page testsl.inc.php</p>
+>>>>>>> tableau_conges
   <?php         
             $id_selection_employe=$_SESSION['id_selection_employe'];
              // requete de selection des type de congés et des congés attribués à l'employé:
@@ -43,8 +53,15 @@
                                      T.type_conge_id AS id_type_conge,
                                         disposer_quantite, type_conge_unite
                                     FROM `type_conge` T 
+<<<<<<< HEAD
                                     LEFT JOIN 
                                     (SELECT * FROM disposer WHERE disposer.employe_id='$id_selection_employe' )
+=======
+                                    
+                                    LEFT JOIN 
+                                    (SELECT * FROM disposer WHERE disposer.employe_id='$id_selection_employe' )
+                                    
+>>>>>>> tableau_conges
                                     AS D 
                                     ON T.type_conge_id = D.type_conge_id
                                     WHERE T.type_conge_valable=1

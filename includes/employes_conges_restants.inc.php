@@ -1,6 +1,10 @@
 <h2>CONGES RESTANTS</h2>
 
+<<<<<<< HEAD
 <!--==================COMMENT CREER UNE EQUIPE====================-->
+=======
+
+>>>>>>> tableau_conges
 <?php
 
 // ---------   si un employé est connectée-------------------------------
@@ -13,12 +17,20 @@ if (! isset($_SESSION['ticket_employe'])) { ?>
 <?php 
 }
 else { ?>
+<<<<<<< HEAD
  	<h2>Voici le détails des congés posés.</h2>
+=======
+<h2>Voici le détails des congés posés.</h2>
+>>>>>>> tableau_conges
 
 
 
 
+<<<<<<< HEAD
  	<!--  =================== SOLDE DES CONGES ==========================-->
+=======
+<!--  =================== SOLDE DES CONGES ==========================-->
+>>>>>>> tableau_conges
 
 
  <?php         
@@ -157,6 +169,7 @@ else { ?>
  } ?>
 
 
+<<<<<<< HEAD
 
 
 
@@ -186,3 +199,5 @@ else { ?>
     <!-- <input id="conges_valides" type="submit" value="CONGES VALIDES"/>
 </form>-->
 
+=======
+>>>>>>> tableau_conges
