@@ -3,6 +3,7 @@ require ("./includes/fonctions_utiles.php");
 $page='contact';
 pose_cookie_bienvenue($page); ?>
 
+
 <!DOCTYPE html>
 <html>
 <head>

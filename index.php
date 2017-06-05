@@ -4,6 +4,7 @@ $page='index';
 pose_cookie_bienvenue($page); ?>
 
 
+
 <!DOCTYPE html>
 <html lang="fr-fr" >
 
@@ -44,7 +45,9 @@ pose_cookie_bienvenue($page); ?>
 <!-- ===================== TITRE ===================== -->
 
 
+
     <?php require ("./includes/header.inc.php"); titre_header('POSER, CONSULTER ET GERER GRATUITEMENT SES JOURS DE CONGE EN LIGNE')?>
+
 
 
 

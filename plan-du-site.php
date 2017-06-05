@@ -1,7 +1,9 @@
+
 <?php session_start(); 
 require ("./includes/fonctions_utiles.php");
 $page='plan_site';
 pose_cookie_bienvenue($page);?>
+
 
 <!DOCTYPE html>
 <html lang="fr-fr" >
