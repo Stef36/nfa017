@@ -1,5 +1,6 @@
 <?php session_start();
 require ("./includes/fonctions_utiles.php");
+require ("./includes/connection.php");
 $page='index';
 pose_cookie_bienvenue($page); ?>
 

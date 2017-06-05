@@ -1,4 +1,3 @@
-
 <?php session_start();
 require ("./includes/fonctions_utiles.php");
 $page='mentions_legales';
