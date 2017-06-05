@@ -1,11 +1,10 @@
 
 <?php
 
-    $sql_requete_noms = "SELECT employe_id, employe_nom,
-                        employe_prenom
-                        FROM employe
-                        WHERE employe_id=1 OR employe_id=5
-                ;";
+    $sql_requete_noms = "SELECT mem_nom, mem_prenom 
+                        FROM membre 
+                        WHERE mem_prenom != 'Philippe'
+                        AND mem_prenom != 'David';";
             
         $noms_prenoms = $pdo -> query($sql_requete_noms);
        
@@ -13,7 +12,7 @@
         while ($nom_prenom = $noms_prenoms -> fetch()){ ?>
             
                     
-                    <p><?php echo $nom_prenom['employe_nom'];?>&nbsp; <?php echo $nom_prenom['employe_prenom'];?></p>
+                    <p><?php echo $nom_prenom['mem_prenom'];?>&nbsp; <?php echo $nom_prenom['mem_nom'];?></p>
                     
                      <?php
             }

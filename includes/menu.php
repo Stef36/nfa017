@@ -76,7 +76,9 @@
 
 
 </nav>
-<?php require_once "./includes/fonctions_utiles.php" ; affiche_variables_session(); ?>
+
+<?php require_once "./includes/fonctions_utiles.php" ;
+ // affiche_variables_session();?>
 
 </div>
 
