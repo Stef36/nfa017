@@ -1,4 +1,5 @@
-<?php  	session_start(); ?>
+<?php  	session_start();
+require ("./includes/connection.php");?>
 <!DOCTYPE html>
 <html lang="fr-fr">
 

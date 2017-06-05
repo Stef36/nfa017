@@ -19,7 +19,7 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 			
 		}
 
-		 session_start();?>
+session_start();?>
 
 
 
@@ -32,12 +32,13 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 <meta charset="UTF-8" lang="fr"/>
 <meta name="description"  content="Mes Repos contact confirmation" >
 
-<link rel="icon" href="soullat2.ico" />
+<link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico" >
 
-<title>MesRepos | Formulaire_renseignement  </title>
-<link href="./css/style.css" rel="stylesheet" type="text/css" />
+<title>MesRepos | Enregistrement de votre requête.</title>
+        <!-- charger les feuiles de style  -->
+        <link href="./css/style.css" rel="stylesheet" type="text/css" />
+        <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
 </head>
-<!-- ======================================================= -->
 
 
 <body>
@@ -47,7 +48,10 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 
 <!-- ===================== TITRE ===================== -->
 
-<?php require ("./includes/header.inc.php"); titre_header('Contact</br>Mes Repos')?>
+<?php require ("./includes/header.inc.php"); titre_header('Enregistrement de votre demande en base de données, et envoi au webmaster.')?>
+
+<!-- ========================= MENU ======================== -->
+  <?php include("includes/menu.php"); ?>
 
 <!-- ======================================================= -->
 
@@ -62,7 +66,7 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 <section id="centre">
 
 	<!-- ===================== MENU ===================== -->
-	<?php include("includes/menu.php"); 
+	<?php //include("includes/menu.php"); 
 
 	//echo session_cache_expire();?>
 
@@ -250,8 +254,6 @@ if ( 	!isset($_POST['nom']) || $_POST['nom']=='' ||
 <!-- ===================== BAS DE PAGE  ===================== -->
 <?php include("includes/basDePage.php"); ?>
 
-<!-- ============= Appels de scripts JS ================== 
-<script src='./javascripts/localisation.js' type = 'text/javascript' ></script>-->
 
 
 </body>
