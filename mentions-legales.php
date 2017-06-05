@@ -9,11 +9,10 @@ pose_cookie_bienvenue($page); ?>
     <head>
 
         <meta charset="UTF-8" lang="fr">
-        <meta name="Mes Repos"  content="poser consulter jours congés travail équipe ">
-
-        <link rel="icon" href="mes-repos.ico" >
-        <link rel="icon" type="image/x-icon" href="img/photos/favicon.ico">
-        <title>Information du personnel</title>
+        <meta name="Mes Repos"  content="mentions légales gerer consulter jours congés travail équipe ">
+        <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico" >
+ 
+        <title>gerer et consulter gratuitement ses jours de congés, gestion par employeurs, consultation par employes</title>
         <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
         <link href="./css/style.css" rel="stylesheet" type="text/css" />
     </head>
