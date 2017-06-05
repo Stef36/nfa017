@@ -1,7 +1,7 @@
 <?php session_start();
 require ("./includes/fonctions_utiles.php");
 require ("./includes/connection.php");
-$page='index';
+$page='accueuil';
 pose_cookie_bienvenue($page); ?>
 
 
