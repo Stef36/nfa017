@@ -41,8 +41,13 @@ require ("./includes/connection.php");?>
 
 	<span>
   		<H2 >Vous êtes déconnecté.</H2>
+
+
+  		<!-- bouton de retour au choix d'administration -->
+    	<p><a href="backoffice.php" class="liens-direct">Retour page d'administration</a><p>
   	</span>
 
+  	
 
 </section>
 

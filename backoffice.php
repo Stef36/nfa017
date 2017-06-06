@@ -141,7 +141,11 @@
 	<!-- =================   SECTION NON AUTORISEE ADMINISTRATION  ===================== -->
 	<span>
 		<H2>Désolé <?php echo ($_SESSION['login']);?>, mot de passe et/ou login incorrect...
-		<a href="connection-back-office.php"><img src="./images/boutonRetour.png"></a></H2>
+
+		<p>---------------------</p>
+
+  		<!-- bouton de retour au choix d'administration -->
+    	<p><a href="connection-back-office.php" class="liens-direct">Retour page de connection</a><p>
 		
 	</span>
 	
