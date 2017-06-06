@@ -12,24 +12,24 @@
 
             <ul class="container_menu"> <!-- liste non ordonnée -->
         
-                    <li class="flex_menu">
+                    <li>
                     <a href="./index.php" >Accueil</a>
                     </li>
                     
-                    <li class="flex_menu">
+                    <li>
                     <a href="./equipes-presentation.php">Les équipes</a>
                         <ul>
-                            <li class="flex_menu">
+                            <li>
                             <a href="equipes-inscrire-modifier.php">Inscrire / Modifier</a>
                             </li>
-                            <li class="flex_menu">
+                            <li>
                             <a href="equipes-gerer-conges.php">Gerer les congés</a>
                             </li>
                         </ul>        
                     </li>
 
                     
-                    <li class="flex_menu">
+                    <li>
                     <a href="./mes-conges.php">Mes congés</a>
                         <ul>
                             <li>

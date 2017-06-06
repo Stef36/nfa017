@@ -334,7 +334,7 @@ body {
     list-style:none;
 }
 
-/*=============Flexbox Menu=====================*/
+/*=============Flexbox Menu=====================
 .container_menu{
     display:flex;
     flex-direction:column;
@@ -344,7 +344,7 @@ body {
     display:flex;
     flex-direction:column;
     height:auto;
-}
+}*/
 /*=========================taille photo===================*/
 .photo{
     display:inline-block;
