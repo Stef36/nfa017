@@ -9,7 +9,6 @@
 
 <?php
 
-	require('./includes/fonctions_utiles.php');//pour affichage des logos
 
 
 	$sqlequipe = "SELECT 		equipe_id, equipe_mdp, equipe_visible,
