@@ -334,8 +334,13 @@ body {
     list-style:none;
 }
 
-/*=============Flexbox Menu=====================
-.container_menu{
+=============Flexbox Menu=====================
+
+
+
+
+
+/*.container_menu{
     display:flex;
     flex-direction:column;
 }
@@ -356,9 +361,7 @@ body {
 }
 
 
-.container_menu{
-    font-size : 3em;
-}
+
 
 .log_equipe{
     font-size : 3em;
@@ -433,72 +436,6 @@ body {
 #rem{
     font-size : 1em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
