@@ -16,11 +16,11 @@ pose_cookie_bienvenue($page);?>
         <meta charset="UTF-8" lang="fr">
 
  
-        <meta name="description" content="mesrepos.domduf.com plan du site">
+        <meta name="description" content="mesrepos.com plan du site">
 
-        <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico" alt="favicon site mesrepos.domduf.com">
+        <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico" alt="favicon site mesrepos.com">
         
-        <title>Plan du site mesrepos.domduf.com</title>
+        <title>Plan du site mesrepos.com</title>
 
         <!-- charger les feuiles de style  -->
         <link href="./css/style.css" rel="stylesheet" type="text/css" />

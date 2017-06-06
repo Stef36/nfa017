@@ -211,7 +211,7 @@ session_start();?>
 
 			/* envoi d'un mail de signalement d'un nouveau message aux webmasters */
 
-			$sujet= "Nouveau message posté sur le site mesrepos.domduf.com";
+			$sujet= "Nouveau message posté sur le site mesrepos.com";
 			$misEnFormeMessage = wordwrap($message, 70, "\r\n");
 			
 			$corp="<H4>Message de Monsieur ou Madame<br> --- ".$prenom." ".$nom."---</H4>

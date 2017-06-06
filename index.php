@@ -107,10 +107,10 @@ require ("./includes/connection.php"); ?>
 
     <p id="animation">
 
-        <img src="./images/animation-accueuil/4.jpg" id="image4" alt="les employes peuvent consulter et poser leurs conges en ligne mesrepos.domduf.com">
-        <img src="./images/animation-accueuil/3.jpg" id="image3" alt="le responsable drh construit son equipe et attribue conges mesrepos.domduf.com">    
-        <img src="./images/animation-accueuil/2.jpg" id="image2" alt="le responsable site mesrepos donne gratuitement login responsable equipe mesrepos.domduf.com">
-        <img src="./images/animation-accueuil/1.jpg" id="image1" alt="le responsable equipe drh contacte responsable site mesrepos mesrepos.domduf.com">
+        <img src="./images/animation-accueuil/4.jpg" id="image4" alt="les employes peuvent consulter et poser leurs conges en ligne mesrepos.com">
+        <img src="./images/animation-accueuil/3.jpg" id="image3" alt="le responsable drh construit son equipe et attribue conges mesrepos.com">    
+        <img src="./images/animation-accueuil/2.jpg" id="image2" alt="le responsable site mesrepos donne gratuitement login responsable equipe mesrepos.com">
+        <img src="./images/animation-accueuil/1.jpg" id="image1" alt="le responsable equipe drh contacte responsable site mesrepos mesrepos.com">
 
 
 

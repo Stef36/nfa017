@@ -214,7 +214,7 @@ function generer_login($nb_caractere, $nom_equipe)
         {?>
         <span>
             <p>
-            <img id = "<?php echo $id; ?>" class= "<?php echo $class;?>" src="<?php echo $fichier ;?>" alt="<?php echo $alt; ?> www.mesrepos.domduf.com"/>
+            <img id = "<?php echo $id; ?>" class= "<?php echo $class;?>" src="<?php echo $fichier ;?>" alt="<?php echo $alt; ?> www.mesrepos.com"/>
             </p>
 
                 

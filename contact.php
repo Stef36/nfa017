@@ -32,7 +32,7 @@ pose_cookie_bienvenue($page); ?>
 
   <section id="">
   
-      <H3>Vous souhaitez pouvoir utiliser "mesrepos.domduf.com"</H3>
+      <H3>Vous souhaitez pouvoir utiliser "mesrepos.com"</H3>
       <p>Merci de bien vouloir remplir ce formulaire, et nous vous envoyons votre code au plus vite. </p>
 
       <p><?php
