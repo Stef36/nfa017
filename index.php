@@ -51,9 +51,8 @@ require ("./includes/connection.php"); ?>
 
 
 
+<section id="vide_sideral"></section>
 
-<!-- ===================== MENU ===================== -->
-    <?php include("includes/menu.php"); ?>
 
 
 <section id="provisoire">
@@ -120,7 +119,8 @@ require ("./includes/connection.php"); ?>
     
 
 </section>
-  
+  <!-- ===================== MENU ===================== -->
+    <?php include("includes/menu.php"); ?>
 
 
 <!-- ===================== BAS DE PAGE  ===================== -->
