@@ -37,16 +37,13 @@ include("./includes/gestion_connection_equipe.inc.php"); ?>
 <?php require ("./includes/header.inc.php"); titre_header('LES EQUIPES DE TRAVAIL')?>
 <!-- ===================== TITRE ===================== -->
 
-<!-- ===================== TITRE =====================
-        <header class="headera">
-            <h1>LES EQUIPES DE TRAVAIL<H1>
-        </header> -->
 
 
-<!-- ===================== MENU ===================== -->
-        
-        <?php include("includes/menu.php"); ?>
- 
+<!-- ===================== VIDE POUR MENU   ========================== -->
+<!--============= (include en bas de page pour referencement)  ======= -->
+<section id="vide_sideral"></section>
+
+
 
  <p>Voici un récapitulatif de votre équipe de travail.</p>
  <p>Ici pour <a href="./equipes-inscrire-modifier.php" class="liens-direct">construire l'équipe</a>  et attribuer les congés, ou là pour<a href="./equipes-gerer-conges.php" class="liens-direct">gérer les congés</a> </p>  
@@ -103,19 +100,6 @@ include("./includes/gestion_connection_equipe.inc.php"); ?>
             <?php include("includes/equipes.inc.php"); ?>
             </article>
         </section>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         

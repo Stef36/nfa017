@@ -33,8 +33,9 @@
 <?php require ("./includes/header.inc.php"); titre_header('Liste administration')?>
 
 
-<!-- ===================== MENU ===================== -->
-<?php include("includes/menu.php"); ?>
+<!-- ===================== VIDE POUR MENU   ========================== -->
+<!--============= (include en bas de page pour referencement)  ======= -->
+<section id="vide_sideral"></section>
 
 
 
@@ -159,7 +160,8 @@
 
 
 
-
+<!-- ===================== BAS DE PAGE  ===================== -->
+        <?php include("includes/basDePage.php"); ?>
 </body>
 
 </html>

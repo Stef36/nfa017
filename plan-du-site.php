@@ -48,8 +48,9 @@ pose_cookie_bienvenue($page);?>
 
 
 
-<!-- ===================== MENU ===================== -->
-    <?php include("includes/menu.php"); ?>
+<!-- ===================== VIDE POUR MENU   ========================== -->
+<!--============= (include en bas de page pour referencement)  ======= -->
+<section id="vide_sideral"></section>
 
 
 <section id="plan-site">

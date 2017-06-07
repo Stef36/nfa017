@@ -27,8 +27,9 @@ pose_cookie_bienvenue($page); ?>
   <?php require ("./includes/header.inc.php"); titre_header('Formulaire de Contact')?>
 
 
-  <!-- ========================= MENU ======================== -->
-  <?php include("includes/menu.php"); ?>
+<!-- ===================== VIDE POUR MENU   ========================== -->
+<!--============= (include en bas de page pour referencement)  ======= -->
+<section id="vide_sideral"></section>
 
   <section id="">
   

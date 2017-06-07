@@ -33,11 +33,17 @@ require ("./includes/connection.php");?>
 
 <?php require ("./includes/header.inc.php"); titre_header('Déconnection </br>back-office')?>
 
+
+<!-- ===================== VIDE POUR MENU   ========================== -->
+<!--============= (include en bas de page pour referencement)  ======= -->
+<section id="vide_sideral"></section>
+
 <!-- ===================== VISUEL ===================== -->
 
+
+
 <section id="centre">
-<!-- ===================== MENU ===================== -->
-	<?php include("includes/menu.php"); ?>
+
 
 	<span>
   		<H2 >Vous êtes déconnecté.</H2>

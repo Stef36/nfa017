@@ -44,9 +44,9 @@ include("./includes/gestion_connection_equipe.inc.php"); ?>
             <h3>INSCRIRE / MODIFIER UNE EQUIPE</h3>
         </header>-->
 
-<!-- ===================== MENU ===================== -->
-
-        <?php include("includes/menu.php"); ?>
+<!-- ===================== VIDE POUR MENU   ========================== -->
+<!--============= (include en bas de page pour referencement)  ======= -->
+<section id="vide_sideral"></section>
 
 <!-- ======== SECTION illustration de l'article ======= -->
     <section id="image-article">

@@ -51,6 +51,8 @@ require ("./includes/connection.php"); ?>
 
 
 
+<!-- ===================== VIDE POUR MENU   ========================== -->
+<!--============= (include en bas de page pour referencement)  ======= -->
 <section id="vide_sideral"></section>
 
 

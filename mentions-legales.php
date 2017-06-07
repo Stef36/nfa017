@@ -31,8 +31,9 @@ pose_cookie_bienvenue($page); ?>
 
         </header>
         
-<!-- ===================== MENU ===================== -->
-        <?php include("includes/menu.php"); ?>
+<!-- ===================== VIDE POUR MENU   ========================== -->
+<!--============= (include en bas de page pour referencement)  ======= -->
+<section id="vide_sideral"></section>
         
      
         <SECTION class="mentionslegales">

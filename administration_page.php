@@ -31,10 +31,15 @@
 
 <!-- ===================== VISUEL ===================== -->
 
+<!-- ===================== VIDE POUR MENU   ========================== -->
+<!--============= (include en bas de page pour referencement)  ======= -->
+<section id="vide_sideral"></section>
+
+
+
 <section id="centre">
-<!-- ===================== MENU ===================== -->
-	<?php include("includes/menu.php");  ?>
-<!-- ================================================ -->
+
+
 
   		<section id="administration">
 
