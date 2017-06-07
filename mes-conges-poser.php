@@ -42,14 +42,9 @@ include("./includes/gestion_connection_employe.inc.php");
 
 
 
-<!--=======voir si possibilité===Menu de demande de validation================-->
-        <article id="warm">
-            <!-- warm -->
-        
-        </article>
-<!-- ===================== MENU ===================== -->
-
-        <?php include("includes/menu.php"); ?>
+<!-- ===================== VIDE POUR MENU   ========================== -->
+<!--============= (include en bas de page pour referencement)  ======= -->
+<section id="vide_sideral"></section>
 
 
 

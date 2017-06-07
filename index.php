@@ -24,6 +24,9 @@ require ("./includes/connection.php"); ?>
         <title>Poser, consulter, gerer mes repos et jours de conges en ligne</title>
 
         <!-- charger les feuiles de style  -->
+        <meta name="viewport" 
+            content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <!--prend largeur celle largeur ecran-->
         <link href="./css/style.css" rel="stylesheet" type="text/css" />
         <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
         <!-- animation du mode d'emploi via css dédié  -->
@@ -51,12 +54,13 @@ require ("./includes/connection.php"); ?>
 
 
 
+<!-- ===================== VIDE POUR MENU   ========================== -->
+<!--============= (include en bas de page pour referencement)  ======= -->
+<section id="vide_sideral"></section>
 
-<!-- ===================== MENU ===================== -->
-    <?php include("includes/menu.php"); ?>
 
 
-<section id="provisoire">
+<section id="blabla_accueil">
 
 
 <ol>
@@ -122,7 +126,8 @@ require ("./includes/connection.php"); ?>
     
 
 </section>
-  
+  <!-- ===================== MENU ===================== -->
+    <?php include("includes/menu.php"); ?>
 
 
 <!-- ===================== BAS DE PAGE  ===================== -->

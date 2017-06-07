@@ -1,3 +1,7 @@
+<!-- ===================== MENU ===================== -->
+        
+        <?php include("includes/menu.php"); ?> 
+
 <footer class="footer">
 
 	<script>(function(d, s, id) {

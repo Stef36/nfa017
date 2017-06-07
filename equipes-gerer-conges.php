@@ -41,9 +41,11 @@ include("./includes/gestion_connection_equipe.inc.php"); ?>
 
 
 
-<!-- ===================== MENU ===================== -->
+<!-- ===================== VIDE POUR MENU   ========================== -->
+<!--============= (include en bas de page pour referencement)  ======= -->
+<section id="vide_sideral"></section>
 
-        <?php include("includes/menu.php"); ?>
+
 
 
 <!-- ============= IMAGE ARTICLE et SOUS-TITRE ======= -->

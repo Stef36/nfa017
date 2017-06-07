@@ -10,7 +10,7 @@ body {
 H1{    
     position: absolute;
     top :30px;
-    left: 28%;
+    left: 30%;
     width: 50%;
     color:#362938;
     text-align:center;
@@ -334,17 +334,7 @@ body {
     list-style:none;
 }
 
-/*=============Flexbox Menu=====================*/
-.container_menu{
-    display:flex;
-    flex-direction:column;
-}
 
-.flex_menu{
-    display:flex;
-    flex-direction:column;
-    height:auto;
-}
 /*=========================taille photo===================*/
 .photo{
     display:inline-block;
@@ -356,9 +346,7 @@ body {
 }
 
 
-.container_menu{
-    font-size : 3em;
-}
+
 
 .log_equipe{
     font-size : 3em;
@@ -433,72 +421,6 @@ body {
 #rem{
     font-size : 1em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

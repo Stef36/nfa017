@@ -15,6 +15,7 @@
 
   <title>Administration | Poser mes repos en ligne  </title>
   <link href="./css/style.css" rel="stylesheet" type="text/css" />
+  <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
 </head>
 <!-- ======================================================= -->
 
@@ -26,15 +27,20 @@
 
 <!-- ===================== TITRE ===================== -->
 
-<?php require ("./includes/header.inc.php"); titre_header('Page d\'administration')?>
+<?php require ("./includes/header.inc.php"); titre_header('PAGE d\'ADMINISTRATION')?>
 
 
 <!-- ===================== VISUEL ===================== -->
 
+<!-- ===================== VIDE POUR MENU   ========================== -->
+<!--============= (include en bas de page pour referencement)  ======= -->
+<section id="vide_sideral"></section>
+
+
+
 <section id="centre">
-<!-- ===================== MENU ===================== -->
-	<?php include("includes/menu.php");  ?>
-<!-- ================================================ -->
+
+
 
   		<section id="administration">
 
