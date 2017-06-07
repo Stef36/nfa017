@@ -4,7 +4,8 @@
 <nav id = "navigation"  class="menu">  
 
     <input type="checkbox" id="toggle-nav" aria-label="open/close navigation">
-  <label for="toggle-nav" class="nav-button"></label>
+    
+    <label for="toggle-nav" class="nav-button"></label>
 
     <div class="nav-inner">
         
