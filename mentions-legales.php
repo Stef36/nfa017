@@ -1,8 +1,9 @@
 <?php session_start();
 require ("./includes/fonctions_utiles.php");
-require ("./includes/connection.php");
 $page='mentions_legales';
-pose_cookie_bienvenue($page); ?>
+pose_cookie_bienvenue($page); 
+
+require ("./includes/connection.php");?>
 
 
 <!DOCTYPE html>
