@@ -1,4 +1,4 @@
-
+<section>
 <H2> Gestion des membres du Back-Office </H2>
 <br>
 
@@ -65,4 +65,4 @@
 
         <br>
         
-            
+</section>    

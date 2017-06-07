@@ -30,7 +30,7 @@
 
 <!-- ===================== TITRE ===================== -->
 
-<?php require ("./includes/header.inc.php"); titre_header('Liste administration')?>
+<?php require ("./includes/header.inc.php"); titre_header('MENU ADMINISTRATION')?>
 
 
 <!-- ===================== VIDE POUR MENU   ========================== -->
