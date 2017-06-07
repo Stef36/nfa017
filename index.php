@@ -62,9 +62,9 @@ require ("./includes/connection.php"); ?>
 <ol>
 
     <li>
-        <h2>Le chef d'équipe interressé par le site demande son inscription via le menu "contact" </h2>
+        <h2>Le chef d'équipe interessé par le site demande son inscription via le menu "contact" </h2>
 
-        <p>Vous avez entendu parler du site "mesrepos", et vous êtes interréssés par une centralisation claire de la gestion des congés de vos employés</p>
+        <p>Vous avez entendu parler du site "mesrepos", et vous êtes interessés par une centralisation claire de la gestion des congés de vos employés</p>
 
         <p>Vous aimeriez avoir gratuitement une vue des congés à un instant "t" de l'ensemble des travailleurs sous votre responsabilité.</p>
     </li>
@@ -84,7 +84,7 @@ require ("./includes/connection.php"); ?>
         <h2>La construction de votre équipe peut commencer en ligne.
         </h2>
 
-        <p>Le responsable peut se logger (via menu "Les équipes") et construire son équipe (via  menu "Les équipes" /"Inscrire-Modifier") , en créant une chaque employé, en remplissant les champs NOM, prénom, etc, y compris le mail de l'employé.</p>
+        <p>Le responsable peut se logger (menu "Les équipes") et construire son équipe (sous-menu "Inscrire-Modifier"), créer une fiche pour chaque employé, en remplissant les champs NOM, prénom, mail, etc.</p>
 
     </li>
 
@@ -94,6 +94,8 @@ require ("./includes/connection.php"); ?>
         <h2>Les employés peuvent poser et consulter leurs congés et leurs jours de repos gratuitement .</h2>
 
         <p>Les employés reçoivent individuellement un mail avec leur loggin (créés par le chef d'équipe) et le mdp. Les employés peuvent se logger en menu "Mes congés"</p>
+
+        <p>Il est très simple ensuite de consulter et gérer ses jours de repos et de congé.</p>
 
     </li>
 
