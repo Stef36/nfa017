@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 
@@ -9,7 +9,11 @@ body {
 }
 
 
- 
+ #blabla_accueil ol, #blabla_accueil li{
+   margin:10px 15px;
+   padding: 2px;
+}
+
 
 
 /* -------------        DISPOSITION du menu écran PC  --------------------*/
@@ -101,8 +105,8 @@ nav > input,
 
 #posMenu{
 position: fixed;
-top :160px;
-right:50px;
+top :7%;
+right:80px;
 }
 
 .nav-inner {
@@ -116,10 +120,10 @@ right:50px;
    border-radius:15px;
   }
 
-.nav-inner  a,.nav-inner ul,.nav-inner li ul li {
+.nav-inner  a , .nav-inner ul,.nav-inner li ul li {
     font-size : 1.1em;
-    margin: 10px;
-    padding: 5px;
+    margin: 1%;
+    padding: 1%;
     text-decoration: none;
     list-style-type: none;
 }
