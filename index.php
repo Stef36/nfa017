@@ -62,9 +62,9 @@ require ("./includes/connection.php"); ?>
 <ol>
 
     <li>
-        <h2>Le chef d'équipe interessé par le site demande son inscription via le menu "contact" </h2>
+        <h2>Le chef d'équipe intéressé par le site demande son inscription via le menu "contact" </h2>
 
-        <p>Vous avez entendu parler du site "mesrepos", et vous êtes interessés par une centralisation claire de la gestion des congés de vos employés</p>
+        <p>Vous avez entendu parler du site "mesrepos", et vous êtes intéressés par une centralisation claire de la gestion des congés de vos employés</p>
 
         <p>Vous aimeriez avoir gratuitement une vue des congés à un instant "t" de l'ensemble des travailleurs sous votre responsabilité.</p>
     </li>
