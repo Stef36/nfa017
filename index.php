@@ -24,8 +24,8 @@ require ("./includes/connection.php"); ?>
         <title>Poser, consulter, gerer mes repos et jours de conges en ligne</title>
 
         <!-- charger les feuiles de style  -->
-        <meta name="viewport" 
-            content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <!--<meta name="viewport" 
+            content="width=device-width, initial-scale=1.0, shrink-to-fit=no">-->
         <!--prend largeur celle largeur ecran-->
         <link href="./css/style.css" rel="stylesheet" type="text/css" />
         <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
