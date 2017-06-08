@@ -13,8 +13,9 @@ pose_cookie_bienvenue($page); ?>
 
 
   <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico">
-  <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
   <link href="./css/style.css" rel="stylesheet" type="text/css" />
+  <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
 <!--==============================logo========================-->
