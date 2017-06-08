@@ -31,13 +31,13 @@ h1{
 
 
 #vide_sideral{
-    height: 130px;
+    height: 150px;
 }
 
 #posMenu{
 
 position: absolute;
-top :270px;
+top :280px;
 left:20%;
 width: 64%; 
 } 
