@@ -9,7 +9,7 @@
 
 <?php
 
-
+	require_once("./includes/fonctions_utiles.php");
 
 	$sqlequipe = "SELECT 		equipe_id, equipe_mdp, equipe_visible,
 								equipe_login, equipe_nom, equipe_entreprise,
@@ -67,6 +67,7 @@
 
 					<?php if ($equipe['equipe_logo']) {
 						# code...
+						
 						afficher_suivant_mime($equipe['equipe_logo'],$equipe['equipe_entreprise'] , NULL, 'logo_equipe', NULL );
 					}
 
