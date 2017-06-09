@@ -107,13 +107,18 @@ pose_cookie_bienvenue($page); ?>
     </p>
     </form><br>
 
+    
     <?php if ( !isset($_SESSION['login'])) { 
     // ne charge pas la map si connecté comme administrateur ?>
+    <section id="contientMapGoogle">
+    
+      <p>Voici la carte</p>
+      <!--=========================== API GOOGLE MAP ==============================-->
+      <div id="siegeSocial"></div><br>
 
-<!--=========================== API GOOGLE MAP ==============================-->
-    <div id="siegeSocial"></div><br> 
+    </section>
     <?php } ?>               
-
+  
 
   <!-- ===================AFFICHE MESSAGES RECUS      ======= -->
   <!-- =================  si connecté administrateur  ======= -->
