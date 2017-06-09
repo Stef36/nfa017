@@ -56,13 +56,16 @@ margin-left:5%;
 
 #contientMapGoogle {
     height: 400px;
-    position: center;
+    padding: 5px;
+    
 
 }
 #siegeSocial { 
 
 height:380px;
-width: 85%;
+width: 90%;
+margin-left:5%;
+
 
 }
 
