@@ -112,7 +112,7 @@ pose_cookie_bienvenue($page); ?>
     // ne charge pas la map si connecté comme administrateur ?>
     <section id="contientMapGoogle">
     
-      <p>Voici la carte de nos bureaux:</p>
+      <H3>Voici la carte de situation de nos bureaux:</H3>
       <!--=========================== API GOOGLE MAP ==============================-->
       <div id="siegeSocial"></div><br>
 
