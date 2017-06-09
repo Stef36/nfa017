@@ -110,13 +110,8 @@ pose_cookie_bienvenue($page); ?>
     <?php if ( !isset($_SESSION['login'])) { 
     // ne charge pas la map si connecté comme administrateur ?>
 
-<!--==============================GOOGLE MAP================================-->
-    <div >
-                <a>Où sommes nous ?</a><br><br>
-                <a href="" onmouseover="javascript:map('id_div_1'); return false;">
-               <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241425.24280187566!2d1.9475511813183024!3d48.04466644576435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5aacf14d343fb%3A0x1c0dc8da45484380!2s45170+Neuville-aux-Bois!5e0!3m2!1sfr!2sfr!4v1493323796756" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></a> <br>
-                
-            </div><br> 
+<!--=========================== API GOOGLE MAP ==============================-->
+    <div id="siegeSocial"></div><br> 
     <?php } ?>               
 
 
@@ -263,6 +258,9 @@ pose_cookie_bienvenue($page); ?>
 
 
   <!-- ============= Appels de scripts JS ================== -->
+
+
+
   <script src='./javascripts/validationChamps.js' type = 'text/javascript' ></script>
   <script src='./javascripts/date.js' type = 'text/javascript' ></script>
   <script src='./javascripts/kapcha.js' type = 'text/javascript' ></script>
@@ -275,5 +273,13 @@ pose_cookie_bienvenue($page); ?>
                         document.write('Largeur de la page : ' + $largeur + ' px');
                     }
                 </script>
+
+
+    <!-- appel du script de description des maps -->
+  <script src="./javascripts/carteAPI.js" type="text/javascript"></script>
+  <!-- appel de l'API maps.googleapis.com -->
+  <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOHWWei_kxzQHKPI7S1i30G9nMetL0RV0&callback=initMap">
+    </script>
 </body>
 </html>
