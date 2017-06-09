@@ -16,8 +16,9 @@ require ("./includes/connection.php");?>
         <link rel="icon" type="image/x-icon" href="./images/photos/favicon.ico" >
  
         <title>gerer et consulter gratuitement ses jours de congés, gestion par employeurs, consultation par employes</title>
-        <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
-        <link href="./css/style.css" rel="stylesheet" type="text/css" />
+         <link href="./css/style.css" rel="stylesheet" type="text/css" />
+         <link href="./css/stylea.css" rel="stylesheet" type="text/css" />
+
     </head>
     <header>
     <!--==============================logo========================-->
@@ -77,14 +78,11 @@ require ("./includes/connection.php");?>
                     
                 </section>
             </ul>
-            <br>
-            <br>
-            <br>
-            <h2> Commentaires : <br>
+ 
+            <h3> Commentaires : <br>
                 Ce site a été développé avec l'aide de Notepad++, Sublime Text, Linux (Debian 8) GitHub & Gimp qui nous ont permis de développer de façon graphique ce site. <br><br><br>
-            </h2>
-            <p>Attention, ce site est encore en cours de développement, certaines fonctionalités ne sont pas implémentées.</p>
-            <p>Merci de patienter notament pour la partie "Gérer les congés"</p>
+            </h3>
+
 
         <footer>
 <!-- ===================== BAS DE PAGE  ===================== -->
