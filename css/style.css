@@ -14,6 +14,48 @@ body {
    padding: 2px;
 }
 
+/* -------------- alignement des "input" du formulaire --------------------- */
+
+#preInscription fieldset{
+margin: 25px;
+}
+
+#preInscription legend {
+    font-size:1.5em;
+}
+
+#preInscription  input, #preInscription #rem {
+display:block;
+margin-left:5%;
+
+}
+
+#preInscription  input:not(#rem)
+  {
+    height: 25px;
+    font-size: 1.1em;
+
+}
+
+#preInscription input[type="radio"] {
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+#kapcharep{
+    
+    width:50px;
+}
+
+
+#preInscription textarea {
+    width: 75%;
+    height: 200px;
+    font-size: 1.5em;
+}
+
+
+
 
 
 /* -------------        DISPOSITION du menu écran PC  --------------------*/
