@@ -162,11 +162,21 @@ else {?>
                     <tr>
                         <td><?php echo $tab_id[$i]; ?></td>
                         <td><?php echo $tab_NOM[$i]; ?></td>
-                        <td><?php echo $tab_qt_attribuee[$i].' '.$tab_inite[$i];
+                        <td><?php 
 
-                            if (floatval($tab_qt_attribuee[$i])>=2 ) {
-                                echo "s"; 
-                            } ?>
+                        // si qté attribuée non nulle, l'affiche
+                        if ($tab_qt_attribuee[$i]!='' AND
+                            floatval($tab_qt_attribuee[$i])!=0 )
+                            {
+                                echo $tab_qt_attribuee[$i].' '.$tab_inite[$i];
+                                // test et affiche un 's' si quantité suffisante
+                                if (floatval($tab_qt_attribuee[$i])>=2 ) {
+                                    echo "s"; 
+                                }
+                            }else echo '---';
+
+
+                            ?>
                             
                         </td>
                         <td><?php 
