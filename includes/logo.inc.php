@@ -4,8 +4,10 @@
 
 
 <header >
+
+	<img src="./images/banniere_valise_se_barre2.gif" id="banniere">
  
-    <a href="index.php"><img src="./images/Logo/MRepos.com40.png" alt="logo site mesrepos.com" class="logo"></a><br/>
+    <a href="./index.php"><img src="./images/Logo/MRepos.com40.png" alt="logo site mesrepos.com" class="logo"></a><br/>
 
     <div class="fb-like" data-href="http://mesrepos.com/" data-width="20" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div><br/>
 
