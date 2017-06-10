@@ -33,7 +33,7 @@ function titre_header($titre)
  
 				fclose($monfichier);
  
-				echo '<p id="compteur">Depuis le 18 mai 2017, cette page a été vue ' . $pages_vues . ' fois.</p>';
+				echo '<p id="compteur">Depuis le 10 juin 2017, page vue '. $pages_vues . ' fois.</p>';
 				?>
 </div>
 
