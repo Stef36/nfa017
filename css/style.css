@@ -82,8 +82,10 @@ border-radius: 7px;
 
     #banniere {
     position:absolute;
-    top:15px;
-    left:350px;
+    top:52px;
+    left:25%;
+    width: 60%;
+    max-height: 250px;
 }
 
 h1{    
