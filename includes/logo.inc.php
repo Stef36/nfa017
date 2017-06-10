@@ -5,7 +5,7 @@
 
 <header >
 
-	<img src="./images/banniere_valise_se_barre2.gif" id="banniere">
+	<img src="./images/conge-pose-valise-partir-vacances.gif" id="banniere" alt="conge pose employe fait valise partir vacances gif mesrepos.com">
  
     <a href="./index.php"><img src="./images/Logo/MRepos.com40.png" alt="logo site mesrepos.com" class="logo"></a><br/>
 
