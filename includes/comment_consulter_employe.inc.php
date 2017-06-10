@@ -163,7 +163,13 @@ else {?>
                         <td><?php echo $tab_id[$i]; ?></td>
                         <td><?php echo $tab_NOM[$i]; ?></td>
                         <td><?php echo $tab_qt_attribuee[$i].' '.$tab_inite[$i]."(s)"; ?></td>
-                        <td><?php echo $tab_conges_accordes[$tab_id[$i]].' '.$tab_inite[$i]."(s)"; ?></td>
+                        <td><?php 
+                            // si solde non nul, affiche le solde
+                            if ($tab_conges_accordes[$tab_id[$i]]!='') {
+                                echo $tab_conges_accordes[$tab_id[$i]].' '.$tab_inite[$i]."(s)"; 
+                                } // sinon n'affiche rien
+                                else echo '---';?>
+                        </td>
                         
                     </tr> 
                    <?php 
