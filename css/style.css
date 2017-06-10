@@ -183,8 +183,7 @@ nav > input,
 @media screen and (max-width: 980px) {
 
     #banniere {
-       width: 50%;
-       border-radius:15px;
+       display: none;
 
     }
 
