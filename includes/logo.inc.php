@@ -4,6 +4,8 @@
 
 
 <header >
+
+	<img src="./images/banniere_valise_se_barre2.gif" id="banniere">
  
     <a href="./index.php"><img src="./images/Logo/MRepos.com40.png" alt="logo site mesrepos.com" class="logo"></a><br/>
 
