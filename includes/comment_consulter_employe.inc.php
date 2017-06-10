@@ -57,7 +57,7 @@ else {?>
                                     ON T.type_conge_id = D.type_conge_id
 
                                     WHERE T.type_conge_valable=1
-                                        AND disposer_quantite != ''
+                                    ORDER BY type_conge_nom    
 
                                     ;";
 
@@ -86,7 +86,10 @@ else {?>
                 $tab_NOM[]=$employe_dispose_type_conge['type_conge_nom'];   
                     
                 //echo $employe_dispose_type_conge['disposer_quantite'];
-                $tab_qt_attribuee[]= $employe_dispose_type_conge['disposer_quantite'];
+                if ($employe_dispose_type_conge['disposer_quantite']=='')
+                    {$tab_qt_attribuee[]=0;}else 
+                {
+                $tab_qt_attribuee[]= $employe_dispose_type_conge['disposer_quantite'];}
                      
                 //echo $employe_dispose_type_conge['type_conge_unite']."(s)";
                 $tab_inite[]=$employe_dispose_type_conge['type_conge_unite'];
