@@ -15,11 +15,7 @@ body {
 }
 
 
-#banniere {
-    position:absolute;
-    top:15px;
-    left:350px;
-}
+
 
 /* -------------- alignement des "input" du formulaire --------------------- */
 
@@ -83,6 +79,12 @@ border-radius: 7px;
 
 /* -------------        DISPOSITION du menu écran PC  --------------------*/
 @media screen and (min-width: 981px){
+
+    #banniere {
+    position:absolute;
+    top:15px;
+    left:350px;
+}
 
 h1{    
     position: absolute;
@@ -179,6 +181,12 @@ nav > input,
 /**************@media screen and (max-width: 980px)*********************/
 /***********************************************************************/
 @media screen and (max-width: 980px) {
+
+    #banniere {
+       width: 50%;
+       border-radius:15px;
+
+    }
 
     h1{    
     position: relative;
