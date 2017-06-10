@@ -162,11 +162,24 @@ else {?>
                     <tr>
                         <td><?php echo $tab_id[$i]; ?></td>
                         <td><?php echo $tab_NOM[$i]; ?></td>
-                        <td><?php echo $tab_qt_attribuee[$i].' '.$tab_inite[$i]."(s)"; ?></td>
+                        <td><?php echo $tab_qt_attribuee[$i].' '.$tab_inite[$i];
+
+                            if (floatval($tab_qt_attribuee[$i])>=2 ) {
+                                echo "s"; 
+                            } ?>
+                            
+                        </td>
                         <td><?php 
                             // si solde non nul, affiche le solde
                             if ($tab_conges_accordes[$tab_id[$i]]!='') {
-                                echo $tab_conges_accordes[$tab_id[$i]].' '.$tab_inite[$i]."(s)"; 
+                                echo $tab_conges_accordes[$tab_id[$i]].' '.$tab_inite[$i];
+
+                                    // test et affiche un 's' si quantité suffisante
+                                    if (floatval($tab_conges_accordes[$tab_id[$i]])>=2 ||
+                                        floatval($tab_conges_accordes[$tab_id[$i]])<=-2) {
+                                    echo "s"; 
+                                    } 
+                                 
                                 } // sinon n'affiche rien
                                 else echo '---';?>
                         </td>
