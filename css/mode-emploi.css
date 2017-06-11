@@ -6,7 +6,7 @@
 #animation{
 position: relative; /* prépare la position des images incluses au container */
 height:0;
-padding-top: 35%; /* fixe la hauteur proportionnelle au container */
+padding-top: 60%; /* fixe la hauteur proportionnelle au container */
 }
 
 
@@ -19,28 +19,27 @@ from  {opacity :1;} /* de pleine opacité */
 to  {opacity:1;}    /* à pleine disparition */
 }
 
+#image1, #image2, #image3, #image4 {
+	position:absolute ;
+	width:80%;
 
+	max-height:800px;
+	margin-left: 10%;
+	top: 5%;
+	border-radius:12px;
+
+}
 
 #image1 {
 animation:  disparition  20s infinite;	/* animation "disparition" */																			/* en boucle  */
-position:absolute ;
-width:95%;
-max-height:390px;
-margin-left: 2.5%;
-top: 5%;
-border-radius:12px;
+
 }
 
 #image2 {
 
 animation:  disparition  20s infinite;	/* animation "disparition" */
 animation-delay:5s;
-position:absolute ;
-width:95%;
-max-height:390px;
-margin-left: 2.5%;
-top: 5%;
-border-radius:12px;
+
 }
 
 
@@ -48,22 +47,12 @@ border-radius:12px;
 
 animation:  disparition  20s infinite; /* même animation, mais décalée de 5s */
 animation-delay:10s;
-position:absolute ;
-width:95%;
-max-height:390px;
-margin-left: 2.5%;
-top: 5%;
-border-radius:12px;
+
 }
 
 #image4 {	
 animation:  disparition  20s infinite; /* même animation, mais décalée de 5s */
 animation-delay:15s;
-position:absolute ;
-width:95%;
-max-height:390px;
-margin-left: 2.5%;
-top: 5%;
-border-radius:12px;
+
 }
 
