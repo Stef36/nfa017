@@ -33,20 +33,19 @@ require ("./includes/connection.php");?>
 
         </header>
         
-<!-- ===================== VIDE POUR MENU   ========================== -->
-<!--============= (include en bas de page pour referencement)  ======= -->
-<section id="vide_sideral"></section>
+        <!-- ===================== VIDE POUR MENU   ========================== -->
+        <!--============= (include en bas de page pour referencement)  ======= -->
+        <section id="vide_sideral"></section>
         
      
-        <SECTION class="mentionslegales">
-            <br>
-            <h2>
-                <div> Coordonnées de l'éditeur :</div>
-            </h2>
-            <br>
-            <ul>
-<!--========== Description des mentions légales ==============-->
-                <section id="mentions">
+        <SECTION class="mentions">
+          
+         
+            <!--========== Description des mentions légales ==============-->
+                <section>
+
+                    <h2>Coordonnées de l'éditeur :</h2>
+
                     <li>Dénomination : Site gratuit pédagogique CP09 du Cnam</li>
 
                     <!-- cherche en BD les co-auteurs -->
@@ -62,7 +61,7 @@ require ("./includes/connection.php");?>
 
                         while ($co_auteur =$co_auteurs->fetch()) { ?>
 
-                            <li>Co-auteur : <?php echo $co_auteur['mem_prenom'].' '.$co_auteur['mem_nom']; ?></li> <?php
+                    <li>Co-auteur : <?php echo $co_auteur['mem_prenom'].' '.$co_auteur['mem_nom']; ?></li> <?php
                             
                         }
 
@@ -72,47 +71,63 @@ require ("./includes/connection.php");?>
                                                     ?>
 
                     
-                    <br>
-                    <li>Hébergeur :  1and1</li><br>
-
                     
+                    <li>Hébergeur :  1and1</li>
+
+                    <li> Commentaires : 
+                        <br>
+                        <p>
+                            Ce site a été développé avec l'aide de Notepad++, Sublime Text, Linux (Debian 8) GitHub & Gimp qui nous ont permis de développer de façon graphique ce site. 
+                        </p>
+                    </li>
                 </section>
 
-                <section id="sources">
+                <section>
 
-                    <H3>Sources des images</H3>
+                    <H2>Sources des images libres de droits:</H2>
                     
                     <ul>
                         <li>valise:
-                        
-                        Lien: <a href="https://www.luxuryhalaltravel.com/voyager/wp-content/uploads/2016/01/luggage-1149289_1920-940x627.jpg">  luggage.jpg</a></li>
-
-                        Lien: <a href="https://cdn.pixabay.com/photo/2013/07/13/12/19/suitcase-159615_960_720.png">Valise Pixabay</a>
+                        Lien: <a href="https://pixabay.com/">Valise Pixabay suitcase-159615_960_720.png</a>
                         
 
-                        <li>soldat inconnu:
+                        <li>soldat inconnu (logo équipe):
                         Lien: <a href="https://pixabay.com/en/art-male-man-military-roman-21122/">art-male-man-military-roman</a></li>
 
                         <li>machine à laver (logo équipe):
                         Lien: <a href="https://commons.wikimedia.org/wiki/File:LGwashingmachine.jpg">LGwashingmachine.jpg</a></li>
 
-                        <li>femme dans jeans (logo équipe):
-                        Lien: <a href="https://pixabay.com/en/belly-body-clothes-diet-female-2473/">belly-body-clothes-diet-female-2473</a></li> 
+                        <li>Toutes les autres images de ce site sont sous la responsabilité des utilisateurs. Merci de <a href="./contact.php">laisser un message</a>  si vous constatez des abus.</li>
+
+ 
+
+                    </ul>
+                </section>
+
+                <section>
+                    <H2>Remerciements:</H2>
+                    <ul>
+                        <li>Merci à M. Philippe Bouquet</li>
+
+                        <p>Qui nous a permis de tester, essayer, triturer le code source.</p>
+                        <p>Qui nous a poussé au bout de nos limites neuronales en termes de compréhension de réferencement et de manipulations des formules magique d' .htaccess :-\)</p>
+                        <a href="http://netpresta-formation.fr"><img src="./images/photos/netpresta-formation-logo-20160428.jpg" alt="netpresta-formation formation web netpresta.fr"></a>
+
+                        <li>Merci à M. David Bost</li>
+                        <p>également formateur au Cnam... et qui va bientôt nous évaluer ;-()</p>
 
                     </ul>
 
-
-
+                    
                 </section>
-            </ul>
+           
+
+        </section>
+            
             
 
 
-            <h3> Commentaires : </h3>
-            <br>
-            <p>
-                Ce site a été développé avec l'aide de Notepad++, Sublime Text, Linux (Debian 8) GitHub & Gimp qui nous ont permis de développer de façon graphique ce site. 
-            </p>
+            
 
 
         <footer>

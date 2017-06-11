@@ -237,10 +237,6 @@ h2{
 } 
 
 
-/*==========================mentionslegales===============================*/
-.mentionslegales{
-    color: black;
-}
 
 
 
@@ -251,9 +247,10 @@ h2{
 }
 
 /*===========================mentions legales========================*/
-#mentions{
-    font-weight:bold;
-    font-size:1.5em;
+.mentions{
+    margin:25px 15px;
+    padding: 25px;
+    font-size:1.2em;
 }
 
 
