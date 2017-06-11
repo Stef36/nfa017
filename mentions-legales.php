@@ -77,11 +77,42 @@ require ("./includes/connection.php");?>
 
                     
                 </section>
+
+                <section id="sources">
+
+                    <H3>Sources des images</H3>
+                    
+                    <ul>
+                        <li>valise:
+                        
+                        Lien: <a href="https://www.luxuryhalaltravel.com/voyager/wp-content/uploads/2016/01/luggage-1149289_1920-940x627.jpg">  luggage.jpg</a></li>
+
+                        Lien: <a href="https://cdn.pixabay.com/photo/2013/07/13/12/19/suitcase-159615_960_720.png">Valise Pixabay</a>
+                        
+
+                        <li>soldat inconnu:
+                        Lien: <a href="https://pixabay.com/en/art-male-man-military-roman-21122/">art-male-man-military-roman</a></li>
+
+                        <li>machine à laver (logo équipe):
+                        Lien: <a href="https://commons.wikimedia.org/wiki/File:LGwashingmachine.jpg">LGwashingmachine.jpg</a></li>
+
+                        <li>femme dans jeans (logo équipe):
+                        Lien: <a href="https://pixabay.com/en/belly-body-clothes-diet-female-2473/">belly-body-clothes-diet-female-2473</a></li> 
+
+                    </ul>
+
+
+
+                </section>
             </ul>
- 
-            <h3> Commentaires : <br>
-                Ce site a été développé avec l'aide de Notepad++, Sublime Text, Linux (Debian 8) GitHub & Gimp qui nous ont permis de développer de façon graphique ce site. <br><br><br>
-            </h3>
+            
+
+
+            <h3> Commentaires : </h3>
+            <br>
+            <p>
+                Ce site a été développé avec l'aide de Notepad++, Sublime Text, Linux (Debian 8) GitHub & Gimp qui nous ont permis de développer de façon graphique ce site. 
+            </p>
 
 
         <footer>
