@@ -6,16 +6,16 @@
                         WHERE mem_prenom != 'Philippe'
                         AND mem_prenom != 'David';";
             
-        $noms_prenoms = $pdo -> query($sql_requete_noms);
-       
+        $noms_prenoms = $pdo -> query($sql_requete_noms); ?>
+
+        <p>Site conçu par : <br><?php
         
         while ($nom_prenom = $noms_prenoms -> fetch()){ ?>
             
                     
-                    <p><?php echo $nom_prenom['mem_prenom'];?>&nbsp; <?php echo $nom_prenom['mem_nom'];?></p>
+                    <?php echo $nom_prenom['mem_prenom'];?>&nbsp; <?php echo $nom_prenom['mem_nom'];?><br>
                     
                      <?php
-            }
+            } ?></p>
+
            ?>
-            
-<!--=========================================================-->

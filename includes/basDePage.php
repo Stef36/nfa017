@@ -21,10 +21,10 @@
     <!--Une ligne pour separer le bas de page-->
     <hr/>
     <p>Site exercice du CNAM NFA017-083-021.</p>
-    <p>Site conçu par : <?php 
+     <?php 
           require_once ("./includes/connection.php");
-          include("includes/footer.inc.php"); ?></p>
-    <!--<p>Dominique D. et Stéphane L.</p>-->
+          include("includes/footer.inc.php"); ?>
+  
     <a href="./plan-du-site.php">Plan du site et documents utiles.</a><br/>
     <a href="./mentions-legales.php">Mentions légales.</a><br/>
 
