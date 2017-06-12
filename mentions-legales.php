@@ -97,7 +97,7 @@ require ("./includes/connection.php");?>
                         <li>machine à laver (logo équipe):
                         Lien: <a href="https://commons.wikimedia.org/wiki/File:LGwashingmachine.jpg">LGwashingmachine.jpg</a></li>
 
-                        <li>Toutes les autres images de ce site sont sous la responsabilité des utilisateurs. Merci de <a href="./contact.php">laisser un message</a>  si vous constatez des abus.</li>
+                        <li>Toutes les autres images de ce site sont sous la responsabilité des utilisateurs. Merci de <a href="./contact.php" class="liens-direct">laisser un message</a>  si vous constatez des abus.</li>
 
  
 
@@ -109,12 +109,18 @@ require ("./includes/connection.php");?>
                     <ul>
                         <li>Merci à M. Philippe Bouquet</li>
 
-                        <p>Qui nous a permis de tester, essayer, triturer le code source.</p>
+                        <p>Qui nous a aider à tester, essayer, triturer le code source.</p>
                         <p>Qui nous a poussé au bout de nos limites neuronales en termes de compréhension de réferencement et de manipulations des formules magique d' .htaccess :-\)</p>
-                        <a href="http://netpresta-formation.fr"><img src="./images/photos/netpresta-formation-logo-20160428.jpg" alt="netpresta-formation formation web netpresta.fr"></a>
+                        <a href="http://netpresta-formation.fr" target="_blank"><img src="./images/photos/netpresta-formation-logo-20160428.jpg" alt="netpresta-formation formation web netpresta.fr" ></a>
 
                         <li>Merci à M. David Bost</li>
                         <p>également formateur au Cnam... et qui va bientôt nous évaluer ;-()</p>
+
+                        <li>Pour les curieux</li>
+                        <p> qui voudraient avoir une idée des compétences à acquérir pour la construction de ce site, vous pouvez télecharger la liste <a href="./docs/CNAM-CP09-competences.pdf" target="_blank" class="liens-direct">ici</a> .</p>
+
+
+                        <li>Merci à tous les gens du <a href="http://www.cnam.fr/" target="_blank">Centre National des Arts et Métiers <img src="./images/Logo/Logo_cnam.gif" class= "logoCnam" alt=" le CNAM logo"></a> qui ont déjà permis à beaucoup de salariés un changement de vie professionnelle positive.</li>
 
                     </ul>
 
