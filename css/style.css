@@ -470,3 +470,9 @@ input[type=reset]{
 .logoCnam {
     width: 100px;
 }
+
+#erreur403 {
+    width: 50%;
+    max-width: 300px;
+    margin-left:25%;
+}
