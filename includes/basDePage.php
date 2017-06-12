@@ -4,19 +4,6 @@
 
 <footer class="footer">
 
-	<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.9";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-
-
-	<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: fr_FR</script>
-
-
 
     <!--Une ligne pour separer le bas de page-->
     <hr/>
