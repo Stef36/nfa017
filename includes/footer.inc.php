@@ -10,12 +10,10 @@
 
         <p>Site conçu par : <br><?php
         
-        while ($nom_prenom = $noms_prenoms -> fetch()){ ?>
+                while ($nom_prenom = $noms_prenoms -> fetch()){ ?>
             
                     
-                    <?php echo $nom_prenom['mem_prenom'].' '.$nom_prenom['mem_nom'];?><br>
-                    
-                     <?php
-            } ?></p>
+                    <?php echo $nom_prenom['mem_prenom'].' '.$nom_prenom['mem_nom'].'<br>';
+                    } ?>
 
-           ?>
+        </p>             
