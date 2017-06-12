@@ -13,6 +13,8 @@ if (! isset($_SESSION['ticket_employe'])) { ?>
 
 <p>Vous pourrez  <a href="mes-conges-consulter.php" class="liens-direct">consulter vos congés ici</a>et pourrez   <a href="mes-conges-poser.php" class="liens-direct">poser vos congés</a>. </p>
 
+<p>Vous trouverez ici un petit <a href="./docs/document-utilisateur-employe.pdf" class="liens-direct" target="_blank">tuto explicatif</a>  pour poser un congé</p>
+
 
 <p>Bons congés !</p>
 
