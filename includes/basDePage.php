@@ -19,3 +19,10 @@
      <p>© Mes Repos.com - 2017 - All Rights Reserved.</p>
 </footer>
 
+<!-- Place this tag in your head or just before your close body tag. -->
+<script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'fr'}
+</script>
+
+
+
