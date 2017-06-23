@@ -151,8 +151,12 @@ h2{
     list-style:none;
 }
 
+#formulaire_modif_employe, #attribution_conges{
+    margin-left: 5px;
+}
+
 .contact_form ul li label { 
-    width:250px;
+    width:300px;
     margin-top: 3px; 
     display:inline-block; 
     float:left; 
@@ -167,6 +171,11 @@ h2{
     width:300px; 
     padding:5px 8px; 
 } 
+
+.contact_form input[type="radio"] {
+    height:auto;
+    width: auto;
+}
 
 
 

@@ -66,7 +66,7 @@
                         onblur="" 
                         value ="<?php echo $employe_dispose_combien_type_conges['disposer_quantite'];?>"
                         min="0"
-                        step="0.5">
+                        step="0.25">
                     <?php echo " ".$employe_dispose_combien_type_conges['type_conge_unite']."(s)"; ?> 
                 </li>
 
