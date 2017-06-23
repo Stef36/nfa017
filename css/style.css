@@ -33,19 +33,23 @@ margin-left:5%;
 
 }
 
-#preInscription  input:not(#rem) ,
-#preInscription  input:not[type="radio"]
-  {
-    height: 25px;
-    font-size: 1.1em;
-
-}
 
 #preInscription input[type="radio"] {
     margin-top: 15px;
     height: auto;
     width: auto;
 }
+
+
+#preInscription  input:not(#rem) 
+  {
+    
+    font-size: 1em;
+    padding:  5px;
+    margin:3px;
+
+}
+
 
 #kapcharep{
     
