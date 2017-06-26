@@ -8,4 +8,4 @@ Disallow: /backoffice*
 Disallow: /plan-du-site.php
 Disallow: /mentions-legales.php
 Disallow: /connection-back-office.php
-Sitemap: http://mesrepos.com.com/sitemap.xml
+Sitemap: http://mesrepos.com/sitemap.xml
