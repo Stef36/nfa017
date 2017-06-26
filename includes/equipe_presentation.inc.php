@@ -13,6 +13,20 @@ if (isset($_SESSION['ticket_equipe'])) { ?>
     <!-- affiche l'entreprise et le nom de l'équipe -->
     <H2> Entreprise ou Organisation:</H2> 
     <H3><?php echo  $_SESSION['equipe_entreprise']?></H3>
+
+        <div>
+            <form name="exo" method="POST" action="./">
+
+                <label for="equipe_entreprise">Ici Nouveau nom entreprise</label>
+                <input type="text" name="equipe_entreprise">
+                <input type="submit" name="changeE">
+
+                
+            </form>
+
+        </div>
+
+
     <p>Equipe: <?php echo  $_SESSION['equipe_nom']?></p> 
 
     <!-- affiche le nom et l'email du responsable de l'équipe -->
