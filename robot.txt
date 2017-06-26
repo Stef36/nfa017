@@ -3,7 +3,6 @@ Disallow: /avatars/
 Disallow: /compteur/
 Disallow: /docs/
 Disallow: /includes/
-Disallow: /javascripts/
 Disallow: /administration*
 Disallow: /backoffice*
 Disallow: /plan-du-site.php
